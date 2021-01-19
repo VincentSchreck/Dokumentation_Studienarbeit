@@ -1,0 +1,27 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
+\contentsline {section}{\numberline {2}Motivation}{1}{section.2}%
+\contentsline {section}{\numberline {3}Theoretische Grundlagen}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Framework}{1}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Einleitung}{1}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Language}{1}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}IDE}{1}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Database}{1}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Firebase}{1}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Recommendationssystem}{1}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Konzept?}{2}{section.5}%
+\contentsline {section}{\numberline {6}Funktionen/Komponenten}{2}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Swipe/Aussuchen/Voting}{2}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Matches/Chat}{2}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Film-/Serienvorschläge}{2}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Gruppenorgien}{2}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Gespeicherte Filme/Filmliste}{2}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Zugänglichkeit/Behindertenfreundlichkeit}{2}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Benutzeroberflächen}{2}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Home-Screen}{2}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Gruppen}{2}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Chat}{2}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Filmliste}{2}{subsection.7.4}%
+\contentsline {section}{\numberline {8}CodeBeispiele}{2}{section.8}%
+\contentsline {section}{\numberline {9}Probleme}{2}{section.9}%
+\contentsline {section}{\numberline {10}Fazit}{2}{section.10}%
