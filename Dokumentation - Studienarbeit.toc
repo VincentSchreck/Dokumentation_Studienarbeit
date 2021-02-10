@@ -9,19 +9,22 @@
 \contentsline {subsection}{\numberline {4.3}Database}{1}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Firebase}{1}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}Recommendationssystem}{1}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Konzept?}{2}{section.5}%
-\contentsline {section}{\numberline {6}Funktionen/Komponenten}{2}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Swipe/Aussuchen/Voting}{2}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Matches/Chat}{2}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Film-/Serienvorschläge}{2}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Gruppenorgien}{2}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Gespeicherte Filme/Filmliste}{2}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Zugänglichkeit/Behindertenfreundlichkeit}{2}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Benutzeroberflächen}{2}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Home-Screen}{2}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Gruppen}{2}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Chat}{2}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Filmliste}{2}{subsection.7.4}%
-\contentsline {section}{\numberline {8}CodeBeispiele}{2}{section.8}%
-\contentsline {section}{\numberline {9}Probleme}{2}{section.9}%
-\contentsline {section}{\numberline {10}Fazit}{2}{section.10}%
+\contentsline {subsubsection}{\numberline {4.5.1}Collaborative Filtering}{2}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Content-based filtering}{2}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Cold Start Problem}{2}{subsubsection.4.5.3}%
+\contentsline {section}{\numberline {5}Konzept?}{3}{section.5}%
+\contentsline {section}{\numberline {6}Funktionen/Komponenten}{3}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Swipe/Aussuchen/Voting}{3}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Matches/Chat}{3}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Film-/Serienvorschläge}{3}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Gruppenorgien}{3}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Gespeicherte Filme/Filmliste}{3}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Zugänglichkeit/Behindertenfreundlichkeit}{3}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Benutzeroberflächen}{3}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Home-Screen}{3}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Gruppen}{3}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Chat}{3}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Filmliste}{3}{subsection.7.4}%
+\contentsline {section}{\numberline {8}CodeBeispiele}{3}{section.8}%
+\contentsline {section}{\numberline {9}Probleme}{3}{section.9}%
+\contentsline {section}{\numberline {10}Fazit}{3}{section.10}%
