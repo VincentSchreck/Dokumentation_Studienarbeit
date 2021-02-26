@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  10 FEB 2021 23:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  26 FEB 2021 18:23
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -536,63 +536,107 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `"Dokumentation - Studienarbeit.toc"'.
 
- [1] (Framework.tex) (Language.tex)
-(IDE.tex) (Database.tex) (Firebase.tex) (Recommendationssystem.tex
+ [1] (Mobil_Anwendungsentwicklung.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 12.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 
-      [1]
-Overfull \hbox (9.25497pt too wide) in paragraph at lines 36--37
+l.19 \subsubsection
+                   {Plattformübergreifende Anwendungen} [1]) (Language.tex)
+(IDE.tex) (Database.tex) (Firebase.tex) (Recommendationssystem.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 12.
+
+[2]
+Overfull \hbox (12.41096pt too wide) in paragraph at lines 45--46
+[]\OT1/cmr/m/n/10.95 Das Sy-stem ist al-so un-abh[]angig von an-de-ren Nut-zer-
+da-ten, da die Vor-schl[]age nur auf Pr[]aferenzen
+ []
+
+
+Overfull \hbox (41.40706pt too wide) in paragraph at lines 45--46
+\OT1/cmr/m/n/10.95 ei-nes ein-zel-nen Nut-zers ba-sie-ren. Dies bie-tet im Hin-
+blick auf ei-ne App auch gu-te Ska-lie-rungsm[]oglichkeiten.
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.51 
+     ]
+Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/m/it/10.95 Memory-based Me-tho-den\OT1/cmr/m/n/10.95 : Es wird, wie 
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
 
-Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
-[]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 338
-3313 . 3412488$[] []$http : / / www . microlinkcolleges .
+Overfull \hbox (2.7346pt too wide) in paragraph at lines 80--81
+ []\OT1/cmr/bx/n/10.95 Cosinus-Funktion[] \OT1/cmr/m/n/10.95 Hier wird ein-fach
+ der Win-kel zwi-schen bei-den Vek-to-ren be-rech-net: $\OML/cmm/m/it/10.95 s\O
+T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q;x\OT1/cmr/m/n/10.95 ) =
  []
 
-) [2pdfTeX warning (ext4): destination with the same identifier (name{table.1})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.91 \end{document}
-                   ] [3] ("Dokumentation - Studienarbeit.aux")
+)
+Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--62
+[][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
+383313 . 3412488$[] []$http : / / www . microlinkcolleges .
+ []
+
+[4]
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 95--96
+[]$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
+/ collateral / executive-[]perspectives / annual-[]internet-[]report /
+ []
+
+[5] ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: DF09C9F412B5B9BD626AFBB327AA53A7;1758.
+(rerunfilecheck)             Checksum: F08E8183D1F16BC620E63EF6191C55F2;2124.
  ) 
 Here is how much of TeX's memory you used:
- 9240 strings out of 479696
- 139034 string characters out of 2867115
- 478361 words of memory out of 3000000
- 26082 multiletter control sequences out of 15000+200000
- 411656 words of font info for 58 fonts, out of 3000000 for 9000
+ 9288 strings out of 479696
+ 139694 string characters out of 2867115
+ 477399 words of memory out of 3000000
+ 26107 multiletter control sequences out of 15000+200000
+ 414354 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,599b,354s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmbx10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmbx12.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leong/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/leong/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/leong/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/leong/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/l
-eong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti
-10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmtt10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (5 pages, 173315 bytes).
+ 66i,11n,72p,726b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+ <C:\Users\leong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+95.pk><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/leong/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leong/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/leong/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/leo
+ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/U
+sers/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr9.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/leong/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/leong/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Dokumentation - Studienarbeit.pdf" (7 pages, 240976 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
