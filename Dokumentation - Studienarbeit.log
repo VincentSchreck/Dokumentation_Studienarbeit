@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  26 FEB 2021 18:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  4 MAR 2021 16:09
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -408,32 +408,60 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@dimlist=\toks27
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count289
+)
+\csq@reset=\count290
+\csq@gtype=\count291
+\csq@glevel=\count292
+\csq@qlevel=\count293
+\csq@maxlvl=\count294
+\csq@tshold=\count295
+\csq@ltx@everypar=\toks28
+
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'german'.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count289
+\l__kernel_color_stack_int=\count296
 \l__pdf_internal_box=\box54
 ) ("Dokumentation - Studienarbeit.aux")
 \openout1 = `"Dokumentation - Studienarbeit.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-Package hyperref Info: Link coloring OFF on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+Package hyperref Info: Link coloring OFF on input line 23.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -445,11 +473,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count297
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 23.
+LaTeX Info: Redefining \pageref on input line 23.
+LaTeX Info: Redefining \nameref on input line 23.
  ("Dokumentation - Studienarbeit.out")
 ("Dokumentation - Studienarbeit.out")
 \@outlinefile=\write3
@@ -459,17 +487,17 @@ LaTeX Info: Redefining \nameref on input line 22.
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
+\scratchcounter=\count298
 \scratchdimen=\dimen182
 \scratchbox=\box55
-\nofMPsegments=\count292
-\nofMParguments=\count293
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count294
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count301
 \MPscratchDim=\dimen183
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks30
 )
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -518,12 +546,12 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -550,14 +578,48 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 \subsubsection
-                   {Plattformübergreifende Anwendungen} [1]) (Language.tex)
-(IDE.tex) (Database.tex) (Firebase.tex) (Recommendationssystem.tex
+l.27 
+      [1]
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+<images/dart-diagram.png, id=207, 803.0pt x 437.635pt>
+File: images/dart-diagram.png Graphic file (type png)
+<use images/dart-diagram.png>
+Package pdftex.def Info: images/dart-diagram.png  used on input line 33.
+(pdftex.def)             Requested size: 361.34666pt x 196.93393pt.
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.49 	\item \textit
+                   {Flutter Engine}: Der Kern von Flutter, geschrieben haupt...
+ <./images/dart-diagram.png (PNG copy)>]
+<images/flutter_architektur.png, id=223, 1842.885pt x 1511.6475pt>
+File: images/flutter_architektur.png Graphic file (type png)
+<use images/flutter_architektur.png>
+Package pdftex.def Info: images/flutter_architektur.png  used on input line 57.
+
+(pdftex.def)             Requested size: 460.72012pt x 377.91095pt.
+
+Overfull \hbox (5.47601pt too wide) in paragraph at lines 57--58
+ [] 
+ []
+
+) (Language.tex) (IDE.tex) (Database.tex) (Firebase.tex)
+(Recommendationssystem.tex [3]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
 
-[2]
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.31 \paragraph
+               {Explizite Nutzerinformation} <./images/flutter_architektur.png>
+]
 Overfull \hbox (12.41096pt too wide) in paragraph at lines 45--46
 []\OT1/cmr/m/n/10.95 Das Sy-stem ist al-so un-abh[]angig von an-de-ren Nut-zer-
 da-ten, da die Vor-schl[]age nur auf Pr[]aferenzen
@@ -569,7 +631,7 @@ Overfull \hbox (41.40706pt too wide) in paragraph at lines 45--46
 blick auf ei-ne App auch gu-te Ska-lie-rungsm[]oglichkeiten.
  []
 
-[3pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
+[5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -588,32 +650,44 @@ T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q;x\OT1/cmr/m/n/10.95 ) =
  []
 
 )
-Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--62
+Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--63
 [][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
 383313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-[4]
-Overfull \hbox (131.25366pt too wide) in paragraph at lines 95--96
+[6]
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 97--98
 []$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
-[5] ("Dokumentation - Studienarbeit.aux")
+[7] ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: F08E8183D1F16BC620E63EF6191C55F2;2124.
+(rerunfilecheck)             Checksum: ECBF85957DEE7D8DAF927614F229F5C5;2263.
  ) 
 Here is how much of TeX's memory you used:
- 9288 strings out of 479696
- 139694 string characters out of 2867115
- 477399 words of memory out of 3000000
- 26107 multiletter control sequences out of 15000+200000
+ 10198 strings out of 479696
+ 153384 string characters out of 2867115
+ 504952 words of memory out of 3000000
+ 26987 multiletter control sequences out of 15000+200000
  414354 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,11n,72p,726b,356s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
+ 66i,12n,72p,726b,576s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
 
  <C:\Users\leong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
 95.pk><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
@@ -634,9 +708,9 @@ pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/leong/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/leong/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (7 pages, 240976 bytes).
+Output written on "Dokumentation - Studienarbeit.pdf" (9 pages, 438179 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 354 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
+ 283 words of extra memory for PDF output out of 10000 (max. 10000000)
 
