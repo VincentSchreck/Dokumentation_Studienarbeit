@@ -12,7 +12,7 @@
 \contentsline {subsubsection}{\numberline {4.5.1}Collaborative Filtering}{2}{subsubsection.4.5.1}%
 \contentsline {subsubsection}{\numberline {4.5.2}Content-based filtering}{2}{subsubsection.4.5.2}%
 \contentsline {subsubsection}{\numberline {4.5.3}Cold Start Problem}{2}{subsubsection.4.5.3}%
-\contentsline {section}{\numberline {5}Konzept?}{3}{section.5}%
+\contentsline {section}{\numberline {5}Konzept?}{2}{section.5}%
 \contentsline {section}{\numberline {6}Funktionen/Komponenten}{3}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Swipe/Aussuchen/Voting}{3}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Matches/Chat}{3}{subsection.6.2}%
