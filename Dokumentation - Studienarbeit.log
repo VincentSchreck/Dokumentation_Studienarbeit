@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  3 APR 2021 18:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  3 APR 2021 21:17
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -544,12 +544,70 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `"Dokumentation - Studienarbeit.toc"'.
 
- [2] (Framework.tex) (Language.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{page.1}) has been already used, duplicate ignored
+ [2] (Framework.texpdfTeX warning (ext4): destination with the same identifier 
+(name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.3 \newpage
-             [1] (Language_JavaScript.tex
+             [1] (Framework_NodeJS.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
+
+ []
+
+<images/nodejs_otherthreading.png, id=275, 1118.1775pt x 675.52374pt>
+File: images/nodejs_otherthreading.png Graphic file (type png)
+<use images/nodejs_otherthreading.png>
+Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
+6.
+(pdftex.def)             Requested size: 284.52579pt x 156.49072pt.
+[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.20 \newpage
+              <./images/nodejs_otherthreading.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+<images/nodejs_nodethreading.png, id=281, 1098.1025pt x 656.4525pt>
+File: images/nodejs_nodethreading.png Graphic file (type png)
+<use images/nodejs_nodethreading.png>
+Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 33
+.
+(pdftex.def)             Requested size: 284.52808pt x 156.49005pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 38--6
+
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.7 \newpage
+             <./images/nodejs_nodethreading.png>]) (Language.tex [4]
+(Language_JavaScript.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -579,13 +637,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
-) [3]) (IDE.tex) (Grundlagen_MongoDB.tex) (Grundlagen_RestAPI.tex)
-(Firebase.tex) (Recommendationssystem.tex
+[5]
+<images/JavaScript_Object.PNG, id=296, 545.03625pt x 143.03438pt>
+File: images/JavaScript_Object.PNG Graphic file (type png)
+<use images/JavaScript_Object.PNG>
+Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
+(pdftex.def)             Requested size: 455.24411pt x 119.46927pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+) [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.6 \clearpage
+               <./images/JavaScript_Object.PNG>]) (IDE.tex)
+(Grundlagen_MongoDB.tex) (Grundlagen_RestAPI.tex) (Firebase.tex)
+(Recommendationssystem.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
@@ -596,7 +671,7 @@ Overfull \hbox (9.25497pt too wide) in paragraph at lines 36--37
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[4
+[7
 
 ]
 Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
@@ -604,7 +679,7 @@ Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
 3313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-) (Konzept.tex) (TechnologieAuswahl.tex [5pdfTeX warning (ext4): destination wi
+) (Konzept.tex) (TechnologieAuswahl.tex [8pdfTeX warning (ext4): destination wi
 th the same identifier (name{table.1}) has been already used, duplicate ignored
 
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -612,20 +687,20 @@ th the same identifier (name{table.1}) has been already used, duplicate ignored
 l.11 \subsection
                 {Kommunikationsschnittstelle}]) (Backend.tex
 (Backend_Server.tex) (Backend_Datenbank.tex)
-(Backend_Kommunikationsschnittstelle.tex)) [6] [7]
+(Backend_Kommunikationsschnittstelle.tex)) [9] [10]
 ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: 58F3883760C59FD6F1D9EC7EF25ABEDF;6675.
+(rerunfilecheck)             Checksum: 54917522934534B3795988C6C2621720;7056.
  ) 
 Here is how much of TeX's memory you used:
- 11966 strings out of 479342
- 176460 string characters out of 2857694
- 519215 words of memory out of 3000000
- 29111 multiletter control sequences out of 15000+200000
+ 12002 strings out of 479342
+ 177340 string characters out of 2857694
+ 519218 words of memory out of 3000000
+ 29130 multiletter control sequences out of 15000+200000
  411656 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,75p,1555b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,11n,75p,1370b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -639,10 +714,10 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/R
 DBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:
 /Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (10 pages, 201248 bytes).
+Output written on "Dokumentation - Studienarbeit.pdf" (13 pages, 571899 bytes).
 
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 385 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 
