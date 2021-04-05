@@ -9,48 +9,49 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Architektur TODO Aufzählung}{2}{subsubsection.3.1.2}%
 \contentsline {subsubsection}{\numberline {3.1.3}Module TODO Aufzählung}{4}{subsubsection.3.1.3}%
 \contentsline {subsubsection}{\numberline {3.1.4}npm TODO Aufzählung}{4}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Express TODO Aufzählung}{4}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.5}Express TODO Aufzählung}{5}{subsubsection.3.1.5}%
 \contentsline {subsubsection}{\numberline {3.1.6}Mongoose TODO Aufzählung}{8}{subsubsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.7}http TODO Aufzählung}{9}{subsubsection.3.1.7}%
-\contentsline {subsection}{\numberline {3.2}Language}{10}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}JavaScript}{11}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Historie TODO Aufzählung! }{11}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Wesentliche Programmiereigenschaften TODO}{11}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Anwendungsgebiete TODO}{12}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}IDE}{13}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}MongoDB}{13}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Representational State Transfer - Application Programming Interface}{13}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Firebase}{13}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Recommendationssystem}{13}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Collaborative Filtering}{13}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Content-based filtering}{14}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Cold Start Problem}{14}{subsubsection.3.7.3}%
-\contentsline {section}{\numberline {4}Konzept?}{14}{section.4}%
-\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{14}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Server}{14}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Datenbank}{15}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{15}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Backend-Implementierung}{15}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Server}{15}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{15}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{15}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{15}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Datenbank}{15}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{15}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{15}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{16}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Funktionen/Komponenten}{16}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{16}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Matches/Chat}{16}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{16}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{16}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{16}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{16}{subsection.7.6}%
-\contentsline {section}{\numberline {8}Benutzeroberflächen}{16}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Home-Screen}{16}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Gruppen}{16}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Chat}{16}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Filmliste}{16}{subsection.8.4}%
-\contentsline {section}{\numberline {9}CodeBeispiele}{16}{section.9}%
-\contentsline {section}{\numberline {10}Probleme}{16}{section.10}%
-\contentsline {section}{\numberline {11}Fazit}{16}{section.11}%
+\contentsline {subsubsection}{\numberline {3.1.7}fs TODO Aufzählung}{11}{subsubsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.8}http TODO Aufzählung}{11}{subsubsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.2}Language}{12}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}JavaScript}{13}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Historie TODO Aufzählung! }{13}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Wesentliche Programmiereigenschaften TODO}{13}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Anwendungsgebiete TODO}{14}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}IDE}{15}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}MongoDB}{15}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Representational State Transfer - Application Programming Interface}{15}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Firebase}{15}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Recommendationssystem}{15}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Collaborative Filtering}{15}{subsubsection.3.7.1}%
+\contentsline {subsubsection}{\numberline {3.7.2}Content-based filtering}{16}{subsubsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.3}Cold Start Problem}{16}{subsubsection.3.7.3}%
+\contentsline {section}{\numberline {4}Konzept?}{16}{section.4}%
+\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Server}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Datenbank}{17}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{17}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Backend-Implementierung}{17}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Server}{17}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{17}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{17}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{17}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Datenbank}{17}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{17}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{17}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{18}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Funktionen/Komponenten}{18}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{18}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Matches/Chat}{18}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{18}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{18}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{18}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{18}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Benutzeroberflächen}{18}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Home-Screen}{18}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gruppen}{18}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Chat}{18}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Filmliste}{18}{subsection.8.4}%
+\contentsline {section}{\numberline {9}CodeBeispiele}{18}{section.9}%
+\contentsline {section}{\numberline {10}Probleme}{18}{section.10}%
+\contentsline {section}{\numberline {11}Fazit}{18}{section.11}%
