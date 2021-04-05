@@ -63,12 +63,12 @@ Für den Import stehen verschiedene Möglichkeiten zur Verfügung. Im folgender 
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter [nodejs 1.3] Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten. [1.4] Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit. [1.5]
 
 \subsubsection{Express TODO Aufzählung}
-„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt.“ [nodejs 1.6] Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. \newline
+„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt.“ [nodejs 1.6] Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation [??] ist 4.17.1. [nodejs 1.65] \newline
 \newline
 \textbf{Beispiel}
  \newline
 
-Das Erstellen einer Express-Applikation wird im folgenden Beispiel dargestellt:\newline
+Das Erstellen einer einfachen Express-Applikation wird im folgenden Beispiel dargestellt:\newline
 
 \begin{figure}[h]
 \centering
@@ -83,6 +83,8 @@ Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion s
 
 Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Funktion app.listen(). Ihr kann auch eine Callback-Funktion mitgegeben werden, die aufgerufen wird, sobald der Server erfolgreich gestartet ist.\newline
 \newline
+
+\newpage
 \textbf{Middleware}
 \newline
 Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion. [nodejs 1.9]
@@ -93,6 +95,45 @@ Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware ge
 \includegraphics[width=12cm]{images/nodejs_middleware.png}
 \caption{Middleware [nodejs 2.0]}
 \end{figure}
+
+\textbf{Middleware: express.json}
+\newline
+
+Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts. [nodejs 2.1]
+\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodejs_expressJson.PNG}
+\caption{Express.json Middleware benutzen}
+\end{figure}
+
+\newpage
+\textbf{Middleware: Router}
+\newline
+
+Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ [nodejs 2.15]
+\newline
+
+Die in express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middleware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
+\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{images/nodejs_expressRoutererstellen.PNG}
+\caption{Routinghandler erstellen[nodejs 2.2]}
+\end{figure}
+
+In oberem Beispiel wird ein Routerhandler für das Verzeichnis ‚/birds‘ mit eigen implementierter Middleware und zwei Anwendungsendpunkte ‚/‘ (bezieht sich auf das Stammverzeichnis) und ‚/about‘ erstellt. Der Code wird unter der Datei birds.js abgespeichert. 
+Abschließend kann das Routermodul in die Anwendung geladen werden: 
+\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{images/nodejs_expressRouterbenutzen.PNG}
+\caption{Routinghandler benutzen[nodejs 2.2]}
+\end{figure}
+
 
 
 \subsubsection{http TODO Aufzählung}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  4 APR 2021 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  5 APR 2021 13:47
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -671,12 +671,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--90
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--90
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
@@ -684,20 +684,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--90
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.90 
-      <./images/nodejs_express_einfacherWebserver.PNG>]
+l.87 \newpage
+              <./images/nodejs_express_einfacherWebserver.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 88--92
+
+ []
+
 <images/nodejs_middleware.png, id=331, 956.57375pt x 256.96pt>
 File: images/nodejs_middleware.png Graphic file (type png)
 <use images/nodejs_middleware.png>
-Package pdftex.def Info: images/nodejs_middleware.png  used on input line 93.
+Package pdftex.def Info: images/nodejs_middleware.png  used on input line 95.
 (pdftex.def)             Requested size: 341.43306pt x 91.71742pt.
-) [6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
+
+ []
+
+<images/nodejs_expressJson.PNG, id=332, 248.42813pt x 59.47218pt>
+File: images/nodejs_expressJson.PNG Graphic file (type png)
+<use images/nodejs_expressJson.PNG>
+Package pdftex.def Info: images/nodejs_expressJson.PNG  used on input line 107.
+
+(pdftex.def)             Requested size: 248.42752pt x 59.47203pt.
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.111 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.111 \newpage
+               <./images/nodejs_middleware.png (PNG copy)> <./images/nodejs_exp
+ressJson.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
+
+ []
+
+<images/nodejs_expressRoutererstellen.PNG, id=340, 510.40688pt x 328.97906pt>
+File: images/nodejs_expressRoutererstellen.PNG Graphic file (type png)
+<use images/nodejs_expressRoutererstellen.PNG>
+Package pdftex.def Info: images/nodejs_expressRoutererstellen.PNG  used on inpu
+t line 123.
+(pdftex.def)             Requested size: 398.33858pt x 256.75824pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
+
+ []
+
+<images/nodejs_expressRouterbenutzen.PNG, id=341, 503.63156pt x 90.3375pt>
+File: images/nodejs_expressRouterbenutzen.PNG Graphic file (type png)
+<use images/nodejs_expressRouterbenutzen.PNG>
+Package pdftex.def Info: images/nodejs_expressRouterbenutzen.PNG  used on input
+ line 133.
+(pdftex.def)             Requested size: 398.33858pt x 71.4513pt.
+) [7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.7 \newpage
-             <./images/nodejs_middleware.png (PNG copy)>]) (Language.tex
-[7] (Language_JavaScript.tex
+            pdfTeX warning (ext4): destination with the same identifier (name{f
+igure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.7 \newpage
+             <./images/nodejs_expressRoutererstellen.PNG> <./images/nodejs_expr
+essRouterbenutzen.PNG>] [8]) (Language.tex [9] (Language_JavaScript.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -732,8 +800,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
  []
 
-[8]
-<images/JavaScript_Object.PNG, id=345, 545.03625pt x 143.03438pt>
+[10]
+<images/JavaScript_Object.PNG, id=361, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
 Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
@@ -743,8 +811,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-) [9pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
-) has been already used, duplicate ignored
+) [11pdfTeX warning (ext4): destination with the same identifier (name{figure.1
+0}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.6 \clearpage
@@ -761,7 +829,7 @@ Overfull \hbox (9.25497pt too wide) in paragraph at lines 36--37
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[10
+[12
 
 ]
 Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
@@ -769,7 +837,7 @@ Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
 3313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-) (Konzept.tex) (TechnologieAuswahl.tex [11pdfTeX warning (ext4): destination w
+) (Konzept.tex) (TechnologieAuswahl.tex [13pdfTeX warning (ext4): destination w
 ith the same identifier (name{table.1}) has been already used, duplicate ignore
 d
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -777,17 +845,17 @@ d
 l.11 \subsection
                 {Kommunikationsschnittstelle}]) (Backend.tex
 (Backend_Server.tex) (Backend_Datenbank.tex)
-(Backend_Kommunikationsschnittstelle.tex)) [12] [13]
+(Backend_Kommunikationsschnittstelle.tex)) [14] [15]
 ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
 (rerunfilecheck)             Checksum: 8716B5D2382390B989E4AABCDA1D3FB6;7981.
  ) 
 Here is how much of TeX's memory you used:
- 12043 strings out of 479342
- 178433 string characters out of 2857694
+ 12066 strings out of 479342
+ 179156 string characters out of 2857694
  519220 words of memory out of 3000000
- 29155 multiletter control sequences out of 15000+200000
+ 29170 multiletter control sequences out of 15000+200000
  411656 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,11n,75p,1370b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -804,10 +872,10 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/R
 DBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:
 /Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (16 pages, 619186 bytes).
+Output written on "Dokumentation - Studienarbeit.pdf" (18 pages, 654817 bytes).
 
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 476 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 
