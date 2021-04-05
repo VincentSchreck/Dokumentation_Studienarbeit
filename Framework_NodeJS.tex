@@ -59,6 +59,11 @@ Für den Import stehen verschiedene Möglichkeiten zur Verfügung. Im folgender 
 \caption{Import von Modulen}
 \end{figure}
 
+Caching TODO
+Modules are cached after the first time they are loaded. This means (among other things) that every call to require('foo') will get exactly the same object returned, if it would resolve to the same file.\newline
+Provided require.cache is not modified, multiple calls to require('foo') will not cause the module code to be executed multiple times. This is an important feature. With it, "partially done" objects can be returned, thus allowing transitive dependencies to be loaded even when they would cause cycles. [nodejs 1.21]
+
+
 \subsubsection{npm TODO Aufzählung}
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter [nodejs 1.3] Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten. [1.4] Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit. [1.5]
 
@@ -81,10 +86,8 @@ Die require()-Funktion importiert das Express-Modul und gibt ein Express-Objekt 
 
 Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion spezifiziert eine Callback-Funktion, die ein „request“- und „response“-Objekt als Parameter erhält und aufgerufen wird, sobald eine HTTP Anfrage der Methode GET mit dem Pfad ‚/‘ empfangen wird. Das Request-Objekt enthält sämtliche Informationen über die HTTP-Anfrage. Das Response-Objekt kann dagegen in der Callback-Funktion mit Informationen gefüllt werden und über die send()-Funktion als HTTP-Antwort an den Sender zurückgesendet werden.\newline
 
-Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Funktion app.listen(). Ihr kann auch eine Callback-Funktion mitgegeben werden, die aufgerufen wird, sobald der Server erfolgreich gestartet ist.\newline
-\newline
+Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Funktion app.listen(). Ihr kann auch eine Callback-Funktion mitgegeben werden, die aufgerufen wird, sobald der Server erfolgreich gestartet ist.\newpage
 
-\newpage
 \textbf{Middleware}
 \newline
 Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion. [nodejs 1.9]
@@ -159,8 +162,62 @@ Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-
 
 \newpage
 \textbf{Model}
+\newline
+Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen werden auch ‚documents‘ genannt. Sie stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung. Beispielsweise wird beim Abspeichern einer Mongoose Instanz eines Models die entsprechende Collection in der Datenbank erzeugt, sofern sie noch nicht vorhanden ist. Eine Konvention in Mongoose sieht vor, dass der Name eines Models dem Singular eines Nomens entspricht, während die Collections nach dem Plural dieses Namens beschrieben werden. [nodejs 3.2] Im folgenden Beispiel wird ein Model über die mongoose.model()-Funktion erstellt unter Angabe des Modelnamens und dem zu verwendenden Schema. Dieses Model wird über module.exports nach außen zur Verfügung gestellt.
+
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodeJS_mongooseModell.PNG}
+\caption{Model erstellen und exportieren}
+\end{figure}
+
+An anderer Stelle kann das Model nun importiert werden. Aus dem Model kann ein Objekt instanziiert werden, welches über die save()-Funktion in der Datenbank gespeichert werden kann.
+
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodeJS_mongooseModellimport.PNG}
+\caption{Model importieren, Objekt instanziieren und persistent speichern}
+\end{figure}
+
+Mongoose Models enthalten ohne Instanziierung des Weiteren auch Schnittstellen, um Daten der zugehörigen Collection zu kreieren, abfragen, bearbeiten oder löschen. (Create, Receive, Update, Delete oder auch kurz CRUD).
+\newline
+\newpage
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodeJS_mongooseModellCRUD.PNG}
+\caption{CRUD-Besipielfunktionen eines Mongoose-Models}
+\end{figure}
+
+\textbf{Verbindung}
+\newline
+Verbindung zur Datenbank kann über die connect()-Funktion mit Angabe der genutzten Datenbank und des Datenbankpfads. Über das mongoose.connection-Objekt können auf Verbindungsereignisse reagiert werden. 
+\newline
 
 
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodeJS_mongooseVerbindung.PNG}
+\caption{Mongoose: Verbindung zur Datenbank aufbauen}
+\end{figure}
 
-\subsubsection{http TODO Aufzählung}
+Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann ein Objekt wie in folgendem Beispiel erstellt werden, dass die zugehörigen Optionen als Attribute beinhaltet. 
+\newline
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=5.5cm]{images/nodeJS_mongooseVerbindungOptions.PNG}
+\caption{Mongoose Verbindungsoptionen[nodejs 3.3] }
+\end{figure}
+
+\newpage
+\subsubsection{fs TODO Aufzählung}
+
+\subsubsection{http&https TODO Aufzählung}
+
+\subsubsection{firebase-admin TODO Aufzählung}
+
+\subsubsection{node-cron TODO Aufzählung}
+
+node-cron
 
