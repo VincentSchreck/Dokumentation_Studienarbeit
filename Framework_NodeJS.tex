@@ -134,8 +134,33 @@ Abschließend kann das Routermodul in die Anwendung geladen werden:
 \caption{Routinghandler benutzen[nodejs 2.2]}
 \end{figure}
 
+\newpage
+\subsubsection{Mongoose TODO Aufzählung}
+Mongoose ist ein öffentliches Modul, dass zum Zeitpunkt der Dokumentation[??] im npm Package Manager in der Version 5.12.3 zur Verfügung steht. [nodejs 2.4] Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM. [nodejs 2.55] Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
+\newline
+
+\textbf{Object Document Mapping (ODM)}
+\newline
+Object-Relational Mappers (ORM) finden hauptsächlich Einsatz in objektorientieren Anwendungen, dessen Daten in relationalen Datenbanken sind. Dabei werden die Tabellen in persistente Objekte gemappt.
+Das Mappen ist aber auch für NoSQL-Datenbanken nützlich. [nodejs 2.56] Die meistverbreiteten NoSQL-Datenbanken basieren auf Dokument-Systemen. Dementsprechend werden für diese Datenbanken Object-Document Mapper für das Mappen zwischen Dokumenten und Objekten genutzt. Einige ODM’s sind Mongoose[nodejs 2.7], Morphia [nodejs 2.8], Doctrine[nodejs 2.9] und Mandango[nodejs 3.0].
+NoSQL Mapper nutzen vom Entwickler definierte Datenschemata, die das Objekt beschreiben. Ein daraus abgeleitetes Model-Objekt ermöglicht dann die Kommunikation zwischen dem im Schema beschriebenen Objekt und der entsprechenden Datenbank-Collection.
+\newline
+
+\textbf{Schema}
+\newline
+Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität [??] eine Collection. Mongoose Schemata werden für jede Collection und jede Nichtwurzel-entität[??] definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
+\newline
+
+\begin{figure}[h]
+\centering
+\includegraphics{images/nodeJS_mongooseSchema.PNG}
+\caption{Mongoose Schema - Beispiel}
+\end{figure}
+
+\newpage
+\textbf{Model}
+
 
 
 \subsubsection{http TODO Aufzählung}
 
-\subsubsection{Mongoose TODO Aufzählung}
