@@ -1,0 +1,54 @@
+\subsubsection{Schichtenmodell}
+
+Eine der gängigsten Arten der Kommunikation findet heutzutage über das Internet statt. Dabei handelt es sich um ein weltweit verbundenes Netz von Rechnern. Zur Gewährleistung einer effizienten und geregelten Datenübertragung der heterogenen Computer im Internet wurden Regelwerke, die sogenannten Netzwerkprotokolle, benötigt. Um das Jahr 1980 wurden daraufhin von verschiedenen Computerherstellern modularisierte Protokolle entwickelt, die fortan als Standard für die digitale Übertragung innerhalb von Rechnernetzen gelten sollen. [1.0] Es musste eine Vielzahl von Aufgaben bewältigt und Anforderung bezüglich Zuverlässigkeit, Sicherheit, Effizienz etc. erfüllt werden. Die Aufgaben reichten dabei von der elektronischen Übertragung der Signale bis zur geregelten Reihenfolge der in der Kommunikation abstrakteren Aufgaben.  [1.05] Aus den zu lösenden Problemen und Anforderung kristallisierten sich sieben Schichten bzw. Ebenen heraus. Jede einzelne Schicht setzt dabei separat eine Anforderung um und kann dabei durch verschiedene Protokolle realisiert werden. In dem sich etablierten OSI-Schichtenmodell bauen die einzelnen Schichten aufeinander auf, wobei die unterste Schicht das Fundament ist. Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. 
+\newline
+
+Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenzmodell. Entwickler dieses Schichtmodells war das das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Departments of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell. [1.06]
+
+\begin{figure}[h]
+\centering
+\includegraphics{images/Netzwerkprotokolle_OSI-Schicht.PNG}
+\caption{OSILAYER [1.1]}
+\end{figure}
+
+\newpage
+
+\begin{table}[]
+\begin{center}
+    \begin{tabular}{| l | p{8cm} |}
+    \hline
+     OSI-Schicht & Aufgabe \\ 
+     \hline
+        
+       Anwendungen & Funktionen für Anwendungen, sowie die Dateneingabe und -ausgabe. \\
+    \hline    
+       Darstellung & Umwandlung der systemabhängigen Daten in ein unabhängiges Format.  \\
+    \hline   
+       Sitzung & Steuerung der Verbindungen und des Datenaustauschs.  \\
+    \hline  
+        Transport & Zuordnung der Datenpakete zu einer Anwendung. \\ 
+    
+    \hline     
+    	Vermittlung & Routing der Datenpakete zum nächsten Knoten. \\
+	
+    \hline       
+      Sicherung & Fehlererkennungsmechanismen / Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen.  \\   
+    \hline
+    
+    Bitübertragung & Umwandlung der Bits in ein zum Medium passendes Signal und physikalische Übertragung.\\ 
+    \hline    
+    \end{tabular}
+\end{center}
+\caption{Kurzbeschreibung der OSI-Schichten [1.2]}
+\end{table}
+
+\textbf{IP}
+\newline
+In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Übertragungsmediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32 Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128 Bit. 
+\newline
+
+\textbf{TCP/UDP}
+\newline
+In der Transportschicht wird eine Ende-zu-Ende-Kommunikation ermöglicht. Sie ist das Bindeglied zwischen den anwendungsorientierten und den transportorientierten Schichten. Die geläufigsten Protokolle sind das verbindungslose, unzuverlässige, aber weniger Overhead belastete User Datagram Protocol (UDP) und das verbindungsorientierte und datentransferzuverlässige Transmission Control Protocol (TCP).
+
+\subsubsection{HTTP}
