@@ -9,17 +9,8 @@
 \contentsline {subsubsection}{\numberline {3.1.2}HTTP}{3}{subsubsection.3.1.2}%
 \contentsline {subsection}{\numberline {3.2}Framework}{6}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Node.JS}{7}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Architektur TODO Aufzählung}{7}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Module TODO Aufzählung}{9}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}npm TODO Aufzählung}{9}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Express TODO Aufzählung}{10}{subsubsection.3.2.5}%
-\contentsline {subsubsection}{\numberline {3.2.6}Mongoose TODO Aufzählung}{13}{subsubsection.3.2.6}%
-\contentsline {subsubsection}{\numberline {3.2.7}Weitere Module TODO Aufzählung}{16}{subsubsection.3.2.7}%
 \contentsline {subsection}{\numberline {3.3}Language}{17}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}JavaScript}{18}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Historie TODO Aufzählung! }{18}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Wesentliche Programmiereigenschaften TODO}{18}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Anwendungsgebiete TODO}{19}{subsubsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.4}Anwendungsentwicklung für mobile Endgeräte}{20}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}Begriffe}{20}{subsubsection.3.4.1}%
 \contentsline {paragraph}{Eine Plattform}{20}{section*.3}%
@@ -44,45 +35,49 @@
 \contentsline {paragraph}{Widgets}{30}{section*.12}%
 \contentsline {paragraph}{States}{32}{section*.13}%
 \contentsline {subsection}{\numberline {3.8}IDE}{32}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}MongoDB}{32}{subsection.3.9}%
-\contentsline {subsection}{\numberline {3.10}Representational State Transfer - Application Programming Interface}{33}{subsection.3.10}%
-\contentsline {subsection}{\numberline {3.11}Firebase}{33}{subsection.3.11}%
-\contentsline {subsection}{\numberline {3.12}Recommender System}{33}{subsection.3.12}%
-\contentsline {subsubsection}{\numberline {3.12.1}Nutzerinformation}{33}{subsubsection.3.12.1}%
-\contentsline {paragraph}{Explizite Nutzerinformation}{33}{section*.14}%
-\contentsline {paragraph}{Implizite Nutzerinformation}{34}{section*.15}%
-\contentsline {subsubsection}{\numberline {3.12.2}Content-based filtering}{34}{subsubsection.3.12.2}%
-\contentsline {subsubsection}{\numberline {3.12.3}Collaborative Filtering}{34}{subsubsection.3.12.3}%
-\contentsline {subsubsection}{\numberline {3.12.4}Ähnlichkeit von Objekten und Nutzern}{35}{subsubsection.3.12.4}%
-\contentsline {paragraph}{Cosinus-Funktion}{35}{section*.16}%
-\contentsline {paragraph}{Skalarprodukt}{35}{section*.17}%
-\contentsline {paragraph}{Euklidischer Abstand}{35}{section*.18}%
-\contentsline {section}{\numberline {4}Konzept?}{35}{section.4}%
-\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{35}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Server}{36}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Datenbank}{36}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{36}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Backend-Implementierung}{36}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Server}{36}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{36}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{36}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{36}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Datenbank}{36}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{36}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{36}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{37}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Funktionen/Komponenten}{37}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{37}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Matches/Chat}{37}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{37}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{37}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{37}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{37}{subsection.7.6}%
-\contentsline {section}{\numberline {8}Benutzeroberflächen}{37}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Home-Screen}{37}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Gruppen}{37}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Chat}{37}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Filmliste}{37}{subsection.8.4}%
-\contentsline {section}{\numberline {9}CodeBeispiele}{37}{section.9}%
-\contentsline {section}{\numberline {10}Probleme}{37}{section.10}%
-\contentsline {section}{\numberline {11}Fazit}{37}{section.11}%
+\contentsline {subsection}{\numberline {3.9}NoSQL-Datenbank}{33}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}NoSQL-Datenbanktypen}{33}{subsubsection.3.9.1}%
+\contentsline {subsubsection}{\numberline {3.9.2}BASE}{35}{subsubsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.3}CAP-Theorem}{35}{subsubsection.3.9.3}%
+\contentsline {subsubsection}{\numberline {3.9.4}MongoDB}{36}{subsubsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.10}Representational State Transfer - Application Programming Interface}{37}{subsection.3.10}%
+\contentsline {subsection}{\numberline {3.11}Firebase}{38}{subsection.3.11}%
+\contentsline {subsection}{\numberline {3.12}Recommender System}{39}{subsection.3.12}%
+\contentsline {subsubsection}{\numberline {3.12.1}Nutzerinformation}{39}{subsubsection.3.12.1}%
+\contentsline {paragraph}{Explizite Nutzerinformation}{39}{section*.14}%
+\contentsline {paragraph}{Implizite Nutzerinformation}{40}{section*.15}%
+\contentsline {subsubsection}{\numberline {3.12.2}Content-based filtering}{40}{subsubsection.3.12.2}%
+\contentsline {subsubsection}{\numberline {3.12.3}Collaborative Filtering}{40}{subsubsection.3.12.3}%
+\contentsline {subsubsection}{\numberline {3.12.4}Ähnlichkeit von Objekten und Nutzern}{41}{subsubsection.3.12.4}%
+\contentsline {paragraph}{Cosinus-Funktion}{41}{section*.16}%
+\contentsline {paragraph}{Skalarprodukt}{41}{section*.17}%
+\contentsline {paragraph}{Euklidischer Abstand}{41}{section*.18}%
+\contentsline {section}{\numberline {4}Konzept?}{41}{section.4}%
+\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{41}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Server}{41}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Datenbank}{41}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{41}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Backend-Implementierung}{42}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Server}{42}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{42}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{42}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{42}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Datenbank}{42}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{42}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{42}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{43}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Funktionen/Komponenten}{43}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{43}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Matches/Chat}{43}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{43}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{43}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{43}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{43}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Benutzeroberflächen}{43}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Home-Screen}{43}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gruppen}{43}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Chat}{43}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Filmliste}{43}{subsection.8.4}%
+\contentsline {section}{\numberline {9}CodeBeispiele}{43}{section.9}%
+\contentsline {section}{\numberline {10}Probleme}{43}{section.10}%
+\contentsline {section}{\numberline {11}Fazit}{43}{section.11}%
