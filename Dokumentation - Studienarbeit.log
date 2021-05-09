@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  4 MAR 2021 16:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  9 MAY 2021 14:29
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -431,7 +431,31 @@ Package csquotes Info: ... configuration file loaded successfully.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
+)) (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.st
+y
+\lst@mode=\count296
+\lst@gtempboxa=\box54
+\lst@token=\toks29
+\lst@length=\count297
+\lst@currlwidth=\dimen182
+\lst@column=\count298
+\lst@pos=\count299
+\lst@lostspace=\dimen183
+\lst@width=\dimen184
+\lst@newlines=\count300
+\lst@lineno=\count301
+\lst@maxwidth=\dimen185
+
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count302
+\lst@skipnumbers=\count303
+\lst@framebox=\box55
+)
+(C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -440,28 +464,28 @@ Package csquotes Info: Redefining alias 'default' -> 'german'.
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count296
-\l__pdf_internal_box=\box54
+\l__kernel_color_stack_int=\count304
+\l__pdf_internal_box=\box56
 ) ("Dokumentation - Studienarbeit.aux")
 \openout1 = `"Dokumentation - Studienarbeit.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-Package hyperref Info: Link coloring OFF on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+Package hyperref Info: Link coloring OFF on input line 61.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -473,11 +497,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 lestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count297
+\c@section@level=\count305
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
  ("Dokumentation - Studienarbeit.out")
 ("Dokumentation - Studienarbeit.out")
 \@outlinefile=\write3
@@ -487,17 +511,17 @@ LaTeX Info: Redefining \nameref on input line 23.
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count298
-\scratchdimen=\dimen182
-\scratchbox=\box55
-\nofMPsegments=\count299
-\nofMParguments=\count300
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count301
-\MPscratchDim=\dimen183
-\MPnumerator=\count302
-\makeMPintoPDFobject=\count303
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count306
+\scratchdimen=\dimen186
+\scratchbox=\box57
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen187
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks31
 )
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -546,12 +570,13 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+\c@lstlisting=\count312
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 
 (C:\Users\leong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -564,61 +589,277 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `"Dokumentation - Studienarbeit.toc"'.
 
- [1] (Mobil_Anwendungsentwicklung.tex
+ [1] ("Dokumentation - Studienarbeit.lof")
+\tf@lof=\write5
+\openout5 = `"Dokumentation - Studienarbeit.lof"'.
+
+[2]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 \newpage
+              [1] (Mobil_Anwendungsentwicklung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+LaTeX Warning: Reference `plattformübergreifende_anwendungen' on page 2 undefi
+ned on input line 12.
+
+
+Overfull \hbox (0.22275pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/10.95 mit wel-chen das Ent-wickeln ei-ner An-wen-dung er-leich-ter
+t sein soll. [[]] Ein platt-form[]ubergreifendes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.27 
-      [1]
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+[2]
+<images/crossplattform_unterteilung.png, id=285, 965.6075pt x 348.30125pt>
+File: images/crossplattform_unterteilung.png Graphic file (type png)
+<use images/crossplattform_unterteilung.png>
+Package pdftex.def Info: images/crossplattform_unterteilung.png  used on input 
+line 35.
+(pdftex.def)             Requested size: 453.83559pt x 163.7016pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
 
  []
 
-<images/dart-diagram.png, id=207, 803.0pt x 437.635pt>
-File: images/dart-diagram.png Graphic file (type png)
-<use images/dart-diagram.png>
-Package pdftex.def Info: images/dart-diagram.png  used on input line 33.
-(pdftex.def)             Requested size: 361.34666pt x 196.93393pt.
-[2pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.49 	\item \textit
-                   {Flutter Engine}: Der Kern von Flutter, geschrieben haupt...
- <./images/dart-diagram.png (PNG copy)>]
-<images/flutter_architektur.png, id=223, 1842.885pt x 1511.6475pt>
-File: images/flutter_architektur.png Graphic file (type png)
-<use images/flutter_architektur.png>
-Package pdftex.def Info: images/flutter_architektur.png  used on input line 57.
+l.48 
+      <./images/crossplattform_unterteilung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
-(pdftex.def)             Requested size: 460.72012pt x 377.91095pt.
-
-Overfull \hbox (5.47601pt too wide) in paragraph at lines 57--58
- [] 
  []
 
-) (Language.tex) (IDE.tex) (Database.tex) (Firebase.tex)
-(Recommendationssystem.tex [3]
+<images/hybride-anwendungen-struktur.PNG, id=301, 485.56406pt x 422.32782pt>
+File: images/hybride-anwendungen-struktur.PNG Graphic file (type png)
+<use images/hybride-anwendungen-struktur.PNG>
+Package pdftex.def Info: images/hybride-anwendungen-struktur.PNG  used on input
+ line 66.
+(pdftex.def)             Requested size: 218.5018pt x 190.04576pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 12.
+Underfull \hbox (badness 10000) in paragraph at lines 75--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--85
+
+ []
 
 [4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.31 \paragraph
-               {Explizite Nutzerinformation} <./images/flutter_architektur.png>
+l.85 
+      <./images/hybride-anwendungen-struktur.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--108
+
+ []
+
+[5]
+<images/crossplattform_popularity.png, id=338, 1003.75pt x 745.78625pt>
+File: images/crossplattform_popularity.png Graphic file (type png)
+<use images/crossplattform_popularity.png>
+Package pdftex.def Info: images/crossplattform_popularity.png  used on input li
+ne 111.
+(pdftex.def)             Requested size: 401.49289pt x 298.30922pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--126
+
+ []
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.126 \paragraph
+                {Architektur} <./images/crossplattform_popularity.png>]
+<images/reactnative_architecture_old.png, id=354, 1204.5pt x 412.54124pt>
+File: images/reactnative_architecture_old.png Graphic file (type png)
+<use images/reactnative_architecture_old.png>
+Package pdftex.def Info: images/reactnative_architecture_old.png  used on input
+ line 131.
+(pdftex.def)             Requested size: 481.79147pt x 165.01357pt.
+
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 131--132
+ [] 
+ []
+
+<images/reactnative_architecture.png, id=357, 1204.5pt x 497.86pt>
+File: images/reactnative_architecture.png Graphic file (type png)
+<use images/reactnative_architecture.png>
+Package pdftex.def Info: images/reactnative_architecture.png  used on input lin
+e 150.
+(pdftex.def)             Requested size: 481.79147pt x 199.14047pt.
+
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 150--151
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.162 
+       <./images/reactnative_architecture_old.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 165.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 166.
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.177 		//
+           <Text> as native component <./images/reactnative_architecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
+
+ []
+
+<images/dart-diagram.png, id=474, 803.0pt x 437.635pt>
+File: images/dart-diagram.png Graphic file (type png)
+<use images/dart-diagram.png>
+Package pdftex.def Info: images/dart-diagram.png  used on input line 282.
+(pdftex.def)             Requested size: 361.34666pt x 196.93393pt.
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.292 \end{displayquote}
+                         <./images/dart-diagram.png (PNG copy)>]
+<images/flutter_architektur.png, id=491, 1842.885pt x 1511.6475pt>
+File: images/flutter_architektur.png Graphic file (type png)
+<use images/flutter_architektur.png>
+Package pdftex.def Info: images/flutter_architektur.png  used on input line 306
+.
+(pdftex.def)             Requested size: 460.72012pt x 377.91095pt.
+
+Overfull \hbox (5.47601pt too wide) in paragraph at lines 306--307
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--325
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
+
+ []
+
+<images/flutter_widget_tree.png, id=504, 602.25pt x 528.97626pt>
+File: images/flutter_widget_tree.png Graphic file (type png)
+<use images/flutter_widget_tree.png>
+Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 335
+.
+(pdftex.def)             Requested size: 301.12425pt x 264.48747pt.
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.7})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.343 \paragraph
+                {States} <./images/flutter_architektur.png>]
+<images/flutter_state.png, id=514, 764.8575pt x 277.035pt>
+File: images/flutter_state.png Graphic file (type png)
+<use images/flutter_state.png>
+Package pdftex.def Info: images/flutter_state.png  used on input line 348.
+(pdftex.def)             Requested size: 305.93758pt x 110.81203pt.
+) (Language.tex)
+(IDE.tex) (Database.tex) [14pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 \subsection
+                {Firebase}pdfTeX warning (ext4): destination with the same iden
+tifier (name{figure.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.99 \subsection
+                {Firebase} <./images/flutter_widget_tree.png> <./images/flutter
+_state.png>] (Firebase.tex) (Recommendationssystem.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 12.
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.34 E
+      ine andere Art der Information sind Bewertungen von Objekten. Diese la...
 ]
 Overfull \hbox (12.41096pt too wide) in paragraph at lines 45--46
 []\OT1/cmr/m/n/10.95 Das Sy-stem ist al-so un-abh[]angig von an-de-ren Nut-zer-
@@ -631,18 +872,13 @@ Overfull \hbox (41.40706pt too wide) in paragraph at lines 45--46
 blick auf ei-ne App auch gu-te Ska-lie-rungsm[]oglichkeiten.
  []
 
-[5pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.51 
-     ]
+
 Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/m/it/10.95 Memory-based Me-tho-den\OT1/cmr/m/n/10.95 : Es wird, wie 
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-
+[16]
 Overfull \hbox (2.7346pt too wide) in paragraph at lines 80--81
  []\OT1/cmr/bx/n/10.95 Cosinus-Funktion[] \OT1/cmr/m/n/10.95 Hier wird ein-fach
  der Win-kel zwi-schen bei-den Vek-to-ren be-rech-net: $\OML/cmm/m/it/10.95 s\O
@@ -650,40 +886,98 @@ T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q;x\OT1/cmr/m/n/10.95 ) =
  []
 
 )
-Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--63
+Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--104
 [][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
 383313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-[6]
-Overfull \hbox (131.25366pt too wide) in paragraph at lines 97--98
+[17] [18]
+Overfull \hbox (20.85497pt too wide) in paragraph at lines 139--140
+[]\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
+On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
+ []
+
+
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 149--150
 []$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
-[7] ("Dokumentation - Studienarbeit.aux")
+[19] ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: ECBF85957DEE7D8DAF927614F229F5C5;2263.
+(rerunfilecheck)             Checksum: 15DE5284393E18C7B4679C3B54BE1B8D;2760.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 10198 strings out of 479696
- 153384 string characters out of 2867115
- 504952 words of memory out of 3000000
- 26987 multiletter control sequences out of 15000+200000
- 414354 words of font info for 69 fonts, out of 3000000 for 9000
+ 12090 strings out of 479696
+ 179509 string characters out of 2867115
+ 639226 words of memory out of 3000000
+ 28722 multiletter control sequences out of 15000+200000
+ 414713 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,12n,72p,726b,576s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exi
-st, replaced by a fixed one
+ 66i,12n,72p,737b,1934s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
 , replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
@@ -693,24 +987,26 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 95.pk><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/leong/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leong/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/leong/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/leo
-ng/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/U
-sers/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pf
-b><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr8.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr9.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/leong/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/leong/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (9 pages, 438179 bytes).
+e1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/leong/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/leong/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/leong/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/leong/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/
+leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr6.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr8.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr9.pfb><C:/Users/leong/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/leong/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/leong/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/leong/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/leong/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Dokumentation - Studienarbeit.pdf" (22 pages, 779759 bytes).
+
 PDF statistics:
- 354 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 283 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 
