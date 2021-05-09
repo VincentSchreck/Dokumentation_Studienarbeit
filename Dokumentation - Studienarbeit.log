@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  6 APR 2021 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  9 MAY 2021 18:38
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -560,7 +560,7 @@ Overfull \hbox (27.73972pt too wide) in paragraph at lines 6--7
 ahren ent-wickel-te TCP/IP-Referenzmodell.
  []
 
-<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=315, 445.665pt x 134.00063pt>
+<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=335, 445.665pt x 134.00063pt>
 File: images/Netzwerkprotokolle_OSI-Schicht.PNG Graphic file (type png)
 <use images/Netzwerkprotokolle_OSI-Schicht.PNG>
 Package pdftex.def Info: images/Netzwerkprotokolle_OSI-Schicht.PNG  used on inp
@@ -624,7 +624,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-<images/netzwerkprotokolle_http.PNG, id=328, 549.55313pt x 176.15813pt>
+<images/netzwerkprotokolle_http.PNG, id=348, 549.55313pt x 176.15813pt>
 File: images/netzwerkprotokolle_http.PNG Graphic file (type png)
 <use images/netzwerkprotokolle_http.PNG>
 Package pdftex.def Info: images/netzwerkprotokolle_http.PNG  used on input line
@@ -640,7 +640,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
-<images/netzwerkprotokolle_Httpstatuscodes.png, id=329, 582.67688pt x 239.39438
+<images/netzwerkprotokolle_Httpstatuscodes.png, id=349, 582.67688pt x 239.39438
 pt>
 File: images/netzwerkprotokolle_Httpstatuscodes.png Graphic file (type png)
 <use images/netzwerkprotokolle_Httpstatuscodes.png>
@@ -692,7 +692,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<images/nodejs_otherthreading.png, id=354, 1118.1775pt x 675.52374pt>
+<images/nodejs_otherthreading.png, id=374, 1118.1775pt x 675.52374pt>
 File: images/nodejs_otherthreading.png Graphic file (type png)
 <use images/nodejs_otherthreading.png>
 Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
@@ -718,7 +718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<images/nodejs_nodethreading.png, id=360, 1098.1025pt x 656.4525pt>
+<images/nodejs_nodethreading.png, id=380, 1098.1025pt x 656.4525pt>
 File: images/nodejs_nodethreading.png Graphic file (type png)
 <use images/nodejs_nodethreading.png>
 Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 33
@@ -739,7 +739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-<images/nodejs_moduleExport.PNG, id=366, 317.68687pt x 107.65219pt>
+<images/nodejs_moduleExport.PNG, id=386, 317.68687pt x 107.65219pt>
 File: images/nodejs_moduleExport.PNG Graphic file (type png)
 <use images/nodejs_moduleExport.PNG>
 Package pdftex.def Info: images/nodejs_moduleExport.PNG  used on input line 49.
@@ -750,7 +750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
-<images/nodejs_moduleImport.PNG, id=367, 307.90031pt x 94.85437pt>
+<images/nodejs_moduleImport.PNG, id=387, 307.90031pt x 94.85437pt>
 File: images/nodejs_moduleImport.PNG Graphic file (type png)
 <use images/nodejs_moduleImport.PNG>
 Package pdftex.def Info: images/nodejs_moduleImport.PNG  used on input line 58.
@@ -781,7 +781,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<images/nodejs_express_einfacherWebserver.PNG, id=376, 399.74344pt x 223.58531p
+<images/nodejs_express_einfacherWebserver.PNG, id=396, 399.74344pt x 223.58531p
 t>
 File: images/nodejs_express_einfacherWebserver.PNG Graphic file (type png)
 <use images/nodejs_express_einfacherWebserver.PNG>
@@ -809,7 +809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
-<images/nodejs_middleware.png, id=384, 956.57375pt x 256.96pt>
+<images/nodejs_middleware.png, id=404, 956.57375pt x 256.96pt>
 File: images/nodejs_middleware.png Graphic file (type png)
 <use images/nodejs_middleware.png>
 Package pdftex.def Info: images/nodejs_middleware.png  used on input line 98.
@@ -824,7 +824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
-<images/nodejs_expressJson.PNG, id=385, 248.42813pt x 59.47218pt>
+<images/nodejs_expressJson.PNG, id=405, 248.42813pt x 59.47218pt>
 File: images/nodejs_expressJson.PNG Graphic file (type png)
 <use images/nodejs_expressJson.PNG>
 Package pdftex.def Info: images/nodejs_expressJson.PNG  used on input line 110.
@@ -856,7 +856,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-<images/nodejs_expressRoutererstellen.PNG, id=393, 510.40688pt x 328.97906pt>
+<images/nodejs_expressRoutererstellen.PNG, id=413, 510.40688pt x 328.97906pt>
 File: images/nodejs_expressRoutererstellen.PNG Graphic file (type png)
 <use images/nodejs_expressRoutererstellen.PNG>
 Package pdftex.def Info: images/nodejs_expressRoutererstellen.PNG  used on inpu
@@ -867,7 +867,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
-<images/nodejs_expressRouterbenutzen.PNG, id=394, 503.63156pt x 90.3375pt>
+<images/nodejs_expressRouterbenutzen.PNG, id=414, 503.63156pt x 90.3375pt>
 File: images/nodejs_expressRouterbenutzen.PNG Graphic file (type png)
 <use images/nodejs_expressRouterbenutzen.PNG>
 Package pdftex.def Info: images/nodejs_expressRouterbenutzen.PNG  used on input
@@ -899,7 +899,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--156
 
  []
 
-<images/nodeJS_mongooseSchema.PNG, id=401, 329.73187pt x 124.96687pt>
+<images/nodeJS_mongooseSchema.PNG, id=421, 329.73187pt x 124.96687pt>
 File: images/nodeJS_mongooseSchema.PNG Graphic file (type png)
 <use images/nodeJS_mongooseSchema.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
@@ -911,13 +911,13 @@ Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
                                                   
 l.163 \newpage
                <./images/nodeJS_mongooseSchema.PNG>]
-<images/nodeJS_mongooseModell.PNG, id=408, 392.21532pt x 141.52875pt>
+<images/nodeJS_mongooseModell.PNG, id=428, 392.21532pt x 141.52875pt>
 File: images/nodeJS_mongooseModell.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModell.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModell.PNG  used on input line 1
 70.
 (pdftex.def)             Requested size: 392.21436pt x 141.5284pt.
-<images/nodeJS_mongooseModellimport.PNG, id=409, 335.75438pt x 65.49469pt>
+<images/nodeJS_mongooseModellimport.PNG, id=429, 335.75438pt x 65.49469pt>
 File: images/nodeJS_mongooseModellimport.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellimport.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellimport.PNG  used on input 
@@ -940,7 +940,7 @@ l.184 \newpage
 l.184 \newpage
                <./images/nodeJS_mongooseModell.PNG> <./images/nodeJS_mongooseMo
 dellimport.PNG>]
-<images/nodeJS_mongooseModellCRUD.PNG, id=417, 435.87843pt x 162.6075pt>
+<images/nodeJS_mongooseModellCRUD.PNG, id=437, 435.87843pt x 162.6075pt>
 File: images/nodeJS_mongooseModellCRUD.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellCRUD.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellCRUD.PNG  used on input li
@@ -951,7 +951,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-<images/nodeJS_mongooseVerbindung.PNG, id=418, 431.36156pt x 76.78688pt>
+<images/nodeJS_mongooseVerbindung.PNG, id=438, 431.36156pt x 76.78688pt>
 File: images/nodeJS_mongooseVerbindung.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindung.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseVerbindung.PNG  used on input li
@@ -962,7 +962,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
-<images/nodeJS_mongooseVerbindungOptions.PNG, id=419, 524.71031pt x 188.20313pt
+<images/nodeJS_mongooseVerbindungOptions.PNG, id=439, 524.71031pt x 188.20313pt
 >
 File: images/nodeJS_mongooseVerbindungOptions.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindungOptions.PNG>
@@ -1036,7 +1036,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 [18]
-<images/JavaScript_Object.PNG, id=444, 545.03625pt x 143.03438pt>
+<images/JavaScript_Object.PNG, id=464, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
 Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
@@ -1051,9 +1051,176 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.6 \clearpage
-               <./images/JavaScript_Object.PNG>]) (IDE.tex)
-(Grundlagen_MongoDB.tex) (Grundlagen_RestAPI.tex) (Firebase.tex)
-(Recommendationssystem.tex
+               <./images/JavaScript_Object.PNG>]) (IDE.tex) [20
+
+]
+(Grundlagen_NoSQL_Datenbank.tex
+Overfull \hbox (9.14607pt too wide) in paragraph at lines 1--4
+\OT1/cmr/m/n/10.95 Unter NoS-QL ([]Not on-ly SQL\) wer-den Da-ten-bank-sy-ste-m
+e be-zeich-net, die einen nicht-relationalen
+ []
+
+
+Overfull \hbox (3.02235pt too wide) in paragraph at lines 1--4
+\OT1/cmr/m/n/10.95 An-satz ver-fol-gen. Im Ver-gleich zu re-la-tio-na-len Da-te
+n-ban-ken, wel-che die Da-ten in ta-bel-lenf[]ormigen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
+
+ []
+
+<images/graphikdatabase.jpg, id=475, 341.3553pt x 257.0403pt>
+File: images/graphikdatabase.jpg Graphic file (type jpg)
+<use images/graphikdatabase.jpg>
+Package pdftex.def Info: images/graphikdatabase.jpg  used on input line 14.
+(pdftex.def)             Requested size: 341.35445pt x 257.03967pt.
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.21 
+      <./images/graphikdatabase.jpg>]
+<images/bsp_dokument.png, id=481, 314.21739pt x 268.34166pt>
+File: images/bsp_dokument.png Graphic file (type png)
+<use images/bsp_dokument.png>
+Package pdftex.def Info: images/bsp_dokument.png  used on input line 24.
+(pdftex.def)             Requested size: 213.40129pt x 199.1757pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
+
+ []
+
+<images/KeyValue.PNG, id=482, 165.61874pt x 112.16907pt>
+File: images/KeyValue.PNG Graphic file (type png)
+<use images/KeyValue.PNG>
+Package pdftex.def Info: images/KeyValue.PNG  used on input line 35.
+(pdftex.def)             Requested size: 165.61833pt x 112.16878pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--41
+
+ []
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.43 \newpage
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.22}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.43 \newpage
+              <./images/bsp_dokument.png> <./images/KeyValue.PNG>]
+<images/SpaltenorientiereDatenbank.png, id=492, 576.1525pt x 261.97874pt>
+File: images/SpaltenorientiereDatenbank.png Graphic file (type png)
+<use images/SpaltenorientiereDatenbank.png>
+Package pdftex.def Info: images/SpaltenorientiereDatenbank.png  used on input l
+ine 48.
+(pdftex.def)             Requested size: 227.62608pt x 85.35794pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
+
+ []
+
+<images/zeilenorientiert.png, id=493, 955.57pt x 75.28125pt>
+File: images/zeilenorientiert.png Graphic file (type png)
+<use images/zeilenorientiert.png>
+Package pdftex.def Info: images/zeilenorientiert.png  used on input line 58.
+(pdftex.def)             Requested size: 426.79134pt x 33.62238pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+<images/spaltenorientiert.png, id=494, 956.57375pt x 73.27374pt>
+File: images/spaltenorientiert.png Graphic file (type png)
+<use images/spaltenorientiert.png>
+Package pdftex.def Info: images/spaltenorientiert.png  used on input line 68.
+(pdftex.def)             Requested size: 426.79134pt x 32.69223pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
+
+ []
+
+<images/Visualization-of-CAP-theorem.png, id=495, 853.1875pt x 770.88pt>
+File: images/Visualization-of-CAP-theorem.png Graphic file (type png)
+<use images/Visualization-of-CAP-theorem.png>
+Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
+ line 82.
+(pdftex.def)             Requested size: 227.61678pt x 184.93263pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.88 \newpage
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.88 \newpage
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.25}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.88 \newpage
+              <./images/SpaltenorientiereDatenbank.png> <./images/zeilenorienti
+ert.png> <./images/spaltenorientiert.png>] (Grundlagen_MongoDB.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--31
+
+ []
+
+)) [24pdfTeX warning (ext4): destination with the same identifier (name{figure.
+26}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.61 \newpage
+              <./images/Visualization-of-CAP-theorem.png>]
+(Grundlagen_RestAPI.tex) [25] (Firebase.tex) [26] (Recommendationssystem.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
@@ -1064,36 +1231,36 @@ Overfull \hbox (9.25497pt too wide) in paragraph at lines 36--37
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[20
-
+[27pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.39 		\item \textit
+                    {Item-based}: Hierbei werden ähnliche Objekte gesucht u...
 ]
 Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
 []$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 338
 3313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-) (Konzept.tex) (TechnologieAuswahl.tex [21pdfTeX warning (ext4): destination w
-ith the same identifier (name{table.3}) has been already used, duplicate ignore
-d
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.11 \subsection
-                {Kommunikationsschnittstelle}]) (Backend.tex
-(Backend_Server.tex) (Backend_Datenbank.tex)
-(Backend_Kommunikationsschnittstelle.tex)) [22] [23]
-("Dokumentation - Studienarbeit.aux")
+) (Konzept.tex) (TechnologieAuswahl.tex) (Backend.tex (Backend_Server.tex
+[28]) (Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex))
+[29] ("Dokumentation - Studienarbeit.aux")
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: 86A3AF2531007A8547CE1938BB09F4CA;8413.
+(rerunfilecheck)             Checksum: 7C8C3502125A7CBBCFC2665FB1B7280F;8935.
  ) 
 Here is how much of TeX's memory you used:
- 12158 strings out of 479342
- 181772 string characters out of 2857694
- 519223 words of memory out of 3000000
- 29222 multiletter control sequences out of 15000+200000
+ 12226 strings out of 479342
+ 183504 string characters out of 2857694
+ 521226 words of memory out of 3000000
+ 29262 multiletter control sequences out of 15000+200000
  411656 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,75p,1522b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,12n,75p,1522b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -1107,10 +1274,10 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/R
 DBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:
 /Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10
 .pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (26 pages, 823250 bytes).
-
+Output written on "Dokumentation - Studienarbeit.pdf" (32 pages, 1055380 bytes)
+.
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 560 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 613 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 627 words of extra memory for PDF output out of 10000 (max. 10000000)
 
