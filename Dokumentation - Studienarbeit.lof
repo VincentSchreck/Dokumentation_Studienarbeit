@@ -1,10 +1,29 @@
 \babel@toc {german}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} }}{3}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark }}{4}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark }}{6}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Alte Architektur von React Native \footnotemark }}{7}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Neue Architektur von React Native \footnotemark }}{8}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark }}{11}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark }}{13}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark }}{14}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark }}{14}{figure.9}%
+\contentsline {figure}{\numberline {1}{\ignorespaces OSILAYER [1.1]}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces HTTP-Nachrichtenaufbau}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces HTTP-Statuscodes}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Multithreaded / Blocking I/O [Nodejs 1.1]}}{7}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Single Threaded / Non Blocking I/0 [Nodejs 1.1]}}{8}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Benannter Export von Modulen}}{9}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Import von Modulen}}{9}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Einfacher Webserver [nodejs 1.8]}}{10}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Middleware [nodejs 2.0]}}{11}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Express.json Middleware benutzen}}{11}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Routinghandler erstellen[nodejs 2.2]}}{12}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Routinghandler benutzen[nodejs 2.2]}}{12}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Mongoose Schema - Beispiel}}{13}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Model erstellen und exportieren}}{14}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Model importieren, Objekt instanziieren und persistent speichern}}{14}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces CRUD-Besipielfunktionen eines Mongoose-Models}}{15}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Mongoose: Verbindung zur Datenbank aufbauen}}{15}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Mongoose Verbindungsoptionen[nodejs 3.3] }}{15}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces JavaScript Objekt [1.29]}}{19}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} }}{21}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark }}{22}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark }}{24}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Alte Architektur von React Native \footnotemark }}{25}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Neue Architektur von React Native \footnotemark }}{26}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark }}{29}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark }}{31}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark }}{32}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark }}{32}{figure.28}%
