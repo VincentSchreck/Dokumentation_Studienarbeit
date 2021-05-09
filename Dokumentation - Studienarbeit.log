@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  9 MAY 2021 18:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  9 MAY 2021 20:59
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -394,15 +394,39 @@ File: pppdftex.def 2021/02/05 v0.5s Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks26
 \c@AM@survey=\count287
 \AM@templatesizebox=\box53
-) (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+) (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count288
+)
+\csq@reset=\count289
+\csq@gtype=\count290
+\csq@glevel=\count291
+\csq@qlevel=\count292
+\csq@maxlvl=\count293
+\csq@tshold=\count294
+\csq@ltx@everypar=\toks27
+
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+))
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count288
-\Gm@cntv=\count289
-\c@Gm@tempcnt=\count290
+\Gm@cnth=\count295
+\Gm@cntv=\count296
+\c@Gm@tempcnt=\count297
 \Gm@bindingoffset=\dimen175
 \Gm@wd@mp=\dimen176
 \Gm@odd@mp=\dimen177
@@ -411,36 +435,65 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen180
 \Gm@layouthoffset=\dimen181
 \Gm@layoutvoffset=\dimen182
-\Gm@dimlist=\toks27
+\Gm@dimlist=\toks28
 
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count298
+\lst@gtempboxa=\box54
+\lst@token=\toks29
+\lst@length=\count299
+\lst@currlwidth=\dimen183
+\lst@column=\count300
+\lst@pos=\count301
+\lst@lostspace=\dimen184
+\lst@width=\dimen185
+\lst@newlines=\count302
+\lst@lineno=\count303
+\lst@maxwidth=\dimen186
+
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count304
+\lst@skipnumbers=\count305
+\lst@framebox=\box55
+)
+(C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'german'.
+
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2021-03-02 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box54
+\l__color_backend_stack_int=\count306
+\l__pdf_internal_box=\box56
 ) ("Dokumentation - Studienarbeit.aux")
 \openout1 = `"Dokumentation - Studienarbeit.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-Package hyperref Info: Link coloring OFF on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+Package hyperref Info: Link coloring OFF on input line 61.
 
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -452,11 +505,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 estring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count292
+\c@section@level=\count307
 )
-LaTeX Info: Redefining \ref on input line 22.
-LaTeX Info: Redefining \pageref on input line 22.
-LaTeX Info: Redefining \nameref on input line 22.
+LaTeX Info: Redefining \ref on input line 61.
+LaTeX Info: Redefining \pageref on input line 61.
+LaTeX Info: Redefining \nameref on input line 61.
  ("Dokumentation - Studienarbeit.out")
 ("Dokumentation - Studienarbeit.out")
 \@outlinefile=\write3
@@ -466,17 +519,17 @@ LaTeX Info: Redefining \nameref on input line 22.
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
-\scratchdimen=\dimen183
-\scratchbox=\box55
-\nofMPsegments=\count294
-\nofMParguments=\count295
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count296
-\MPscratchDim=\dimen184
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
-\everyMPtoPDFconversion=\toks29
+\scratchcounter=\count308
+\scratchdimen=\dimen187
+\scratchbox=\box57
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen188
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks31
 )
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
 se.sty
@@ -526,12 +579,13 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 24.
+\c@lstlisting=\count314
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 24.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 
 (C:\Users\RDBC\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -544,11 +598,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write4
 \openout4 = `"Dokumentation - Studienarbeit.toc"'.
 
- [2]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) 
+ [2]
+("Dokumentation - Studienarbeit.lof")
+\tf@lof=\write5
+\openout5 = `"Dokumentation - Studienarbeit.lof"'.
+
+ [3]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.46 \newpage
+l.87 \newpage
               [1] (Netzwerkprotokolle.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
@@ -560,7 +619,7 @@ Overfull \hbox (27.73972pt too wide) in paragraph at lines 6--7
 ahren ent-wickel-te TCP/IP-Referenzmodell.
  []
 
-<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=335, 445.665pt x 134.00063pt>
+<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=453, 445.665pt x 134.00063pt>
 File: images/Netzwerkprotokolle_OSI-Schicht.PNG Graphic file (type png)
 <use images/Netzwerkprotokolle_OSI-Schicht.PNG>
 Package pdftex.def Info: images/Netzwerkprotokolle_OSI-Schicht.PNG  used on inp
@@ -624,7 +683,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-<images/netzwerkprotokolle_http.PNG, id=348, 549.55313pt x 176.15813pt>
+<images/netzwerkprotokolle_http.PNG, id=466, 549.55313pt x 176.15813pt>
 File: images/netzwerkprotokolle_http.PNG Graphic file (type png)
 <use images/netzwerkprotokolle_http.PNG>
 Package pdftex.def Info: images/netzwerkprotokolle_http.PNG  used on input line
@@ -640,7 +699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
-<images/netzwerkprotokolle_Httpstatuscodes.png, id=349, 582.67688pt x 239.39438
+<images/netzwerkprotokolle_Httpstatuscodes.png, id=467, 582.67688pt x 239.39438
 pt>
 File: images/netzwerkprotokolle_Httpstatuscodes.png Graphic file (type png)
 <use images/netzwerkprotokolle_Httpstatuscodes.png>
@@ -666,7 +725,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--115
  []
 
 )
-Overfull \hbox (4.84016pt too wide) in paragraph at lines 116--50
+Overfull \hbox (4.84016pt too wide) in paragraph at lines 116--91
 \OT1/cmr/m/n/10.95 Be-ginn der Kom-mu-ni-ka-ti-on an den Web-cli-ent ge-sen-det
  wird, be-schei-nigt die Ver-trau-ensw[]urdigkeit
  []
@@ -675,10 +734,10 @@ Overfull \hbox (4.84016pt too wide) in paragraph at lines 116--50
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.50 \newpage
+l.91 \newpage
               <./images/netzwerkprotokolle_Httpstatuscodes.png>] (Framework.tex
 [6] (Framework_NodeJS.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--7
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
@@ -692,7 +751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<images/nodejs_otherthreading.png, id=374, 1118.1775pt x 675.52374pt>
+<images/nodejs_otherthreading.png, id=488, 1118.1775pt x 675.52374pt>
 File: images/nodejs_otherthreading.png Graphic file (type png)
 <use images/nodejs_otherthreading.png>
 Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
@@ -718,7 +777,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<images/nodejs_nodethreading.png, id=380, 1098.1025pt x 656.4525pt>
+<images/nodejs_nodethreading.png, id=493, 1098.1025pt x 656.4525pt>
 File: images/nodejs_nodethreading.png Graphic file (type png)
 <use images/nodejs_nodethreading.png>
 Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 33
@@ -739,7 +798,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-<images/nodejs_moduleExport.PNG, id=386, 317.68687pt x 107.65219pt>
+<images/nodejs_moduleExport.PNG, id=498, 317.68687pt x 107.65219pt>
 File: images/nodejs_moduleExport.PNG Graphic file (type png)
 <use images/nodejs_moduleExport.PNG>
 Package pdftex.def Info: images/nodejs_moduleExport.PNG  used on input line 49.
@@ -750,19 +809,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
-<images/nodejs_moduleImport.PNG, id=387, 307.90031pt x 94.85437pt>
+<images/nodejs_moduleImport.PNG, id=499, 307.90031pt x 94.85437pt>
 File: images/nodejs_moduleImport.PNG Graphic file (type png)
 <use images/nodejs_moduleImport.PNG>
 Package pdftex.def Info: images/nodejs_moduleImport.PNG  used on input line 58.
 
 (pdftex.def)             Requested size: 307.89955pt x 94.85413pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
+Underfull \hbox (badness 10000) in paragraph at lines 70--75
 
  []
 
@@ -781,7 +840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<images/nodejs_express_einfacherWebserver.PNG, id=396, 399.74344pt x 223.58531p
+<images/nodejs_express_einfacherWebserver.PNG, id=507, 399.74344pt x 223.58531p
 t>
 File: images/nodejs_express_einfacherWebserver.PNG Graphic file (type png)
 <use images/nodejs_express_einfacherWebserver.PNG>
@@ -809,7 +868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
-<images/nodejs_middleware.png, id=404, 956.57375pt x 256.96pt>
+<images/nodejs_middleware.png, id=513, 956.57375pt x 256.96pt>
 File: images/nodejs_middleware.png Graphic file (type png)
 <use images/nodejs_middleware.png>
 Package pdftex.def Info: images/nodejs_middleware.png  used on input line 98.
@@ -824,7 +883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
-<images/nodejs_expressJson.PNG, id=405, 248.42813pt x 59.47218pt>
+<images/nodejs_expressJson.PNG, id=514, 248.42813pt x 59.47218pt>
 File: images/nodejs_expressJson.PNG Graphic file (type png)
 <use images/nodejs_expressJson.PNG>
 Package pdftex.def Info: images/nodejs_expressJson.PNG  used on input line 110.
@@ -856,7 +915,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-<images/nodejs_expressRoutererstellen.PNG, id=413, 510.40688pt x 328.97906pt>
+<images/nodejs_expressRoutererstellen.PNG, id=520, 510.40688pt x 328.97906pt>
 File: images/nodejs_expressRoutererstellen.PNG Graphic file (type png)
 <use images/nodejs_expressRoutererstellen.PNG>
 Package pdftex.def Info: images/nodejs_expressRoutererstellen.PNG  used on inpu
@@ -867,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
-<images/nodejs_expressRouterbenutzen.PNG, id=414, 503.63156pt x 90.3375pt>
+<images/nodejs_expressRouterbenutzen.PNG, id=521, 503.63156pt x 90.3375pt>
 File: images/nodejs_expressRouterbenutzen.PNG Graphic file (type png)
 <use images/nodejs_expressRouterbenutzen.PNG>
 Package pdftex.def Info: images/nodejs_expressRouterbenutzen.PNG  used on input
@@ -885,7 +944,7 @@ l.140 \newpage
 l.140 \newpage
                <./images/nodejs_expressRoutererstellen.PNG> <./images/nodejs_ex
 pressRouterbenutzen.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 142--144
+Underfull \hbox (badness 10000) in paragraph at lines 141--144
 
  []
 
@@ -899,7 +958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--156
 
  []
 
-<images/nodeJS_mongooseSchema.PNG, id=421, 329.73187pt x 124.96687pt>
+<images/nodeJS_mongooseSchema.PNG, id=526, 329.73187pt x 124.96687pt>
 File: images/nodeJS_mongooseSchema.PNG Graphic file (type png)
 <use images/nodeJS_mongooseSchema.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
@@ -911,13 +970,13 @@ Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
                                                   
 l.163 \newpage
                <./images/nodeJS_mongooseSchema.PNG>]
-<images/nodeJS_mongooseModell.PNG, id=428, 392.21532pt x 141.52875pt>
+<images/nodeJS_mongooseModell.PNG, id=532, 392.21532pt x 141.52875pt>
 File: images/nodeJS_mongooseModell.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModell.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModell.PNG  used on input line 1
 70.
 (pdftex.def)             Requested size: 392.21436pt x 141.5284pt.
-<images/nodeJS_mongooseModellimport.PNG, id=429, 335.75438pt x 65.49469pt>
+<images/nodeJS_mongooseModellimport.PNG, id=533, 335.75438pt x 65.49469pt>
 File: images/nodeJS_mongooseModellimport.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellimport.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellimport.PNG  used on input 
@@ -940,7 +999,7 @@ l.184 \newpage
 l.184 \newpage
                <./images/nodeJS_mongooseModell.PNG> <./images/nodeJS_mongooseMo
 dellimport.PNG>]
-<images/nodeJS_mongooseModellCRUD.PNG, id=437, 435.87843pt x 162.6075pt>
+<images/nodeJS_mongooseModellCRUD.PNG, id=539, 435.87843pt x 162.6075pt>
 File: images/nodeJS_mongooseModellCRUD.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellCRUD.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellCRUD.PNG  used on input li
@@ -951,7 +1010,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-<images/nodeJS_mongooseVerbindung.PNG, id=438, 431.36156pt x 76.78688pt>
+<images/nodeJS_mongooseVerbindung.PNG, id=540, 431.36156pt x 76.78688pt>
 File: images/nodeJS_mongooseVerbindung.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindung.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseVerbindung.PNG  used on input li
@@ -962,7 +1021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
-<images/nodeJS_mongooseVerbindungOptions.PNG, id=439, 524.71031pt x 188.20313pt
+<images/nodeJS_mongooseVerbindungOptions.PNG, id=541, 524.71031pt x 188.20313pt
 >
 File: images/nodeJS_mongooseVerbindungOptions.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindungOptions.PNG>
@@ -1006,7 +1065,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5--7
+Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
@@ -1026,7 +1085,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--17
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
@@ -1036,13 +1095,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 [18]
-<images/JavaScript_Object.PNG, id=464, 545.03625pt x 143.03438pt>
+<images/JavaScript_Object.PNG, id=563, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
 Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
 (pdftex.def)             Requested size: 455.24411pt x 119.46927pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
@@ -1051,9 +1110,260 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.6 \clearpage
-               <./images/JavaScript_Object.PNG>]) (IDE.tex) [20
+               <./images/JavaScript_Object.PNG>])
+(Mobil_Anwendungsentwicklung.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+
+ []
+
+
+LaTeX Warning: Reference `plattformübergreifende_anwendungen' on page 20 undef
+ined on input line 12.
+
+
+Overfull \hbox (0.22275pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/10.95 mit wel-chen das Ent-wickeln ei-ner An-wen-dung er-leich-ter
+t sein soll. [[]] Ein platt-form[]ubergreifendes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+[20
 
 ]
+<images/crossplattform_unterteilung.png, id=589, 965.6075pt x 348.30125pt>
+File: images/crossplattform_unterteilung.png Graphic file (type png)
+<use images/crossplattform_unterteilung.png>
+Package pdftex.def Info: images/crossplattform_unterteilung.png  used on input 
+line 35.
+(pdftex.def)             Requested size: 453.83559pt x 163.7016pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--46
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
+
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.48 
+      <./images/crossplattform_unterteilung.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
+
+ []
+
+<images/hybride-anwendungen-struktur.PNG, id=605, 485.56406pt x 422.32782pt>
+File: images/hybride-anwendungen-struktur.PNG Graphic file (type png)
+<use images/hybride-anwendungen-struktur.PNG>
+Package pdftex.def Info: images/hybride-anwendungen-struktur.PNG  used on input
+ line 66.
+(pdftex.def)             Requested size: 218.5018pt x 190.04576pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--85
+
+ []
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.85 
+      <./images/hybride-anwendungen-struktur.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--108
+
+ []
+
+[23]
+<images/crossplattform_popularity.png, id=641, 1003.75pt x 745.78625pt>
+File: images/crossplattform_popularity.png Graphic file (type png)
+<use images/crossplattform_popularity.png>
+Package pdftex.def Info: images/crossplattform_popularity.png  used on input li
+ne 111.
+(pdftex.def)             Requested size: 401.49289pt x 298.30922pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--126
+
+ []
+
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.22}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.128 
+       <./images/crossplattform_popularity.png>]
+<images/reactnative_architecture_old.png, id=658, 1204.5pt x 412.54124pt>
+File: images/reactnative_architecture_old.png Graphic file (type png)
+<use images/reactnative_architecture_old.png>
+Package pdftex.def Info: images/reactnative_architecture_old.png  used on input
+ line 131.
+(pdftex.def)             Requested size: 481.79147pt x 165.01357pt.
+
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 131--132
+ [] 
+ []
+
+<images/reactnative_architecture.png, id=661, 1204.5pt x 497.86pt>
+File: images/reactnative_architecture.png Graphic file (type png)
+<use images/reactnative_architecture.png>
+Package pdftex.def Info: images/reactnative_architecture.png  used on input lin
+e 150.
+(pdftex.def)             Requested size: 481.79147pt x 199.14047pt.
+
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 150--151
+ [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.163 \paragraph
+                {JSX mit nativen Komponenten} <./images/reactnative_architectur
+e_old.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
+
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 165.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 166.
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.24}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.182 	export 
+              default Cat; <./images/reactnative_architecture.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 224--225
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
+
+ []
+
+<images/dart-diagram.png, id=781, 803.0pt x 437.635pt>
+File: images/dart-diagram.png Graphic file (type png)
+<use images/dart-diagram.png>
+Package pdftex.def Info: images/dart-diagram.png  used on input line 282.
+(pdftex.def)             Requested size: 361.34666pt x 196.93393pt.
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.25}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.292 \end{displayquote}
+                         <./images/dart-diagram.png (PNG copy)>]
+<images/flutter_architektur.png, id=795, 1842.885pt x 1511.6475pt>
+File: images/flutter_architektur.png Graphic file (type png)
+<use images/flutter_architektur.png>
+Package pdftex.def Info: images/flutter_architektur.png  used on input line 306
+.
+(pdftex.def)             Requested size: 460.72012pt x 377.91095pt.
+
+Overfull \hbox (5.47601pt too wide) in paragraph at lines 306--307
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--325
+
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 327--332
+
+ []
+
+<images/flutter_widget_tree.png, id=808, 602.25pt x 528.97626pt>
+File: images/flutter_widget_tree.png Graphic file (type png)
+<use images/flutter_widget_tree.png>
+Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 335
+.
+(pdftex.def)             Requested size: 301.12425pt x 264.48747pt.
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.26}
+) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.345 	
+        <./images/flutter_architektur.png>]
+<images/flutter_state.png, id=817, 764.8575pt x 277.035pt>
+File: images/flutter_state.png Graphic file (type png)
+<use images/flutter_state.png>
+Package pdftex.def Info: images/flutter_state.png  used on input line 348.
+(pdftex.def)             Requested size: 305.93758pt x 110.81203pt.
+) (IDE.tex) [32pdfTeX warning (ext4): destination with the same identifier (nam
+e{figure.27}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.100 \newpage
+              pdfTeX warning (ext4): destination with the same identifier (name
+{figure.28}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.100 \newpage
+               <./images/flutter_widget_tree.png> <./images/flutter_state.png>]
 (Grundlagen_NoSQL_Datenbank.tex
 Overfull \hbox (9.14607pt too wide) in paragraph at lines 1--4
 \OT1/cmr/m/n/10.95 Unter NoS-QL ([]Not on-ly SQL\) wer-den Da-ten-bank-sy-ste-m
@@ -1076,18 +1386,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/graphikdatabase.jpg, id=475, 341.3553pt x 257.0403pt>
+<images/graphikdatabase.jpg, id=829, 341.3553pt x 257.0403pt>
 File: images/graphikdatabase.jpg Graphic file (type jpg)
 <use images/graphikdatabase.jpg>
 Package pdftex.def Info: images/graphikdatabase.jpg  used on input line 14.
 (pdftex.def)             Requested size: 341.35445pt x 257.03967pt.
-[21pdfTeX warning (ext4): destination with the same identifier (name{figure.20}
+[33pdfTeX warning (ext4): destination with the same identifier (name{figure.29}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.21 
       <./images/graphikdatabase.jpg>]
-<images/bsp_dokument.png, id=481, 314.21739pt x 268.34166pt>
+<images/bsp_dokument.png, id=835, 314.21739pt x 268.34166pt>
 File: images/bsp_dokument.png Graphic file (type png)
 <use images/bsp_dokument.png>
 Package pdftex.def Info: images/bsp_dokument.png  used on input line 24.
@@ -1097,7 +1407,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<images/KeyValue.PNG, id=482, 165.61874pt x 112.16907pt>
+<images/KeyValue.PNG, id=836, 165.61874pt x 112.16907pt>
 File: images/KeyValue.PNG Graphic file (type png)
 <use images/KeyValue.PNG>
 Package pdftex.def Info: images/KeyValue.PNG  used on input line 35.
@@ -1107,18 +1417,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
  []
 
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.21}
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.30}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.43 \newpage
              pdfTeX warning (ext4): destination with the same identifier (name{
-figure.22}) has been already used, duplicate ignored
+figure.31}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.43 \newpage
               <./images/bsp_dokument.png> <./images/KeyValue.PNG>]
-<images/SpaltenorientiereDatenbank.png, id=492, 576.1525pt x 261.97874pt>
+<images/SpaltenorientiereDatenbank.png, id=843, 576.1525pt x 261.97874pt>
 File: images/SpaltenorientiereDatenbank.png Graphic file (type png)
 <use images/SpaltenorientiereDatenbank.png>
 Package pdftex.def Info: images/SpaltenorientiereDatenbank.png  used on input l
@@ -1129,7 +1439,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
-<images/zeilenorientiert.png, id=493, 955.57pt x 75.28125pt>
+<images/zeilenorientiert.png, id=844, 955.57pt x 75.28125pt>
 File: images/zeilenorientiert.png Graphic file (type png)
 <use images/zeilenorientiert.png>
 Package pdftex.def Info: images/zeilenorientiert.png  used on input line 58.
@@ -1139,7 +1449,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--64
 
  []
 
-<images/spaltenorientiert.png, id=494, 956.57375pt x 73.27374pt>
+<images/spaltenorientiert.png, id=845, 956.57375pt x 73.27374pt>
 File: images/spaltenorientiert.png Graphic file (type png)
 <use images/spaltenorientiert.png>
 Package pdftex.def Info: images/spaltenorientiert.png  used on input line 68.
@@ -1154,7 +1464,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-<images/Visualization-of-CAP-theorem.png, id=495, 853.1875pt x 770.88pt>
+<images/Visualization-of-CAP-theorem.png, id=846, 853.1875pt x 770.88pt>
 File: images/Visualization-of-CAP-theorem.png Graphic file (type png)
 <use images/Visualization-of-CAP-theorem.png>
 Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
@@ -1163,18 +1473,18 @@ Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.32}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.88 \newpage
              pdfTeX warning (ext4): destination with the same identifier (name{
-figure.24}) has been already used, duplicate ignored
+figure.33}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.88 \newpage
              pdfTeX warning (ext4): destination with the same identifier (name{
-figure.25}) has been already used, duplicate ignored
+figure.34}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.88 \newpage
@@ -1195,89 +1505,198 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--12
+Underfull \hbox (badness 10000) in paragraph at lines 10--16
+
+ []
+
+<images/BSON.PNG, id=854, 429.10312pt x 150.5625pt>
+File: images/BSON.PNG Graphic file (type png)
+<use images/BSON.PNG>
+Package pdftex.def Info: images/BSON.PNG  used on input line 19.
+(pdftex.def)             Requested size: 429.10207pt x 150.56212pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
-
- []
-
-)) [24pdfTeX warning (ext4): destination with the same identifier (name{figure.
-26}) has been already used, duplicate ignored
+)) [36pdfTeX warning (ext4): destination with the same identifier (name{figure.
+35}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.61 \newpage
-              <./images/Visualization-of-CAP-theorem.png>]
-(Grundlagen_RestAPI.tex) [25] (Firebase.tex) [26] (Recommendationssystem.tex
+l.104 \newpage
+               <./images/Visualization-of-CAP-theorem.png>]
+(Grundlagen_RestAPI.tex) [37pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.36}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.107 \newpage
+               <./images/BSON.PNG>] (Firebase.tex) [38]
+(Recommendationssystem.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
 
+[39pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.37 
+     ]
+Overfull \hbox (12.41096pt too wide) in paragraph at lines 45--46
+[]\OT1/cmr/m/n/10.95 Das Sy-stem ist al-so un-abh[]angig von an-de-ren Nut-zer-
+da-ten, da die Vor-schl[]age nur auf Pr[]aferenzen
+ []
 
-Overfull \hbox (9.25497pt too wide) in paragraph at lines 36--37
+
+Overfull \hbox (41.40706pt too wide) in paragraph at lines 45--46
+\OT1/cmr/m/n/10.95 ei-nes ein-zel-nen Nut-zers ba-sie-ren. Dies bie-tet im Hin-
+blick auf ei-ne App auch gu-te Ska-lie-rungsm[]oglichkeiten.
+ []
+
+
+Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
 []\OT1/cmr/m/it/10.95 Memory-based Me-tho-den\OT1/cmr/m/n/10.95 : Es wird, wie 
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[27pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  
-l.39 		\item \textit
-                    {Item-based}: Hierbei werden ähnliche Objekte gesucht u...
-]
-Overfull \hbox (1.33556pt too wide) in paragraph at lines 51--53
-[]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 338
-3313 . 3412488$[] []$http : / / www . microlinkcolleges .
+[40]
+Overfull \hbox (2.7346pt too wide) in paragraph at lines 80--81
+ []\OT1/cmr/bx/n/10.95 Cosinus-Funktion[] \OT1/cmr/m/n/10.95 Hier wird ein-fach
+ der Win-kel zwi-schen bei-den Vek-to-ren be-rech-net: $\OML/cmm/m/it/10.95 s\O
+T1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 q;x\OT1/cmr/m/n/10.95 ) =
  []
 
-) (Konzept.tex) (TechnologieAuswahl.tex) (Backend.tex (Backend_Server.tex
-[28]) (Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex))
-[29] ("Dokumentation - Studienarbeit.aux")
+)
+Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--114
+[][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
+383313 . 3412488$[] []$http : / / www . microlinkcolleges .
+ []
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+(Konzept.tex) (TechnologieAuswahl.tex) (Backend.tex [41] (Backend_Server.tex)
+(Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex)) [42]
+[43]
+Overfull \hbox (20.85497pt too wide) in paragraph at lines 155--156
+[]\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
+On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
+ []
+
+
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 165--166
+[]$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
+/ collateral / executive-[]perspectives / annual-[]internet-[]report /
+ []
+
+[44] ("Dokumentation - Studienarbeit.aux")
+
+LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: 7C8C3502125A7CBBCFC2665FB1B7280F;8935.
+(rerunfilecheck)             Checksum: A36379409F677B3E0DF210D7A1A94BDB;9772.
  ) 
 Here is how much of TeX's memory you used:
- 12226 strings out of 479342
- 183504 string characters out of 2857694
- 521226 words of memory out of 3000000
- 29262 multiletter control sequences out of 15000+200000
- 411656 words of font info for 58 fonts, out of 3000000 for 9000
+ 15069 strings out of 479342
+ 223912 string characters out of 2857694
+ 685529 words of memory out of 3000000
+ 31901 multiletter control sequences out of 15000+200000
+ 414713 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,75p,1522b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mbx10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/RDBC/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/RDBC/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/RDBC/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/RDBC/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/R
-DBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:
-/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10
-.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (32 pages, 1055380 bytes)
+ 71i,12n,75p,1522b,1930s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.18} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.10} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\RDBC\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1095.pk><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/RDBC/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/RDBC/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/RDBC/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/RDBC
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
+rs/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+<C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmr8.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/RDBC/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/RDBC/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Dokumentation - Studienarbeit.pdf" (48 pages, 1661115 bytes)
 .
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
- 134 named destinations out of 1000 (max. 500000)
- 627 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 289 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 
