@@ -14,10 +14,49 @@
 \usepackage{float}
 \usepackage{pdfpages}
 \usepackage{hyperref}
+\usepackage{csquotes}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3.5cm]{geometry}
 \title{StreamSwipe\\Tinder für Filme\vspace{10px}}
 \author{Leon Gieringer, Robin Meckler,Vincent Schreck \\ \\ Studienarbeit \\ \\ \\}
 \date{\today}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{0.5,0.5,0.5}
+\definecolor{ballblue}{rgb}{0.13, 0.67, 0.8}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const, var, from, export, import, defaultValue, class, boolean, throw, implements,this, style},
+	keywordstyle=\color{orange}\bfseries,
+	ndkeywords={height, borderColor, borderWidth, isHungry, setIsHungry},
+	ndkeywordstyle=\color{ballblue}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{darkgray}\ttfamily,
+	stringstyle=\color{darkpastelgreen}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	language=JavaScript,
+	backgroundcolor=\color{lightgray},
+	extendedchars=true,
+	basicstyle=\ttfamily,
+	showstringspaces=false,
+	showspaces=false,
+	numbers=left,
+	numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	breaklines=true,
+	showtabs=false,
+	captionpos=b
+}
 
 \begin{document}
 \maketitle
@@ -25,6 +64,8 @@
 \newpage
 \pagenumbering{Roman}
 \tableofcontents
+\newpage
+\listoffigures
 \newpage
 \pagenumbering{arabic}
 
@@ -52,6 +93,8 @@
 \input{Framework}
 \subsection{Language}
 \input{Language}
+\subsection{Anwendungsentwicklung für mobile Endgeräte}
+\input{Mobil_Anwendungsentwicklung}
 \subsection{IDE}
 \input{IDE}
 \newpage
@@ -66,7 +109,7 @@
 \input{Firebase}
 \newpage
 
-\subsection{Recommendationssystem}
+\subsection{Recommender System}
 \input{Recommendationssystem}	
 		
 \section{Konzept?}
@@ -102,10 +145,42 @@
 
 
 \section{Fazit}
+\newpage
+\section*{Literaturverzeichnis}
+\begin{itemize}
+	\bibitem[1]{aggarwal2016} Aggarwal, C. C. (2016). Recommender systems (Vol. 1). Cham: Springer International Publishing.
+	
+	\bibitem[2]{fentaw2020} Fentaw, A. E. (2020). Cross platform mobile application development: a comparison study of React Native Vs Flutter.
+	
+	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, Zuletzt aufgerufen am: 13.04.2021
+	
+	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, Zuletzt aufgerufen am: 13.04.2021 
+	 
+	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, Aufgerufen am: 04.03.2021
+	
+	\bibitem[6]{johnson1988} Johnson R. E. \&  Foote B. “Designing Reusable Classes.” Journal of ObjectOriented Programming 1, 2 (June/July 1988). Page 22-35.
+	
+	\bibitem[7]{majchrzak2015} Majchrzak TA, Ernsting J, Kuchen H (2015) Achieving business practicability of model-driven crossplatform apps. OJIS 2(2):3–14
+	
+	\bibitem[8]{cisco2020} Cisco (2020) Cisco Annual Internet Report (2018–2023) White Paper [Online] Verfügbar: \url{https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.html}
+	
+	\bibitem[9]{charland2011} Charland, A. \& Leroux, B. (2011). Mobile application development: Web vs. native. Communications of the ACM, 54(5):49–53.
+	
+	\bibitem[10]{lachgar2017} Lachgar, M., \& Abdelmounaim, A. (2017). Decision Framework for Mobile Development Methods. International Journal of Advanced Computer Science and Applications, 8.
+	
+	\bibitem[11]{bjorn-hansen2020} Biørn-Hansen, A., Rieger, C., Grønli, TM. et al. (2020) An empirical investigation of performance overhead in cross-platform mobile development frameworks. Empir Software Eng 25, 2997–3040. https://doi.org/10.1007/s10664-020-09827-6
+	
+	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
+\end{itemize}
 
 \end{document}
 
 
+
+
+%************************************************************%
+%*********************End of document************************%
+%************************************************************%
 
 \footnote{\url{https://de.wikipedia.org/wiki/Alufolie}} 
 
