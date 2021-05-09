@@ -1,7 +1,7 @@
 Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code. \-[NodeJS 1.0]
 
 
-\subsubsection{Architektur TODO Aufzählung}
+\textbf{- Architektur TODO Aufzählung}
 Eine wesentliche Eigenschaft von Node.js ist die hohe Performance. Im Folgenden soll der Unterschied der Node.js-Architektur zu traditionellen Webservern und der damit verbundenen höheren Performance dargestellt werden.
 \newline
 
@@ -39,7 +39,7 @@ Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein
 \newline
 
 \newpage
-\subsubsection{Module TODO Aufzählung}
+\textbf{- Module TODO Aufzählung}
 
 Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen. Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponente, die den Hauptteil des Moduls repräsentiert, exportiert werden. Bei der anderen Möglichkeit, des sogenannten ‚benannten Exports‘ werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist in nachfolgender Abbildung dargestellt. 
 \newline
@@ -64,10 +64,10 @@ Modules are cached after the first time they are loaded. This means (among other
 Provided require.cache is not modified, multiple calls to require('foo') will not cause the module code to be executed multiple times. This is an important feature. With it, "partially done" objects can be returned, thus allowing transitive dependencies to be loaded even when they would cause cycles. [nodejs 1.21]
 
 
-\subsubsection{npm TODO Aufzählung}
+\textbf{- npm TODO Aufzählung}
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter [nodejs 1.3] Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten. [1.4] Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit. [1.5]
 
-\subsubsection{Express TODO Aufzählung}
+\textbf{Express TODO Aufzählung}
 „Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt.“ [nodejs 1.6] Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation [??] ist 4.17.1. [nodejs 1.65] \newline
 \newline
 \textbf{Beispiel}
@@ -138,7 +138,7 @@ Abschließend kann das Routermodul in die Anwendung geladen werden:
 \end{figure}
 
 \newpage
-\subsubsection{Mongoose TODO Aufzählung}
+\textbf{- Mongoose TODO Aufzählung}
 Mongoose ist ein öffentliches Modul, dass zum Zeitpunkt der Dokumentation[??] im npm Package Manager in der Version 5.12.3 zur Verfügung steht. [nodejs 2.4] Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM. [nodejs 2.55] Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
 \newline
 
@@ -211,7 +211,7 @@ Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann
 \end{figure}
 
 \newpage
-\subsubsection{Weitere Module TODO Aufzählung}
+\textbf{- Weitere Module TODO Aufzählung}
 TODO warum Tabelle oben?
 
 \begin{table}[]
