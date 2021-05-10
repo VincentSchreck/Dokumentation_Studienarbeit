@@ -19,11 +19,17 @@ Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sog
 \newline
 Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. Dokumente können weitere Dokumente als Attribut oder in einer Lsite einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML. 
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=7.5cm, height = 7cm]{images/bsp_dokument.png}
-\caption{Dokumentenorientiert JSON Beispiel [NoSql 1.4]}
-\end{figure}
+\begin{lstlisting}
+{
+	"Vorname": "Max",
+	"Nachname": "Mustermann",
+	"Telefon-Nr": "0124567",
+	"Alter": 33,
+	"Adresse": "Musterstrasse 34, MusterStadt",
+	"Kinder":  ["Junior","Elenor"]
+}
+\end{lstlisting}
+
 
 \textbf{Key-Value-Datenbanken}
 \newline
@@ -83,7 +89,7 @@ Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Ja
 \caption{Visualization-of-CAP-theorem [NoSql 1.67]}
 \end{figure}
 
-Die Konsistenz (C) beschreibt, dass Datenzustände, die in einem verteilten System geändert  werden, in jedem zusammenhängenden System gleich sein müssen. Der Zustand der Daten soll somit im gesamten System übereinstimmen. Ein System, das einen ununterbrochenen Betrieb und eine akzeptable Antwortzeit aufweisen kann, besitzt eine hohe Verfügbarkeit (A). Die Ausfalltoleranz (P) steht für ein Verhalten, bei dem es bei Ausfallen eines Bestandteiles innerhalb eines Systems  zu keinem Gesamtausfall kommt.
+Die \textbf{Konsistenz (C)} beschreibt, dass Datenzustände, die in einem verteilten System geändert  werden, in jedem zusammenhängenden System gleich sein müssen. Der Zustand der Daten soll somit im gesamten System übereinstimmen. Ein System, das einen ununterbrochenen Betrieb und eine akzeptable Antwortzeit aufweisen kann, besitzt eine hohe \textbf{Verfügbarkeit (A)}. Die \textbf{Ausfalltoleranz (P)} steht für ein Verhalten, bei dem es bei Ausfallen eines Bestandteiles innerhalb eines Systems  zu keinem Gesamtausfall kommt.
 
 \newpage
 \subsubsection{MongoDB}
