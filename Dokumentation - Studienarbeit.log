@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  10 MAY 2021 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  11 MAY 2021 14:14
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -619,7 +619,7 @@ Overfull \hbox (27.73972pt too wide) in paragraph at lines 6--7
 ahren ent-wickel-te TCP/IP-Referenzmodell.
  []
 
-<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=451, 445.665pt x 134.00063pt>
+<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=453, 445.665pt x 134.00063pt>
 File: images/Netzwerkprotokolle_OSI-Schicht.PNG Graphic file (type png)
 <use images/Netzwerkprotokolle_OSI-Schicht.PNG>
 Package pdftex.def Info: images/Netzwerkprotokolle_OSI-Schicht.PNG  used on inp
@@ -683,7 +683,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
  []
 
-<images/netzwerkprotokolle_http.PNG, id=464, 549.55313pt x 176.15813pt>
+<images/netzwerkprotokolle_http.PNG, id=466, 549.55313pt x 176.15813pt>
 File: images/netzwerkprotokolle_http.PNG Graphic file (type png)
 <use images/netzwerkprotokolle_http.PNG>
 Package pdftex.def Info: images/netzwerkprotokolle_http.PNG  used on input line
@@ -699,7 +699,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
-<images/netzwerkprotokolle_Httpstatuscodes.png, id=465, 582.67688pt x 239.39438
+<images/netzwerkprotokolle_Httpstatuscodes.png, id=467, 582.67688pt x 239.39438
 pt>
 File: images/netzwerkprotokolle_Httpstatuscodes.png Graphic file (type png)
 <use images/netzwerkprotokolle_Httpstatuscodes.png>
@@ -751,7 +751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
-<images/nodejs_otherthreading.png, id=486, 1118.1775pt x 675.52374pt>
+<images/nodejs_otherthreading.png, id=488, 1118.1775pt x 675.52374pt>
 File: images/nodejs_otherthreading.png Graphic file (type png)
 <use images/nodejs_otherthreading.png>
 Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
@@ -777,7 +777,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-<images/nodejs_nodethreading.png, id=491, 1098.1025pt x 656.4525pt>
+<images/nodejs_nodethreading.png, id=493, 1098.1025pt x 656.4525pt>
 File: images/nodejs_nodethreading.png Graphic file (type png)
 <use images/nodejs_nodethreading.png>
 Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 33
@@ -798,7 +798,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--46
 
  []
 
-<images/nodejs_moduleExport.PNG, id=496, 317.68687pt x 107.65219pt>
+<images/nodejs_moduleExport.PNG, id=498, 317.68687pt x 107.65219pt>
 File: images/nodejs_moduleExport.PNG Graphic file (type png)
 <use images/nodejs_moduleExport.PNG>
 Package pdftex.def Info: images/nodejs_moduleExport.PNG  used on input line 49.
@@ -809,7 +809,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
-<images/nodejs_moduleImport.PNG, id=497, 307.90031pt x 94.85437pt>
+<images/nodejs_moduleImport.PNG, id=499, 307.90031pt x 94.85437pt>
 File: images/nodejs_moduleImport.PNG Graphic file (type png)
 <use images/nodejs_moduleImport.PNG>
 Package pdftex.def Info: images/nodejs_moduleImport.PNG  used on input line 58.
@@ -840,7 +840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<images/nodejs_express_einfacherWebserver.PNG, id=505, 399.74344pt x 223.58531p
+<images/nodejs_express_einfacherWebserver.PNG, id=507, 399.74344pt x 223.58531p
 t>
 File: images/nodejs_express_einfacherWebserver.PNG Graphic file (type png)
 <use images/nodejs_express_einfacherWebserver.PNG>
@@ -868,7 +868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
-<images/nodejs_middleware.png, id=511, 956.57375pt x 256.96pt>
+<images/nodejs_middleware.png, id=513, 956.57375pt x 256.96pt>
 File: images/nodejs_middleware.png Graphic file (type png)
 <use images/nodejs_middleware.png>
 Package pdftex.def Info: images/nodejs_middleware.png  used on input line 98.
@@ -883,7 +883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--107
 
  []
 
-<images/nodejs_expressJson.PNG, id=512, 248.42813pt x 59.47218pt>
+<images/nodejs_expressJson.PNG, id=514, 248.42813pt x 59.47218pt>
 File: images/nodejs_expressJson.PNG Graphic file (type png)
 <use images/nodejs_expressJson.PNG>
 Package pdftex.def Info: images/nodejs_expressJson.PNG  used on input line 110.
@@ -915,7 +915,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-<images/nodejs_expressRoutererstellen.PNG, id=518, 510.40688pt x 328.97906pt>
+<images/nodejs_expressRoutererstellen.PNG, id=520, 510.40688pt x 328.97906pt>
 File: images/nodejs_expressRoutererstellen.PNG Graphic file (type png)
 <use images/nodejs_expressRoutererstellen.PNG>
 Package pdftex.def Info: images/nodejs_expressRoutererstellen.PNG  used on inpu
@@ -926,7 +926,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
-<images/nodejs_expressRouterbenutzen.PNG, id=519, 503.63156pt x 90.3375pt>
+<images/nodejs_expressRouterbenutzen.PNG, id=521, 503.63156pt x 90.3375pt>
 File: images/nodejs_expressRouterbenutzen.PNG Graphic file (type png)
 <use images/nodejs_expressRouterbenutzen.PNG>
 Package pdftex.def Info: images/nodejs_expressRouterbenutzen.PNG  used on input
@@ -958,7 +958,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--156
 
  []
 
-<images/nodeJS_mongooseSchema.PNG, id=524, 329.73187pt x 124.96687pt>
+<images/nodeJS_mongooseSchema.PNG, id=526, 329.73187pt x 124.96687pt>
 File: images/nodeJS_mongooseSchema.PNG Graphic file (type png)
 <use images/nodeJS_mongooseSchema.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
@@ -970,13 +970,13 @@ Package pdftex.def Info: images/nodeJS_mongooseSchema.PNG  used on input line 1
                                                   
 l.163 \newpage
                <./images/nodeJS_mongooseSchema.PNG>]
-<images/nodeJS_mongooseModell.PNG, id=530, 392.21532pt x 141.52875pt>
+<images/nodeJS_mongooseModell.PNG, id=532, 392.21532pt x 141.52875pt>
 File: images/nodeJS_mongooseModell.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModell.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModell.PNG  used on input line 1
 70.
 (pdftex.def)             Requested size: 392.21436pt x 141.5284pt.
-<images/nodeJS_mongooseModellimport.PNG, id=531, 335.75438pt x 65.49469pt>
+<images/nodeJS_mongooseModellimport.PNG, id=533, 335.75438pt x 65.49469pt>
 File: images/nodeJS_mongooseModellimport.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellimport.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellimport.PNG  used on input 
@@ -999,7 +999,7 @@ l.184 \newpage
 l.184 \newpage
                <./images/nodeJS_mongooseModell.PNG> <./images/nodeJS_mongooseMo
 dellimport.PNG>]
-<images/nodeJS_mongooseModellCRUD.PNG, id=537, 435.87843pt x 162.6075pt>
+<images/nodeJS_mongooseModellCRUD.PNG, id=539, 435.87843pt x 162.6075pt>
 File: images/nodeJS_mongooseModellCRUD.PNG Graphic file (type png)
 <use images/nodeJS_mongooseModellCRUD.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseModellCRUD.PNG  used on input li
@@ -1010,7 +1010,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-<images/nodeJS_mongooseVerbindung.PNG, id=538, 431.36156pt x 76.78688pt>
+<images/nodeJS_mongooseVerbindung.PNG, id=540, 431.36156pt x 76.78688pt>
 File: images/nodeJS_mongooseVerbindung.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindung.PNG>
 Package pdftex.def Info: images/nodeJS_mongooseVerbindung.PNG  used on input li
@@ -1021,7 +1021,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
-<images/nodeJS_mongooseVerbindungOptions.PNG, id=539, 524.71031pt x 188.20313pt
+<images/nodeJS_mongooseVerbindungOptions.PNG, id=541, 524.71031pt x 188.20313pt
 >
 File: images/nodeJS_mongooseVerbindungOptions.PNG Graphic file (type png)
 <use images/nodeJS_mongooseVerbindungOptions.PNG>
@@ -1095,7 +1095,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 [18]
-<images/JavaScript_Object.PNG, id=561, 545.03625pt x 143.03438pt>
+<images/JavaScript_Object.PNG, id=563, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
 Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
@@ -1134,7 +1134,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 [20
 
 ]
-<images/crossplattform_unterteilung.png, id=587, 965.6075pt x 348.30125pt>
+<images/crossplattform_unterteilung.png, id=589, 965.6075pt x 348.30125pt>
 File: images/crossplattform_unterteilung.png Graphic file (type png)
 <use images/crossplattform_unterteilung.png>
 Package pdftex.def Info: images/crossplattform_unterteilung.png  used on input 
@@ -1160,7 +1160,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
-<images/hybride-anwendungen-struktur.PNG, id=603, 485.56406pt x 422.32782pt>
+<images/hybride-anwendungen-struktur.PNG, id=605, 485.56406pt x 422.32782pt>
 File: images/hybride-anwendungen-struktur.PNG Graphic file (type png)
 <use images/hybride-anwendungen-struktur.PNG>
 Package pdftex.def Info: images/hybride-anwendungen-struktur.PNG  used on input
@@ -1197,7 +1197,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--108
  []
 
 [23]
-<images/crossplattform_popularity.png, id=639, 1003.75pt x 745.78625pt>
+<images/crossplattform_popularity.png, id=641, 1003.75pt x 745.78625pt>
 File: images/crossplattform_popularity.png Graphic file (type png)
 <use images/crossplattform_popularity.png>
 Package pdftex.def Info: images/crossplattform_popularity.png  used on input li
@@ -1219,7 +1219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--126
                                                   
 l.128 
        <./images/crossplattform_popularity.png>]
-<images/reactnative_architecture_old.png, id=656, 1204.5pt x 412.54124pt>
+<images/reactnative_architecture_old.png, id=658, 1204.5pt x 412.54124pt>
 File: images/reactnative_architecture_old.png Graphic file (type png)
 <use images/reactnative_architecture_old.png>
 Package pdftex.def Info: images/reactnative_architecture_old.png  used on input
@@ -1230,7 +1230,7 @@ Overfull \hbox (26.54736pt too wide) in paragraph at lines 131--132
  [] 
  []
 
-<images/reactnative_architecture.png, id=659, 1204.5pt x 497.86pt>
+<images/reactnative_architecture.png, id=661, 1204.5pt x 497.86pt>
 File: images/reactnative_architecture.png Graphic file (type png)
 <use images/reactnative_architecture.png>
 Package pdftex.def Info: images/reactnative_architecture.png  used on input lin
@@ -1299,7 +1299,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
-<images/dart-diagram.png, id=779, 803.0pt x 437.635pt>
+<images/dart-diagram.png, id=781, 803.0pt x 437.635pt>
 File: images/dart-diagram.png Graphic file (type png)
 <use images/dart-diagram.png>
 Package pdftex.def Info: images/dart-diagram.png  used on input line 282.
@@ -1310,7 +1310,7 @@ Package pdftex.def Info: images/dart-diagram.png  used on input line 282.
                                                   
 l.292 \end{displayquote}
                          <./images/dart-diagram.png (PNG copy)>]
-<images/flutter_architektur.png, id=793, 1842.885pt x 1511.6475pt>
+<images/flutter_architektur.png, id=795, 1842.885pt x 1511.6475pt>
 File: images/flutter_architektur.png Graphic file (type png)
 <use images/flutter_architektur.png>
 Package pdftex.def Info: images/flutter_architektur.png  used on input line 306
@@ -1336,7 +1336,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 327--332
 
  []
 
-<images/flutter_widget_tree.png, id=806, 602.25pt x 528.97626pt>
+<images/flutter_widget_tree.png, id=808, 602.25pt x 528.97626pt>
 File: images/flutter_widget_tree.png Graphic file (type png)
 <use images/flutter_widget_tree.png>
 Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 335
@@ -1348,7 +1348,7 @@ Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 335
                                                   
 l.345 	
         <./images/flutter_architektur.png>]
-<images/flutter_state.png, id=815, 764.8575pt x 277.035pt>
+<images/flutter_state.png, id=817, 764.8575pt x 277.035pt>
 File: images/flutter_state.png Graphic file (type png)
 <use images/flutter_state.png>
 Package pdftex.def Info: images/flutter_state.png  used on input line 348.
@@ -1386,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/graphikdatabase.jpg, id=827, 341.3553pt x 257.0403pt>
+<images/graphikdatabase.jpg, id=829, 341.3553pt x 257.0403pt>
 File: images/graphikdatabase.jpg Graphic file (type jpg)
 <use images/graphikdatabase.jpg>
 Package pdftex.def Info: images/graphikdatabase.jpg  used on input line 14.
@@ -1401,7 +1401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
-<images/KeyValue.PNG, id=833, 165.61874pt x 112.16907pt>
+<images/KeyValue.PNG, id=835, 165.61874pt x 112.16907pt>
 File: images/KeyValue.PNG Graphic file (type png)
 <use images/KeyValue.PNG>
 Package pdftex.def Info: images/KeyValue.PNG  used on input line 41.
@@ -1417,7 +1417,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--47
                                                   
 l.49 \newpage
               <./images/KeyValue.PNG>]
-<images/SpaltenorientiereDatenbank.png, id=848, 576.1525pt x 261.97874pt>
+<images/SpaltenorientiereDatenbank.png, id=850, 576.1525pt x 261.97874pt>
 File: images/SpaltenorientiereDatenbank.png Graphic file (type png)
 <use images/SpaltenorientiereDatenbank.png>
 Package pdftex.def Info: images/SpaltenorientiereDatenbank.png  used on input l
@@ -1428,7 +1428,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
  []
 
-<images/zeilenorientiert.png, id=849, 955.57pt x 75.28125pt>
+<images/zeilenorientiert.png, id=851, 955.57pt x 75.28125pt>
 File: images/zeilenorientiert.png Graphic file (type png)
 <use images/zeilenorientiert.png>
 Package pdftex.def Info: images/zeilenorientiert.png  used on input line 64.
@@ -1438,7 +1438,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
-<images/spaltenorientiert.png, id=850, 956.57375pt x 73.27374pt>
+<images/spaltenorientiert.png, id=852, 956.57375pt x 73.27374pt>
 File: images/spaltenorientiert.png Graphic file (type png)
 <use images/spaltenorientiert.png>
 Package pdftex.def Info: images/spaltenorientiert.png  used on input line 74.
@@ -1453,7 +1453,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-<images/Visualization-of-CAP-theorem.png, id=851, 853.1875pt x 770.88pt>
+<images/Visualization-of-CAP-theorem.png, id=853, 853.1875pt x 770.88pt>
 File: images/Visualization-of-CAP-theorem.png Graphic file (type png)
 <use images/Visualization-of-CAP-theorem.png>
 Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
@@ -1495,7 +1495,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-<images/MongoDB_Architektur.png, id=859, 881.2925pt x 418.56375pt>
+<images/MongoDB_Architektur.png, id=861, 881.2925pt x 418.56375pt>
 File: images/MongoDB_Architektur.png Graphic file (type png)
 <use images/MongoDB_Architektur.png>
 Package pdftex.def Info: images/MongoDB_Architektur.png  used on input line 12.
@@ -1593,24 +1593,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--166
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--178
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 170--175
 
  []
 
-[38]
-Overfull \hbox (2.74022pt too wide) in paragraph at lines 183--187
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--175
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--180
+
+ []
+
+
+Overfull \hbox (2.74022pt too wide) in paragraph at lines 186--190
 \OT1/cmr/m/n/10.95 F[]ur das L[]oschen von Da-tens[]atzen aus ei-ner Col-lec-ti
 -on gibt es die DeleteOne()- und DeleteMany()-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--198
+Underfull \hbox (badness 10000) in paragraph at lines 186--190
 
  []
 
@@ -1618,29 +1623,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--198
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.198 
+l.190 
       pdfTeX warning (ext4): destination with the same identifier (name{table.4
 }) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.198 
+l.190 
       ]
-Underfull \hbox (badness 10000) in paragraph at lines 199--207
+Underfull \hbox (badness 10000) in paragraph at lines 196--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--213
+Underfull \hbox (badness 10000) in paragraph at lines 209--214
 
  []
 
-)) [40] (Grundlagen_RestAPI.tex) [41] (Firebase.tex) [42]
-(Recommendationssystem.tex
+[40]
+<images/replicaset1.png, id=913, 465.74pt x 422.57875pt>
+File: images/replicaset1.png Graphic file (type png)
+<use images/replicaset1.png>
+Package pdftex.def Info: images/replicaset1.png  used on input line 222.
+(pdftex.def)             Requested size: 199.16928pt x 180.71231pt.
+)) [41pdfTeX warning (ext4): destination with the same identifier (name{figure.
+36}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.105 \newpage
+               <./images/replicaset1.png>] (Grundlagen_RestAPI.tex) [42]
+(Firebase.tex) [43] (Recommendationssystem.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
+[44pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1663,7 +1679,7 @@ Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[44]
+[45]
 Overfull \hbox (2.7346pt too wide) in paragraph at lines 80--81
  []\OT1/cmr/bx/n/10.95 Cosinus-Funktion[] \OT1/cmr/m/n/10.95 Hier wird ein-fach
  der Win-kel zwi-schen bei-den Vek-to-ren be-rech-net: $\OML/cmm/m/it/10.95 s\O
@@ -1676,9 +1692,9 @@ Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--115
 383313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-(Konzept.tex) (TechnologieAuswahl.tex) (Backend.tex [45] (Backend_Server.tex)
-(Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex)) [46]
-[47]
+(Konzept.tex) (TechnologieAuswahl.tex) (Backend.tex [46] (Backend_Server.tex)
+(Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex)) [47]
+[48]
 Overfull \hbox (20.85497pt too wide) in paragraph at lines 156--157
 []\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
 On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
@@ -1690,7 +1706,7 @@ Overfull \hbox (131.25366pt too wide) in paragraph at lines 166--167
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
-[48] ("Dokumentation - Studienarbeit.aux")
+[49] ("Dokumentation - Studienarbeit.aux")
 
 LaTeX Warning: There were undefined references.
 
@@ -1699,10 +1715,10 @@ Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
 (rerunfilecheck)             Checksum: A36379409F677B3E0DF210D7A1A94BDB;9772.
  ) 
 Here is how much of TeX's memory you used:
- 15142 strings out of 479342
- 225136 string characters out of 2857694
- 685861 words of memory out of 3000000
- 31932 multiletter control sequences out of 15000+200000
+ 15157 strings out of 479342
+ 225422 string characters out of 2857694
+ 686639 words of memory out of 3000000
+ 31944 multiletter control sequences out of 15000+200000
  415011 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,12n,75p,1522b,1930s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1790,10 +1806,10 @@ ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/RDBC/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/RDBC/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (52 pages, 1690778 bytes)
+Output written on "Dokumentation - Studienarbeit.pdf" (53 pages, 1748014 bytes)
 .
 PDF statistics:
- 1108 PDF objects out of 1200 (max. 8388607)
- 328 named destinations out of 1000 (max. 500000)
- 704 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1117 PDF objects out of 1200 (max. 8388607)
+ 330 named destinations out of 1000 (max. 500000)
+ 709 words of extra memory for PDF output out of 10000 (max. 10000000)
 
