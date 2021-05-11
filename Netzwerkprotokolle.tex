@@ -42,13 +42,11 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
 \caption{Kurzbeschreibung der OSI-Schichten [1.2]}
 \end{table}
 
-\textbf{IP}
-\newline
+\subparagraph{IP}
 In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Übertragungsmediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32 Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128 Bit. 
 \newline
 
-\textbf{TCP/UDP}
-\newline
+\subparagraph{TCP/UDP}
 In der Transportschicht wird eine Ende-zu-Ende-Kommunikation ermöglicht. Sie ist das Bindeglied zwischen den anwendungsorientierten und den transportorientierten Schichten. Die geläufigsten Protokolle sind das verbindungslose, unzuverlässige, aber weniger Overhead belastete User Datagram Protocol (UDP) und das verbindungsorientierte und datentransferzuverlässige Transmission Control Protocol (TCP). Jedes netzwerkfähige Gerät enthält eine Vielzahl von Ports, die primär zur
 Unterscheidung zwischen Datenströmen aus Anwendungen bei Netzwerkverbindungen
 genutzt werden. Anhand des genutzten Ports bei Netzwerkanfragen
@@ -56,10 +54,8 @@ wissen Webserver, welches Protokollverfahren genutzt werden soll.
 
 \subsubsection{HTTP}
 Das Hypertext Transfer Protocol, kurz HTTP, ist ein zustandloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht.
-\newline
-\newline
-\textbf{Kommunikation}
-\newline
+
+\subparagraph{Kommunikation}
 Unter einer Nachricht versteht man die HTTP die Kommunikationseinheiten zwischen dem Zentralrechner (Server) und dem, der einen Dienst vom Server abruft (Client). Man unterscheidet dabei zwischen der Anfrage (Request) vom Client an den Server und der Antwort (Response) als Reaktion vom Server zum Client. 
 \newline
 
@@ -75,10 +71,8 @@ Die erste Zeile des Nachrichtenkops ist dreiteilig und besteht bei der Anfrage a
 \caption{HTTP-Nachrichtenaufbau}
 \end{figure}
 
-\textbf{Methoden}
-\newline
+\subparagraph{Methoden}
 HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiedene Aufgaben gedacht sind. Im Folgenden werden die wichtigsten Methoden beschrieben:
-\newline
 
 \begin{enumerate}
 		\item \textit{GET} ist die gebräuchlichste Methode. Sie fordert vom Server eine Ressource, die bei Erfolg in der Antwort im Body zurückgegeben wird. 
@@ -95,8 +89,7 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 		
 \end{enumerate}
 
-\textbf{Statuscodes}
-\newline
+\subparagraph{Statuscodes}
 HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben.\newline
 
 \begin{figure}[h]
@@ -105,8 +98,7 @@ HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angab
 \caption{HTTP-Statuscodes}
 \end{figure}
 
-\textbf{HTTPS}
-\newline
+\subsubsection{HTTPS}
 Das HTTP-Protokoll hat den großen Nachteil, dass die Nachrichten unverschlüsselt und ungesichert übertragen werden. Die Daten können bei der Übertragung von Dritten empfangen, gelesen und verändert werden. Hypertext Transfer Protocol Secure, kurz HTTPS, dem entgegenwirken und die Sicherheit bei der Kommunikation gewährleisten. Dafür dienen zwei Konzepte:
 \newline
 

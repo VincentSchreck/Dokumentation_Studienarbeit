@@ -6,7 +6,7 @@ Zu den bekanntesten NoSQL-Datenbanken gehören beispielsweise Apache Cassandra, 
 NoSQL-Datenbanken werden hauptsächlich in vier verschiedene Kategorien unterteilt, die unterschiedliche Konzepte verfolgen.
 \newline
 
-\textbf{Graphendatenbanken}
+\subparagraph{Graphendatenbanken}
 Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen.
 
 \begin{figure}[h]
@@ -15,8 +15,7 @@ Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sog
 \caption{Graphikdatenbank Beispiel [NoSql 1.2]}
 \end{figure}
 
-\textbf{Dokumentenorientierte Datenbanken}
-\newline
+\subparagraph{Dokumentenorientierte Datenbanken}
 Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. Dokumente können weitere Dokumente als Attribut oder in einer Lsite einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML. 
 
 \begin{lstlisting}
@@ -31,9 +30,7 @@ Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eige
 \end{lstlisting}
 
 
-\textbf{Key-Value-Datenbanken}
-\newline
-
+\subparagraph{Key-Value-Datenbanken}
 Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. 
 
 \begin{figure}[h]
@@ -42,11 +39,8 @@ Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- u
 \caption{Key-Value Beispiel [NoSql 1.5]}
 \end{figure}
 
-\textbf{Spaltenorientierte Datenbanken}
-\newline
-
+\subparagraph{Spaltenorientierte Datenbanken}
 Spaltenorientierte Datenbanken, oder auch „Wide-Column“-Datenbanken genannt, speichern ihre Datensätze in Form von Tabellen.  Sie wirken zunächst den Tabellen der relationalen Datenbanksysteme sehr ähnlich, unterscheiden sich grundlegend aber in der Speicherung der Daten, die nicht zeilenorientiert, sondern spaltenorientiert abgelegt werden. 
-\newpage
 
 
 \begin{figure}[h]

@@ -1,7 +1,7 @@
 Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code. \-[NodeJS 1.0]
 
 
-\textbf{- Architektur TODO Aufzählung}
+\subsubsection{Architektur}
 Eine wesentliche Eigenschaft von Node.js ist die hohe Performance. Im Folgenden soll der Unterschied der Node.js-Architektur zu traditionellen Webservern und der damit verbundenen höheren Performance dargestellt werden.
 \newline
 
@@ -39,7 +39,7 @@ Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein
 \newline
 
 \newpage
-\textbf{- Module TODO Aufzählung}
+\subsubsection{Module}
 
 Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen. Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponente, die den Hauptteil des Moduls repräsentiert, exportiert werden. Bei der anderen Möglichkeit, des sogenannten ‚benannten Exports‘ werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist in nachfolgender Abbildung dargestellt. 
 \newline
@@ -64,10 +64,10 @@ Modules are cached after the first time they are loaded. This means (among other
 Provided require.cache is not modified, multiple calls to require('foo') will not cause the module code to be executed multiple times. This is an important feature. With it, "partially done" objects can be returned, thus allowing transitive dependencies to be loaded even when they would cause cycles. [nodejs 1.21]
 
 
-\textbf{- npm TODO Aufzählung}
+\paragraph{npm}
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter [nodejs 1.3] Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten. [1.4] Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit. [1.5]
 
-\textbf{Express TODO Aufzählung}
+\paragraph{Express}
 „Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt.“ [nodejs 1.6] Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation [??] ist 4.17.1. [nodejs 1.65] \newline
 \newline
 \textbf{Beispiel}
@@ -88,8 +88,7 @@ Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion s
 
 Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Funktion app.listen(). Ihr kann auch eine Callback-Funktion mitgegeben werden, die aufgerufen wird, sobald der Server erfolgreich gestartet ist.\newpage
 
-\textbf{Middleware}
-\newline
+\subparagraph{Middleware}
 Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion. [nodejs 1.9]
 Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in folgender Abbildung illustriert: \newline
 
@@ -99,8 +98,7 @@ Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware ge
 \caption{Middleware [nodejs 2.0]}
 \end{figure}
 
-\textbf{Middleware: express.json}
-\newline
+\subparagraph{Middleware: express.json}
 
 Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts. [nodejs 2.1]
 \newline
@@ -112,8 +110,7 @@ Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSO
 \end{figure}
 
 \newpage
-\textbf{Middleware: Router}
-\newline
+\subparagraph{Middleware: Router}
 
 Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ [nodejs 2.15]
 \newline
@@ -138,19 +135,17 @@ Abschließend kann das Routermodul in die Anwendung geladen werden:
 \end{figure}
 
 \newpage
-\textbf{- Mongoose TODO Aufzählung}
+\paragraph{Mongoose}
 Mongoose ist ein öffentliches Modul, dass zum Zeitpunkt der Dokumentation[??] im npm Package Manager in der Version 5.12.3 zur Verfügung steht. [nodejs 2.4] Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM. [nodejs 2.55] Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
 \newline
 
-\textbf{Object Document Mapping (ODM)}
-\newline
+\subparagraph{Object Document Mapping (ODM)}
 Object-Relational Mappers (ORM) finden hauptsächlich Einsatz in objektorientieren Anwendungen, dessen Daten in relationalen Datenbanken sind. Dabei werden die Tabellen in persistente Objekte gemappt.
 Das Mappen ist aber auch für NoSQL-Datenbanken nützlich. [nodejs 2.56] Die meistverbreiteten NoSQL-Datenbanken basieren auf Dokument-Systemen. Dementsprechend werden für diese Datenbanken Object-Document Mapper für das Mappen zwischen Dokumenten und Objekten genutzt. Einige ODM’s sind Mongoose[nodejs 2.7], Morphia [nodejs 2.8], Doctrine[nodejs 2.9] und Mandango[nodejs 3.0].
 NoSQL Mapper nutzen vom Entwickler definierte Datenschemata, die das Objekt beschreiben. Ein daraus abgeleitetes Model-Objekt ermöglicht dann die Kommunikation zwischen dem im Schema beschriebenen Objekt und der entsprechenden Datenbank-Collection.
 \newline
 
-\textbf{Schema}
-\newline
+\subparagraph{Schema}
 Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität [??] eine Collection. Mongoose Schemata werden für jede Collection und jede Nichtwurzel-entität[??] definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
 \newline
 
@@ -161,8 +156,7 @@ Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-
 \end{figure}
 
 \newpage
-\textbf{Model}
-\newline
+\subparagraph{Model}
 Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen werden auch ‚documents‘ genannt. Sie stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung. Beispielsweise wird beim Abspeichern einer Mongoose Instanz eines Models die entsprechende Collection in der Datenbank erzeugt, sofern sie noch nicht vorhanden ist. Eine Konvention in Mongoose sieht vor, dass der Name eines Models dem Singular eines Nomens entspricht, während die Collections nach dem Plural dieses Namens beschrieben werden. [nodejs 3.2] Im folgenden Beispiel wird ein Model über die mongoose.model()-Funktion erstellt unter Angabe des Modelnamens und dem zu verwendenden Schema. Dieses Model wird über module.exports nach außen zur Verfügung gestellt.
 
 \begin{figure}[h]
@@ -188,8 +182,7 @@ Mongoose Models enthalten ohne Instanziierung des Weiteren auch Schnittstellen, 
 \caption{CRUD-Besipielfunktionen eines Mongoose-Models}
 \end{figure}
 
-\textbf{Verbindung}
-\newline
+\paragraph{Verbindung}
 Verbindung zur Datenbank kann über die connect()-Funktion mit Angabe der genutzten Datenbank und des Datenbankpfads. Über das mongoose.connection-Objekt können auf Verbindungsereignisse reagiert werden. 
 \newline
 
@@ -211,10 +204,9 @@ Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann
 \end{figure}
 
 \newpage
-\textbf{- Weitere Module TODO Aufzählung}
-TODO warum Tabelle oben?
+\paragraph{Weitere Module}
 
-\begin{table}[]
+\begin{table}[h]
 \begin{center}
     \begin{tabular}{| l | p{8cm} |}
     \hline

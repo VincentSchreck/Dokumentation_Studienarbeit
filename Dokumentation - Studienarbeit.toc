@@ -7,84 +7,129 @@
 \contentsline {section}{\numberline {3}Theoretische Grundlagen}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Netzwerkprotokolle}{2}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Schichtenmodell}{2}{subsubsection.3.1.1}%
+\contentsline {subparagraph}{IP}{3}{table.1}%
+\contentsline {subparagraph}{TCP/UDP}{3}{table.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}HTTP}{3}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Framework}{6}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Node.JS}{7}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Language}{17}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}JavaScript}{18}{subsubsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsentwicklung für mobile Endgeräte}{20}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Begriffe}{20}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Eine Plattform}{20}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Ein \textit {Framework}}{20}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Eine mobile Anwendung}{20}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Plattformspezifische native Apps}{20}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Plattformübergreifende Anwendungen}{21}{subsubsection.3.4.3}%
-\contentsline {paragraph}{\numberline {3.4.3.1}\textit {(Progressive) Web Apps}}{21}{paragraph.3.4.3.1}%
-\contentsline {paragraph}{\numberline {3.4.3.2}Hybride Anwendungen}{22}{paragraph.3.4.3.2}%
-\contentsline {paragraph}{\numberline {3.4.3.3}Runtime basierte Anwendungen}{22}{paragraph.3.4.3.3}%
-\contentsline {paragraph}{\numberline {3.4.3.4}Model-driven Software Entwicklung}{23}{paragraph.3.4.3.4}%
-\contentsline {paragraph}{\numberline {3.4.3.5}Kompilierte Anwendungen}{23}{paragraph.3.4.3.5}%
-\contentsline {subsection}{\numberline {3.5}Frameworks zur mobilen, plattformübergreifenden Entwicklung}{23}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}React Native}{24}{subsubsection.3.5.1}%
-\contentsline {paragraph}{\numberline {3.5.1.1}Architektur}{25}{paragraph.3.5.1.1}%
-\contentsline {paragraph}{\numberline {3.5.1.2}JSX mit nativen Komponenten}{26}{paragraph.3.5.1.2}%
-\contentsline {paragraph}{\numberline {3.5.1.3}Komponenten}{27}{paragraph.3.5.1.3}%
-\contentsline {paragraph}{\numberline {3.5.1.4}State}{28}{paragraph.3.5.1.4}%
-\contentsline {subsubsection}{\numberline {3.5.2}Flutter}{29}{subsubsection.3.5.2}%
-\contentsline {paragraph}{\numberline {3.5.2.1}Architektur}{30}{paragraph.3.5.2.1}%
-\contentsline {paragraph}{\numberline {3.5.2.2}Dart}{30}{paragraph.3.5.2.2}%
-\contentsline {paragraph}{\numberline {3.5.2.3}Widgets}{31}{paragraph.3.5.2.3}%
-\contentsline {paragraph}{\numberline {3.5.2.4}States}{32}{paragraph.3.5.2.4}%
-\contentsline {subsection}{\numberline {3.6}IDE}{32}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}NoSQL-Datenbank}{33}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}NoSQL-Datenbanktypen}{33}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}BASE}{35}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}CAP-Theorem}{35}{subsubsection.3.7.3}%
-\contentsline {subsubsection}{\numberline {3.7.4}MongoDB}{36}{subsubsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.8}Representational State Transfer - Application Programming Interface}{37}{subsection.3.8}%
-\contentsline {subsection}{\numberline {3.9}Firebase}{38}{subsection.3.9}%
-\contentsline {subsubsection}{\numberline {3.9.1}Firebase Authentifizierung}{38}{subsubsection.3.9.1}%
-\contentsline {subsubsection}{\numberline {3.9.2}Firestore}{38}{subsubsection.3.9.2}%
-\contentsline {subsubsection}{\numberline {3.9.3}Storage}{41}{subsubsection.3.9.3}%
-\contentsline {subsubsection}{\numberline {3.9.4}Cloud Functions}{41}{subsubsection.3.9.4}%
-\contentsline {subsubsection}{\numberline {3.9.5}Analytics}{41}{subsubsection.3.9.5}%
-\contentsline {subsubsection}{\numberline {3.9.6}Google AdMob, Google Ads}{41}{subsubsection.3.9.6}%
-\contentsline {subsection}{\numberline {3.10}Recommender System}{42}{subsection.3.10}%
-\contentsline {subsubsection}{\numberline {3.10.1}Nutzerinformation}{42}{subsubsection.3.10.1}%
-\contentsline {paragraph}{\numberline {3.10.1.1}Explizite Nutzerinformation}{42}{paragraph.3.10.1.1}%
-\contentsline {paragraph}{\numberline {3.10.1.2}Implizite Nutzerinformation}{43}{paragraph.3.10.1.2}%
-\contentsline {subsubsection}{\numberline {3.10.2}Content-based filtering}{43}{subsubsection.3.10.2}%
-\contentsline {subsubsection}{\numberline {3.10.3}Collaborative Filtering}{43}{subsubsection.3.10.3}%
-\contentsline {subsubsection}{\numberline {3.10.4}Ähnlichkeit von Objekten und Nutzern}{44}{subsubsection.3.10.4}%
-\contentsline {paragraph}{\numberline {3.10.4.1}Cosinus-Funktion}{44}{paragraph.3.10.4.1}%
-\contentsline {paragraph}{\numberline {3.10.4.2}Skalarprodukt}{44}{paragraph.3.10.4.2}%
-\contentsline {paragraph}{\numberline {3.10.4.3}Euklidischer Abstand}{44}{paragraph.3.10.4.3}%
-\contentsline {section}{\numberline {4}Konzept?}{44}{section.4}%
-\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{44}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Server}{44}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Datenbank}{44}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{45}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Backend-Implementierung}{45}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Server}{45}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{45}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{45}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{45}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Datenbank}{45}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{45}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{45}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{46}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Funktionen/Komponenten}{46}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{46}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Matches/Chat}{46}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{46}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{46}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{46}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{46}{subsection.7.6}%
-\contentsline {section}{\numberline {8}Benutzeroberflächen}{46}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Home-Screen}{46}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Gruppen}{46}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Chat}{46}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Filmliste}{46}{subsection.8.4}%
-\contentsline {section}{\numberline {9}CodeBeispiele}{46}{section.9}%
-\contentsline {section}{\numberline {10}Probleme}{46}{section.10}%
-\contentsline {section}{\numberline {11}Fazit}{46}{section.11}%
+\contentsline {subparagraph}{Kommunikation}{3}{subsubsection.3.1.2}%
+\contentsline {subparagraph}{Methoden}{4}{figure.2}%
+\contentsline {subparagraph}{Statuscodes}{4}{Item.6}%
+\contentsline {subsubsection}{\numberline {3.1.3}HTTPS}{5}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Node.JS}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Architektur}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Module}{8}{subsubsection.3.2.2}%
+\contentsline {paragraph}{\numberline {3.2.2.1}npm}{8}{paragraph.3.2.2.1}%
+\contentsline {paragraph}{\numberline {3.2.2.2}Express}{9}{paragraph.3.2.2.2}%
+\contentsline {subparagraph}{Middleware}{10}{figure.8}%
+\contentsline {subparagraph}{Middleware: express.json}{10}{figure.9}%
+\contentsline {subparagraph}{Middleware: Router}{11}{figure.10}%
+\contentsline {paragraph}{\numberline {3.2.2.3}Mongoose}{12}{paragraph.3.2.2.3}%
+\contentsline {subparagraph}{Object Document Mapping (ODM)}{12}{paragraph.3.2.2.3}%
+\contentsline {subparagraph}{Schema}{12}{paragraph.3.2.2.3}%
+\contentsline {subparagraph}{Model}{13}{figure.13}%
+\contentsline {paragraph}{\numberline {3.2.2.4}Verbindung}{14}{paragraph.3.2.2.4}%
+\contentsline {paragraph}{\numberline {3.2.2.5}Weitere Module}{15}{paragraph.3.2.2.5}%
+\contentsline {subsection}{\numberline {3.3}JavaScript}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Historie}{15}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Wesentliche Programmiereigenschaften}{16}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Anwendungsgebiete}{16}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}Anwendungsentwicklung für mobile Endgeräte}{17}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Begriffe}{17}{subsubsection.3.4.1}%
+\contentsline {subparagraph}{Eine Plattform}{17}{subsubsection.3.4.1}%
+\contentsline {subparagraph}{Ein \textit {Framework}}{17}{subsubsection.3.4.1}%
+\contentsline {subparagraph}{Eine mobile Anwendung}{17}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Plattformspezifische native Apps}{18}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Plattformübergreifende Anwendungen}{18}{subsubsection.3.4.3}%
+\contentsline {paragraph}{\numberline {3.4.3.1}\textit {(Progressive) Web Apps}}{19}{paragraph.3.4.3.1}%
+\contentsline {paragraph}{\numberline {3.4.3.2}Hybride Anwendungen}{19}{paragraph.3.4.3.2}%
+\contentsline {paragraph}{\numberline {3.4.3.3}Runtime basierte Anwendungen}{19}{paragraph.3.4.3.3}%
+\contentsline {paragraph}{\numberline {3.4.3.4}Model-driven Software Entwicklung}{20}{paragraph.3.4.3.4}%
+\contentsline {paragraph}{\numberline {3.4.3.5}Kompilierte Anwendungen}{21}{paragraph.3.4.3.5}%
+\contentsline {subsection}{\numberline {3.5}Frameworks zur mobilen, plattformübergreifenden Entwicklung}{21}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}React Native}{22}{subsubsection.3.5.1}%
+\contentsline {paragraph}{\numberline {3.5.1.1}Architektur}{22}{paragraph.3.5.1.1}%
+\contentsline {paragraph}{\numberline {3.5.1.2}JSX mit nativen Komponenten}{23}{paragraph.3.5.1.2}%
+\contentsline {paragraph}{\numberline {3.5.1.3}Komponenten}{24}{paragraph.3.5.1.3}%
+\contentsline {paragraph}{\numberline {3.5.1.4}State}{25}{paragraph.3.5.1.4}%
+\contentsline {subsubsection}{\numberline {3.5.2}Flutter}{26}{subsubsection.3.5.2}%
+\contentsline {paragraph}{\numberline {3.5.2.1}Architektur}{26}{paragraph.3.5.2.1}%
+\contentsline {paragraph}{\numberline {3.5.2.2}Dart}{27}{paragraph.3.5.2.2}%
+\contentsline {paragraph}{\numberline {3.5.2.3}Widgets}{28}{paragraph.3.5.2.3}%
+\contentsline {paragraph}{\numberline {3.5.2.4}States}{29}{paragraph.3.5.2.4}%
+\contentsline {subsection}{\numberline {3.6}NoSQL-Datenbank}{31}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}NoSQL-Datenbanktypen}{31}{subsubsection.3.6.1}%
+\contentsline {subparagraph}{Graphendatenbanken}{31}{subsubsection.3.6.1}%
+\contentsline {subparagraph}{Dokumentenorientierte Datenbanken}{31}{figure.29}%
+\contentsline {subparagraph}{Key-Value-Datenbanken}{32}{lstnumber.-1.8}%
+\contentsline {subparagraph}{Spaltenorientierte Datenbanken}{32}{figure.30}%
+\contentsline {subsubsection}{\numberline {3.6.2}BASE}{33}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.3}CAP-Theorem}{33}{subsubsection.3.6.3}%
+\contentsline {subsubsection}{\numberline {3.6.4}MongoDB}{34}{subsubsection.3.6.4}%
+\contentsline {paragraph}{\numberline {3.6.4.1}2.2.4.3 Aufbau/Struktur}{34}{paragraph.3.6.4.1}%
+\contentsline {subparagraph}{Schema-Freiheit}{34}{figure.35}%
+\contentsline {subparagraph}{BSON}{34}{figure.35}%
+\contentsline {subparagraph}{ObjectID und Primärschlüssel}{35}{lstnumber.-2.9}%
+\contentsline {paragraph}{\numberline {3.6.4.2}Datenbankabfrage}{35}{paragraph.3.6.4.2}%
+\contentsline {subparagraph}{Query-By-Example}{35}{paragraph.3.6.4.2}%
+\contentsline {subparagraph}{MapReduce}{36}{lstnumber.6.1}%
+\contentsline {subparagraph}{Aggregation-Framework}{36}{lstnumber.6.1}%
+\contentsline {paragraph}{\numberline {3.6.4.3}CRUD}{36}{paragraph.3.6.4.3}%
+\contentsline {subparagraph}{Create}{36}{table.4}%
+\contentsline {subparagraph}{Read}{37}{lstnumber.8.1}%
+\contentsline {subparagraph}{Update}{37}{lstnumber.8.1}%
+\contentsline {subparagraph}{Delete}{37}{lstnumber.9.2}%
+\contentsline {paragraph}{\numberline {3.6.4.4}Atomare Operationen}{37}{paragraph.3.6.4.4}%
+\contentsline {paragraph}{\numberline {3.6.4.5}Architektur}{38}{paragraph.3.6.4.5}%
+\contentsline {subparagraph}{Engine}{38}{paragraph.3.6.4.5}%
+\contentsline {subparagraph}{Replica Sets}{38}{paragraph.3.6.4.5}%
+\contentsline {subparagraph}{Sharding}{39}{figure.36}%
+\contentsline {paragraph}{\numberline {3.6.4.6}Verwaltungswerkzeuge}{39}{paragraph.3.6.4.6}%
+\contentsline {subparagraph}{Mongo Shell}{39}{paragraph.3.6.4.6}%
+\contentsline {subparagraph}{Treiber}{39}{paragraph.3.6.4.6}%
+\contentsline {subparagraph}{Grafische Oberflächen}{39}{paragraph.3.6.4.6}%
+\contentsline {subsection}{\numberline {3.7}Representational State Transfer - Application Programming Interface}{40}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Firebase}{41}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Firebase Authentifizierung}{41}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Firestore}{41}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Storage}{44}{subsubsection.3.8.3}%
+\contentsline {subsubsection}{\numberline {3.8.4}Cloud Functions}{44}{subsubsection.3.8.4}%
+\contentsline {subsubsection}{\numberline {3.8.5}Analytics}{44}{subsubsection.3.8.5}%
+\contentsline {subsubsection}{\numberline {3.8.6}Google AdMob, Google Ads}{44}{subsubsection.3.8.6}%
+\contentsline {subsection}{\numberline {3.9}Recommender System}{45}{subsection.3.9}%
+\contentsline {subsubsection}{\numberline {3.9.1}Nutzerinformation}{45}{subsubsection.3.9.1}%
+\contentsline {paragraph}{\numberline {3.9.1.1}Explizite Nutzerinformation}{45}{paragraph.3.9.1.1}%
+\contentsline {paragraph}{\numberline {3.9.1.2}Implizite Nutzerinformation}{46}{paragraph.3.9.1.2}%
+\contentsline {subsubsection}{\numberline {3.9.2}Content-based filtering}{46}{subsubsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.3}Collaborative Filtering}{46}{subsubsection.3.9.3}%
+\contentsline {subsubsection}{\numberline {3.9.4}Ähnlichkeit von Objekten und Nutzern}{47}{subsubsection.3.9.4}%
+\contentsline {paragraph}{\numberline {3.9.4.1}Cosinus-Funktion}{47}{paragraph.3.9.4.1}%
+\contentsline {paragraph}{\numberline {3.9.4.2}Skalarprodukt}{47}{paragraph.3.9.4.2}%
+\contentsline {paragraph}{\numberline {3.9.4.3}Euklidischer Abstand}{47}{paragraph.3.9.4.3}%
+\contentsline {section}{\numberline {4}Konzept?}{47}{section.4}%
+\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{47}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Server}{47}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Datenbank}{47}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{48}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Backend-Implementierung}{48}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Server}{48}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{48}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{48}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{48}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Datenbank}{48}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{48}{subsubsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{48}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{49}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Funktionen/Komponenten}{49}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{49}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Matches/Chat}{49}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{49}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gruppenorgien}{49}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Gespeicherte Filme/Filmliste}{49}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Zugänglichkeit/Behindertenfreundlichkeit}{49}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Benutzeroberflächen}{49}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Home-Screen}{49}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gruppen}{49}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Chat}{49}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Filmliste}{49}{subsection.8.4}%
+\contentsline {section}{\numberline {9}CodeBeispiele}{49}{section.9}%
+\contentsline {section}{\numberline {10}Probleme}{49}{section.10}%
+\contentsline {section}{\numberline {11}Fazit}{49}{section.11}%

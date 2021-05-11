@@ -4,8 +4,7 @@ Gründe der Popularität der Datenbank ist neben den oben erwähnten Eigenschaft
 Dem Konzept des CAP-Theorems folgend steht MongoDB für Konsistenz und Partitionstoleranz, dafür ordnet sich die Verfügbarkeit den anderen Eigenschaften unter.
 \newline
 
-\textbf{2.2.4.3 Aufbau/Struktur}
-\newline
+\paragraph{2.2.4.3 Aufbau/Struktur}
 
 \begin{figure}[htb]
 \centering
@@ -17,14 +16,12 @@ Letztere Abbildung stellt die grundsätzliche Struktur einer MongoDB-Instanz dar
 Ein \textbf{Server} kann mehrere logische \textbf{Datenbanken} verwalten, die ihrerseits einen oder mehrere logische Namensräume enthalten, die sogenannten \textbf{Collections}. Eine Collection verwaltet die einzelnen Datensätze, die als \textbf{Dokumente} bekannt sind. 
 \newline
 
-\textbf{Schema-Freiheit}
-\newline
+\subparagraph{Schema-Freiheit}
 Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kein vorausgesetztes Schema. Aufgrund der Schema-Freiheut dürfen dennoch Architekturentscheidungen bei der Datenmodellierung nicht ignoriert werden. Stattdessen werden diese Entscheidungen des Schema-Managements auf die Anwendungsentwicklung verlagert.
 \newline
 
 
-\textbf{BSON}
-\newline
+\subparagraph{BSON}
 Während MongoDB für Datenaustausch das JSON-Format nutzt, hält es seine Dokumente im Binary JSON-Format (BSON), einer binärcodiertem Erweiterung des JSON-Formats. Daten im BSON-Format enthalten zusätzlich Informationen zum Typ und zur Länge der Informationen, wodurch schnelleres Parsen von Daten möglich ist. Des Weiteren werden ist BSON um zusätzliche Datentypen wie 32- und 64-bit Integer oder das Datum erweitert. [MongoDb1.8 https://www.mongodb.com/json-and-bson] 
 \newline
 
@@ -42,20 +39,15 @@ hello\x00                  // field name
 
 
 
-\textbf{ObjectID und Primärschlüssel}
-\newline
-Für die eindeutige Identifikation eines Dokuments vergibt MongoDB automatisch erstellte \"\_id\"-Felder. Dabei wird bei der Generierung des BSON-Dokuments für den Wert das \"\_id\"-Feld ein Datentyp "ObjectId" hinzugefügt. Dieses Identifikationsfeld ist gleichzusetzen mit dem Primärschlüsseln aus relationalen Datenbanken. [MongoDB1.85] Ist eine automatische Generierung des eindeutigen Identifikationsfeldes nicht erwünscht, kann der Anwendungsentwickler dieses Feld auch selbst erzeugen, indem er die Eigenschaft explizit dem zu erstellenden Objekt hinzufügt und mit einem Wert verseht. 
+\subparagraph{ObjectID und Primärschlüssel}
+Für die eindeutige Identifikation eines Dokuments vergibt MongoDB automatisch erstellte \"\_id\"\-Felder. Dabei wird bei der Generierung des BSON-Dokuments für den Wert das \"\_id\"\-Feld ein Datentyp \"ObjectId\" hinzugefügt. Dieses Identifikationsfeld ist gleichzusetzen mit dem Primärschlüsseln aus relationalen Datenbanken. [MongoDB1.85] Ist eine automatische Generierung des eindeutigen Identifikationsfeldes nicht erwünscht, kann der Anwendungsentwickler dieses Feld auch selbst erzeugen, indem er die Eigenschaft explizit dem zu erstellenden Objekt hinzufügt und mit einem Wert verseht. 
 \newline
 
 
-\textbf{Datenbankabfrage}
-\newline
+\paragraph{Datenbankabfrage}
 Im Vergleich zu relationalen Datenbanken benutzt MongoDB keine Abfragesprache wie SQL. Stattdessen ermöglicht dieses Datenbanksystem drei Arten von Abfragen, wobei eine Abfrage sich immer auf genau eine Collection bezieht. Ein Bezug einer Abfrage zu mehreren Collections, wie es relationale Datenbanken mit „Join“-Operationen erlauben, ist hier nicht gegeben und muss in der Anwendung realisiert werden. [1.9] Abfragen in MongoDB werden grundsätzlich in Form von Dokumenten formuliert. Dieses Verfahren ermöglicht schnelles Abhandeln komplexer Abfragen von tief geschachtelten Dokumentenstrukturen. Nachfolgend werden die drei Abfragemöglichkeiten erläutert.
-\newline 
-\newline
-\textbf{Query-by-Example}
-\newline
 
+\subparagraph{Query-By-Example}
 Das folgende Beispiel zeigt einen Aufruf aller Einträge, die als Ort Karlsruhe eingespeichert haben. 
 \newline
 \begin{lstlisting}[caption=MongoDB Read, label=lst:MongoDBRead]
@@ -70,8 +62,7 @@ db.pois.find().limit(5).sort({"adresse.ort": -1})
 \end{lstlisting}
 
 
-\textbf{MapReduce}
-\newline
+\subparagraph{MapReduce}
 MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Verarbeitung von großen Datenmengen in aggregierte Ergebnisse. Dabei unterteilt sich der Algorithmus im Wesentlichen in zwei Operationen. [MongoDB2.3]
 \newline
 -	Map: Emittieren der beliebig vielen Key-Value-Paare für jedes Dokument
@@ -79,8 +70,7 @@ MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Ver
 -	Reduce: Zusammenfassen aller Daten, die einem Kriterium entsprechen.
 \newline
 
-\textbf{Aggregation-Framework}
-\newline
+\subparagraph{Aggregation-Framework}
 Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance. [MongoDB2.4] Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden. [MongoDB2.5]
 \newline 
 
@@ -96,7 +86,7 @@ Es stehen folgende Pipeline-Operatoren zur Verfügung:
 
  
 
-\begin{table}[htb]
+\begin{table}[h]
 \begin{center}
     \begin{tabular}{| l | p{14cm} |}
     \hline
@@ -129,8 +119,7 @@ Es stehen folgende Pipeline-Operatoren zur Verfügung:
 \caption{Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]}
 \end{table}
 
-\textbf{CRUD}
-\newline
+\paragraph{CRUD}
 MongoDB unterstützt eine Vielzahl an Operationen zum Erzeugen, Lesen, Updaten und Löschen von Daten.
 Über folgende Kommandos lassen sich die CRUD-Operationen realisieren:
 \newline
@@ -159,22 +148,19 @@ MongoDB unterstützt eine Vielzahl an Operationen zum Erzeugen, Lesen, Updaten u
 \caption{Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]}
 \end{table}
 
-\textbf{Create}
-\newline
+\subparagraph{Create}
 „InsertOne()“ erzeugt ein einzelnes Dokument in der jeweiligen Collection der Datenbank. Dabei wird ein Dokument im JSON-Format als Parameter mitgegeben. ObjectID wird, wenn nicht als Eigenschaft im Dokument angegeben, automatisch von MongoDB erzeugt. Ebenfalls wird die angesprochene Collection automatisch erzeugt, falls sie nicht bereits existiert. Die Funktion „InsertMany()“  erlaubt das Hinzufügen mehrerer Datensätze über ein Array von JSON-Dokumenten als Parameter. Die Methode „Insert“ ist flexibler und bietet beide Parametrisierungsmöglichkeiten. [Mongo2.55 ]
 \newline
 \begin{lstlisting}[caption=MongoDB Create, label=lst:MongoDBCreate]
 db.personen.insertOne({"vorname" : "Robin"});
 \end{lstlisting}
 
-\textbf{Read}
-\newline
+\subparagraph{Read}
 Um Datensätze aus der Datenbank zu lesen, wird die find()-Methode zur Verfügung gestellt. Sie gibt alle Dokumente einer Kollektion zurück. Wie im Kapitel Query-By-Example beschrieben, kann die Funktion mit Filtern versehen werden. Die Funktion findOne() bietet die gleiche Funktionsweise, die Dokumentenausgabe ist aber auf ein einzelnes Dokument begrenzt. 
 Ein Beispiel ist dargestellt in Listing \ref{lst:MongoDBRead}.
 \newline\newline
 
-\textbf{Update}
-\newline
+\subparagraph{Update}
 Die Update()-Methode ermöglicht es, Änderungen an Datensätzen vorzunehmen.  Die Methode erhält zwei Parameter, einen zur Angabe der gesuchten Dokumente und den anderen mit  der vorzunehmenden Änderung. Simultan zu den Insert-Methoden gibt es die UpdateOne()-Methode für Änderungen an einem Dokument und UpdateMany()-Methode für mehrere Dokumente.
 \newline
 
@@ -183,8 +169,7 @@ db.personen.updateOne({"vorname" : "Robin"} , currentDate("last_login") );
 
 \end{lstlisting}
 
-\textbf{Delete}
-\newline
+\subparagraph{Delete}
 Für das Löschen von Datensätzen aus einer Collection gibt es die DeleteOne()- und DeleteMany()-Methode. Über mitgegegeben Parameter können Filter eingestellt werden. Eine ganze Collection kann mit der drop()-Methode entfernt werden.
 \newline
 
@@ -193,27 +178,23 @@ db.personen.deleteOne( {"vorname" : "Robin"} );
 
 \end{lstlisting}
 
-\textbf{2.2.2.2 Atomare Operationen}
-\newline
+\paragraph{Atomare Operationen}
 Als atomare Operationen wird ein Verbund von Einzeloperationen bezeichnet, der als logische Einheit betrachtet wird und nur als Ganzes erfolgreich abläuft oder fehlschlägt. In Bezug auf Datenbanken spricht man von Transaktionen, die entweder als Ganzes erfolgreich ablaufen (Commit) oder nach einer fehlerhaften Einzeloperation rückgangig gemacht werden (Rollback). Ohne atomare Operationen können Probleme aufkommen, die zu einer Inkonsistenz der Datenzustände führt. Beispielsweise wurde ein Abbruch inmitten mehrerer zusammenhängender Operationsabläufe dazu führen,  dass nur ein Teil der Operationen ausgeführt wurde, während die restlichen Operationen und somit die verbleibenden Datenänderungen verworfen werden.
 \newline
 Bis vor dem Jahre 2018 unterstützte MongoDB keine Transaktionen. Mit der Veröffentlichung der Version 4.0 wurde der Funktionsumfang von MongoDB stark erweitert. Eines der neuen Erweiterungen war die Möglichkeit, Transaktionen durchführen zu können. Dafür werden sogenannte „Sessions“ genutzt. Sämtlichen CRUD-Operationen, die einer Transaktion zugehören sollen, werden eine Session als zusätzlicher Parameter hinzugefügt.  Bei Abschluss der Transaktion kann sie mit der Methode „session.commitTransaction()“ bestätigt werden. Andernfalls, sollte ein Fehler aufgetreten sein, kann die Methode „session.abortTransaction()“ die Operationen rückgängig machen. Eine wichtige Vorraussetzung, um Transaktionen in MongoDB nutzen zu können, ist ein Replica Set aufzusetzen. Darauf wird im weiteren Kapitel eingegangen. 
 \newline
 
-\textbf{2.2.4.x Architektur}
-\newline 
+\paragraph{Architektur}
 Bei der Inbetriebnahme einer MongoDB Datenbank spielen drei Prozesse eine wichtige  Rolle. \newline Der  „mongod“-Prozess ist der primäre Hintergrundprozess für das Datenbanksystem. Er behandelt Datenabfragen, Datenzugriffe und führt benötigte Hintergrundoperationen durch. [mongodb3.0] Beim Starten des mongod-Prozesses können über Flags Konfigurationen vorgenommen werden, beispielsweise ändert „--port 5000“ den Port. Nach erfolgreichem Start des Prozesses kann über den Standard Port der MongoDB (27017) bzw. über den konfigurierten Port eine Verbindung hergestellt werden.\newline
 Der Prozess, der als Controller für sich auf mehreren Datenbanken befindenden verteilte Daten dient, nennt sich „mongos“. [mongodb3.1] Dieser Prozess findet seinen Einsatz hauptsächlich in Kombination mit Sharding, auf die im weiteren Unterkapitel eingegangen wird. \newline
 Der „mongo“-Prozess ist eine interaktive JavaScript Schnittstelle auf der Kommandozeile. Er bietet umfassende Funktionalitätem für die Systemadministration des Datenbankensystems als auch Zugriff auf die Datensätze. [mongo3.2]
 
-\textbf{Storage Engine}
-\newline
+\subparagraph{Engine}
 Als Storage Engine, oder auch Datenbank-Engine, wird die zugrundeliegende Softwarekomponente eines Datenbanksystems zum Verwalten der Daten bezeichnet. Die gebräuchlichsten Engines in MongoDB sind die MMAPv1-Engine und die WiredTiger-Engine.\newline
 Bis vor Version 3.2 war MMAPv1-Engine die Standard-Storage Engine von MongoDB. Eine Kompression der Daten wurde nicht unterstützt und Transaktionen waren nur auf einem Dokument ausführbar. Ab MongoDB 3.2 wird standardmäßig die Wired Tiger-Engine eingesetzt. Neben der Kompression der Daten und der miteingehenden Verringerung des benötigten Speicherplatzes bietet diese Engine auch eine Verschlüsselung der Daten an. Abhängig des benutzten Kompressionsalgorithmus kann der benötigte Verbrauch um 70\% für Daten und um 50\% für Indizes reduziert werden. [Mongo3.5] Die WiredTiger-Engine skaliert im Vergleich zur MMAPv1 mit der Anzahl der CPU-Kerne und ermöglicht Transaktionen über mehrere Dokumente hinweg. Die genutzte Engine kann in den Konfigurationen eingestellt werden.
 \newline
 
-\textbf{Replica Sets}
-\newline
+\subparagraph{Replica Sets}
 Im standardmäßgen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden. [3.6] MongoDB realisiert die Replikation der Daten über Replica Sets. [3.7] Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten. 
 Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten "Oplogs" (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird. [3.8]  Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab.
 
@@ -225,11 +206,14 @@ Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderunge
 
 
 
-\textbf{Sharding}
+\subparagraph{Sharding}
 -
-\newline
+\paragraph{Verwaltungswerkzeuge}
 -
-\textbf{Verwaltungswerkzeuge}
-Mongo Shell
-Treiber
-Grafische Oberflächen
+\subparagraph{Mongo Shell}
+-
+\subparagraph{Treiber}
+-
+\subparagraph{Grafische Oberflächen}
+-
+
