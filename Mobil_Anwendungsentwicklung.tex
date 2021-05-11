@@ -5,16 +5,15 @@ Diese Entwicklung forcierte viele Firmen immer mehr ihre Anwendungen auch \texti
 Daher ist es für die Wirtschaft und Entwicklung gleichermaßen wichtig sich ständig weiterzuentwickeln und sich nicht auf (Kosten-) ineffiziente Entwicklungsprozesse auszuruhen. Dabei bieten jährliche, wenn nicht sogar halbjährliche Design- und Performanceänderungen von den Geräten selbst oder der Betriebssysteme Herausforderungen an die mobilen Anwendungen - \textit{apps} - und gleichzeitig an deren Programmierumgebung. Trotz einer riesigen Auswahl an \textit{Apps} lassen sich diese allgemein in drei Kategorien eingliedern: Plattformspezifische native Anwendungen, adaptive Webanwendungen und plattformübergreifende Anwendungen.
 
 \subsubsection{Begriffe}
-\paragraph{Eine Plattform} besteht aus der Hardware (System und zusätzlicher Peripherie, wie Sensoren oder Aktoren), dem Betriebssystem, den spezifischen \textit{Software Development Kits (SDK)} und den jeweiligen Basisbibliotheken. 
+\subparagraph{Eine Plattform} besteht aus der Hardware (System und zusätzlicher Peripherie, wie Sensoren oder Aktoren), dem Betriebssystem, den spezifischen \textit{Software Development Kits (SDK)} und den jeweiligen Basisbibliotheken. 
 Zusammen bietet eine Plattform die Grundlage um Software für sie zu entwickeln.
+\subparagraph{Ein \textit{Framework}} definiert eine Architektur für Anwendungen und stellt Komponenten bereit, mit welchen das Entwickeln einer Anwendung erleichtert sein soll. \cite{johnson1988} 
+Ein plattformübergreifendes Framework muss somit Anwendungscode für mehrere Plattformen wiederverwenden, jedoch müssen auch plattformspezifische Funktionen, wie Architektur oder Benutzeroberflächen API, bereitgestellt werden. Mehr dazu in Kapitel \ref{plattformuebergreifende_anwendungen}.
 
-\paragraph{Ein \textit{Framework}} definiert eine Architektur für Anwendungen und stellt Komponenten bereit, mit welchen das Entwickeln einer Anwendung erleichtert sein soll. \cite{johnson1988} 
-Ein plattformübergreifendes Framework muss somit Anwendungscode für mehrere Plattformen wiederverwenden, jedoch müssen auch plattformspezifische Funktionen, wie Architektur oder Benutzeroberflächen API, bereitgestellt werden. Mehr dazu in Kapitel \ref{plattformübergreifende_anwendungen}.
-
-\paragraph{Eine mobile Anwendung} ist eine Anwendung, geschrieben für eine Plattform eines mobilen Endgerätes, welche die jeweiligen Features nutzen könnte - dazu zählen Kamera(s), Beschleunigungssensoren oder auch \textit{Global Positioning System (GPS)}. Webseiten als solches sind demnach keine mobilen Anwendungen.
+\subparagraph{Eine mobile Anwendung} ist eine Anwendung, geschrieben für eine Plattform eines mobilen Endgerätes, welche die jeweiligen Features nutzen könnte - dazu zählen Kamera(s), Beschleunigungssensoren oder auch \textit{Global Positioning System (GPS)}. Webseiten als solches sind demnach keine mobilen Anwendungen.
 
 
-\subsection{Plattformspezifische native Apps}
+\subsubsection{Plattformspezifische native Apps}
 Plattformspezifische oder auch native Anwendungen sind Programme, welche auf eine gewisse Plattform abzielen und in einer der davon unterstützen Programmiersprachen geschrieben wurden. Da diese Art der (mobilen) Anwendung mit plattformspezifischen  SDK und \textit{Frameworks} entwickelt wird, ist diese Anwendung an eine Plattform gebunden. \\
 Dies bringt zum einen natürlich Vorteile wie allgemein best mögliche Performance auf der jeweiligen Plattform und direkt vom Hersteller unterstützte Entwicklungsumgebungen/SDKs.
 Zudem lassen sich plattformspezifische Fähigkeiten oder Einstellungen nutzen - beispielsweise mehrere Kameras oder GPS.
@@ -25,7 +24,7 @@ Zwei der am weitesten verbreiteten Plattformen sind Android von Google und iOS v
 
 Beide bieten jeweils Plattform eigene Services an, beispielsweise das direkte Veröffentlichen in den jeweiligen Appstore \cite{fentaw2020}
 
-\subsection{Plattformübergreifende Anwendungen}
+\subsubsection{Plattformübergreifende Anwendungen}
 \label{plattformuebergreifende_anwendungen}
 Die Entwicklung einer plattformübergreifenden Anwendung zeichnet sich generell durch die Möglichkeit aus, nur einmal Code schreiben zu müssen, diesen jedoch auf mehreren Plattformen ausführen zu können. \\
 Verschiedene Ansätze einer solchen Anwendung sind in Abbildung \ref{fig:crossplattform_architecture} kategorisiert. Im Folgenden werden jene Entwicklungsmöglichkeiten detaillierter besprochen.
@@ -38,7 +37,7 @@ Verschiedene Ansätze einer solchen Anwendung sind in Abbildung \ref{fig:crosspl
 	\label{fig:crossplattform_architecture}
 \end{figure}
 
-\subsubsection{\textit{(Progressive) Web Apps}}
+\paragraph{\textit{(Progressive) Web Apps}}
 Eine mobile Webanwendung ist eigentlich eine Webseite, welche sich an die Größe und Auflösung von unterschiedlichen Bildschirmen anpasst - hier speziell an die Bildschirmgrößen der mobilen Geräte. Diese Anwendung ist mit Standard Webentwicklungstools geschrieben (HTML, CSS \& JavaScript) und läuft somit theoretisch auf jedem Gerät mit einem Internet Browser. \cite{charland2011}
 Aufgrund der steigenden Unterstützung von jeglichen APIs in mobilen Browsern, ist es auch möglich geworden auf Geräteeigenschaften, wie bspw. den Standort zuzugreifen.\\
 Jedoch kann diese App logischerweise nicht im jeweiligen \textit{Appstore} heruntergeladen werden, da es sich weiterhin um eine Webseite handelt.
@@ -50,7 +49,7 @@ Generell ist der Ansatz sehr simpel, da hiermit plattformübergreifende Anwendun
 Hierfür wird zudem keine zusätzliche Programmiersprache oder wissen über die jeweilige Plattform benötigt.\\
 Eine große Schwierigkeit hieran ist weiterhin der Zugriff auf Gerätefeatures, da nicht alle über den Browser verfügbar sind.
 
-\subsubsection{Hybride Anwendungen}
+\paragraph{Hybride Anwendungen}
 \label{hybride_anwendung}
 Eine hybride Anwendung kombiniert die native Vorgehensweise mit der einer normalen Webseite. 
 In einer nativen WebView ist eine Webanwendung verpackt, welche nun in einer \textit{HTML-Rendering-Engine} gerendert wird. Bei Android und iOS ist das WebKit.
@@ -70,7 +69,7 @@ Daher liegt auch hier die Leitung der Applikation deutlich hinter der der Native
 \end{figure}
 \footnotetext{Quelle: \cite{lachgar2017}}
 
-\subsubsection{Runtime basierte Anwendungen}
+\paragraph{Runtime basierte Anwendungen}
 \label{runtime_based_apps}
 Im Gegensatz zur in Kapitel \ref{hybride_anwendung} beschriebenen hybriden Anwendung, nutzen Runtime basierte Anwendungen keinen Browser des Gerätes mit einer WebView, sondern jede App besitzt eine eigene Runtime Ebene. 
 Jedes Framework muss also eine solche Ebene für alle Plattformen in jeweiliger Programmiersprache mitliefern, damit seine Anwendung hierauf laufen können.
@@ -83,7 +82,7 @@ Somit können beispielsweise React Native und NativeScript mit Sprachinterpreter
 Ein großer Nachteil dieser Strategie ist jedoch zugleich ihr Vorteil: Jedes Framework besitzt seine eigene Architektur. Dadurch sind Plug-ins des einen Frameworks trotz gleicher Anwendungssprache nicht unbedingt funktionstüchtig im anderen. 
 Bei projektspezifischen Plug-ins macht es einen späteren Systemwechsel daher besonders schwer, da nicht nur Benutzeroberfläche und Businesslogik neu geschrieben werden müssen, sondern auch jeweilige Plug-ins. \cite{bjorn-hansen2020}
 
-\subsubsection{Model-driven Software Entwicklung}
+\paragraph{Model-driven Software Entwicklung}
 Die Grundsätze der modellgetriebenen Softwareentwicklung beschäftigen sich mit der Abstraktion des Modells als (Teil eines) System, von welchem die eigentliche Software abgeleitet wird. \cite{stahl2006}\\
 Das bedeutet in der Realität, dass eine höhere Abstraktion als Quellcode in Form von textuellen oder grafischen domänenspezifischen Sprachen oder universell einsetzbaren Modellierungssprachen (Unified Modeling Language(UML)) zum beschreiben der Software verwendet wird. 
 Codegeneratoren übersetzen diese Modelle nun jeweils in Programmiersprachen der gewählten Zielplattform, auf welcher sie kompiliert werden.\\
@@ -92,7 +91,7 @@ Theoretisch kann dadurch der komplette Funktionsumfang wie bei einer nativen Anw
 Bekannte Frameworks dieser Methode sind zum Beispiel \href{https://www.wi.uni-muenster.de/sites/wi/files/public/department/pi/publications/heitkoetter/cross-platform-model-driven-development-of-mobile-applications-with-md2.pdf}{$M\!D_2$},\href{https://www.sciencedirect.com/science/article/abs/pii/S1477842417301215}{MAML}, \href{https://www.webratio.com/site/content/en/home}{WebRatio Mobile}, \href{https://www.biznessapps.com/}{BiznessApps} und \href{https://bubble.io/}{Bubble}.\\
 \\
 Der große Nachteil hieran ist, dass Entwickler sehr selten modellgetriebene Entwicklung verwenden, sondern Quellcode-basierte Programmiermethoden bevorzugen. \cite{bjorn-hansen2020}
-\subsubsection{Kompilierte Anwendungen}
+\paragraph{Kompilierte Anwendungen}
 \label{compilierte_anwendungen}
 Kompilierte plattformübergreifende Anwendungen basieren auf einer einzigen Codebasis und können für mehrere Plattformen vollständig kompiliert werden. 
 Dies kann entweder von der Codebasis einer nativen Anwendung für mindestens eine andere Plattform (bspw. \href{https://developers.google.com/j2objc/}{J2ObjC}), oder von einer unabhängigen Codebasis direkt für mehrere Plattformen (bspw. \href{https://flutter.dev/}{Flutter}) geschehen.
@@ -141,8 +140,7 @@ Grundlegend wurde React Native als Plattform-agnostisch designet. Entwickler sch
 	\item \textit{Shadow Thread}. Hier wird das gesamte Layout der Anwendung berechnet. Zugrunde liegt die Facebook-eigene layout engine \glqq Yoga\grqq .
 \end{itemize}
 
-Ein Hauptproblem dieses Ansatzes ist, dass die Brücke grundlegend eine asynchrone Warteschlange ist, da der JS Thread und der native Thread unabhängig voneinander arbeiten. 
-Zusätzlich werden während der gesamten Datenübertragung die Daten im JSON Format serialisiert und deserialisiert .
+Ein Hauptproblem dieses Ansatzes ist, dass die Brücke grundlegend eine asynchrone Warteschlange ist, da der JS Thread und der native Thread unabhängig voneinander arbeiten. Zusätzlich werden während der gesamten Datenübertragung die Daten im JSON Format serialisiert und deserialisiert .
 Daher kann es zu Performance-Einbrüchen und somit zu schlechter Nutzererfahrung, durch bspw. Eingabeverzögerung, kommen.
 
 \begin{figure}[h]
