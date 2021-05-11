@@ -19,13 +19,20 @@
 \title{StreamSwipe\\Tinder für Filme\vspace{10px}}
 \author{Leon Gieringer, Robin Meckler,Vincent Schreck \\ \\ Studienarbeit \\ \\ \\}
 \date{\today}
-\usepackage{listings}
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%% listing & color for Code %%%%%%%%%%%%
 \usepackage{color}
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{0.5,0.5,0.5}
 \definecolor{ballblue}{rgb}{0.13, 0.67, 0.8}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 \definecolor{darkpastelgreen}{rgb}{0.01, 0.75, 0.24}
+
+\usepackage{listings}
+\renewcommand*{\lstlistlistingname}{Quellcodeverzeichnis}
+
 
 \lstdefinelanguage{JavaScript}{
 	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, const, var, from, export, import, defaultValue, class, boolean, throw, implements,this, style},
@@ -58,6 +65,16 @@
 	captionpos=b
 }
 
+%%%%%%%%%%%% titlesec for paragraphs %%%%%%%%%%%%
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
 \begin{document}
 \maketitle
 \thispagestyle{empty}
@@ -66,6 +83,9 @@
 \tableofcontents
 \newpage
 \listoffigures
+\newpage
+\addcontentsline{toc}{section}{Listings}
+\lstlistoflistings
 \newpage
 \pagenumbering{arabic}
 
@@ -171,6 +191,8 @@
 	\bibitem[11]{bjorn-hansen2020} Biørn-Hansen, A., Rieger, C., Grønli, TM. et al. (2020) An empirical investigation of performance overhead in cross-platform mobile development frameworks. Empir Software Eng 25, 2997–3040. https://doi.org/10.1007/s10664-020-09827-6
 	
 	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
+	
+	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, Aufgerufen am: 25.04.2021
 \end{itemize}
 
 \end{document}
