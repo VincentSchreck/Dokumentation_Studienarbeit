@@ -16,7 +16,10 @@ Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sog
 \end{figure}
 
 \subparagraph{Dokumentenorientierte Datenbanken}
-Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. Dokumente können weitere Dokumente als Attribut oder in einer Lsite einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML. 
+Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. 
+Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. 
+Dokumente können weitere Dokumente als Attribut oder in einer Liste einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  
+In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML. 
 
 \begin{lstlisting}
 {
@@ -33,11 +36,32 @@ Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eige
 \subparagraph{Key-Value-Datenbanken}
 Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. 
 
-\begin{figure}[h]
-\centering
-\includegraphics[]{images/KeyValue.PNG}
+\begin{table}[h]
+\begin{center}
+    \begin{tabular}{| l | p{8cm} |}
+    \hline
+    \textbf{Key} & \textbf{Value} \\ \hline
+    K1 & AAA,BBB,CCC\\
+    
+    \hline
+    K2 &  AAA,BBB\\
+    
+    \hline
+	K3 & AAA,DDD\\
+	
+    \hline    
+    K4 & AAA,2,01/01/2015 \\ 
+       \hline  
+    \end{tabular}
+\end{center}
 \caption{Key-Value Beispiel [NoSql 1.5]}
-\end{figure}
+\end{table}
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=8cm]{images/KeyValue.PNG}
+%\caption{Key-Value Beispiel [NoSql 1.5]}
+%\end{figure}
 
 \subparagraph{Spaltenorientierte Datenbanken}
 Spaltenorientierte Datenbanken, oder auch „Wide-Column“-Datenbanken genannt, speichern ihre Datensätze in Form von Tabellen.  Sie wirken zunächst den Tabellen der relationalen Datenbanksysteme sehr ähnlich, unterscheiden sich grundlegend aber in der Speicherung der Daten, die nicht zeilenorientiert, sondern spaltenorientiert abgelegt werden. 
@@ -49,28 +73,26 @@ Spaltenorientierte Datenbanken, oder auch „Wide-Column“-Datenbanken genannt,
 \caption{Spaltenorientierte Datenbank Beispiel [NoSql 1.5]}
 \end{figure}
 
-Nachfolgend ist die zeilenoriente Speicherung dargestellt. Sie bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus meheren Spalten benötigt werden.
+Nachfolgend ist die zeilen- und die spaltenorientierte Speicherung dargestellt. Zeilenorientierung bei der Speicherung bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus mehreren Spalten benötigt werden.
+Spaltenorientierung dagegen eignet sich sehr gut für die Auswertung von Aggregaten.
 \newline
 
 
-\begin{figure}[h]
+%\begin{figure}[hb]
+%\centering
+%\includegraphics[width=15cm]{images/zeilenorientiert.png}
+%\caption{Key-Value Beispiel [NoSql 1.5]}
+%\end{figure}
+
+
+\begin{figure}[htb]
 \centering
-\includegraphics[width=15cm]{images/zeilenorientiert.png}
-\caption{Key-Value Beispiel [NoSql 1.5]}
-\end{figure}
-
-Folglich wird die spaltenorientiere Speicherung abgebildet. Sie eignen sich sehr gut für die Auswerttung von Aggregaten
-\newline
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=15cm]{images/spaltenorientiert.png}
-\caption{Key-Value Beispiel [NoSql 1.5]}
+\includegraphics[width=15cm]{images/zeilenspaltenorientiert.png}
+\caption{Zeilen- und spaltenorientierte Speicherung [NoSql 1.5]}
 \end{figure}
 
 \subsubsection{BASE}
-s
+TODO
 \newline
 
 \subsubsection{CAP-Theorem}
@@ -88,3 +110,4 @@ Die \textbf{Konsistenz (C)} beschreibt, dass Datenzustände, die in einem vertei
 \newpage
 \subsubsection{MongoDB}
 \input{Grundlagen_MongoDB}
+\newpage

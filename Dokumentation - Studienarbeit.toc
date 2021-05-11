@@ -12,80 +12,80 @@
 \contentsline {subsubsection}{\numberline {3.1.2}HTTP}{3}{subsubsection.3.1.2}%
 \contentsline {subparagraph}{Kommunikation}{3}{subsubsection.3.1.2}%
 \contentsline {subparagraph}{Methoden}{4}{figure.2}%
-\contentsline {subparagraph}{Statuscodes}{4}{Item.6}%
+\contentsline {subparagraph}{Statuscodes}{5}{Item.6}%
 \contentsline {subsubsection}{\numberline {3.1.3}HTTPS}{5}{subsubsection.3.1.3}%
-\contentsline {subsection}{\numberline {3.2}Node.JS}{6}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Architektur}{6}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Module}{8}{subsubsection.3.2.2}%
-\contentsline {paragraph}{\numberline {3.2.2.1}npm}{8}{paragraph.3.2.2.1}%
-\contentsline {paragraph}{\numberline {3.2.2.2}Express}{9}{paragraph.3.2.2.2}%
-\contentsline {subparagraph}{Middleware}{10}{figure.8}%
-\contentsline {subparagraph}{Middleware: express.json}{10}{figure.9}%
-\contentsline {subparagraph}{Middleware: Router}{11}{figure.10}%
-\contentsline {paragraph}{\numberline {3.2.2.3}Mongoose}{12}{paragraph.3.2.2.3}%
-\contentsline {subparagraph}{Object Document Mapping (ODM)}{12}{paragraph.3.2.2.3}%
-\contentsline {subparagraph}{Schema}{12}{paragraph.3.2.2.3}%
-\contentsline {subparagraph}{Model}{13}{figure.13}%
-\contentsline {paragraph}{\numberline {3.2.2.4}Verbindung}{14}{paragraph.3.2.2.4}%
-\contentsline {paragraph}{\numberline {3.2.2.5}Weitere Module}{15}{paragraph.3.2.2.5}%
-\contentsline {subsection}{\numberline {3.3}JavaScript}{15}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Historie}{15}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Wesentliche Programmiereigenschaften}{16}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Anwendungsgebiete}{16}{subsubsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsentwicklung für mobile Endgeräte}{17}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Begriffe}{17}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Eine Plattform}{17}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Ein \textit {Framework}}{17}{subsubsection.3.4.1}%
-\contentsline {subparagraph}{Eine mobile Anwendung}{17}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Plattformspezifische native Apps}{18}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Plattformübergreifende Anwendungen}{18}{subsubsection.3.4.3}%
-\contentsline {paragraph}{\numberline {3.4.3.1}\textit {(Progressive) Web Apps}}{19}{paragraph.3.4.3.1}%
-\contentsline {paragraph}{\numberline {3.4.3.2}Hybride Anwendungen}{19}{paragraph.3.4.3.2}%
-\contentsline {paragraph}{\numberline {3.4.3.3}Runtime basierte Anwendungen}{19}{paragraph.3.4.3.3}%
-\contentsline {paragraph}{\numberline {3.4.3.4}Model-driven Software Entwicklung}{20}{paragraph.3.4.3.4}%
-\contentsline {paragraph}{\numberline {3.4.3.5}Kompilierte Anwendungen}{21}{paragraph.3.4.3.5}%
-\contentsline {subsection}{\numberline {3.5}Frameworks zur mobilen, plattformübergreifenden Entwicklung}{21}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}React Native}{22}{subsubsection.3.5.1}%
-\contentsline {paragraph}{\numberline {3.5.1.1}Architektur}{22}{paragraph.3.5.1.1}%
-\contentsline {paragraph}{\numberline {3.5.1.2}JSX mit nativen Komponenten}{23}{paragraph.3.5.1.2}%
-\contentsline {paragraph}{\numberline {3.5.1.3}Komponenten}{24}{paragraph.3.5.1.3}%
-\contentsline {paragraph}{\numberline {3.5.1.4}State}{25}{paragraph.3.5.1.4}%
-\contentsline {subsubsection}{\numberline {3.5.2}Flutter}{26}{subsubsection.3.5.2}%
-\contentsline {paragraph}{\numberline {3.5.2.1}Architektur}{26}{paragraph.3.5.2.1}%
-\contentsline {paragraph}{\numberline {3.5.2.2}Dart}{27}{paragraph.3.5.2.2}%
-\contentsline {paragraph}{\numberline {3.5.2.3}Widgets}{28}{paragraph.3.5.2.3}%
-\contentsline {paragraph}{\numberline {3.5.2.4}States}{29}{paragraph.3.5.2.4}%
-\contentsline {subsection}{\numberline {3.6}NoSQL-Datenbank}{31}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}NoSQL-Datenbanktypen}{31}{subsubsection.3.6.1}%
-\contentsline {subparagraph}{Graphendatenbanken}{31}{subsubsection.3.6.1}%
-\contentsline {subparagraph}{Dokumentenorientierte Datenbanken}{31}{figure.29}%
-\contentsline {subparagraph}{Key-Value-Datenbanken}{32}{lstnumber.-1.8}%
-\contentsline {subparagraph}{Spaltenorientierte Datenbanken}{32}{figure.30}%
-\contentsline {subsubsection}{\numberline {3.6.2}BASE}{33}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}CAP-Theorem}{33}{subsubsection.3.6.3}%
-\contentsline {subsubsection}{\numberline {3.6.4}MongoDB}{34}{subsubsection.3.6.4}%
-\contentsline {paragraph}{\numberline {3.6.4.1}2.2.4.3 Aufbau/Struktur}{34}{paragraph.3.6.4.1}%
-\contentsline {subparagraph}{Schema-Freiheit}{34}{figure.35}%
-\contentsline {subparagraph}{BSON}{34}{figure.35}%
-\contentsline {subparagraph}{ObjectID und Primärschlüssel}{35}{lstnumber.-2.9}%
-\contentsline {paragraph}{\numberline {3.6.4.2}Datenbankabfrage}{35}{paragraph.3.6.4.2}%
-\contentsline {subparagraph}{Query-By-Example}{35}{paragraph.3.6.4.2}%
-\contentsline {subparagraph}{MapReduce}{36}{lstnumber.6.1}%
-\contentsline {subparagraph}{Aggregation-Framework}{36}{lstnumber.6.1}%
-\contentsline {paragraph}{\numberline {3.6.4.3}CRUD}{36}{paragraph.3.6.4.3}%
-\contentsline {subparagraph}{Create}{36}{table.4}%
-\contentsline {subparagraph}{Read}{37}{lstnumber.8.1}%
-\contentsline {subparagraph}{Update}{37}{lstnumber.8.1}%
-\contentsline {subparagraph}{Delete}{37}{lstnumber.9.2}%
-\contentsline {paragraph}{\numberline {3.6.4.4}Atomare Operationen}{37}{paragraph.3.6.4.4}%
-\contentsline {paragraph}{\numberline {3.6.4.5}Architektur}{38}{paragraph.3.6.4.5}%
-\contentsline {subparagraph}{Engine}{38}{paragraph.3.6.4.5}%
-\contentsline {subparagraph}{Replica Sets}{38}{paragraph.3.6.4.5}%
-\contentsline {subparagraph}{Sharding}{39}{figure.36}%
-\contentsline {paragraph}{\numberline {3.6.4.6}Verwaltungswerkzeuge}{39}{paragraph.3.6.4.6}%
-\contentsline {subparagraph}{Mongo Shell}{39}{paragraph.3.6.4.6}%
-\contentsline {subparagraph}{Treiber}{39}{paragraph.3.6.4.6}%
-\contentsline {subparagraph}{Grafische Oberflächen}{39}{paragraph.3.6.4.6}%
+\contentsline {subsection}{\numberline {3.2}JavaScript}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Historie}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Wesentliche Programmiereigenschaften}{6}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Anwendungsgebiete}{7}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Node.JS}{8}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Architektur}{8}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Module}{10}{subsubsection.3.3.2}%
+\contentsline {paragraph}{\numberline {3.3.2.1}npm}{10}{paragraph.3.3.2.1}%
+\contentsline {paragraph}{\numberline {3.3.2.2}Express}{10}{paragraph.3.3.2.2}%
+\contentsline {subparagraph}{Middleware}{12}{lstnumber.3.11}%
+\contentsline {subparagraph}{Middleware: express.json}{12}{figure.6}%
+\contentsline {subparagraph}{Middleware: Router}{13}{lstnumber.4.3}%
+\contentsline {paragraph}{\numberline {3.3.2.3}Mongoose}{14}{paragraph.3.3.2.3}%
+\contentsline {subparagraph}{Object Document Mapping (ODM)}{14}{paragraph.3.3.2.3}%
+\contentsline {subparagraph}{Schema}{14}{paragraph.3.3.2.3}%
+\contentsline {subparagraph}{Model}{15}{lstnumber.7.6}%
+\contentsline {subparagraph}{Verbindung}{16}{lstnumber.10.11}%
+\contentsline {paragraph}{\numberline {3.3.2.4}Weitere Module}{16}{paragraph.3.3.2.4}%
+\contentsline {subsection}{\numberline {3.4}NoSQL-Datenbank}{17}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}NoSQL-Datenbanktypen}{17}{subsubsection.3.4.1}%
+\contentsline {subparagraph}{Graphendatenbanken}{17}{subsubsection.3.4.1}%
+\contentsline {subparagraph}{Dokumentenorientierte Datenbanken}{17}{figure.7}%
+\contentsline {subparagraph}{Key-Value-Datenbanken}{18}{lstnumber.-1.8}%
+\contentsline {subparagraph}{Spaltenorientierte Datenbanken}{18}{table.4}%
+\contentsline {subsubsection}{\numberline {3.4.2}BASE}{19}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}CAP-Theorem}{19}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}MongoDB}{20}{subsubsection.3.4.4}%
+\contentsline {paragraph}{\numberline {3.4.4.1}Struktur}{20}{paragraph.3.4.4.1}%
+\contentsline {subparagraph}{Schema-Freiheit}{20}{figure.11}%
+\contentsline {subparagraph}{BSON}{20}{figure.11}%
+\contentsline {subparagraph}{ObjectID und Primärschlüssel}{21}{lstnumber.-2.9}%
+\contentsline {paragraph}{\numberline {3.4.4.2}Datenbankabfrage}{21}{paragraph.3.4.4.2}%
+\contentsline {subparagraph}{Query-By-Example}{21}{paragraph.3.4.4.2}%
+\contentsline {subparagraph}{MapReduce}{22}{lstnumber.14.1}%
+\contentsline {subparagraph}{Aggregation-Framework}{22}{lstnumber.14.1}%
+\contentsline {paragraph}{\numberline {3.4.4.3}CRUD}{22}{paragraph.3.4.4.3}%
+\contentsline {subparagraph}{Create}{22}{table.6}%
+\contentsline {subparagraph}{Read}{23}{lstnumber.16.1}%
+\contentsline {subparagraph}{Update}{23}{lstnumber.16.1}%
+\contentsline {subparagraph}{Delete}{23}{lstnumber.17.2}%
+\contentsline {paragraph}{\numberline {3.4.4.4}Atomare Operationen}{23}{paragraph.3.4.4.4}%
+\contentsline {paragraph}{\numberline {3.4.4.5}Architektur}{24}{paragraph.3.4.4.5}%
+\contentsline {subparagraph}{Engine}{24}{paragraph.3.4.4.5}%
+\contentsline {subparagraph}{Replica Sets}{24}{paragraph.3.4.4.5}%
+\contentsline {subparagraph}{Sharding}{25}{figure.12}%
+\contentsline {paragraph}{\numberline {3.4.4.6}Verwaltungswerkzeuge}{25}{paragraph.3.4.4.6}%
+\contentsline {subparagraph}{Mongo Shell}{25}{paragraph.3.4.4.6}%
+\contentsline {subparagraph}{Treiber}{25}{paragraph.3.4.4.6}%
+\contentsline {subparagraph}{Grafische Oberflächen}{26}{paragraph.3.4.4.6}%
+\contentsline {subsection}{\numberline {3.5}Anwendungsentwicklung für mobile Endgeräte}{27}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Begriffe}{27}{subsubsection.3.5.1}%
+\contentsline {subparagraph}{Eine Plattform}{27}{subsubsection.3.5.1}%
+\contentsline {subparagraph}{Ein \textit {Framework}}{27}{subsubsection.3.5.1}%
+\contentsline {subparagraph}{Eine mobile Anwendung}{27}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Plattformspezifische native Apps}{27}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Plattformübergreifende Anwendungen}{28}{subsubsection.3.5.3}%
+\contentsline {paragraph}{\numberline {3.5.3.1}\textit {(Progressive) Web Apps}}{28}{paragraph.3.5.3.1}%
+\contentsline {paragraph}{\numberline {3.5.3.2}Hybride Anwendungen}{29}{paragraph.3.5.3.2}%
+\contentsline {paragraph}{\numberline {3.5.3.3}Runtime basierte Anwendungen}{29}{paragraph.3.5.3.3}%
+\contentsline {paragraph}{\numberline {3.5.3.4}Model-driven Software Entwicklung}{30}{paragraph.3.5.3.4}%
+\contentsline {paragraph}{\numberline {3.5.3.5}Kompilierte Anwendungen}{30}{paragraph.3.5.3.5}%
+\contentsline {subsection}{\numberline {3.6}Frameworks zur mobilen, plattformübergreifenden Entwicklung}{30}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}React Native}{31}{subsubsection.3.6.1}%
+\contentsline {paragraph}{\numberline {3.6.1.1}Architektur}{32}{paragraph.3.6.1.1}%
+\contentsline {paragraph}{\numberline {3.6.1.2}JSX mit nativen Komponenten}{33}{paragraph.3.6.1.2}%
+\contentsline {paragraph}{\numberline {3.6.1.3}Komponenten}{34}{paragraph.3.6.1.3}%
+\contentsline {paragraph}{\numberline {3.6.1.4}State}{35}{paragraph.3.6.1.4}%
+\contentsline {subsubsection}{\numberline {3.6.2}Flutter}{36}{subsubsection.3.6.2}%
+\contentsline {paragraph}{\numberline {3.6.2.1}Architektur}{37}{paragraph.3.6.2.1}%
+\contentsline {paragraph}{\numberline {3.6.2.2}Dart}{37}{paragraph.3.6.2.2}%
+\contentsline {paragraph}{\numberline {3.6.2.3}Widgets}{38}{paragraph.3.6.2.3}%
+\contentsline {paragraph}{\numberline {3.6.2.4}States}{39}{paragraph.3.6.2.4}%
 \contentsline {subsection}{\numberline {3.7}Representational State Transfer - Application Programming Interface}{40}{subsection.3.7}%
 \contentsline {subsection}{\numberline {3.8}Firebase}{41}{subsection.3.8}%
 \contentsline {subsubsection}{\numberline {3.8.1}Firebase Authentifizierung}{41}{subsubsection.3.8.1}%
