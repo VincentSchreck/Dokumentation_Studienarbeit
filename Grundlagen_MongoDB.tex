@@ -58,14 +58,14 @@ Im Vergleich zu relationalen Datenbanken benutzt MongoDB keine Abfragesprache wi
 
 Das folgende Beispiel zeigt einen Aufruf aller Einträge, die als Ort Karlsruhe eingespeichert haben. 
 \newline
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Read, label=lst:MongoDBRead]
 db.pois.find( {"adresse.ort": "Karlsruhe" } )
 \end{lstlisting}
 
 Dabei kommt das Prinzip Query-by-Example [MongoDB2.0] zum Einsatz, bei dem die als JSON-Dokument beschriebenen Suchkriterien als Filter auf die durchsuchte Collection wirkt. Zusätzlich stehen für diese Art von Abfragemöglichkeit sämtliche logische Verknüpfungen und Vergleichsoperatoren zur Verfügung.  [ siehe MongoDB2.1]
 Das Ergebnis der obigen Find-Operationen liefert dabei einen Cursor zurück, über den die aufrufende Anwendung durch die einzelnen zurückgelieferten Dokumente iterieren kann. Außerdem kann der Cursor modifiziert werden, um beispielsweise Beschränkungen der Trefferanzahl oder Sortierung vorzunehmen.
 \newline
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Read Modifikation, label=lst:MongoDBReadModifikation]
 db.pois.find().limit(5).sort({"adresse.ort": -1})
 \end{lstlisting}
 
@@ -84,7 +84,7 @@ MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Ver
 Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance. [MongoDB2.4] Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden. [MongoDB2.5]
 \newline 
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Aggregate, label=lst:MongoDBAggregate]
 db.pois.aggregate([
     {$group: {_id: "$adresse.ort", n: {$sum:1}}},
     {$sort: {n: -1}}
@@ -163,21 +163,24 @@ MongoDB unterstützt eine Vielzahl an Operationen zum Erzeugen, Lesen, Updaten u
 \newline
 „InsertOne()“ erzeugt ein einzelnes Dokument in der jeweiligen Collection der Datenbank. Dabei wird ein Dokument im JSON-Format als Parameter mitgegeben. ObjectID wird, wenn nicht als Eigenschaft im Dokument angegeben, automatisch von MongoDB erzeugt. Ebenfalls wird die angesprochene Collection automatisch erzeugt, falls sie nicht bereits existiert. Die Funktion „InsertMany()“  erlaubt das Hinzufügen mehrerer Datensätze über ein Array von JSON-Dokumenten als Parameter. Die Methode „Insert“ ist flexibler und bietet beide Parametrisierungsmöglichkeiten. [Mongo2.55 ]
 \newline
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Create, label=lst:MongoDBCreate]
 db.personen.insertOne({"vorname" : "Robin"});
 \end{lstlisting}
 
 \textbf{Read}
 \newline
-Um Datensätze aus der Datenbank zu lesen, wird die find()-Methode zur Verfügung gestellt. Sie gibt alle Dokumente einer Kollektion zurück. Wie im Kapitel Query-By-Example beschrieben, kann die Funktion mit Filtern versehen werden. Die Funktion findOne() bietet die gleiche Funktionsweise, die Dokumentenausgabe ist aber auf ein einzelnes Dokument begrenzt.
-\newline
+Um Datensätze aus der Datenbank zu lesen, wird die find()-Methode zur Verfügung gestellt. Sie gibt alle Dokumente einer Kollektion zurück. Wie im Kapitel Query-By-Example beschrieben, kann die Funktion mit Filtern versehen werden. Die Funktion findOne() bietet die gleiche Funktionsweise, die Dokumentenausgabe ist aber auf ein einzelnes Dokument begrenzt. 
+Ein Beispiel ist dargestellt in Listing \ref{lst:MongoDBRead}.
+\newline\newline
+
 \textbf{Update}
 \newline
 Die Update()-Methode ermöglicht es, Änderungen an Datensätzen vorzunehmen.  Die Methode erhält zwei Parameter, einen zur Angabe der gesuchten Dokumente und den anderen mit  der vorzunehmenden Änderung. Simultan zu den Insert-Methoden gibt es die UpdateOne()-Methode für Änderungen an einem Dokument und UpdateMany()-Methode für mehrere Dokumente.
 \newline
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Update, label=lst:MongoDBUpdate]
 db.personen.updateOne({"vorname" : "Robin"} , currentDate("last_login") );
+
 \end{lstlisting}
 
 \textbf{Delete}
@@ -185,8 +188,9 @@ db.personen.updateOne({"vorname" : "Robin"} , currentDate("last_login") );
 Für das Löschen von Datensätzen aus einer Collection gibt es die DeleteOne()- und DeleteMany()-Methode. Über mitgegegeben Parameter können Filter eingestellt werden. Eine ganze Collection kann mit der drop()-Methode entfernt werden.
 \newline
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=MongoDB Remove, label=lst:MongoDBRemove]
 db.personen.deleteOne( {"vorname" : "Robin"} );
+
 \end{lstlisting}
 
 \textbf{2.2.2.2 Atomare Operationen}
@@ -198,19 +202,33 @@ Bis vor dem Jahre 2018 unterstützte MongoDB keine Transaktionen. Mit der Veröf
 
 \textbf{2.2.4.x Architektur}
 \newline 
-Wired Tiger?
-Storage Engine
-Replica Sets
-Oplog
-Sharding
+Bei der Inbetriebnahme einer MongoDB Datenbank spielen drei Prozesse eine wichtige  Rolle. \newline Der  „mongod“-Prozess ist der primäre Hintergrundprozess für das Datenbanksystem. Er behandelt Datenabfragen, Datenzugriffe und führt benötigte Hintergrundoperationen durch. [mongodb3.0] Beim Starten des mongod-Prozesses können über Flags Konfigurationen vorgenommen werden, beispielsweise ändert „--port 5000“ den Port. Nach erfolgreichem Start des Prozesses kann über den Standard Port der MongoDB (27017) bzw. über den konfigurierten Port eine Verbindung hergestellt werden.\newline
+Der Prozess, der als Controller für sich auf mehreren Datenbanken befindenden verteilte Daten dient, nennt sich „mongos“. [mongodb3.1] Dieser Prozess findet seinen Einsatz hauptsächlich in Kombination mit Sharding, auf die im weiteren Unterkapitel eingegangen wird. \newline
+Der „mongo“-Prozess ist eine interaktive JavaScript Schnittstelle auf der Kommandozeile. Er bietet umfassende Funktionalitätem für die Systemadministration des Datenbankensystems als auch Zugriff auf die Datensätze. [mongo3.2]
+
+\textbf{Storage Engine}
+\newline
+Als Storage Engine, oder auch Datenbank-Engine, wird die zugrundeliegende Softwarekomponente eines Datenbanksystems zum Verwalten der Daten bezeichnet. Die gebräuchlichsten Engines in MongoDB sind die MMAPv1-Engine und die WiredTiger-Engine.\newline
+Bis vor Version 3.2 war MMAPv1-Engine die Standard-Storage Engine von MongoDB. Eine Kompression der Daten wurde nicht unterstützt und Transaktionen waren nur auf einem Dokument ausführbar. Ab MongoDB 3.2 wird standardmäßig die Wired Tiger-Engine eingesetzt. Neben der Kompression der Daten und der miteingehenden Verringerung des benötigten Speicherplatzes bietet diese Engine auch eine Verschlüsselung der Daten an. Abhängig des benutzten Kompressionsalgorithmus kann der benötigte Verbrauch um 70\% für Daten und um 50\% für Indizes reduziert werden. [Mongo3.5] Die WiredTiger-Engine skaliert im Vergleich zur MMAPv1 mit der Anzahl der CPU-Kerne und ermöglicht Transaktionen über mehrere Dokumente hinweg. Die genutzte Engine kann in den Konfigurationen eingestellt werden.
 \newline
 
-\textbf{Technische Grundlagen}
-/
-Replica
-Transaktionen
+\textbf{Replica Sets}
 \newline
+Im standardmäßgen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden. [3.6] MongoDB realisiert die Replikation der Daten über Replica Sets. [3.7] Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten. 
+Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten "Oplogs" (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird. [3.8]  Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab.
 
+\begin{figure}[htb]
+\centering
+\includegraphics[width=7cm]{images/replicaset1.png}
+\caption{MongoDB Replica Set [3.8]}
+\end{figure}
+
+
+
+\textbf{Sharding}
+-
+\newline
+-
 \textbf{Verwaltungswerkzeuge}
 Mongo Shell
 Treiber
