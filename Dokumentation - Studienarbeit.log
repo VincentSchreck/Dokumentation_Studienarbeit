@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  11 MAY 2021 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2021.3.5)  12 MAY 2021 20:17
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -641,7 +641,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--11
 
  []
 
-<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=503, 445.665pt x 134.00063pt>
+<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=505, 445.665pt x 134.00063pt>
 File: images/Netzwerkprotokolle_OSI-Schicht.PNG Graphic file (type png)
 <use images/Netzwerkprotokolle_OSI-Schicht.PNG>
 Package pdftex.def Info: images/Netzwerkprotokolle_OSI-Schicht.PNG  used on inp
@@ -694,7 +694,7 @@ as been already used, duplicate ignored
                                                   
 l.77 
      ]
-<images/netzwerkprotokolle_http.PNG, id=516, 549.55313pt x 176.15813pt>
+<images/netzwerkprotokolle_http.PNG, id=518, 549.55313pt x 176.15813pt>
 File: images/netzwerkprotokolle_http.PNG Graphic file (type png)
 <use images/netzwerkprotokolle_http.PNG>
 Package pdftex.def Info: images/netzwerkprotokolle_http.PNG  used on input line
@@ -767,7 +767,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
  []
 
 [6]
-<images/JavaScript_Object.PNG, id=538, 545.03625pt x 143.03438pt>
+<images/JavaScript_Object.PNG, id=540, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
 Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
@@ -797,7 +797,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
  []
 
-<images/nodejs_otherthreading.png, id=544, 1118.1775pt x 675.52374pt>
+<images/nodejs_otherthreading.png, id=546, 1118.1775pt x 675.52374pt>
 File: images/nodejs_otherthreading.png Graphic file (type png)
 <use images/nodejs_otherthreading.png>
 Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
@@ -823,7 +823,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
-<images/nodejs_nodethreading.png, id=550, 1098.1025pt x 656.4525pt>
+<images/nodejs_nodethreading.png, id=552, 1098.1025pt x 656.4525pt>
 File: images/nodejs_nodethreading.png Graphic file (type png)
 <use images/nodejs_nodethreading.png>
 Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 35
@@ -891,7 +891,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 128--130
 
  []
 
-<images/nodejs_middleware.png, id=587, 956.57375pt x 256.96pt>
+<images/nodejs_middleware.png, id=589, 956.57375pt x 256.96pt>
 File: images/nodejs_middleware.png Graphic file (type png)
 <use images/nodejs_middleware.png>
 Package pdftex.def Info: images/nodejs_middleware.png  used on input line 135.
@@ -1003,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/graphikdatabase.jpg, id=685, 341.3553pt x 257.0403pt>
+<images/graphikdatabase.jpg, id=687, 341.3553pt x 257.0403pt>
 File: images/graphikdatabase.jpg Graphic file (type jpg)
 <use images/graphikdatabase.jpg>
 Package pdftex.def Info: images/graphikdatabase.jpg  used on input line 14.
@@ -1019,7 +1019,7 @@ Overfull \hbox (1.37259pt too wide) in paragraph at lines 67--68
 y-ste-me sehr []ahnlich, un-ter-schei-den sich grund-
  []
 
-<images/SpaltenorientiereDatenbank.png, id=690, 576.1525pt x 261.97874pt>
+<images/SpaltenorientiereDatenbank.png, id=692, 576.1525pt x 261.97874pt>
 File: images/SpaltenorientiereDatenbank.png Graphic file (type png)
 <use images/SpaltenorientiereDatenbank.png>
 Package pdftex.def Info: images/SpaltenorientiereDatenbank.png  used on input l
@@ -1030,7 +1030,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--79
 
  []
 
-<images/zeilenspaltenorientiert.png, id=691, 473.51906pt x 103.13531pt>
+<images/zeilenspaltenorientiert.png, id=693, 473.51906pt x 103.13531pt>
 File: images/zeilenspaltenorientiert.png Graphic file (type png)
 <use images/zeilenspaltenorientiert.png>
 Package pdftex.def Info: images/zeilenspaltenorientiert.png  used on input line
@@ -1056,7 +1056,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
-<images/Visualization-of-CAP-theorem.png, id=707, 853.1875pt x 770.88pt>
+<images/Visualization-of-CAP-theorem.png, id=709, 853.1875pt x 770.88pt>
 File: images/Visualization-of-CAP-theorem.png Graphic file (type png)
 <use images/Visualization-of-CAP-theorem.png>
 Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
@@ -1085,7 +1085,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<images/MongoDB_Architektur.png, id=713, 881.2925pt x 418.56375pt>
+<images/MongoDB_Architektur.png, id=715, 881.2925pt x 418.56375pt>
 File: images/MongoDB_Architektur.png Graphic file (type png)
 <use images/MongoDB_Architektur.png>
 Package pdftex.def Info: images/MongoDB_Architektur.png  used on input line 11.
@@ -1216,7 +1216,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--194
  []
 
 [24]
-<images/replicaset1.png, id=763, 465.74pt x 422.57875pt>
+<images/replicaset1.png, id=765, 465.74pt x 422.57875pt>
 File: images/replicaset1.png Graphic file (type png)
 <use images/replicaset1.png>
 Package pdftex.def Info: images/replicaset1.png  used on input line 201.
@@ -1227,7 +1227,7 @@ Package pdftex.def Info: images/replicaset1.png  used on input line 201.
                                                   
 l.220 \newpage
                <./images/replicaset1.png>]
-<images/mongodb_compass.png, id=770, 1028.84375pt x 472.76625pt>
+<images/mongodb_compass.png, id=772, 1028.84375pt x 472.76625pt>
 File: images/mongodb_compass.png Graphic file (type png)
 <use images/mongodb_compass.png>
 Package pdftex.def Info: images/mongodb_compass.png  used on input line 227.
@@ -1255,7 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 [27]
-<images/crossplattform_unterteilung.png, id=794, 965.6075pt x 348.30125pt>
+<images/crossplattform_unterteilung.png, id=796, 965.6075pt x 348.30125pt>
 File: images/crossplattform_unterteilung.png Graphic file (type png)
 <use images/crossplattform_unterteilung.png>
 Package pdftex.def Info: images/crossplattform_unterteilung.png  used on input 
@@ -1281,7 +1281,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 
  []
 
-<images/hybride-anwendungen-struktur.PNG, id=810, 485.56406pt x 422.32782pt>
+<images/hybride-anwendungen-struktur.PNG, id=812, 485.56406pt x 422.32782pt>
 File: images/hybride-anwendungen-struktur.PNG Graphic file (type png)
 <use images/hybride-anwendungen-struktur.PNG>
 Package pdftex.def Info: images/hybride-anwendungen-struktur.PNG  used on input
@@ -1318,7 +1318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--107
  []
 
 [30]
-<images/crossplattform_popularity.png, id=850, 1003.75pt x 745.78625pt>
+<images/crossplattform_popularity.png, id=852, 1003.75pt x 745.78625pt>
 File: images/crossplattform_popularity.png Graphic file (type png)
 <use images/crossplattform_popularity.png>
 Package pdftex.def Info: images/crossplattform_popularity.png  used on input li
@@ -1340,7 +1340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--125
                                                   
 l.127 
        <./images/crossplattform_popularity.png>]
-<images/reactnative_architecture_old.png, id=868, 1204.5pt x 412.54124pt>
+<images/reactnative_architecture_old.png, id=870, 1204.5pt x 412.54124pt>
 File: images/reactnative_architecture_old.png Graphic file (type png)
 <use images/reactnative_architecture_old.png>
 Package pdftex.def Info: images/reactnative_architecture_old.png  used on input
@@ -1351,7 +1351,7 @@ Overfull \hbox (26.54736pt too wide) in paragraph at lines 130--131
  [] 
  []
 
-<images/reactnative_architecture.png, id=871, 1204.5pt x 497.86pt>
+<images/reactnative_architecture.png, id=873, 1204.5pt x 497.86pt>
 File: images/reactnative_architecture.png Graphic file (type png)
 <use images/reactnative_architecture.png>
 Package pdftex.def Info: images/reactnative_architecture.png  used on input lin
@@ -1416,7 +1416,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
-<images/dart-diagram.png, id=981, 803.0pt x 437.635pt>
+<images/dart-diagram.png, id=983, 803.0pt x 437.635pt>
 File: images/dart-diagram.png Graphic file (type png)
 <use images/dart-diagram.png>
 Package pdftex.def Info: images/dart-diagram.png  used on input line 280.
@@ -1427,7 +1427,7 @@ Package pdftex.def Info: images/dart-diagram.png  used on input line 280.
                                                   
 l.290 \end{displayquote}
                          <./images/dart-diagram.png (PNG copy)>]
-<images/flutter_architektur.png, id=998, 1842.885pt x 1511.6475pt>
+<images/flutter_architektur.png, id=1000, 1842.885pt x 1511.6475pt>
 File: images/flutter_architektur.png Graphic file (type png)
 <use images/flutter_architektur.png>
 Package pdftex.def Info: images/flutter_architektur.png  used on input line 304
@@ -1459,13 +1459,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--330
                                                   
 l.330 
        <./images/flutter_architektur.png>]
-<images/flutter_widget_tree.png, id=1018, 602.25pt x 528.97626pt>
+<images/flutter_widget_tree.png, id=1020, 602.25pt x 528.97626pt>
 File: images/flutter_widget_tree.png Graphic file (type png)
 <use images/flutter_widget_tree.png>
 Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 333
 .
 (pdftex.def)             Requested size: 301.12425pt x 264.48747pt.
-<images/flutter_state.png, id=1021, 764.8575pt x 277.035pt>
+<images/flutter_state.png, id=1023, 764.8575pt x 277.035pt>
 File: images/flutter_state.png Graphic file (type png)
 <use images/flutter_state.png>
 Package pdftex.def Info: images/flutter_state.png  used on input line 346.
@@ -1474,14 +1474,14 @@ Package pdftex.def Info: images/flutter_state.png  used on input line 346.
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.134 \newpage
+l.137 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.22}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
-l.134 \newpage
+l.137 \newpage
                <./images/flutter_widget_tree.png> <./images/flutter_state.png>]
-(Grundlagen_RestAPI.tex) [40] (Firebase.tex
+(Firebase.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--10
 
  []
@@ -1501,13 +1501,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
  []
 
-<images/firestore_datastucture.png, id=1042, 702.625pt x 542.025pt>
+<images/firestore_datastucture.png, id=1040, 702.625pt x 542.025pt>
 File: images/firestore_datastucture.png Graphic file (type png)
 <use images/firestore_datastucture.png>
 Package pdftex.def Info: images/firestore_datastucture.png  used on input line 
 31.
 (pdftex.def)             Requested size: 159.33821pt x 122.91801pt.
-[41]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 38--52
 
  []
@@ -1522,18 +1522,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--73
 
  []
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.23}
 ) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
 l.73 
-      <./images/firestore_datastucture.png>] [43]) [44]
+      <./images/firestore_datastucture.png>] [42]) [43]
 (Recommendationssystem.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 12.
 
-[45pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
+[44pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   
@@ -1556,39 +1556,60 @@ Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
 oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
  []
 
-[46])
+[45])
 Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--144
 [][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
 383313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
-(Konzept.tex) (TechnologieAuswahl.tex) [47] (Backend.tex (Backend_Server.tex)
-(Backend_Datenbank.tex) (Backend_Kommunikationsschnittstelle.tex)) [48]
-[49]
-Overfull \hbox (20.85497pt too wide) in paragraph at lines 185--186
+[46] (Konzept.tex
+<images/Konzept.PNG, id=1152, 782.17218pt x 470.50781pt>
+File: images/Konzept.PNG Graphic file (type png)
+<use images/Konzept.PNG>
+Package pdftex.def Info: images/Konzept.PNG  used on input line 7.
+(pdftex.def)             Requested size: 398.33858pt x 239.61838pt.
+) [47pdfTeX warning (ext4): destination with the same identifier (name{figure.2
+4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.149 \newpage
+               <./images/Konzept.PNG>] (TechnologieAuswahl.tex [48]
+Overfull \hbox (7.03014pt too wide) in paragraph at lines 38--39
+\OT1/cmr/m/n/10.95 Als Kom-mu-ni-ka-ti-ons-schnitt-stel-le wird ei-ne We-bA-pi 
+ent-wickelt, des-sen Kom-mu-ni-ka-ti-on auf HTTP-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--46
+
+ []
+
+) (Backend.tex (Backend_Server.tex) (Backend_Datenbank.tex) [49]
+(Backend_Kommunikationsschnittstelle.tex)) [50]
+Overfull \hbox (20.85497pt too wide) in paragraph at lines 186--187
 []\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
 On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
  []
 
 
-Overfull \hbox (131.25366pt too wide) in paragraph at lines 195--196
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 196--197
 []$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
-[50] ("Dokumentation - Studienarbeit.aux")
+[51] ("Dokumentation - Studienarbeit.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: 15689F61A8ACF1062991A561BF16EAAF;10275.
+(rerunfilecheck)             Checksum: F7BA2B1FCE166F56CAB09FC418A8B17A;9992.
  ) 
 Here is how much of TeX's memory you used:
- 15699 strings out of 479342
- 231085 string characters out of 2857694
- 700289 words of memory out of 3000000
- 32336 multiletter control sequences out of 15000+200000
+ 15701 strings out of 479342
+ 231047 string characters out of 2857694
+ 700288 words of memory out of 3000000
+ 32339 multiletter control sequences out of 15000+200000
  415011 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,12n,75p,1355b,1930s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1688,10 +1709,10 @@ ype1/public/amsfonts/cm/cmsy10.pfb><C:/Users/RDBC/AppData/Local/Programs/MiKTeX
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/RDBC/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/RDBC/AppDat
 a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (55 pages, 1841449 bytes)
+Output written on "Dokumentation - Studienarbeit.pdf" (56 pages, 1872286 bytes)
 .
 PDF statistics:
- 1343 PDF objects out of 1440 (max. 8388607)
- 491 named destinations out of 1000 (max. 500000)
- 684 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1352 PDF objects out of 1440 (max. 8388607)
+ 493 named destinations out of 1000 (max. 500000)
+ 689 words of extra memory for PDF output out of 10000 (max. 10000000)
 
