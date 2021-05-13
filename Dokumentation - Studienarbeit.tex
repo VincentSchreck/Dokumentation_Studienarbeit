@@ -21,6 +21,10 @@
 \author{Leon Gieringer, Robin Meckler,Vincent Schreck \\ \\ Studienarbeit \\ \\ \\}
 \date{\today}
 \usepackage{wrapfig}
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{xspace}
+
 
 
 %%%%%%%%%%%% listing & color for Code %%%%%%%%%%%%
@@ -72,8 +76,7 @@
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
 {\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 
 \begin{document}
@@ -85,7 +88,6 @@
 \newpage
 \listoffigures
 \newpage
-\addcontentsline{toc}{section}{Listings}
 \lstlistoflistings
 \newpage
 \pagenumbering{arabic}
@@ -119,10 +121,14 @@
 \input{Framework_NodeJS}
 %\subsection{Language}
 %\input{Language}
+\subsection{Representational State Transfer - Application Programming Interface}
+\input{Grundlagen_RestAPI}
 \newpage
-
 \subsection{NoSQL-Datenbank}
 \input{Grundlagen_NoSQL_Datenbank}
+\newpage
+\subsection{Firebase}
+\input{Firebase}
 
 \newpage
 \subsection{Anwendungsentwicklung für mobile Endgeräte}
@@ -130,18 +136,14 @@
 %\subsection{IDE} Auswahl geeign. Techn.
 %\input{IDE} Auswahl geeign. Techn
 
-
 %\newpage
 %\subsection{Representational State Transfer - Application Programming Interface}
 %\input{Grundlagen_RestAPI}
 \newpage
-\subsection{Firebase}
-\input{Firebase}
-\newpage
 
 \subsection{Recommender System}
-\input{Recommendationssystem}	
-		
+\input{Recommendationssystem}
+
 \newpage
 \section{Konzept?}
 \input{Konzept}
@@ -157,8 +159,7 @@
 
 \subsection{Swipe/Aussuchen/Voting}		
 \subsection{Matches/Chat}		
-\subsection{Film-/Serienvorschläge}		
-\subsection{Gruppenorgien}		
+\subsection{Film-/Serienvorschläge}
 \subsection{Gespeicherte Filme/Filmliste}		
 \subsection{Zugänglichkeit/Behindertenfreundlichkeit}		
 
@@ -176,6 +177,10 @@
 
 
 \section{Fazit}
+\newpage
+\appendix
+\section{Verfasser einzelner Abschnitte}
+\input{aufteilung}
 \newpage
 \section*{Literaturverzeichnis}
 \begin{itemize}

@@ -12,14 +12,17 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Graphikdatenbank Beispiel [NoSql 1.9]}}{20}{figure.11}%
 \contentsline {figure}{\numberline {12}{\ignorespaces MongoDB Replica Set [3.8]}}{25}{figure.12}%
 \contentsline {figure}{\numberline {13}{\ignorespaces CRUD-Besipielfunktionen eines Mongoose-Models}}{26}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} }}{28}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark }}{29}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark }}{31}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Alte Architektur von React Native \footnotemark }}{32}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Neue Architektur von React Native \footnotemark }}{33}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark }}{36}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark }}{38}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark }}{39}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark }}{39}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Datenmodell in Firebase \footnotemark }}{41}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Konzept}}{47}{figure.24}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Datenmodell in Firebase \footnotemark }}{28}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Cloud Functions Anwendungsfall Benachrichtigung}}{31}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Firebase Cloud Messaging Architektur}}{32}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Google AdMob Anzeigemöglichkeiten}}{32}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} }}{34}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark }}{35}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark }}{37}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Alte Architektur von React Native \footnotemark }}{38}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Neue Architektur von React Native \footnotemark }}{39}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark }}{42}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark }}{44}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark }}{45}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark }}{45}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Konzept}}{49}{figure.27}%

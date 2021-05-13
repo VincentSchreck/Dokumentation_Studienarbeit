@@ -15,3 +15,12 @@ Dokumentation - Studienarbeit.out
 Dokumentation - Studienarbeit.pdf
 Dokumentation - Studienarbeit.synctex.gz
 Dokumentation - Studienarbeit.toc
+Dokumentation - Studienarbeit.aux
+*.aux
+*.lof
+*.log
+Dokumentation - Studienarbeit.lof
+*.pdf
+*.lol
+*.gz
+*.toc
