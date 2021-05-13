@@ -1,0 +1,48 @@
+
+EINLEITUNG:
+- \glqq Aber nicht nur Menschen mit Behinderung benutzen Screenreader/Talkback/JAWS (Job Access With Speech)..., auch für Menschen deren Sicht eingeschränkt ist (ob durch Krankheiten oder im Alter) greifen auf diese Unterstützung zurück. \grqq \\
+- Immer mehr Filme/Serien werden zugänglicher/barrierefreier und mit Untertitel oder Audiodeskription erweitert. 
+- Wir wollen einerseits zu dieser Barrierefreiheit beitragen und allen Personen die gleichen Möglichkeiten geben. Und andererseits...\\
+- in Sehr vielen Filmen wird bei einer neuen Szene akustisch die neue Umgebung beschrieben. Teilweise durch einen Kommentar eines Charakters (\glqq Du hast deine Wohnung ja schön eingerichtet\grqq der eine aus dem Musical) oder durch Geräusche wie Vogelgezwitscher oder Autohupen.\\
+
+
+----------------------------------\\
+%TODO Einleitung zu Barrierefreiheit allgemein
+Barrierefreiheit im Allgemeinen bedeutet, dass ein Gegenstand, eine Einrichtung oder Informationsquelle für Menschen mit Behinderung ohne Unzulänglichkeiten nutzbar, zugänglich oder auffindbar ist [BGG, §4]. In der Softwareentwicklung versteht man darunter Applikationen für Menschen mit Einschränkungen zugänglich und bedienbar zu machen. Bezogen auf die Entwicklung von  mobilen Apps gilt es dabei den akustischen, optischen oder motorischen Einschränkungen der Benutzer entgegenzuwirken. \\
+
+%TODO Barrierefreiheit in Applications
+\noindent Mit der Verbreitung von Smartphones ist die Benutzung mobiler Apps stark angestiegen und mittlerweile in nahezu jedem Haushalt aufzufinden. Obwohl etwa 9,5\% aller in Deutschland lebenden Menschen einen Schwerbehindertenausweis besitzen (Stand 24.06.2020)\cite{schwerbehindertenausweis}, ist die Implementierung von barrierefreier Bedienung nicht selbstverständlich. Gerade Programmierern/innen aus dem privaten Sektor sind diese Funktionen oft nicht bekannt, es besteht kein Interesse oder sie werden schlichtweg vergessen. Software, die für öffentliche Einrichtungen entwickelt wird, ist durch das Behindertengleichstellungsgesetz von 2002 dazu verpflichtet ihr Softwareangebot bis spätestens dem 23. Juni 2021 barrierefrei zu gestalten \cite{behindertengleichstellungsgesetz}. Hierzu zählen sämtliche Webseiten sowie mobile Anwendungen. \\
+
+%TODO Was wird das???
+Neben den erwähnten 7,9 Millionen Menschen in Deutschland mit Schwerbehindertenausweis ... altersbedingte Sehschwäche...\\
+
+
+%TODO Barrierefreiheit in Filmen und Serien
+Auch die Zugänglichkeit von Filmen und Serien für Menschen mit eingeschränkter Wahrnehmung wurde in den letzten Jahren stark verbessert. 
+Hierbei lässt sich zwischen optischer und akustischer Einschränkung differenzieren. Für hörgeschädigte Personen werden bereits seit mehreren Jahrzehnten Untertitel eingesetzt. Was früher für ausgewählte Filme durch eine Funktion des Teletextes erreicht wurde, wird heutzutage durch eine integrierte Funktion des Videoplayers verwirklicht. Manche Anbieter wie beispielsweise die Internetplattform YouTube bieten durch Spracherkennung automatisch generierte Untertitel an.\\
+Auch für Menschen mit eingeschränktem Sehvermögen werden Filme und Serien mithilfe von Audiodeskriptionen vermehrt zugänglich gemacht. Hierbei wird die bereits vorhandene Tonspur mit Bildbeschreibungen und Kommentaren versehen. Was bis vor wenigen Jahren noch etwas Besonderes war und nur für ausgewählte Filme bestimmt war, ist heutzutage Standard. Größere Video-On-Demand-Plattformen wie Netflix oder Amazon Prime bieten diese Möglichkeit bei nahezu allen Eigenproduktionen an. Zusätzlich werden bestehende Filme neu mit Audiodeskriptionen versehen.\\
+
+
+%TODO Also warum?
+Hieraus lässt sich leicht erkennen, dass Filme und Serien heutzutage auch von Menschen mit Einschränkungen genutzt werden. Was auf den ersten Blick vielleicht nicht bedacht wird oder als  unwichtig abgestempelt wird, kann einen nicht unerheblichen Vergrößerungsfaktor für den Kundenstamm bewirken. Für die Entwicklung einer mobilen App, bei der Filme und Serien bewertet werden, spielt also die Barrierefreiheit eine wichtige Rolle und darf auf keinen Fall vernachlässigt werden. 
+
+
+%TODO Fokus auf welche Funktion? Was wir machen?
+Bei der Entwicklung von StreamSwipe werden mehrere mögliche Einschränkungen der User betrachtet und entsprechend reagiert. Ziel ist es, dass sowohl der Kunde sowie der Anbieter maximal davon profitieren. Hierfür soll die App für ein möglichst großes Publikum zugänglich gemacht werden, jedoch auch sogenanntes Over-Engineering vermieden werden, da zu viele Funktionen eine App unübersichtlich, teuer und langsamer werden lassen. Natürlich beziehen sich die folgenden Aspekte nur auf das Design der App, da die dargestellten Filmposter durch die API vorgegeben werden.\\
+
+Allgemein wird Leserlichkeit durch große Schriftgrößen, hohe Farbkontraste, große Schaltflächen oder universelles Design erreicht. Alleine in Deutschland tragen 44,5 Millionen Menschen regelmäßig eine Brille oder Kontaktlinsen und benötigen somit Sehhilfen \cite{sehhilfen}. Unterstützung auf Seiten der App kann hierfür durch vergrößerbaren Text geschehen. Da aber davon ausgegangen werden kann, dass Personen, die sich auf Sehhilfen verlassen, bereits eine Brille oder Kontaktlinsen besitzen, wird die Textgröße vorerst nicht variabel gehalten. Außerdem gibt es bei Android- und Apple-Smartphones bereits eingebaute Vergrößerungsfeatures, die Bildausschnitte vergrößert darstellen können. Aus diesem Grund wird in diesem Projekt kein Fokus auf dieses Feature gelegt. \\
+Farbblindheit kann jedoch in vielen Formen auftreten. Um der bekannten Farbfehlsicht entgegenzuwirken, werden Farben aus Problembereichen wie Rot und Grün nicht nebeneinander benutzt. Allgemein wird ein schlichtes Design gewählt und Farben nur zu Akzentuierung und als Stilmittel benutzt, statt als Informationsträger. %TODO Referenz auf ein Screenshot aus Kapitel Benutzeroberfläche, mit dem das zugängliche Design gezeigt wird.
+ Geringe Sehschärfe durch Achromatopsie kann wie weiter oben beschrieben umgangen werden.\\
+
+Ist die Sehkraft noch weiter eingeschränkt oder gar nicht mehr vorhanden, werden Semantiken eingesetzt. Hierbei erhält jedes Element auf dem Bildschirm eine Beschreibung, die vorgelesen werden kann. Bei Zahlen und Texten wird die vorhandene Information übermittelt, sofern keine weitere Information hinterlegt ist. Besonders hilfreich ist dies jedoch bei Abbildungen. Ausgeführt wird das Auslesen von einem Screenreader. Mobile Geräte haben diese Funktion bereits standardmäßig eingebaut (VoiceOver bei Apple und TalkBack bei Android) und wandeln die Semantiken mittels Sprachsynthese in akustische Signale um. Bei Desktopanwendungen wie z.B. JAWS für Windows können diese Informationen auch durch eine Braillezeile wiedergegeben werden.\\
+Bei Flutter ist das Hinzufügen von Semantiken bereits eingebaut. Hierfür ...
+- optisch: Wir bauen Semantics ein, so gut es geht, dass Standardfeatures von Android und Apple damit arbeiten können. %TODO Codeausschnitt, der Semantics anzeigt
+- Bilder mit Semantics versehen (Sodass Blindenprogramme es vorlesen können)\\
+
+
+Um für Personen mit eingeschränktem Hörvermögen oder vollständiger Gehörlosigkeit die App zugänglich zu machen, wird auf akustisches Feedback als notwendige Informationsübertragung verzichtet. Innerhalb der App werden keine Geräusche erzeugt, außer der oben beschriebenen Funktion der Semantiken. Beim Erhalten einer neuen Nachricht oder eines neuen Matches kann weiterhin optional eine akustische Benachrichtigung erhalten werden. Hierbei wird die betriebssystemeigene Funktion übernommen, sodass in der App keine neuen Einstellungen vorgenommen werden müssen.\\
+
+Auch feinmotorische Einschränkungen werden versucht zu umgehen. Die Navigation und die Filmbewertung in StreamSwipe können durch großflächige Wischbewegungen ausgeführt werden. Wo diese Lösung nicht möglich ist, werden verhältnismäßig große Buttons eingesetzt. Lediglich beim Registrieren und Einloggen werden feine Bewegungen erfordert. Hierbei öffnet sich allerdings die als Standard eingestellte digitale Tastatur, die in vielen Fällen eine Spracheingabe besitzt, sodass die sehr kleinen Tasten nicht benutzt werden müssen.\\
+
+
+Sollte sich in Zukunft jedoch Kritik in Form von negativen Nutzerbewertungen herauskristallisieren, kann eines der noch nicht implementierten Features über ein Update nachgerüstet werden.

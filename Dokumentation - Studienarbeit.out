@@ -2,28 +2,29 @@
 \BOOKMARK [1][-]{section.2}{Motivation}{}% 2
 \BOOKMARK [1][-]{section.3}{Theoretische Grundlagen}{}% 3
 \BOOKMARK [2][-]{subsection.3.1}{Framework}{section.3}% 4
-\BOOKMARK [1][-]{section.4}{Einleitung}{}% 5
-\BOOKMARK [2][-]{subsection.4.1}{Language}{section.4}% 6
-\BOOKMARK [2][-]{subsection.4.2}{IDE}{section.4}% 7
-\BOOKMARK [2][-]{subsection.4.3}{Database}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.4}{Firebase}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.5}{Recommendationssystem}{section.4}% 10
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Collaborative Filtering}{subsection.4.5}% 11
-\BOOKMARK [3][-]{subsubsection.4.5.2}{Content-based filtering}{subsection.4.5}% 12
-\BOOKMARK [3][-]{subsubsection.4.5.3}{Cold Start Problem}{subsection.4.5}% 13
-\BOOKMARK [1][-]{section.5}{Konzept?}{}% 14
-\BOOKMARK [1][-]{section.6}{Funktionen/Komponenten}{}% 15
-\BOOKMARK [2][-]{subsection.6.1}{Swipe/Aussuchen/Voting}{section.6}% 16
-\BOOKMARK [2][-]{subsection.6.2}{Matches/Chat}{section.6}% 17
-\BOOKMARK [2][-]{subsection.6.3}{Film-/Serienvorschl\344ge}{section.6}% 18
-\BOOKMARK [2][-]{subsection.6.4}{Gruppenorgien}{section.6}% 19
-\BOOKMARK [2][-]{subsection.6.5}{Gespeicherte Filme/Filmliste}{section.6}% 20
-\BOOKMARK [2][-]{subsection.6.6}{Zug\344nglichkeit/Behindertenfreundlichkeit}{section.6}% 21
-\BOOKMARK [1][-]{section.7}{Benutzeroberfl\344chen}{}% 22
-\BOOKMARK [2][-]{subsection.7.1}{Home-Screen}{section.7}% 23
-\BOOKMARK [2][-]{subsection.7.2}{Gruppen}{section.7}% 24
-\BOOKMARK [2][-]{subsection.7.3}{Chat}{section.7}% 25
-\BOOKMARK [2][-]{subsection.7.4}{Filmliste}{section.7}% 26
-\BOOKMARK [1][-]{section.8}{CodeBeispiele}{}% 27
-\BOOKMARK [1][-]{section.9}{Probleme}{}% 28
-\BOOKMARK [1][-]{section.10}{Fazit}{}% 29
+\BOOKMARK [2][-]{subsection.3.2}{Language}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{IDE}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Database}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Firebase}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Recommendationssystem}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Konzept}{}% 10
+\BOOKMARK [1][-]{section.5}{Funktionen/Komponenten}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Swipe/Aussuchen/Voting}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Matches/Chat}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Film-/Serienvorschl\344ge}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.4}{Gruppenorgien}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.5}{Gespeicherte Filme/Filmliste}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.6}{Zug\344nglichkeit/Behindertenfreundlichkeit/Barrierefreiheit}{section.5}% 17
+\BOOKMARK [1][-]{section.6}{Benutzeroberfl\344chen}{}% 18
+\BOOKMARK [2][-]{subsection.6.1}{Aspekte von Benutzeroberfl\344chen}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.2}{Oberfl\344chen von StreamSwipe}{section.6}% 20
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Login-Screen}{subsection.6.2}% 21
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Home-Screen}{subsection.6.2}% 22
+\BOOKMARK [3][-]{subsubsection.6.2.3}{Swipe-Screen}{subsection.6.2}% 23
+\BOOKMARK [3][-]{subsubsection.6.2.4}{Chat}{subsection.6.2}% 24
+\BOOKMARK [3][-]{subsubsection.6.2.5}{Benutzerprofil}{subsection.6.2}% 25
+\BOOKMARK [2][-]{subsection.6.3}{Filmliste}{section.6}% 26
+\BOOKMARK [1][-]{section.7}{CodeBeispiele}{}% 27
+\BOOKMARK [1][-]{section.8}{Probleme}{}% 28
+\BOOKMARK [1][-]{section.9}{Fazit}{}% 29
+\BOOKMARK [1][-]{section.10}{Literaturverzeichnis}{}% 30
