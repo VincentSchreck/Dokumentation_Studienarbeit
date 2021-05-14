@@ -1,4 +1,4 @@
-\paragraph{Bereitstellung des Webservers}
+\subsubsection{Bereitstellung des Webservers}
 Zunächst wird das Node.js-Installationspaket aus der offiziellen Seite der Hersteller heruntergeladen und ausgeführt. Hierbei werden sowohl die Laufzeitumgebung für Node.JS, als auch der npm package manager installiert [Siehe nächste Abbildung]. 
 Zusätzlich wird bei der Installation ausgewählt, dass Node.js sowie npm und dessen Module zu den Umgebungsvariablen hinzugefügt werden. Dabei werden Variablen unter ihrem Applikationsnamen gespeichert und ihre entsprechende Datei-Pfade hinterlegt.
 Über den Zugriff auf diese Umgebungsvariable ist ein schneller Zugriff über ein Terminal beziehungsweise einer anderen Applikation gewährleistet.
@@ -47,7 +47,7 @@ Als Applikationsstartpunkt wird die Datei „server.js“ erzeugt und im package
 }
 \end{lstlisting}
 
-\paragraph{Sichere Kommunikation}
+\subsubsection{Sichere Kommunikation}
 
 Das http-Modul ermöglicht eine Kommunikation über das http-Protokoll. 
 \begin{lstlisting}[caption=Einfache Verbindung, label=lst:nodejs_easyconnection]
@@ -82,4 +82,55 @@ Diesem Serverobjekt wird über seine Methode 'listen' aufgefordet, auf eingehend
 }
 \end{lstlisting}
 
+
+\subsubsection{Datenbankverbindung}
+Wie bereits erwähnt, wird das Modul „mongoose“ für die Verbindung mit der MongoDB-Datenbank verwendet. 
+Da der Quellcode in anderen Dateien hinterlegt ist, muss für den Zugriff auf dessen Funktionalitäten das entsprechende Modul zunächst inkludiert werden. Dazu wird die require-Methode aufgerufen, die ein Objekt zurückgibt, dass die aus dem Modul exportierten Methoden enthält und im Folgenden als Variabel mit dem Namen „mongoose“ gespeichert wird. 
+\newline
+Über die connect-Methode des zurückgelieferten Objekts wird nun bei Parameterübergabe der URL der Datenbank versucht, eine Verbindung aufzubauen.  
+Dabei wird unter der Objekt-Membervariabel  „connection“ ein Objekt vom Typ „Connection“ hinterlegt, über das bei erfolgreicher Verbindung mit der Datenbank kommuniziert werden kann und das nachfolgend unter der Variabel „database“ abgespeichert ist. 
+
+\begin{lstlisting}[caption=Verbindung zur MongoDB-Datenbank, label=lst:mongodbconnection]
+ {
+ 	const mongoose = require('mongoose');
+	let database = null;
+
+	async function startDatabase() {
+	await mongoose.connect(process.env.DATABASE_URL, 
+	{useNewUrlParser: true,
+	useUnifiedTopology: true}); 
+  	database = mongoose.connection;
+  	database.on('error',(error) => console.log(error));
+  	database.on('open',(error) => console.log('Connected to DB'))
+	}
+
+	async function getDatabase() {
+ 	 	if (!mongoose.connection) await startDatabase();
+  		return database;
+	}
+
+	module.exports = {
+  		getDatabase,
+  		startDatabase,
+	}
+}
+\end{lstlisting}
+
+\subsubsection{Datenbankmodelle und Schemata}
+
+\subsection{Datenbank}
+\input{Backend_Implementierung/Backend_Serverkomponenten/Backend_Server_Models.tex}
+
+\subsubsection{Datenbankzugriff}                   
+\input{Backend_Implementierung/Backend_Serverkomponenten/Backend_Server_Services.tex}
+
+\subsubsection{Controller} 
+\input{Backend_Implementierung/Backend_Serverkomponenten/Backend_Server_Controller.tex}
+
+
+\subsubsection{Routing} 
+\input{Backend_Implementierung/Backend_Serverkomponenten/Backend_Server_Routes.tex}
+
+\subsubsection{Weitere Backendfunktionalit"aten} 
+\input{Backend_Implementierung/Backend_Serverkomponenten/Backend_Server_Weitere.tex}
 

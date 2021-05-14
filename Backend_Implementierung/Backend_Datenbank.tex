@@ -1,76 +1,32 @@
-\paragraph{Bereitstellung der Datenbank}
-=> MongoDB 
-=> WiredTiger Engine, Replica Sets
+\subsubsection{Bereitstellung der Datenbank}
+Über die offizielle Seite der MongoDB-Hersteller wird das Community-Installationspaket heruntergeladen und ausgeführt. []
+%https://www.mongodb.com/try/download/community
+Ausserdem wird die Kommandozeilenanwendung MongDBShell[] und die
+%https://www.mongodb.com/try/download/shell
+graphische Benutzeroberfläche MongoDBCompass installiert. []
+%https://www.mongodb.com/try/download/compass
+Nach erfolgreichem Initiieren eines Replica-Sets[]
+%https://docs.mongodb.com/manual/tutorial/deploy-replica-set/
+kann der mongod-Prozess unter Angabe des zu verwendenden Replica-Sets, des Ports und des Datenspeicherpfads gestartet werden. \newline
 
-\paragraph{Datenbankverbindung}
-Wie bereits erwähnt, wird das Modul „mongoose“ für die Verbindung mit der MongoDB-Datenbank verwendet. 
-Da der Quellcode in anderen Dateien hinterlegt ist, muss für den Zugriff auf dessen Funktionalitäten das entsprechende Modul zunächst inkludiert werden. Dazu wird die require-Methode aufgerufen, die ein Objekt zurückgibt, dass die aus dem Modul exportierten Methoden enthält und im Folgenden als Variabel mit dem Namen „mongoose“ gespeichert wird. 
+%\begin{lstlisting}[caption=Mongod-Aufruf, %label=lst:mongodcall]
+%mongod --port 27017 --replSet rs0 --dbpath=”..\data\db0
+%\end{lstlisting} %TODO
+
+
+Standardmäßig wird bei Installation von MongoDB eine Konfigurationsdatei erstellt, dessen Name und Verzeichnis anhängig vom benutzten Betriebssystem sind. Auf diese Datei wird bei fehlender Angabe im mongod-ausführendem Kommando zugegriffen. [] 
+%https://docs.mongodb.com/manual/reference/configuration-options/
+Sie ermöglicht das Konfigurieren der zu nutzen Storage-Engine. Dementsprechend wird als Storage Engine die WiredTiger-Engine eingestellt. 
+Über die graphische Benutzeroberfläche MongoDBCompass wird nach erfolgreicher Verbindung mit der MongoDB-Datenbanksystem eine neue Datenbank hinzugefügt namens 'StreamSwipeDatabase'.
+
+\subsubsection{Importieren der Film- und Städtedaten}
+Um Nutzer innerhalb einer Stadt miteinander matchen zu können, werden Städtenamendaten auf der Datenbank benötigt. Auf der Webseite "datenboerse.net" wird eine Liste deutscher Städtenamen zur Verfügung gestellt[].\newline
+%https://www.datenbörse.net/item/Liste_von_deutschen_Staedtenamen_.csv
+
+
+Die von uns genutzte Filmdatenbank TMDB bietet eine Liste der datenbankseitig vorhandenen Filme. Sie kann über Filmdatenbankanbieter-API heruntergeladen werden.[]
+%TODO
 \newline
-Über die connect-Methode des zurückgelieferten Objekts wird nun bei Parameterübergabe der URL der Datenbank versucht, eine Verbindung aufzubauen.  
-Dabei wird unter der Objekt-Membervariabel  „connection“ ein Objekt vom Typ „Connection“ hinterlegt, über das bei erfolgreicher Verbindung mit der Datenbank kommuniziert werden kann und das nachfolgend unter der Variabel „database“ abgespeichert ist. 
-
-\begin{lstlisting}[caption=Verbindung zur MongoDB-Datenbank, label=lst:mongodbconnection]
- {
- 	const mongoose = require('mongoose');
-	let database = null;
-
-	async function startDatabase() {
-	await mongoose.connect(process.env.DATABASE_URL, 
-	{useNewUrlParser: true,
-	useUnifiedTopology: true}); 
-  	database = mongoose.connection;
-  	database.on('error',(error) => console.log(error));
-  	database.on('open',(error) => console.log('Connected to DB'))
-	}
-
-	async function getDatabase() {
- 	 	if (!mongoose.connection) await startDatabase();
-  		return database;
-	}
-
-	module.exports = {
-  		getDatabase,
-  		startDatabase,
-	}
-}
-\end{lstlisting}
-
-\paragraph{Datenbankmodelle und Schemata}
-
-Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung.
+Über MongoDBCompass werden die heruntergeladenen Städtenamen in die Datenbank als Collection 'cities' und die Filminformationen als 'movies' importiert.
 \newline
-Folgender Code zeigt den Aufbau des Schemas für die Swipe-Collection. 
-
-\begin{lstlisting}[caption=Swipe Schema und Model, label=lst:modelswipe]
-	const mongoose = require('mongoose')
-
-	const swipeSchema = new mongoose.Schema({
-    uid: {
-        type: String,
-        required: true
-    },
-    swipes :
-     [{ movieid: { type: String },
-        swipeaction: {type: Number}}]
-	})
-
-	module.exports = mongoose.model('Swipe',swipeSchema)
-\end{lstlisting}
-
-Die einzelnen Schemata wurden nach dem im Konzept beschriebenen Aufbau [TODO] für jede Collection in separaten Dateien unter dem Verzeichnis '/database/models' erstellt. Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugten Model.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=8cm]{images/modelsstruktur.PNG}
-\caption{NodeJSServer - Models Struktur}
-\end{figure}
-
-\paragraph{Datenzugriff}
-Für den Datenzugriff auf die Datenbank wurden 
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=8cm]{images/serviceStruktur.PNG}
-\caption{NodeJSServer - Services Struktur}
-\end{figure}
+=\> Todo Ausblick: Filme aktualisieren

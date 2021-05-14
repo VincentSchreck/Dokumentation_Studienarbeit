@@ -1,0 +1,105 @@
+Controller sind für xy
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{images/controllerStruktur.PNG}
+\caption{Node.js Server - Controller Struktur}
+\end{figure}
+
+\paragraph{Movie Controller}
+
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+const SwipeService = require('../services/swipeService')
+const MovieService = require('../services/movieService')
+const FirebaseAdmin = require('../services/firebaseService')
+
+exports.RequestMovies = async function(req, res){
+   ...
+}
+
+\end{lstlisting}
+
+\subparagraph{Request Movies}
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+    var uid; 
+    const uidToken = req.body.uidtoken;
+    
+    //GET UID BY UIDTOKEN
+    try
+    {
+        uid = await FirebaseAdmin.GetUID(uidToken);
+    }
+    catch(Exception)
+    {
+        res.status(401).json({title: "TOKEN ERROR", message: Exception});
+        return;
+    }
+
+    var amount = req.body.amount;
+    var includeSwiped = req.body.includeSwiped;
+    var alreadyRequestedMovieIDs = req.body.alreadyRequestedMovieIDs;
+
+    amount = RestrictAmount(amount); //Begrenzung auf max. 10 Filme
+
+    //function variables
+    var excludedMovieIDs = [];
+
+    //Get already Swiped Movies
+    var newMovies;
+    if(includeSwiped === true)
+    {
+        var swipedMovieIDs;
+        try{ swipedMovieIDs = await SwipeService.FindAllSwipesByUserID(uid) }
+        catch(err){ res.status(400).json({message: err.message}) }
+
+        excludedMovieIDs.push(...swipedMovieIDs);
+    }
+
+    //Get already Requested Movies
+    if(alreadyRequestedMovieIDs !== undefined && alreadyRequestedMovieIDs != null)
+    {
+        await alreadyRequestedMovieIDs.forEach(element => excludedMovieIDs.push(element));
+    }
+
+    //Request Movies
+    if(excludedMovieIDs.length > 0)
+    {
+        try{ newMovies = await MovieService.FindMoviesExcept(excludedMovieIDs,amount) } 
+        catch(err){ res.status(400).json({message: err.message}) }
+    }
+    else
+    {
+        try{ newMovies = await MovieService.FindExactAmount(amount); } 
+        catch(err){ res.status(400).json({message: err.message}) }
+    }
+
+    res.status(200).json(newMovies);
+\end{lstlisting}
+
+
+\paragraph{User Controller}
+Im Folgenden werden..
+\begin{itemize}
+	\item CreateUser
+	\item ChangeUser
+	\item InfoUser
+\end{itemize} 
+
+
+\paragraph{Match Controller}
+Im Folgenden werden..
+\begin{itemize}
+	\item RequestMatches
+	\item DeleteSupermatch
+	\item DeleteNormalmatch
+	\item Received
+	\item Trigger
+\end{itemize} 
+
+
+
+\paragraph{Swipe Controller}
+Im Folgenden werden..
+\begin{itemize}
+	\item CreateSwipe
+\end{itemize} 

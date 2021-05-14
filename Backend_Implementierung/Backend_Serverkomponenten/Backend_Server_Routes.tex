@@ -1,0 +1,84 @@
+Router sind für xyz
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{images/routestruktur.PNG}
+\caption{Node.js Server - Controller Struktur}
+\end{figure}
+
+
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+//Movies
+const moviesRouter = require('./routes/movies')
+app.use('/movies', moviesRouter)
+
+//Users
+const usersRouter = require('./routes/users')
+app.use('/users', usersRouter)
+
+//Matches
+const matchesRouter = require('./routes/matches')
+app.use('/matches', matchesRouter)
+
+//Swipes
+const swipesRouter = require('./routes/swipes')
+app.use('/swipes', swipesRouter)
+
+\end{lstlisting}
+
+
+\paragraph{Movie Router}
+Diese
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+// Require controller modules.
+const MovieController = require('../controllers/movieController')
+
+// Send Requests to MovieController
+router.post('/request', MovieController.RequestMovies)
+\end{lstlisting}
+
+\paragraph{User Router}
+Diese
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+// Require controller modules.
+const UserController = require('../controllers/userController')
+
+// Send Request to UserController
+router.get('/', UserController.FindUsers)
+router.post('/create', UserController.CreateUser)
+router.post('/change', UserController.ChangeUser)
+router.post('/info', UserController.InfoUser)
+\end{lstlisting}
+
+\paragraph{Match Router}
+Diese
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+// Require controller modules.
+const MatchController = require('../controllers/matchController');
+
+// Send Request to MatchController
+router.post('/request', MatchController.RequestMatches)
+router.post('/deleteSupermatch', MatchController.DeleteSupermatch)
+router.post('/deleteNormalmatch', MatchController.DeleteNormalmatch)
+router.post('/received',  MatchController.Received)
+router.post('/trigger',  MatchController.Trigger)
+\end{lstlisting}
+
+
+\paragraph{Swipe Router}
+Diese
+\begin{lstlisting}[caption=TODO, label=lst:TODO]
+// Require controller modules.
+const SwipeController = require('../controllers/swipeController');
+
+// Send Request to SwipeController
+router.post('/create',  SwipeController.CreateSwipe )
+\end{lstlisting}
+
+
+
+
+
+
+
+

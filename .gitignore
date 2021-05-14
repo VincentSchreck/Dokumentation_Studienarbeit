@@ -1,5 +1,7 @@
 .idea/
 
+images/old
+
 
 *.log
 *.aux
