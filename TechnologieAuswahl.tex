@@ -15,6 +15,8 @@ Beide bieten vordefinierte, nativ implementierte Benutzeroberflächenkomponenten
 Das Konzept aus Kapitel \ref{sec:app_concept} schlägt vor, dem Nutzer die Bewertung einzelner Filme über eine Wisch-Funktion bereitzustellen.
 Allein dieser Bildschirm muss zunächst einmal eine Reihe von Filmen inklusive Titelbild und Informationen über HTTP Anfragen von unserer Datenbank laden, die Animationen und Logik hinter dem Bewertungssystem abarbeiten und zusätzlich die Bewertung wieder zurück an unseren Server senden.
 Aufgrund dieses enorm hohen Performance-Anspruchs sind nativ implementierte Komponente unabdingbar.
+Da sowohl Flutter als auch React Native es ermöglichen, die UI Komponenten in der plattformspezifischen Sprache zu implementieren, erweist sich der Leistungsvergleich beider Frameworks als schwierig.
+Grundlegend kann jedoch angenommen werden, dass Flutter eher weniger CPU-Nutzung beansprucht, jedoch dazu tendiert, mehr Speicher vor der eigentlichen Anwendung anzufordern\cite{bjorn-hansen2020}
 
 Somit kristallisierten sich drei Entwicklungsmöglichkeiten per Ausschlussverfahren heraus:
 \begin{itemize}
@@ -24,12 +26,25 @@ Somit kristallisierten sich drei Entwicklungsmöglichkeiten per Ausschlussverfah
 \end{itemize}
 
 Mit einer nativen Anwendung für jede Plattform erhält man nicht nur doppelten Entwicklungsaufwand, sondern gleichzeitig auch doppelten Wartungsaufwand. 
-Zusätzlich gegen die native Möglichkeit spricht, dass für die Entwicklung einer iOS Anwendung die Entwicklungsumgebung XCode benötigt wird, welche eine Desktopanwendung ausschließlich für macOS ist.
-Daher ist die Entwicklung nicht nur in Sachen Codezeilen ein deutlicher Mehraufwand, welcher sich aber bei der Größe des Projektes nicht bezahlt macht.\\
-Bei den plattformübergreifenden Lösungen entfällt dieser Aspekt, jedoch ist das veröffentlichen einer iOS Anwendung im Vergleich zu Android weiterhin deutlich komplizierter - hierauf wird im weiteren Verlauf der Arbeit noch eingegangen.
-
-
-
+Zusätzlich gegen die native Möglichkeit spricht, dass für die Entwicklung einer iOS Anwendung die Entwicklungsumgebung XCode benötigt wird, welche eine Desktopanwendung ausschließlich für das Betriebssystem macOS ist.
+Daher ist die Entwicklung nicht nur in Sachen Codezeilen ein deutlicher Mehraufwand, welcher sich aber bei der Größe des Projektes nicht bezahlt macht.
+Bei den plattformübergreifenden Lösungen entfällt dieser Aspekt, jedoch ist das veröffentlichen einer iOS Anwendung im Vergleich zu Android weiterhin deutlich komplizierter - hierauf wird im weiteren Verlauf der Arbeit noch eingegangen.\\
+\\
+Beim direkten Vergleich zwischen React Native und Flutter ist der deutlichste Unterschied, dass React Native die Entwicklung einer Laufzeit-basierten Anwendung bietet und Flutter die einer kompilierten Anwendung.
+Hierbei werden unterschiedliche Programmiersprachen verwendet: Flutter beruht auf der Google eigenen Sprache Dart. 
+Da diese sich bisher noch nicht etablieren konnte, ist diese Sprache unbekannt und muss neu erlernt werden.
+JavaScript hingegen ist weit verbreitet, jedoch bringt die spezielle Erweiterung JSX bei React Native ebenfalls zusätzlichen Lernaufwand mit sich.\\
+Während der Entwicklung bieten beide Frameworks eine \glqq Hot Reload\grqq Funktion an, welche vor allem bei der Erstellung von Benutzeroberflächen deutliche Zeitersparnisse ermöglicht.
+Flutter punktet jedoch vor allem hierbei durch die direkte Unterstützung von UI Bibliotheken, welche React Native ausschließlich über externe Bibliotheken bezieht. 
+Gleichzeitig bringt Flutter allgemein mehr \glqq out of the box\grqq mit sich, weshalb bei React Native eher Probleme durch Abhängigkeiten von Drittanbieter entstehen können. \\
+\\
+Der ausschlaggebende Punkt ist jedoch tatsächlich die BaaS-Plattform (Backend-as-a-Service).
+Es existiert zwar ein großer Konkurrent zu Firebase, nämlich \href{https://docs.amplify.aws/}{AWS Amplify}.
+Hierbei handelt es sich ebenfalls um ein Backend-Service für Mobil- und Webanwendungen. 
+Aufgrund der auf Skalierung ausgesetzten Tools mit besseren Echtzeit-Features ist Firebase jedoch speziell für Nachrichtenaustausch besser geeignet.
+Gleichzeitig spielt die Vertrautheit mit dieser BaaS Plattform und die breit gefächerten Tools eine große Rolle bei der Auswahl des Services.
+Letztendlich wurde die Entscheidung getroffen, das allgemeines Nutzermanagement und Chat-Funktion der Anwendung mit Firebase zu realisieren.\\
+Da AWS Amplify erst seit Beginn 2021 eine offizielle Unterstützung für Flutter anbieten\footnote{\url{https://aws.amazon.com/de/about-aws/whats-new/2021/02/announcing-general-availability-amplify-flutter-data-authentication-support/}}, wurde Flutter als Frontend-Framework und Firebase als BaaS-Plattform ausgewählt.
 
 \subsection{Server}
 Der Webserver ist jener Dienst,  der die zugrundeliegenden Funktionalitäten bezüglich der Filmabfragen, der Matching-Logik und der Filmempfehlung bietet. 

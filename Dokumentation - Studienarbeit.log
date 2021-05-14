@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  13 MAY 2021 20:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.12) (preloaded format=pdflatex 2021.1.19)  14 MAY 2021 19:07
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -1634,27 +1634,44 @@ Package pdftex.def Info: images/Konzept.PNG  used on input line 9.
                                                   
 l.151 \newpage
                <./images/Konzept.PNG>] (TechnologieAuswahl.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--18
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
 
  []
 
-[50]
-Overfull \hbox (7.03014pt too wide) in paragraph at lines 68--69
+
+Overfull \hbox (180.14867pt too wide) in paragraph at lines 47--47
+[][][]$\OT1/cmtt/m/n/9 https : / / aws . amazon . com / de / about-[]aws / what
+s-[]new / 2021 / 02 / announcing-[]general-[]availability-[]amplify-[]flutter-[
+]data-[]authentication-[]support/$[]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--48
+
+ []
+
+[50] [51]
+Overfull \hbox (7.03014pt too wide) in paragraph at lines 83--84
 \OT1/cmr/m/n/10.95 Als Kom-mu-ni-ka-ti-ons-schnitt-stel-le wird ei-ne We-bA-pi 
 ent-wickelt, des-sen Kom-mu-ni-ka-ti-on auf HTTP-
  []
 
-[51]
-Underfull \hbox (badness 10000) in paragraph at lines 71--76
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--91
 
  []
 
-) (Backend.tex (Backend_Server.tex) (Backend_Datenbank.tex)
-(Backend_Kommunikationsschnittstelle.tex)) [52] [53] (aufteilung.tex) [54]
+) (Backend.tex [52] (Backend_Server.tex) (Backend_Datenbank.tex)
+(Backend_Kommunikationsschnittstelle.tex)) [53] [54] (aufteilung.tex) [55]
 Overfull \vbox (0.65958pt too high) has occurred while \output is active []
 
 
-[55]
+[56]
 Overfull \hbox (20.85497pt too wide) in paragraph at lines 191--192
 []\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
 On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
@@ -1666,7 +1683,7 @@ Overfull \hbox (131.25366pt too wide) in paragraph at lines 201--202
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
-[56] ("Dokumentation - Studienarbeit.aux")
+[57] ("Dokumentation - Studienarbeit.aux")
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
 (rerunfilecheck)             Checksum: FB4274633FFA4181C0689DF6BC67C5FD;4994.
@@ -1676,15 +1693,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13224 strings out of 479696
- 198580 string characters out of 2867115
+ 13226 strings out of 479696
+ 198599 string characters out of 2867115
  650218 words of memory out of 3000000
  29482 multiletter control sequences out of 15000+200000
  415011 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,12n,72p,1355b,1935s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.30} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.28} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1786,10 +1806,10 @@ l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/leong/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/l
 eong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb>
-Output written on "Dokumentation - Studienarbeit.pdf" (61 pages, 1996552 bytes)
+Output written on "Dokumentation - Studienarbeit.pdf" (62 pages, 2000795 bytes)
 .
 PDF statistics:
- 1414 PDF objects out of 1440 (max. 8388607)
- 505 named destinations out of 1000 (max. 500000)
+ 1423 PDF objects out of 1440 (max. 8388607)
+ 507 named destinations out of 1000 (max. 500000)
  712 words of extra memory for PDF output out of 10000 (max. 10000000)
 
