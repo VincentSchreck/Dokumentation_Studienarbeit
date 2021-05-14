@@ -25,7 +25,7 @@ Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kei
 Während MongoDB für Datenaustausch das JSON-Format nutzt, hält es seine Dokumente im Binary JSON-Format (BSON), einer binärcodiertem Erweiterung des JSON-Formats. Daten im BSON-Format enthalten zusätzlich Informationen zum Typ und zur Länge der Informationen, wodurch schnelleres Parsen von Daten möglich ist. Des Weiteren ist BSON um zusätzliche Datentypen wie 32- und 64-bit Integer oder das Datum erweitert. [MongoDb1.8 https://www.mongodb.com/json-and-bson] 
 \newline
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=JSON - BSON Vergleich, label=lst:JSONBSON]
 /* JSON */
 {"hello": "world"}  // "key":"value"
 
