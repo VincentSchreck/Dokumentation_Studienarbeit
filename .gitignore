@@ -25,3 +25,8 @@ Dokumentation - Studienarbeit.lof
 *.gz
 *.toc
 *.xml
+*.aux
+*.log
+*.aux
+*.xml
+*.xml
