@@ -105,31 +105,32 @@
 \contentsline {paragraph}{\numberline {3.9.4.3}Euklidischer Abstand}{48}{paragraph.3.9.4.3}%
 \contentsline {section}{\numberline {4}Konzept?}{49}{section.4}%
 \contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{50}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Server}{50}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Datenbank}{50}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{51}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Film-Datenbank}{51}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Backend-Implementierung}{51}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Server}{51}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{51}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{51}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{51}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Datenbank}{51}{subsection.6.2}%
+\contentsline {subsection}{\numberline {5.1}Anwendungsframework}{50}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Server}{50}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Datenbank}{51}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Kommunikationsschnittstelle}{52}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Film-Datenbank}{52}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Backend-Implementierung}{52}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Server}{52}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{52}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{52}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{52}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Datenbank}{52}{subsection.6.2}%
 \contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{52}{subsubsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{52}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{52}{subsubsection.6.3.1}%
-\contentsline {section}{\numberline {7}Funktionen/Komponenten}{52}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{52}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Matches/Chat}{52}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{52}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Gespeicherte Filme/Filmliste}{52}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Zugänglichkeit/Behindertenfreundlichkeit}{52}{subsection.7.5}%
-\contentsline {section}{\numberline {8}Benutzeroberflächen}{52}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Home-Screen}{52}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Gruppen}{52}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Chat}{52}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Filmliste}{52}{subsection.8.4}%
-\contentsline {section}{\numberline {9}CodeBeispiele}{52}{section.9}%
-\contentsline {section}{\numberline {10}Probleme}{52}{section.10}%
-\contentsline {section}{\numberline {11}Fazit}{52}{section.11}%
-\contentsline {section}{\numberline {A}Verfasser einzelner Abschnitte}{54}{appendix.A}%
+\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{53}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Funktionen/Komponenten}{53}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Swipe/Aussuchen/Voting}{53}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Matches/Chat}{53}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Film-/Serienvorschläge}{53}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Gespeicherte Filme/Filmliste}{53}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Zugänglichkeit/Behindertenfreundlichkeit}{53}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Benutzeroberflächen}{53}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Home-Screen}{53}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Gruppen}{53}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Chat}{53}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Filmliste}{53}{subsection.8.4}%
+\contentsline {section}{\numberline {9}CodeBeispiele}{53}{section.9}%
+\contentsline {section}{\numberline {10}Probleme}{53}{section.10}%
+\contentsline {section}{\numberline {11}Fazit}{53}{section.11}%
+\contentsline {section}{\numberline {A}Verfasser einzelner Abschnitte}{55}{appendix.A}%

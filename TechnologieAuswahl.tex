@@ -1,11 +1,41 @@
 Den Anforderungen der Entwicklung entsprechend wurde zunächst entschieden, welche Technologien zum Einsatz kommen. 
 
+\subsection{Anwendungsframework}
+Bei der Auswahl des Framework zur Programmierung der eigentlichen Anwendung gibt es, wie in Kapitel \ref{sec:mobile_development} erläutert, eine Vielzahl von möglichen Herangehensweisen.
+Die Anwendung ist letztendlich der Teil unseres Systems, welches direkt mit dem Nutzer in Berührung kommt.
+Daher sind vor allem die Anforderungen an Performance, Aussehen und Benutzbarkeit der Oberfläche essentiell wichtig.
+Gleichzeitig ist bei der Entwicklung auf die verwendete Programmiersprache, die Entwicklungsumgebung, welche das Framework mit sich bringt und die Kenntnisse aller Entwickler zu achten.\\
+\\
+Wie bereits in Abbildung \ref{fig:crossplattform_popularity} gezeigt, können sich Marktanteile verschiedener Frameworks sehr schnell ändern. 
+Dies hängt auch deutlich mit den unterliegenden Plattformen und deren Update-Zyklen zusammen.
+Google beispielsweise veröffentlicht beinahe jährlich eine neue Version von Android\footnote{\href{https://engineerbabu.com/blog/evolution-of-android-versions/}{engineerbabu.com}}, weshalb sich eben Programmierumgebungen immer mitentwickeln.
+Die Popularität eines Frameworks spiegelt somit unter anderem wieder, wie gut es mit den neuesten Features und Programmierkonzepten umgeht. 
+Daher wurde sich bei den plattformübergreifenden Frameworks \ref{sec:framework_introduction} auf React Native und Flutter beschränkt. 
+Beide bieten vordefinierte, nativ implementierte Benutzeroberflächenkomponenten - welche im Falle von Flutter sogar auf dem Design System \href{https://material.io/}{\textit{Material Design}} beruht.\\
+Das Konzept aus Kapitel \ref{sec:app_concept} schlägt vor, dem Nutzer die Bewertung einzelner Filme über eine Wisch-Funktion bereitzustellen.
+Allein dieser Bildschirm muss zunächst einmal eine Reihe von Filmen inklusive Titelbild und Informationen über HTTP Anfragen von unserer Datenbank laden, die Animationen und Logik hinter dem Bewertungssystem abarbeiten und zusätzlich die Bewertung wieder zurück an unseren Server senden.
+Aufgrund dieses enorm hohen Performance-Anspruchs sind nativ implementierte Komponente unabdingbar.
+
+Somit kristallisierten sich drei Entwicklungsmöglichkeiten per Ausschlussverfahren heraus:
+\begin{itemize}
+	\item Native Anwendung für jeweils Android und iOS
+	\item Plattformübergreifend mit Flutter
+	\item Plattformübergreifend mit React Native
+\end{itemize}
+
+Mit einer nativen Anwendung für jede Plattform erhält man nicht nur doppelten Entwicklungsaufwand, sondern gleichzeitig auch doppelten Wartungsaufwand. 
+Zusätzlich gegen die native Möglichkeit spricht, dass für die Entwicklung einer iOS Anwendung die Entwicklungsumgebung XCode benötigt wird, welche eine Desktopanwendung ausschließlich für macOS ist.
+Daher ist die Entwicklung nicht nur in Sachen Codezeilen ein deutlicher Mehraufwand, welcher sich aber bei der Größe des Projektes nicht bezahlt macht.\\
+Bei den plattformübergreifenden Lösungen entfällt dieser Aspekt, jedoch ist das veröffentlichen einer iOS Anwendung im Vergleich zu Android weiterhin deutlich komplizierter - hierauf wird im weiteren Verlauf der Arbeit noch eingegangen.
+
+
+
 
 \subsection{Server}
 Der Webserver ist jener Dienst,  der die zugrundeliegenden Funktionalitäten bezüglich der Filmabfragen, der Matching-Logik und der Filmempfehlung bietet. 
 Anforderungen an die genutzte Webservertechnologie sind zum einen eine grundlegend hohe Performance, um mit einer hohen Anzahl an Serveranfragen umzugehen. Des Weiteren sollte die Technologie Skalierbarkeit in Bezug auf die Performance und wachsenden Ressourcen wie Hardware aufweisen und eine Unterstützung, Dokumentation und umfassende Funktionalitäten des Frameworks bieten. 
 Ein Paketmanager, der umfassende Kern-Funktionalitäten zur Verfügung stellt, sollte vorhanden sein, damit diese nicht neu implementiert werden müssen. Um offen für das genutzte Zielbetriebssystem zu bleiben, sollten mehrere Betriebssysteme unterstützt werden. 
-Im folgenden werden keine properietären Webserver-technologien betrachtet.
+Im folgenden werden keine proprietären Webserver-technologien betrachtet.
 \newline
 Nach genauerer Recherche kamen drei Webservertechnologien in die engere Betrachtung:
 

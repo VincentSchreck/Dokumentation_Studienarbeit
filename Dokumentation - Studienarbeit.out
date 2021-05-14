@@ -41,31 +41,32 @@
 \BOOKMARK [3][-]{subsubsection.3.9.4}{\304hnlichkeit von Objekten und Nutzern}{subsection.3.9}% 41
 \BOOKMARK [1][-]{section.4}{Konzept?}{}% 42
 \BOOKMARK [1][-]{section.5}{Auswahl geeigneter Technologie}{}% 43
-\BOOKMARK [2][-]{subsection.5.1}{Server}{section.5}% 44
-\BOOKMARK [2][-]{subsection.5.2}{Datenbank}{section.5}% 45
-\BOOKMARK [2][-]{subsection.5.3}{Kommunikationsschnittstelle}{section.5}% 46
-\BOOKMARK [2][-]{subsection.5.4}{Film-Datenbank}{section.5}% 47
-\BOOKMARK [1][-]{section.6}{Backend-Implementierung}{}% 48
-\BOOKMARK [2][-]{subsection.6.1}{Server}{section.6}% 49
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Einrichtung}{subsection.6.1}% 50
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Sicherheit}{subsection.6.1}% 51
-\BOOKMARK [3][-]{subsubsection.6.1.3}{Webserver}{subsection.6.1}% 52
-\BOOKMARK [2][-]{subsection.6.2}{Datenbank}{section.6}% 53
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Einrichtung}{subsection.6.2}% 54
-\BOOKMARK [2][-]{subsection.6.3}{Kommunikationsschnittstelle}{section.6}% 55
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Implementierung}{subsection.6.3}% 56
-\BOOKMARK [1][-]{section.7}{Funktionen/Komponenten}{}% 57
-\BOOKMARK [2][-]{subsection.7.1}{Swipe/Aussuchen/Voting}{section.7}% 58
-\BOOKMARK [2][-]{subsection.7.2}{Matches/Chat}{section.7}% 59
-\BOOKMARK [2][-]{subsection.7.3}{Film-/Serienvorschl\344ge}{section.7}% 60
-\BOOKMARK [2][-]{subsection.7.4}{Gespeicherte Filme/Filmliste}{section.7}% 61
-\BOOKMARK [2][-]{subsection.7.5}{Zug\344nglichkeit/Behindertenfreundlichkeit}{section.7}% 62
-\BOOKMARK [1][-]{section.8}{Benutzeroberfl\344chen}{}% 63
-\BOOKMARK [2][-]{subsection.8.1}{Home-Screen}{section.8}% 64
-\BOOKMARK [2][-]{subsection.8.2}{Gruppen}{section.8}% 65
-\BOOKMARK [2][-]{subsection.8.3}{Chat}{section.8}% 66
-\BOOKMARK [2][-]{subsection.8.4}{Filmliste}{section.8}% 67
-\BOOKMARK [1][-]{section.9}{CodeBeispiele}{}% 68
-\BOOKMARK [1][-]{section.10}{Probleme}{}% 69
-\BOOKMARK [1][-]{section.11}{Fazit}{}% 70
-\BOOKMARK [1][-]{appendix.A}{Verfasser einzelner Abschnitte}{}% 71
+\BOOKMARK [2][-]{subsection.5.1}{Anwendungsframework}{section.5}% 44
+\BOOKMARK [2][-]{subsection.5.2}{Server}{section.5}% 45
+\BOOKMARK [2][-]{subsection.5.3}{Datenbank}{section.5}% 46
+\BOOKMARK [2][-]{subsection.5.4}{Kommunikationsschnittstelle}{section.5}% 47
+\BOOKMARK [2][-]{subsection.5.5}{Film-Datenbank}{section.5}% 48
+\BOOKMARK [1][-]{section.6}{Backend-Implementierung}{}% 49
+\BOOKMARK [2][-]{subsection.6.1}{Server}{section.6}% 50
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Einrichtung}{subsection.6.1}% 51
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Sicherheit}{subsection.6.1}% 52
+\BOOKMARK [3][-]{subsubsection.6.1.3}{Webserver}{subsection.6.1}% 53
+\BOOKMARK [2][-]{subsection.6.2}{Datenbank}{section.6}% 54
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Einrichtung}{subsection.6.2}% 55
+\BOOKMARK [2][-]{subsection.6.3}{Kommunikationsschnittstelle}{section.6}% 56
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Implementierung}{subsection.6.3}% 57
+\BOOKMARK [1][-]{section.7}{Funktionen/Komponenten}{}% 58
+\BOOKMARK [2][-]{subsection.7.1}{Swipe/Aussuchen/Voting}{section.7}% 59
+\BOOKMARK [2][-]{subsection.7.2}{Matches/Chat}{section.7}% 60
+\BOOKMARK [2][-]{subsection.7.3}{Film-/Serienvorschl\344ge}{section.7}% 61
+\BOOKMARK [2][-]{subsection.7.4}{Gespeicherte Filme/Filmliste}{section.7}% 62
+\BOOKMARK [2][-]{subsection.7.5}{Zug\344nglichkeit/Behindertenfreundlichkeit}{section.7}% 63
+\BOOKMARK [1][-]{section.8}{Benutzeroberfl\344chen}{}% 64
+\BOOKMARK [2][-]{subsection.8.1}{Home-Screen}{section.8}% 65
+\BOOKMARK [2][-]{subsection.8.2}{Gruppen}{section.8}% 66
+\BOOKMARK [2][-]{subsection.8.3}{Chat}{section.8}% 67
+\BOOKMARK [2][-]{subsection.8.4}{Filmliste}{section.8}% 68
+\BOOKMARK [1][-]{section.9}{CodeBeispiele}{}% 69
+\BOOKMARK [1][-]{section.10}{Probleme}{}% 70
+\BOOKMARK [1][-]{section.11}{Fazit}{}% 71
+\BOOKMARK [1][-]{appendix.A}{Verfasser einzelner Abschnitte}{}% 72
