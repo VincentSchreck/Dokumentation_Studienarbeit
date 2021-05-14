@@ -1,26 +1,12 @@
+.idea/
 
-Dokumentation - Studienarbeit.synctex.gz
-Dokumentation - Studienarbeit.out
-Dokumentation - Studienarbeit.log
-Dokumentation - Studienarbeit.aux
-Konzept.log
-Dokumentation - Studienarbeit.pdf
-Dokumentation - Studienarbeit.toc
-Dokumentation - Studienarbeit.out
-Dokumentation - Studienarbeit.lof
-Dokumentation - Studienarbeit.aux
-Dokumentation - Studienarbeit.lof
+
 *.log
-Dokumentation - Studienarbeit.out
-Dokumentation - Studienarbeit.pdf
-Dokumentation - Studienarbeit.synctex.gz
-Dokumentation - Studienarbeit.toc
-Dokumentation - Studienarbeit.aux
 *.aux
 *.lof
-*.log
-Dokumentation - Studienarbeit.lof
-*.pdf
+*.out
 *.lol
 *.gz
 *.toc
+*.xml
+*.aux

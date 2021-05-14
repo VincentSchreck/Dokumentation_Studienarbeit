@@ -4,12 +4,15 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{hyperref}
+\usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{threeparttable}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\renewcommand*{\lstlistlistingname}{Quellcodeverzeichnis}
 \usepackage{icomma}
 \usepackage{float}
 \usepackage{pdfpages}
@@ -79,6 +82,9 @@
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
 
+
+%%%%%%%%%%%% begin document %%%%%%%%%%%%
+
 \begin{document}
 \maketitle
 \thispagestyle{empty}
@@ -92,134 +98,163 @@
 \newpage
 \pagenumbering{arabic}
 
+
+
 \pagestyle{fancy}
 \fancyhf{}
 \setlength{\headheight}{35pt}
-\lhead{StreamSwipe}
-\rhead{Studienarbeit}
+
+\renewcommand\headrulewidth{0.4pt}
+
+\fancyhead[LE,RO]{\rightmark}% <- changed
+\fancyhead[LO,RE]{StreamSwipe}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+\renewcommand{\subsubsectionmark}[1]{\markright{#1}}
+
 \cfoot{\thepage}
 \newpage
 
 
-\section{Einleitung}
-\subsection{..}
-\subsection{Aufbau der Arbeit}
+\section[Einleitung]{Einleitung \hfill \normalfont \small{Vincent Schreck}}
+\input{Einleitung/Einleitung.tex}
+\subsection{Motivation}
+\input{Einleitung/Motivation.tex}
+\subsection{Methode}
+\input{Einleitung/Methode.tex}
+\clearpage
 
-\section{Motivation}
-
-\newpage
 \section{Theoretische Grundlagen}
 \subsection{Netzwerkprotokolle}
-\input{Netzwerkprotokolle}
-\newpage
+\input{Theoretische_Grundlagen/Netzwerkprotokolle.tex}
 \subsection{JavaScript}
-\input{Language_JavaScript}
-\newpage
-%\subsection{Framework}
-%\input{Framework}
+\input{Theoretische_Grundlagen/Language_JavaScript}
 \subsection{Node.JS}
-\input{Framework_NodeJS}
-%\subsection{Language}
-%\input{Language}
+\input{Theoretische_Grundlagen/Framework_NodeJS}
 \subsection{Representational State Transfer - Application Programming Interface}
-\input{Grundlagen_RestAPI}
-\newpage
+\input{Theoretische_Grundlagen/Grundlagen_RestAPI}
 \subsection{NoSQL-Datenbank}
-\input{Grundlagen_NoSQL_Datenbank}
-\newpage
+\input{Theoretische_Grundlagen/Grundlagen_NoSQL_Datenbank}
 \subsection{Firebase}
-\input{Firebase}
-
-\newpage
+\input{Theoretische_Grundlagen/Firebase}
 \subsection{Anwendungsentwicklung für mobile Endgeräte}
-\input{Mobil_Anwendungsentwicklung}
-%\subsection{IDE} Auswahl geeign. Techn.
-%\input{IDE} Auswahl geeign. Techn
-
-%\newpage
-%\subsection{Representational State Transfer - Application Programming Interface}
-%\input{Grundlagen_RestAPI}
-\newpage
-
+\input{Theoretische_Grundlagen/Mobil_Anwendungsentwicklung}
 \subsection{Recommender System}
-\input{Recommendationssystem}
+\input{Theoretische_Grundlagen/Recommendationssystem}
+\clearpage
 
-\newpage
-\section{Konzept?}
-\input{Konzept}
+\section{Konzept}
+\input{Konzept/Konzept.tex}
+\clearpage
 
-\newpage
+\section[Funktionen/Komponenten]{Funktionen/Komponenten \hfill \normalfont \small{Autor-Name}}
+\clearpage
+
 \section{Auswahl geeigneter Technologie}
-\input{TechnologieAuswahl}
+\input{Auswahl_geeigneter_Technologie/TechnologieAuswahl}
+\clearpage
 
 \newpage
 \section{Backend-Implementierung}
-\input{Backend}
-
-\section{Funktionen/Komponenten}
+\input{Backend_Implementierung/Backend.tex}
 
 \subsection{Swipe/Aussuchen/Voting}		
 \subsection{Matches/Chat}		
 \subsection{Film-/Serienvorschläge}
 \subsection{Gespeicherte Filme/Filmliste}		
-\subsection{Zugänglichkeit/Behindertenfreundlichkeit}		
+\subsection{Barrierefreiheit}
+\label{sec:barrierefreiheit}
+\input{Barrierefreiheit/BF-Einleitung.tex}
+\subsubsection{Barrierefreiheit in mobilen Anwendungen}
+\input{Barrierefreiheit/BF-Apps.tex}
+\subsubsection{Barrierefreiheit in Filmen und Serien}
+\input{Barrierefreiheit/BF-Filme.tex}
+\subsubsection{Barrierefreiheit bei StreamSwipe}
+\label{sec:bf-streamswipe}
+\input{Barrierefreiheit/BF-Streamswipe.tex}
+\clearpage
 
-
-\section{Benutzeroberflächen}
-\subsection{Home-Screen}
-\subsection{Gruppen}		
-\subsection{Chat}		
+\section[Benutzeroberflächen]{Benutzeroberflächen \hfill \normalfont \small{Vincent Schreck}}
+\input{Benutzeroberfläche/UI_Einleitung.tex}
+\subsection{Aspekte von Benutzeroberflächen}
+\label{sec:UI-Aspekte}
+\input{Benutzeroberfläche/UI_Aspekte.tex}
+\subsection{Oberflächen von StreamSwipe}
+\input{Benutzeroberfläche/UI_StreamSwipe.tex}
+\subsubsection{Login-Screen}
+\label{sec:loginscreen}
+\input{Benutzeroberfläche/UI_Login.tex}
+\subsubsection{Home-Screen}
+\label{sec:homescreen}
+\input{Benutzeroberfläche/UI_Home-Screen}
+\subsubsection{Swipe-Screen}
+\label{sec:swipescreen}
+\input{Benutzeroberfläche/UI_Swipe-Screen.tex}
+\subsubsection{Chat}
+\label{sec:UI-Chat}
+\input{Benutzeroberfläche/UI_Chat}
+\subsubsection{Benutzerprofil}
+\label{sec:benutzerprofil}
+\input{Benutzeroberfläche/UI_Profilseite.tex}
 \subsection{Filmliste}
+\clearpage
 
-\section{CodeBeispiele}
+\section[Probleme]{Probleme \hfill \normalfont \small{Autor-Name}}
+\clearpage
 
+\section[Fazit]{Fazit \hfill \normalfont \small{Autor-Name}}
+\clearpage
 
-\section{Probleme}
-
-
-\section{Fazit}
-\newpage
 \appendix
 \section{Verfasser einzelner Abschnitte}
-\input{aufteilung}
-\newpage
+\input{Anhang/Aufteilung.tex}
+\clearpage
+
 \section*{Literaturverzeichnis}
 \begin{itemize}
 	\bibitem[1]{aggarwal2016} Aggarwal, C. C. (2016). Recommender systems (Vol. 1). Cham: Springer International Publishing.
-	
-	\bibitem[2]{fentaw2020} Fentaw, A. E. (2020). Cross platform mobile application development: a comparison study of React Native Vs Flutter.
-	
-	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, Zuletzt aufgerufen am: 13.04.2021
-	
-	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, Zuletzt aufgerufen am: 13.04.2021 
-	 
-	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, Aufgerufen am: 04.03.2021
-	
-	\bibitem[6]{johnson1988} Johnson R. E. \&  Foote B. “Designing Reusable Classes.” Journal of ObjectOriented Programming 1, 2 (June/July 1988). Page 22-35.
-	
-	\bibitem[7]{majchrzak2015} Majchrzak TA, Ernsting J, Kuchen H (2015) Achieving business practicability of model-driven crossplatform apps. OJIS 2(2):3–14
-	
-	\bibitem[8]{cisco2020} Cisco (2020) Cisco Annual Internet Report (2018–2023) White Paper [Online] Verfügbar: \url{https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.html}
-	
-	\bibitem[9]{charland2011} Charland, A. \& Leroux, B. (2011). Mobile application development: Web vs. native. Communications of the ACM, 54(5):49–53.
-	
-	\bibitem[10]{lachgar2017} Lachgar, M., \& Abdelmounaim, A. (2017). Decision Framework for Mobile Development Methods. International Journal of Advanced Computer Science and Applications, 8.
-	
-	\bibitem[11]{bjorn-hansen2020} Biørn-Hansen, A., Rieger, C., Grønli, TM. et al. (2020) An empirical investigation of performance overhead in cross-platform mobile development frameworks. Empir Software Eng 25, 2997–3040. https://doi.org/10.1007/s10664-020-09827-6
-	
-	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
-	
-	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, Aufgerufen am: 25.04.2021
-\end{itemize}
 
+	\bibitem[2]{fentaw2020} Fentaw, A. E. (2020). Cross platform mobile application development: a comparison study of React Native Vs Flutter.
+
+	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, Zuletzt aufgerufen am: 13.04.2021
+
+	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, Zuletzt aufgerufen am: 13.04.2021
+
+	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, Aufgerufen am: 04.03.2021
+
+	\bibitem[6]{johnson1988} Johnson R. E. \&  Foote B. “Designing Reusable Classes.” Journal of ObjectOriented Programming 1, 2 (June/July 1988). Page 22-35.
+
+	\bibitem[7]{majchrzak2015} Majchrzak TA, Ernsting J, Kuchen H (2015) Achieving business practicability of model-driven crossplatform apps. OJIS 2(2):3–14
+
+	\bibitem[8]{cisco2020} Cisco (2020) Cisco Annual Internet Report (2018–2023) White Paper [Online] Verfügbar: \url{https://www.cisco.com/c/en/us/solutions/collateral/executive-perspectives/annual-internet-report/white-paper-c11-741490.html}
+
+	\bibitem[9]{charland2011} Charland, A. \& Leroux, B. (2011). Mobile application development: Web vs. native. Communications of the ACM, 54(5):49–53.
+
+	\bibitem[10]{lachgar2017} Lachgar, M., \& Abdelmounaim, A. (2017). Decision Framework for Mobile Development Methods. International Journal of Advanced Computer Science and Applications, 8.
+
+	\bibitem[11]{bjorn-hansen2020} Biørn-Hansen, A., Rieger, C., Grønli, TM. et al. (2020) An empirical investigation of performance overhead in cross-platform mobile development frameworks. Empir Software Eng 25, 2997–3040. https://doi.org/10.1007/s10664-020-09827-6
+
+	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
+
+	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, Aufgerufen am: 25.04.2021
+
+    \bibitem[14]{scheidungen} Meinungsforschungsinstituts Civey (2020):  \url{https://www.presseportal.de/pm/145489/4627304}, letzter Zugriff: 13. Mai 2021
+
+    \bibitem[15]{serienkonsum} Splendid Research (2017): \url{https://www.springerprofessional.de/konsumforschung/marketingstrategie/konsumenten-auf-der-serien-welle/15146374}, letzter Zugriff: 14. Mai 2021
+
+    \bibitem[16]{schwerbehindertenausweis} Statistisches Bundesamt (2020): \url{https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Behinderte-Menschen/Tabellen/schwerbehinderte-alter-geschlecht-quote.html;jsessionid=885260788D4FFC7F670576B72E5089F4.live741}, letzter Zugriff: 17. April 2021
+
+    \bibitem[17]{behindertengleichstellungsgesetz} Behindertengleichstellungsgesetz (2002): \url{https://www.gesetze-im-internet.de/bgg/BGG.pdf}, letzter Zugriff: 19. April 2021
+
+    \bibitem[18]{sehhilfen} Institut für Demoskopie Allensbach (2019): \textit{Untersuchung zum Sehbewusstsein der Deutschen},  \url{file:///C:/Users/Vincent/AppData/Local/Temp/ZVA_Brillenstudie_2019-1.pdf}, letzter Zugriff: 11. Mai 2021
+\end{itemize}
 \end{document}
 
-
-
-
-%************************************************************%
-%*********************End of document************************%
-%************************************************************%
+\section*{Literaturverzeichnis}
+\begin{itemize}
+\bibitem[99]{muster} Mustermann, Max (2020): Methode und Nutzung der Literatur-Zitierweise, 2. Aufl., Boston: Harvard’s Eleven Publications.
+\bibitem[99]{asdf} Autor (2008): Name des Buches, 22. Aufl., Berlin: Foxtrott.
+\end{itemize}
 
 \footnote{\url{https://de.wikipedia.org/wiki/Alufolie}} 
 
