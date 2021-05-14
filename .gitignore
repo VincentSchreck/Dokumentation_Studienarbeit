@@ -1,7 +1,10 @@
+.idea/
+
+
 *.log
 *.aux
 *.lof
-*.pdf
+*.out
 *.lol
 *.gz
 *.toc
