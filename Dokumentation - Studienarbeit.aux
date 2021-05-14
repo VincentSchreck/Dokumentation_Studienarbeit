@@ -20,36 +20,373 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \babel@aux{german}{}
+\citation{majchrzak2015}
+\citation{scheidungen}
+\citation{serienkonsum}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Motivation}{1}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3}Theoretische Grundlagen}{1}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Framework}{1}{subsection.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Einleitung}{1}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Language}{1}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}IDE}{1}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Database}{1}{subsection.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Firebase}{1}{subsection.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Recommendationssystem}{1}{subsection.4.5}\protected@file@percent }
-\newlabel{Recommendation Matrix}{{4.5}{2}{Recommendationssystem}{subsection.4.5}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Nutzer-Item Matrix mit Bewertungen. Jede Zelle $r_{u;i}$ steht hierbei für die Bewertung des Nutzers $u$ an der Stelle $i$}}{2}{table.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.1}Collaborative Filtering}{2}{subsubsection.4.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.2}Content-based filtering}{2}{subsubsection.4.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.5.3}Cold Start Problem}{2}{subsubsection.4.5.3}\protected@file@percent }
-\newlabel{Cold Start Problem}{{4.5.3}{2}{Cold Start Problem}{subsubsection.4.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Konzept?}{3}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Funktionen/Komponenten}{3}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Swipe/Aussuchen/Voting}{3}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Matches/Chat}{3}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Film-/Serienvorschläge}{3}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Gruppenorgien}{3}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Gespeicherte Filme/Filmliste}{3}{subsection.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Zugänglichkeit/Behindertenfreundlichkeit}{3}{subsection.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Benutzeroberflächen}{3}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Home-Screen}{3}{subsection.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Gruppen}{3}{subsection.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Chat}{3}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}Filmliste}{3}{subsection.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}CodeBeispiele}{3}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Probleme}{3}{section.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {10}Fazit}{3}{section.10}\protected@file@percent }
-\gdef \@abspage@last{5}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Motivation}{1}{subsection.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Methode}{1}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Theoretische Grundlagen}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Netzwerkprotokolle}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Schichtenmodell}{2}{subsubsection.2.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces OSILAYER [1.1]\relax }}{2}{figure.caption.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Kurzbeschreibung der OSI-Schichten [1.2]\relax }}{3}{table.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{IP}{3}{table.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{TCP/UDP}{3}{table.caption.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.2}HTTP}{3}{subsubsection.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Kommunikation}{3}{subsubsection.2.1.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces HTTP-Nachrichtenaufbau\relax }}{4}{figure.caption.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Methoden}{4}{figure.caption.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Statuscodes}{5}{Item.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Module\relax }}{5}{table.caption.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.3}HTTPS}{5}{subsubsection.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}JavaScript}{6}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Historie}{6}{subsubsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Wesentliche Programmiereigenschaften}{6}{subsubsection.2.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces JavaScript Objekt [1.29]\relax }}{7}{figure.caption.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.3}Anwendungsgebiete}{7}{subsubsection.2.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Node.JS}{8}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Architektur}{8}{subsubsection.2.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Multithreaded / Blocking I/O [Nodejs 1.1]\relax }}{8}{figure.caption.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Single Threaded / Non Blocking I/0 [Nodejs 1.1]\relax }}{9}{figure.caption.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Module}{10}{subsubsection.2.3.2}\protected@file@percent }
+\newlabel{lst:ModuleExport}{{1}{10}{Benannter Export von Modulen}{lstlisting.1}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Benannter Export von Modulen}{10}{lstlisting.1}\protected@file@percent }
+\newlabel{lst:ModuleImport}{{2}{10}{Import von Modulen}{lstlisting.2}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Import von Modulen}{10}{lstlisting.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.2.1}npm}{10}{paragraph.2.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.2.2}Express}{10}{paragraph.2.3.2.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3}Einfacher Webserver [nodejs 1.8}{11}{lstlisting.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Middleware}{12}{lstnumber.3.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Middleware [nodejs 2.0]\relax }}{12}{figure.caption.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Middleware: express.json}{12}{figure.caption.8}\protected@file@percent }
+\newlabel{lst:ExpressNutzen}{{4}{12}{Express.json Middleware benutzen}{lstlisting.4}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {4}Express.json Middleware benutzen}{12}{lstlisting.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Middleware: Router}{13}{lstnumber.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.2.3}Mongoose}{14}{paragraph.2.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Object Document Mapping (ODM)}{14}{paragraph.2.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Schema}{14}{paragraph.2.3.2.3}\protected@file@percent }
+\newlabel{lst:MongooseSchema}{{7}{14}{Mongoose Schema - Beispiel}{lstlisting.7}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {7}Mongoose Schema - Beispiel}{14}{lstlisting.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Model}{15}{lstnumber.7.6}\protected@file@percent }
+\newlabel{lst:MongooseObjectExport}{{8}{15}{Model erstellen und exportierenn}{lstlisting.8}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {8}Model erstellen und exportierenn}{15}{lstlisting.8}\protected@file@percent }
+\newlabel{lst:MongooseObjectInstance}{{9}{15}{Model importieren - Objekt instanziieren und persistent speichern}{lstlisting.9}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {9}Model importieren - Objekt instanziieren und persistent speichern}{15}{lstlisting.9}\protected@file@percent }
+\newlabel{lst:MongooseCrud}{{10}{15}{CRUD-Beispielfunktionen eines Mongoose-Models}{lstlisting.10}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {10}CRUD-Beispielfunktionen eines Mongoose-Models}{15}{lstlisting.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Verbindung}{16}{lstnumber.10.11}\protected@file@percent }
+\newlabel{lst:MongooseConnect}{{11}{16}{Mongoose: Verbindung zur Datenbank aufbauen}{lstlisting.11}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {11}Mongoose: Verbindung zur Datenbank aufbauen}{16}{lstlisting.11}\protected@file@percent }
+\newlabel{lst:MongooseConnect}{{12}{16}{Mongoose Verbindungsoptionen -nodejs 3.3-}{lstlisting.12}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {12}Mongoose Verbindungsoptionen -nodejs 3.3-}{16}{lstlisting.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.3.2.4}Weitere Module}{16}{paragraph.2.3.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Module\relax }}{16}{table.caption.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Representational State Transfer - Application Programming Interface}{16}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}NoSQL-Datenbank}{17}{subsection.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}NoSQL-Datenbanktypen}{17}{subsubsection.2.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Graphendatenbanken}{17}{subsubsection.2.5.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Graphikdatenbank Beispiel [NoSql 1.2]\relax }}{17}{figure.caption.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Dokumentenorientierte Datenbanken}{17}{figure.caption.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Key-Value-Datenbanken}{18}{lstnumber.-1.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Key-Value Beispiel [NoSql 1.5]\relax }}{18}{table.caption.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Spaltenorientierte Datenbanken}{18}{table.caption.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Spaltenorientierte Datenbank Beispiel [NoSql 1.5]\relax }}{18}{figure.caption.12}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Zeilen- und spaltenorientierte Speicherung [NoSql 1.5]\relax }}{19}{figure.caption.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}BASE}{19}{subsubsection.2.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.3}CAP-Theorem}{19}{subsubsection.2.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Visualization-of-CAP-theorem [NoSql 1.67]\relax }}{19}{figure.caption.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.4}MongoDB}{20}{subsubsection.2.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.1}Struktur}{20}{paragraph.2.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Graphikdatenbank Beispiel [NoSql 1.9]\relax }}{20}{figure.caption.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Schema-Freiheit}{20}{figure.caption.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{BSON}{20}{figure.caption.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{ObjectID und Primärschlüssel}{21}{lstnumber.-2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.2}Datenbankabfrage}{21}{paragraph.2.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Query-By-Example}{21}{paragraph.2.5.4.2}\protected@file@percent }
+\newlabel{lst:MongoDBRead}{{13}{21}{MongoDB Read}{lstlisting.13}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {13}MongoDB Read}{21}{lstlisting.13}\protected@file@percent }
+\newlabel{lst:MongoDBReadModifikation}{{14}{21}{MongoDB Read Modifikation}{lstlisting.14}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {14}MongoDB Read Modifikation}{21}{lstlisting.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{MapReduce}{22}{lstnumber.14.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Aggregation-Framework}{22}{lstnumber.14.1}\protected@file@percent }
+\newlabel{lst:MongoDBAggregate}{{15}{22}{MongoDB Aggregate}{lstlisting.15}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {15}MongoDB Aggregate}{22}{lstlisting.15}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]\relax }}{22}{table.caption.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.3}CRUD}{22}{paragraph.2.5.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Create}{22}{table.caption.17}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]\relax }}{23}{table.caption.17}\protected@file@percent }
+\newlabel{lst:MongoDBCreate}{{16}{23}{MongoDB Create}{lstlisting.16}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {16}MongoDB Create}{23}{lstlisting.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Read}{23}{lstnumber.16.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Update}{23}{lstnumber.16.1}\protected@file@percent }
+\newlabel{lst:MongoDBUpdate}{{17}{23}{MongoDB Update}{lstlisting.17}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {17}MongoDB Update}{23}{lstlisting.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Delete}{23}{lstnumber.17.2}\protected@file@percent }
+\newlabel{lst:MongoDBRemove}{{18}{23}{MongoDB Remove}{lstlisting.18}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {18}MongoDB Remove}{23}{lstlisting.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.4}Atomare Operationen}{23}{paragraph.2.5.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.5}Architektur}{24}{paragraph.2.5.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Engine}{24}{paragraph.2.5.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Replica Sets}{24}{paragraph.2.5.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces MongoDB Replica Set [3.8]\relax }}{25}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Sharding}{25}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.5.4.6}Verwaltungswerkzeuge}{25}{paragraph.2.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Mongo Shell}{25}{paragraph.2.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Treiber}{25}{paragraph.2.5.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Grafische Oberflächen}{26}{paragraph.2.5.4.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces CRUD-Besipielfunktionen eines Mongoose-Models\relax }}{26}{figure.caption.19}\protected@file@percent }
+\citation{firebase2021}
+\citation{firebase2021}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Firebase}{27}{subsection.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Firebase Authentifizierung}{27}{subsubsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Cloud Firestore}{27}{subsubsection.2.6.2}\protected@file@percent }
+\newlabel{sec:firestore}{{2.6.2}{27}{Cloud Firestore}{subsubsection.2.6.2}{}}
+\citation{firebase2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Datenmodell in Firebase \footnotemark \relax }}{28}{figure.caption.20}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:firestore_data_structure}{{14}{28}{Datenmodell in Firebase \protect \footnotemark \relax }{figure.caption.20}{}}
+\newlabel{lst:firestorerules_basic}{{19}{28}{Beschränkung des Zugriffs auf Dokumente der Sammlung \texttt {cities}}{lstlisting.19}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {19}Beschränkung des Zugriffs auf Dokumente der Sammlung \texttt  {cities}}{28}{lstlisting.19}\protected@file@percent }
+\citation{firebase2021}
+\newlabel{lst:firestorerules_hierarchy}{{20}{29}{Hierarchische Zugriffsbeschränkung}{lstlisting.20}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {20}Hierarchische Zugriffsbeschränkung}{29}{lstlisting.20}\protected@file@percent }
+\newlabel{lst:firestorerules_validation}{{21}{29}{Datenvalidierung für atomare Operationen}{lstlisting.21}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {21}Datenvalidierung für atomare Operationen}{29}{lstlisting.21}\protected@file@percent }
+\citation{firebase2021}
+\citation{firebase2021}
+\citation{firebase2021}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.3}Cloud Storage}{30}{subsubsection.2.6.3}\protected@file@percent }
+\newlabel{lst:storagerules_validation}{{22}{30}{Validierung nach Dateigröße}{lstlisting.22}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {22}Validierung nach Dateigröße}{30}{lstlisting.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.4}Cloud Functions}{30}{subsubsection.2.6.4}\protected@file@percent }
+\newlabel{sec:cloudfunctions}{{2.6.4}{30}{Cloud Functions}{subsubsection.2.6.4}{}}
+\citation{firebase2021}
+\citation{firebase2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Cloud Functions Anwendungsfall Benachrichtigung\relax }}{31}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:functions_notifications}{{15}{31}{Cloud Functions Anwendungsfall Benachrichtigung\relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.5}Cloud Messaging}{31}{subsubsection.2.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Firebase Cloud Messaging Architektur\relax }}{32}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:cloudmessaging_architecture}{{16}{32}{Firebase Cloud Messaging Architektur\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.6}Google AdMob}{32}{subsubsection.2.6.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Google AdMob Anzeigemöglichkeiten\relax }}{32}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:firebase_admob}{{17}{32}{Google AdMob Anzeigemöglichkeiten\relax }{figure.caption.23}{}}
+\citation{cisco2020}
+\citation{johnson1988}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Anwendungsentwicklung für mobile Endgeräte}{33}{subsection.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.1}Begriffe}{33}{subsubsection.2.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Eine Plattform}{33}{subsubsection.2.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Ein \textit  {Framework}}{33}{subsubsection.2.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Eine mobile Anwendung}{33}{subsubsection.2.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.2}Plattformspezifische native Apps}{33}{subsubsection.2.7.2}\protected@file@percent }
+\citation{fentaw2020}
+\citation{majchrzak2015}
+\citation{majchrzak2015}
+\citation{charland2011}
+\citation{bjorn-hansen2020}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.7.3}Plattformübergreifende Anwendungen}{34}{subsubsection.2.7.3}\protected@file@percent }
+\newlabel{plattformuebergreifende_anwendungen}{{2.7.3}{34}{Plattformübergreifende Anwendungen}{subsubsection.2.7.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite  {majchrzak2015} \relax }}{34}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:crossplattform_architecture}{{18}{34}{Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} \protect \relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.7.3.1}\textit  {(Progressive) Web Apps}}{34}{paragraph.2.7.3.1}\protected@file@percent }
+\citation{lachgar2017}
+\citation{bjorn-hansen2020}
+\citation{lachgar2017}
+\citation{bjorn-hansen2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark \relax }}{35}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:hybrid_structure}{{19}{35}{Struktur einer hybriden Anwendung \protect \footnotemark \relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.7.3.2}Hybride Anwendungen}{35}{paragraph.2.7.3.2}\protected@file@percent }
+\newlabel{hybride_anwendung}{{2.7.3.2}{35}{Hybride Anwendungen}{paragraph.2.7.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.7.3.3}Runtime basierte Anwendungen}{35}{paragraph.2.7.3.3}\protected@file@percent }
+\newlabel{runtime_based_apps}{{2.7.3.3}{35}{Runtime basierte Anwendungen}{paragraph.2.7.3.3}{}}
+\citation{stahl2006}
+\citation{bjorn-hansen2020}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.7.3.4}Model-driven Software Entwicklung}{36}{paragraph.2.7.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.7.3.5}Kompilierte Anwendungen}{36}{paragraph.2.7.3.5}\protected@file@percent }
+\newlabel{compilierte_anwendungen}{{2.7.3.5}{36}{Kompilierte Anwendungen}{paragraph.2.7.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}Frameworks zur mobilen, plattformübergreifenden Entwicklung}{36}{subsection.2.8}\protected@file@percent }
+\citation{reactnative2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark \relax }}{37}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:crossplattform_popularity}{{20}{37}{Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \protect \footnotemark \relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.1}React Native}{37}{subsubsection.2.8.1}\protected@file@percent }
+\newlabel{react-native}{{2.8.1}{37}{React Native}{subsubsection.2.8.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.1.1}Architektur}{38}{paragraph.2.8.1.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Alte Architektur von React Native \footnotemark \relax }}{38}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:reactnative_architecture_old}{{21}{38}{Alte Architektur von React Native \protect \footnotemark \relax }{figure.caption.27}{}}
+\citation{react2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Neue Architektur von React Native \footnotemark \relax }}{39}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:reactnative_architecture}{{22}{39}{Neue Architektur von React Native \protect \footnotemark \relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.1.2}JSX mit nativen Komponenten}{39}{paragraph.2.8.1.2}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {23}JSX Hello World Element}{39}{lstlisting.23}\protected@file@percent }
+\newlabel{lst:jsx_native_component}{{24}{39}{Native Komponenten}{lstlisting.24}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {24}Native Komponenten}{39}{lstlisting.24}\protected@file@percent }
+\citation{reactnative2021}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.1.3}Komponenten}{40}{paragraph.2.8.1.3}\protected@file@percent }
+\newlabel{lst:reactnative_own_components}{{25}{40}{Eigene Komponenten}{lstlisting.25}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {25}Eigene Komponenten}{40}{lstlisting.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.1.4}State}{41}{paragraph.2.8.1.4}\protected@file@percent }
+\newlabel{lst:reactnative_state}{{26}{41}{State mit \texttt {useState} Hook}{lstlisting.26}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {26}State mit \texttt  {useState} Hook}{41}{lstlisting.26}\protected@file@percent }
+\citation{reactnative2021}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.2}Flutter}{42}{subsubsection.2.8.2}\protected@file@percent }
+\newlabel{flutter}{{2.8.2}{42}{Flutter}{subsubsection.2.8.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark \relax }}{42}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:dart_plattform}{{23}{42}{Kompatibilität der Dart Plattform \protect \footnotemark \relax }{figure.caption.29}{}}
+\citation{flutter2021}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.2.1}Architektur}{43}{paragraph.2.8.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.2.2}Dart}{43}{paragraph.2.8.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark \relax }}{44}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:flutter_plattform}{{24}{44}{Bibliotheken und Ebenen der Flutter Plattform \protect \footnotemark \relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.2.3}Widgets}{44}{paragraph.2.8.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark \relax }}{45}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:flutter_widget_tree}{{25}{45}{Widget Baum einer beispielhaften Anwendung \protect \footnotemark \relax }{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.8.2.4}States}{45}{paragraph.2.8.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark \relax }}{45}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:flutter_state}{{26}{45}{Deklarative Benutzeroberfläche \protect \footnotemark \relax }{figure.caption.32}{}}
+\citation{aggarwal2016}
+\newlabel{Recommendation Matrix}{{\caption@xref {Recommendation Matrix}{ on input line 14}}{46}{Recommender System}{table.caption.33}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Nutzer-Item Matrix mit Bewertungen. Jede Zelle $r_{u;i}$ steht hierbei für die Bewertung des Nutzers $u$ an der Stelle $i$\relax }}{46}{table.caption.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.9}Recommender System}{46}{subsection.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.1}Nutzerinformation}{46}{subsubsection.2.9.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.9.1.1}Explizite Nutzerinformation}{46}{paragraph.2.9.1.1}\protected@file@percent }
+\citation{aggarwal2016}
+\citation{aggarwal2016}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.9.1.2}Implizite Nutzerinformation}{47}{paragraph.2.9.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.2}Content-based filtering}{47}{subsubsection.2.9.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.3}Collaborative Filtering}{47}{subsubsection.2.9.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.9.4}Ähnlichkeit von Objekten und Nutzern}{48}{subsubsection.2.9.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.9.4.1}Cosinus-Funktion}{48}{paragraph.2.9.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.9.4.2}Skalarprodukt}{48}{paragraph.2.9.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.9.4.3}Euklidischer Abstand}{48}{paragraph.2.9.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Konzept}{49}{section.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Konzept\relax }}{49}{figure.caption.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Funktionen/Komponenten}{49}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{50}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Server}{50}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Datenbank}{50}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{51}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Film-Datenbank}{51}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Backend-Implementierung}{51}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Server}{51}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{51}{subsubsection.6.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{51}{subsubsection.6.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{51}{subsubsection.6.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Datenbank}{51}{subsection.6.2}\protected@file@percent }
+\citation{behindertengleichstellungsgesetz}
+\citation{schwerbehindertenausweis}
+\citation{behindertengleichstellungsgesetz}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{52}{subsubsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{52}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{52}{subsubsection.6.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Swipe/Aussuchen/Voting}{52}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Matches/Chat}{52}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Film-/Serienvorschläge}{52}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Gespeicherte Filme/Filmliste}{52}{subsection.6.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.8}Barrierefreiheit}{52}{subsection.6.8}\protected@file@percent }
+\newlabel{sec:barrierefreiheit}{{6.8}{52}{Barrierefreiheit}{subsection.6.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.8.1}Barrierefreiheit in mobilen Anwendungen}{52}{subsubsection.6.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.8.2}Barrierefreiheit in Filmen und Serien}{52}{subsubsection.6.8.2}\protected@file@percent }
+\citation{sehhilfen}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.8.3}Barrierefreiheit bei StreamSwipe}{53}{subsubsection.6.8.3}\protected@file@percent }
+\newlabel{sec:bf-streamswipe}{{6.8.3}{53}{Barrierefreiheit bei StreamSwipe}{subsubsection.6.8.3}{}}
+\newlabel{fig:bf-beispiel_a}{{28a}{54}{\relax }{figure.caption.35}{}}
+\newlabel{sub@fig:bf-beispiel_a}{{a}{54}{\relax }{figure.caption.35}{}}
+\newlabel{fig:bf-beispiel_b}{{28b}{54}{\relax }{figure.caption.35}{}}
+\newlabel{sub@fig:bf-beispiel_b}{{b}{54}{\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Screenshots aus der App StreamSwipe als Beispiele zu (a) schlichtem Design, bei dem farbige Akzente nicht der Informationenübertragung dienen um die Zugänglichkeit für farbblinde Menschen zu verbessern und für einen Icon in (b), welcher sonst durch sehgeschädigte Menschen nicht wahrnehmbar ist, wird exemplarisch eine Semantik implementiert.\relax }}{54}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:BF-Beispiele}{{28}{54}{Screenshots aus der App StreamSwipe als Beispiele zu (a) schlichtem Design, bei dem farbige Akzente nicht der Informationenübertragung dienen um die Zugänglichkeit für farbblinde Menschen zu verbessern und für einen Icon in (b), welcher sonst durch sehgeschädigte Menschen nicht wahrnehmbar ist, wird exemplarisch eine Semantik implementiert.\relax }{figure.caption.35}{}}
+\newlabel{lst:semantics}{{27}{54}{Codeausschnitt in Dart von einem Button mit Semantiken}{lstlisting.27}{}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {27}Codeausschnitt in Dart von einem Button mit Semantiken.}{54}{lstlisting.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Benutzeroberflächen}{55}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Aspekte von Benutzeroberflächen}{55}{subsection.7.1}\protected@file@percent }
+\newlabel{sec:UI-Aspekte}{{7.1}{55}{Aspekte von Benutzeroberflächen}{subsection.7.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Oberflächen von StreamSwipe}{56}{subsection.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.1}Login-Screen}{56}{subsubsection.7.2.1}\protected@file@percent }
+\newlabel{sec:loginscreen}{{7.2.1}{56}{Login-Screen}{subsubsection.7.2.1}{}}
+\newlabel{fig:login_a}{{29a}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_a}{{a}{58}{\relax }{figure.caption.36}{}}
+\newlabel{fig:login_b}{{29b}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_b}{{b}{58}{\relax }{figure.caption.36}{}}
+\newlabel{fig:login_c}{{29c}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_c}{{c}{58}{\relax }{figure.caption.36}{}}
+\newlabel{fig:login_d}{{29d}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_d}{{d}{58}{\relax }{figure.caption.36}{}}
+\newlabel{fig:login_e}{{29e}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_e}{{e}{58}{\relax }{figure.caption.36}{}}
+\newlabel{fig:login_f}{{29f}{58}{\relax }{figure.caption.36}{}}
+\newlabel{sub@fig:login_f}{{f}{58}{\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Screenshots der Anmeldeseiten}}{58}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:login_alle}{{29}{58}{Screenshots der Anmeldeseiten}{figure.caption.36}{}}
+\newlabel{fig:homescreen_a}{{30a}{59}{\relax }{figure.caption.37}{}}
+\newlabel{sub@fig:homescreen_a}{{a}{59}{\relax }{figure.caption.37}{}}
+\newlabel{fig:homescreen_b}{{30b}{59}{\relax }{figure.caption.37}{}}
+\newlabel{sub@fig:homescreen_b}{{b}{59}{\relax }{figure.caption.37}{}}
+\newlabel{fig:homescreen_c}{{30c}{59}{\relax }{figure.caption.37}{}}
+\newlabel{sub@fig:homescreen_c}{{c}{59}{\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Screenshots des Home-Screens}}{59}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:homescreen_alle}{{30}{59}{Screenshots des Home-Screens}{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.2}Home-Screen}{59}{subsubsection.7.2.2}\protected@file@percent }
+\newlabel{sec:homescreen}{{7.2.2}{59}{Home-Screen}{subsubsection.7.2.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.3}Swipe-Screen}{60}{subsubsection.7.2.3}\protected@file@percent }
+\newlabel{sec:swipescreen}{{7.2.3}{60}{Swipe-Screen}{subsubsection.7.2.3}{}}
+\newlabel{fig:swipescreen_a}{{31a}{61}{\relax }{figure.caption.38}{}}
+\newlabel{sub@fig:swipescreen_a}{{a}{61}{\relax }{figure.caption.38}{}}
+\newlabel{fig:swipescreen_b}{{31b}{61}{\relax }{figure.caption.38}{}}
+\newlabel{sub@fig:swipescreen_b}{{b}{61}{\relax }{figure.caption.38}{}}
+\newlabel{fig:swipescreen_c}{{31c}{61}{\relax }{figure.caption.38}{}}
+\newlabel{sub@fig:swipescreen_c}{{c}{61}{\relax }{figure.caption.38}{}}
+\newlabel{fig:swipescreen_d}{{31d}{61}{\relax }{figure.caption.38}{}}
+\newlabel{sub@fig:swipescreen_d}{{d}{61}{\relax }{figure.caption.38}{}}
+\newlabel{fig:swipescreen_e}{{31e}{61}{\relax }{figure.caption.38}{}}
+\newlabel{sub@fig:swipescreen_e}{{e}{61}{\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Screenshots des Swipe-Screen}}{61}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:swipescreen_alle}{{31}{61}{Screenshots des Swipe-Screen}{figure.caption.38}{}}
+\newlabel{fig:chat_a}{{32a}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_a}{{a}{62}{\relax }{figure.caption.39}{}}
+\newlabel{fig:chat_b}{{32b}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_b}{{b}{62}{\relax }{figure.caption.39}{}}
+\newlabel{fig:chat_c}{{32c}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_c}{{c}{62}{\relax }{figure.caption.39}{}}
+\newlabel{fig:chat_d}{{32d}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_d}{{d}{62}{\relax }{figure.caption.39}{}}
+\newlabel{fig:chat_e}{{32e}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_e}{{e}{62}{\relax }{figure.caption.39}{}}
+\newlabel{fig:chat_f}{{32f}{62}{\relax }{figure.caption.39}{}}
+\newlabel{sub@fig:chat_f}{{f}{62}{\relax }{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Screenshots der Chat-Seiten}}{62}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:chat_alle}{{32}{62}{Screenshots der Chat-Seiten}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.4}Chat}{62}{subsubsection.7.2.4}\protected@file@percent }
+\newlabel{sec:UI-Chat}{{7.2.4}{62}{Chat}{subsubsection.7.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.2.5}Benutzerprofil}{63}{subsubsection.7.2.5}\protected@file@percent }
+\newlabel{sec:benutzerprofil}{{7.2.5}{63}{Benutzerprofil}{subsubsection.7.2.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Filmliste}{63}{subsection.7.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}CodeBeispiele}{63}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Probleme}{63}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {10}Fazit}{63}{section.10}\protected@file@percent }
+\newlabel{fig:profilseite_a}{{33a}{64}{\relax }{figure.caption.40}{}}
+\newlabel{sub@fig:profilseite_a}{{a}{64}{\relax }{figure.caption.40}{}}
+\newlabel{fig:profilseite_b}{{33b}{64}{\relax }{figure.caption.40}{}}
+\newlabel{sub@fig:profilseite_b}{{b}{64}{\relax }{figure.caption.40}{}}
+\newlabel{fig:profilseite_c}{{33c}{64}{\relax }{figure.caption.40}{}}
+\newlabel{sub@fig:profilseite_c}{{c}{64}{\relax }{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Screenshots der Profilseite}}{64}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:profilseite_alle}{{33}{64}{Screenshots der Profilseite}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Verfasser einzelner Abschnitte}{65}{appendix.A}\protected@file@percent }
+\bibcite{aggarwal2016}{1}
+\bibcite{fentaw2020}{2}
+\bibcite{reactnative2021}{3}
+\bibcite{react2021}{4}
+\bibcite{flutter2021}{5}
+\bibcite{johnson1988}{6}
+\bibcite{majchrzak2015}{7}
+\bibcite{cisco2020}{8}
+\bibcite{charland2011}{9}
+\bibcite{lachgar2017}{10}
+\bibcite{bjorn-hansen2020}{11}
+\bibcite{stahl2006}{12}
+\bibcite{firebase2021}{13}
+\bibcite{scheidungen}{14}
+\bibcite{serienkonsum}{15}
+\bibcite{schwerbehindertenausweis}{16}
+\bibcite{behindertengleichstellungsgesetz}{17}
+\bibcite{sehhilfen}{18}

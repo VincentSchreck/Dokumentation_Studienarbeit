@@ -1,45 +1,45 @@
 \BOOKMARK [1][-]{section.1}{Einleitung}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{..}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{Aufbau der Arbeit}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Motivation}{}% 4
-\BOOKMARK [1][-]{section.3}{Theoretische Grundlagen}{}% 5
-\BOOKMARK [2][-]{subsection.3.1}{Netzwerkprotokolle}{section.3}% 6
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Schichtenmodell}{subsection.3.1}% 7
-\BOOKMARK [3][-]{subsubsection.3.1.2}{HTTP}{subsection.3.1}% 8
-\BOOKMARK [3][-]{subsubsection.3.1.3}{HTTPS}{subsection.3.1}% 9
-\BOOKMARK [2][-]{subsection.3.2}{JavaScript}{section.3}% 10
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Historie}{subsection.3.2}% 11
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Wesentliche Programmiereigenschaften}{subsection.3.2}% 12
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Anwendungsgebiete}{subsection.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.3}{Node.JS}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.3.1}{Architektur}{subsection.3.3}% 15
-\BOOKMARK [3][-]{subsubsection.3.3.2}{Module}{subsection.3.3}% 16
-\BOOKMARK [2][-]{subsection.3.4}{Representational State Transfer - Application Programming Interface}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.5}{NoSQL-Datenbank}{section.3}% 18
-\BOOKMARK [3][-]{subsubsection.3.5.1}{NoSQL-Datenbanktypen}{subsection.3.5}% 19
-\BOOKMARK [3][-]{subsubsection.3.5.2}{BASE}{subsection.3.5}% 20
-\BOOKMARK [3][-]{subsubsection.3.5.3}{CAP-Theorem}{subsection.3.5}% 21
-\BOOKMARK [3][-]{subsubsection.3.5.4}{MongoDB}{subsection.3.5}% 22
-\BOOKMARK [2][-]{subsection.3.6}{Firebase}{section.3}% 23
-\BOOKMARK [3][-]{subsubsection.3.6.1}{Firebase Authentifizierung}{subsection.3.6}% 24
-\BOOKMARK [3][-]{subsubsection.3.6.2}{Cloud Firestore}{subsection.3.6}% 25
-\BOOKMARK [3][-]{subsubsection.3.6.3}{Cloud Storage}{subsection.3.6}% 26
-\BOOKMARK [3][-]{subsubsection.3.6.4}{Cloud Functions}{subsection.3.6}% 27
-\BOOKMARK [3][-]{subsubsection.3.6.5}{Cloud Messaging}{subsection.3.6}% 28
-\BOOKMARK [3][-]{subsubsection.3.6.6}{Google AdMob}{subsection.3.6}% 29
-\BOOKMARK [2][-]{subsection.3.7}{Anwendungsentwicklung f\374r mobile Endger\344te}{section.3}% 30
-\BOOKMARK [3][-]{subsubsection.3.7.1}{Begriffe}{subsection.3.7}% 31
-\BOOKMARK [3][-]{subsubsection.3.7.2}{Plattformspezifische native Apps}{subsection.3.7}% 32
-\BOOKMARK [3][-]{subsubsection.3.7.3}{Plattform\374bergreifende Anwendungen}{subsection.3.7}% 33
-\BOOKMARK [2][-]{subsection.3.8}{Frameworks zur mobilen, plattform\374bergreifenden Entwicklung}{section.3}% 34
-\BOOKMARK [3][-]{subsubsection.3.8.1}{React Native}{subsection.3.8}% 35
-\BOOKMARK [3][-]{subsubsection.3.8.2}{Flutter}{subsection.3.8}% 36
-\BOOKMARK [2][-]{subsection.3.9}{Recommender System}{section.3}% 37
-\BOOKMARK [3][-]{subsubsection.3.9.1}{Nutzerinformation}{subsection.3.9}% 38
-\BOOKMARK [3][-]{subsubsection.3.9.2}{Content-based filtering}{subsection.3.9}% 39
-\BOOKMARK [3][-]{subsubsection.3.9.3}{Collaborative Filtering}{subsection.3.9}% 40
-\BOOKMARK [3][-]{subsubsection.3.9.4}{\304hnlichkeit von Objekten und Nutzern}{subsection.3.9}% 41
-\BOOKMARK [1][-]{section.4}{Konzept?}{}% 42
+\BOOKMARK [2][-]{subsection.1.1}{Motivation}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Methode}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Theoretische Grundlagen}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Netzwerkprotokolle}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Schichtenmodell}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.2}{HTTP}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.3}{HTTPS}{subsection.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.2}{JavaScript}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Historie}{subsection.2.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Wesentliche Programmiereigenschaften}{subsection.2.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Anwendungsgebiete}{subsection.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.3}{Node.JS}{section.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.3.1}{Architektur}{subsection.2.3}% 14
+\BOOKMARK [3][-]{subsubsection.2.3.2}{Module}{subsection.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.4}{Representational State Transfer - Application Programming Interface}{section.2}% 16
+\BOOKMARK [2][-]{subsection.2.5}{NoSQL-Datenbank}{section.2}% 17
+\BOOKMARK [3][-]{subsubsection.2.5.1}{NoSQL-Datenbanktypen}{subsection.2.5}% 18
+\BOOKMARK [3][-]{subsubsection.2.5.2}{BASE}{subsection.2.5}% 19
+\BOOKMARK [3][-]{subsubsection.2.5.3}{CAP-Theorem}{subsection.2.5}% 20
+\BOOKMARK [3][-]{subsubsection.2.5.4}{MongoDB}{subsection.2.5}% 21
+\BOOKMARK [2][-]{subsection.2.6}{Firebase}{section.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.6.1}{Firebase Authentifizierung}{subsection.2.6}% 23
+\BOOKMARK [3][-]{subsubsection.2.6.2}{Cloud Firestore}{subsection.2.6}% 24
+\BOOKMARK [3][-]{subsubsection.2.6.3}{Cloud Storage}{subsection.2.6}% 25
+\BOOKMARK [3][-]{subsubsection.2.6.4}{Cloud Functions}{subsection.2.6}% 26
+\BOOKMARK [3][-]{subsubsection.2.6.5}{Cloud Messaging}{subsection.2.6}% 27
+\BOOKMARK [3][-]{subsubsection.2.6.6}{Google AdMob}{subsection.2.6}% 28
+\BOOKMARK [2][-]{subsection.2.7}{Anwendungsentwicklung f\374r mobile Endger\344te}{section.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.7.1}{Begriffe}{subsection.2.7}% 30
+\BOOKMARK [3][-]{subsubsection.2.7.2}{Plattformspezifische native Apps}{subsection.2.7}% 31
+\BOOKMARK [3][-]{subsubsection.2.7.3}{Plattform\374bergreifende Anwendungen}{subsection.2.7}% 32
+\BOOKMARK [2][-]{subsection.2.8}{Frameworks zur mobilen, plattform\374bergreifenden Entwicklung}{section.2}% 33
+\BOOKMARK [3][-]{subsubsection.2.8.1}{React Native}{subsection.2.8}% 34
+\BOOKMARK [3][-]{subsubsection.2.8.2}{Flutter}{subsection.2.8}% 35
+\BOOKMARK [2][-]{subsection.2.9}{Recommender System}{section.2}% 36
+\BOOKMARK [3][-]{subsubsection.2.9.1}{Nutzerinformation}{subsection.2.9}% 37
+\BOOKMARK [3][-]{subsubsection.2.9.2}{Content-based filtering}{subsection.2.9}% 38
+\BOOKMARK [3][-]{subsubsection.2.9.3}{Collaborative Filtering}{subsection.2.9}% 39
+\BOOKMARK [3][-]{subsubsection.2.9.4}{\304hnlichkeit von Objekten und Nutzern}{subsection.2.9}% 40
+\BOOKMARK [1][-]{section.3}{Konzept}{}% 41
+\BOOKMARK [1][-]{section.4}{Funktionen/Komponenten}{}% 42
 \BOOKMARK [1][-]{section.5}{Auswahl geeigneter Technologie}{}% 43
 \BOOKMARK [2][-]{subsection.5.1}{Server}{section.5}% 44
 \BOOKMARK [2][-]{subsection.5.2}{Datenbank}{section.5}% 45
@@ -54,18 +54,24 @@
 \BOOKMARK [3][-]{subsubsection.6.2.1}{Einrichtung}{subsection.6.2}% 54
 \BOOKMARK [2][-]{subsection.6.3}{Kommunikationsschnittstelle}{section.6}% 55
 \BOOKMARK [3][-]{subsubsection.6.3.1}{Implementierung}{subsection.6.3}% 56
-\BOOKMARK [1][-]{section.7}{Funktionen/Komponenten}{}% 57
-\BOOKMARK [2][-]{subsection.7.1}{Swipe/Aussuchen/Voting}{section.7}% 58
-\BOOKMARK [2][-]{subsection.7.2}{Matches/Chat}{section.7}% 59
-\BOOKMARK [2][-]{subsection.7.3}{Film-/Serienvorschl\344ge}{section.7}% 60
-\BOOKMARK [2][-]{subsection.7.4}{Gespeicherte Filme/Filmliste}{section.7}% 61
-\BOOKMARK [2][-]{subsection.7.5}{Zug\344nglichkeit/Behindertenfreundlichkeit}{section.7}% 62
-\BOOKMARK [1][-]{section.8}{Benutzeroberfl\344chen}{}% 63
-\BOOKMARK [2][-]{subsection.8.1}{Home-Screen}{section.8}% 64
-\BOOKMARK [2][-]{subsection.8.2}{Gruppen}{section.8}% 65
-\BOOKMARK [2][-]{subsection.8.3}{Chat}{section.8}% 66
-\BOOKMARK [2][-]{subsection.8.4}{Filmliste}{section.8}% 67
-\BOOKMARK [1][-]{section.9}{CodeBeispiele}{}% 68
-\BOOKMARK [1][-]{section.10}{Probleme}{}% 69
-\BOOKMARK [1][-]{section.11}{Fazit}{}% 70
-\BOOKMARK [1][-]{appendix.A}{Verfasser einzelner Abschnitte}{}% 71
+\BOOKMARK [2][-]{subsection.6.4}{Swipe/Aussuchen/Voting}{section.6}% 57
+\BOOKMARK [2][-]{subsection.6.5}{Matches/Chat}{section.6}% 58
+\BOOKMARK [2][-]{subsection.6.6}{Film-/Serienvorschl\344ge}{section.6}% 59
+\BOOKMARK [2][-]{subsection.6.7}{Gespeicherte Filme/Filmliste}{section.6}% 60
+\BOOKMARK [2][-]{subsection.6.8}{Barrierefreiheit}{section.6}% 61
+\BOOKMARK [3][-]{subsubsection.6.8.1}{Barrierefreiheit in mobilen Anwendungen}{subsection.6.8}% 62
+\BOOKMARK [3][-]{subsubsection.6.8.2}{Barrierefreiheit in Filmen und Serien}{subsection.6.8}% 63
+\BOOKMARK [3][-]{subsubsection.6.8.3}{Barrierefreiheit bei StreamSwipe}{subsection.6.8}% 64
+\BOOKMARK [1][-]{section.7}{Benutzeroberfl\344chen}{}% 65
+\BOOKMARK [2][-]{subsection.7.1}{Aspekte von Benutzeroberfl\344chen}{section.7}% 66
+\BOOKMARK [2][-]{subsection.7.2}{Oberfl\344chen von StreamSwipe}{section.7}% 67
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Login-Screen}{subsection.7.2}% 68
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Home-Screen}{subsection.7.2}% 69
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Swipe-Screen}{subsection.7.2}% 70
+\BOOKMARK [3][-]{subsubsection.7.2.4}{Chat}{subsection.7.2}% 71
+\BOOKMARK [3][-]{subsubsection.7.2.5}{Benutzerprofil}{subsection.7.2}% 72
+\BOOKMARK [2][-]{subsection.7.3}{Filmliste}{section.7}% 73
+\BOOKMARK [1][-]{section.8}{CodeBeispiele}{}% 74
+\BOOKMARK [1][-]{section.9}{Probleme}{}% 75
+\BOOKMARK [1][-]{section.10}{Fazit}{}% 76
+\BOOKMARK [1][-]{appendix.A}{Verfasser einzelner Abschnitte}{}% 77
