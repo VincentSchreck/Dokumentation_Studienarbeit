@@ -11,6 +11,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
+\usepackage{listings}
+\renewcommand*{\lstlistlistingname}{Quellcodeverzeichnis}
 \usepackage{icomma}
 \usepackage{float}
 \usepackage{pdfpages}
@@ -19,6 +21,9 @@
 \title{DreamSwipe\\Tinder für Filme\vspace{10px}}
 \author{Leon Gieringer, Robin Meckler,Vincent Schreck \\ \\ Studienarbeit \\ \\ \\}
 \date{\today}
+
+
+
 
 \begin{document}
 \maketitle
@@ -47,10 +52,14 @@
 \newpage
 
 
-\section[Einleitung]{Einleitung \hfill \normalfont \small{Autor-Name}}
+\section[Einleitung]{Einleitung \hfill \normalfont \small{Vincent Schreck}}
+\input{Einleitung/Einleitung.tex}
 
+\subsection{Motivation}
+\input{Einleitung/Motivation.tex}
 
-\section[Motivation]{Motivation \hfill \normalfont \small{Autor-Name}}
+\subsection{Methode}
+\input{Einleitung/Methode.tex}
 
 
 \section[Theoretische Grundlagen]{Theoretische Grundlagen \hfill \normalfont \small{Autor-Name}}
@@ -88,9 +97,19 @@
 
 \subsection{Gespeicherte Filme/Filmliste}		
 
-\subsection{Zugänglichkeit/Behindertenfreundlichkeit/Barrierefreiheit}
+\subsection{Barrierefreiheit}
 \label{sec:barrierefreiheit}
-\input{Barrierefreiheit/Barrierefreiheit.tex}
+\input{Barrierefreiheit/BF-Einleitung.tex}
+
+\subsubsection{Barrierefreiheit in mobilen Anwendungen}
+\input{Barrierefreiheit/BF-Apps.tex}
+
+\subsubsection{Barrierefreiheit in Filmen und Serien}
+\input{Barrierefreiheit/BF-Filme.tex}
+
+\subsubsection{Barrierefreiheit bei StreamSwipe}
+\label{sec:bf-streamswipe}
+\input{Barrierefreiheit/BF-Streamswipe.tex}
 
 
 \section[Benutzeroberflächen]{Benutzeroberflächen \hfill \normalfont \small{Vincent Schreck}}
@@ -142,8 +161,13 @@
 
 \section{Literaturverzeichnis}
 \begin{itemize}
+\bibitem[1]{scheidungen} Meinungsforschungsinstituts Civey (2020):  \url{https://www.presseportal.de/pm/145489/4627304}, letzter Zugriff: 13. Mai 2021
+\bibitem[1]{serienkonsum} Splendid Research (2017): \url{https://www.springerprofessional.de/konsumforschung/marketingstrategie/konsumenten-auf-der-serien-welle/15146374}, letzter Zugriff: 14. Mai 2021
 \bibitem[1]{schwerbehindertenausweis} Statistisches Bundesamt (2020): \url{https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Behinderte-Menschen/Tabellen/schwerbehinderte-alter-geschlecht-quote.html;jsessionid=885260788D4FFC7F670576B72E5089F4.live741}, letzter Zugriff: 17. April 2021
-\bibitem[2]{behindertengleichstellungsgesetz} UN (2002): \url{https://www.un.org/development/desa/disabilities/wp-content/uploads/sites/15/2019/11/Germany_Equality-for-Persons-with-Disabilities-Act-BGG.pdf}, letzter Zugriff: 19.04.2021
+\bibitem[2]{behindertengleichstellungsgesetz} Behindertengleichstellungsgesetz (2002): \url{https://www.gesetze-im-internet.de/bgg/BGG.pdf}, letzter Zugriff: 19. April 2021
+\bibitem[3]{sehhilfen} Institut für Demoskopie Allensbach (2019): \textit{Untersuchung zum Sehbewusstsein der Deutschen},  \url{file:///C:/Users/Vincent/AppData/Local/Temp/ZVA_Brillenstudie_2019-1.pdf}, letzter Zugriff: 11. Mai 2021
+
+
 \bibitem[99]{muster} Mustermann, Max (2020): Methode und Nutzung der Literatur-Zitierweise, 2. Aufl., Boston: Harvard’s Eleven Publications.
 \bibitem[99]{asdf} Autor (2008): Name des Buches, 22. Aufl., Berlin: Foxtrott.
 \end{itemize}

@@ -1,31 +1,35 @@
 \babel@toc {german}{}
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.1}%
-\contentsline {section}{\numberline {2}Motivation}{1}{section.2}%
-\contentsline {section}{\numberline {3}Theoretische Grundlagen}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Framework}{1}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Language}{1}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}IDE}{1}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Database}{1}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Firebase}{1}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Recommendationssystem}{1}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Konzept}{1}{section.4}%
-\contentsline {section}{\numberline {5}Funktionen/Komponenten}{1}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Swipe/Aussuchen/Voting}{1}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Matches/Chat}{1}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Film-/Serienvorschläge}{1}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Gruppenorgien}{1}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Gespeicherte Filme/Filmliste}{1}{subsection.5.5}%
-\contentsline {subsection}{\numberline {5.6}Zugänglichkeit/Behindertenfreundlichkeit/Barrierefreiheit}{1}{subsection.5.6}%
-\contentsline {section}{\numberline {6}Benutzeroberflächen}{3}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Aspekte von Benutzeroberflächen}{3}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Oberflächen von StreamSwipe}{5}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Login-Screen}{5}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}Home-Screen}{7}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}Swipe-Screen}{8}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}Chat}{10}{subsubsection.6.2.4}%
-\contentsline {subsubsection}{\numberline {6.2.5}Benutzerprofil}{10}{subsubsection.6.2.5}%
-\contentsline {subsection}{\numberline {6.3}Filmliste}{10}{subsection.6.3}%
-\contentsline {section}{\numberline {7}CodeBeispiele}{10}{section.7}%
-\contentsline {section}{\numberline {8}Probleme}{10}{section.8}%
-\contentsline {section}{\numberline {9}Fazit}{10}{section.9}%
-\contentsline {section}{\numberline {10}Literaturverzeichnis}{10}{section.10}%
+\contentsline {subsection}{\numberline {1.1}Motivation}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Methode}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Theoretische Grundlagen}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Framework}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Language}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}IDE}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Database}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Firebase}{2}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Recommendationssystem}{2}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Konzept}{2}{section.3}%
+\contentsline {section}{\numberline {4}Funktionen/Komponenten}{2}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Swipe/Aussuchen/Voting}{2}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Matches/Chat}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Film-/Serienvorschläge}{2}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Gruppenorgien}{2}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Gespeicherte Filme/Filmliste}{2}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Barrierefreiheit}{2}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Barrierefreiheit in mobilen Anwendungen}{2}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Barrierefreiheit in Filmen und Serien}{2}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Barrierefreiheit bei StreamSwipe}{3}{subsubsection.4.6.3}%
+\contentsline {section}{\numberline {5}Benutzeroberflächen}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Aspekte von Benutzeroberflächen}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Oberflächen von StreamSwipe}{6}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Login-Screen}{7}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Home-Screen}{9}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Swipe-Screen}{10}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Chat}{12}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Benutzerprofil}{12}{subsubsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.3}Filmliste}{12}{subsection.5.3}%
+\contentsline {section}{\numberline {6}CodeBeispiele}{12}{section.6}%
+\contentsline {section}{\numberline {7}Probleme}{12}{section.7}%
+\contentsline {section}{\numberline {8}Fazit}{12}{section.8}%
+\contentsline {section}{\numberline {9}Literaturverzeichnis}{12}{section.9}%
