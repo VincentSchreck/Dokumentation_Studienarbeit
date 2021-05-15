@@ -1,4 +1,6 @@
-Controller sind für xy
+Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen. Die einzelnen Funktionen empfangen jeweils das Request- und das Response-Objekt der Anfrage. Das Füllen und Zurückschicken des Response-Objekts ist ebenfalls Aufgabe der Controller. Zum Zugriff auf die Datenbank greifen sie auf die Services zu.
+
+
 
 \begin{figure}[h]
 \centering
@@ -8,50 +10,40 @@ Controller sind für xy
 
 \paragraph{Movie Controller}
 
-\begin{lstlisting}[caption=TODO, label=lst:TODO]
+Der Movie-Controller nutzt den Movie-Service zum Zugriff auf die Datenbank. 
+\begin{lstlisting}[caption=movieController.js Imports und Funktionen, label=lst:movieController.js]
 const SwipeService = require('../services/swipeService')
 const MovieService = require('../services/movieService')
-const FirebaseAdmin = require('../services/firebaseService')
+const FirebaseService = require('../services/firebaseService')
 
 exports.RequestMovies = async function(req, res){
    ...
 }
-
 \end{lstlisting}
 
-\subparagraph{Request Movies}
-\begin{lstlisting}[caption=TODO, label=lst:TODO]
+Er enthält die Funktion 'RequestMovies', welche in engem Kontakt zum SwipeManager des Frontends steht und es Nutzern ermöglichen sollen, neue Filminformationen, die vom Nutzer noch nicht empfangen wurden, abzufragen.
+\newline
+Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Objekts eine Eigenschaft 'uidtoken', dessen Wert eine aus Firebase generierte Token-Referenz zur eindeutigen Authentifizierung des Nutzers ist. Der Token wird an die 'GetUID'-Funktion des Firebase-Services[TODO] weitergeleitet, die bei erfolgreicher Authentifizierung die entsprechende 'uid' zurückschickt. Bei einem aufgetretenen Fehler, wie beispielsweise einem ungültigem Token, wird das Response-Objekt mit dem Statuscode 401 sowie der aufgetretenen Fehlernachricht zurückgeschickt und die Funktion beendet. Der folgende Code kommt in weiteren Funktionen anderer Controller ebenfalls zum Einsatz, wenn eine Authentifizierung benötigt wurde.
+
+\begin{lstlisting}[caption=Controller Firebase-Authentifizierung, label=lst:controllerfirebaseauth]
     var uid; 
     const uidToken = req.body.uidtoken;
-    
-    //GET UID BY UIDTOKEN
-    try
-    {
-        uid = await FirebaseAdmin.GetUID(uidToken);
-    }
+    try{ uid = await FirebaseService.GetUID(uidToken); }
     catch(Exception)
-    {
-        res.status(401).json({title: "TOKEN ERROR", message: Exception});
-        return;
-    }
+    { res.status(401).json({title: "TOKEN ERROR", message: Exception}); return; }
+\end{lstlisting}
 
-    var amount = req.body.amount;
-    var includeSwiped = req.body.includeSwiped;
+Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenschaftswerte aus dem Request-Body als Variabeln gespeichert. Erwartet wird ein Zahlenwert 'amount', der die Anzahl der abgefragten Filme darstellt. Über die lokale Funktion 'RestrictAmount' wird überprüft, dass die begrenzende Zahl den Wert 10 nicht übersteigt. Damit soll sichergestellt werden, dass die Datenbankabfrage mit den weit über 500.000 Filmen nicht ausgelastet wird. Des Weiteren werden in der Variable 'alreadyRequestedMovieIDs' eine Liste von   eindeutigen Identifizierern aus der Movie-Collection erwartet. Die Werte sollen jene Film-ID's wiederspiegeln, die bereits vom Nutzer abgefragt worden sind, aber noch nicht über einen Swipe-Request[TODO] in der Datenbank hinterlegt wurden. Die vom Nutzer bereits getätigten Swipes werden über die 'FindAllSwipesByUserID'-Funktion[Todo] des SwipeServices abgefragt. Zurück\-gegeben wird eine Liste von Film-ID's, die zusammen mit der Liste der 'alreadyRequestedMovieIDs' in die Variabel 'excludedMovieIDs' gespeichert werden.
+
+\begin{lstlisting}[caption=MovieController - RequestMovie - Excluded Movies, label=lst:MovieControllerExcludedMovies]
+    var amount = RestrictAmount(req.body.amount);
     var alreadyRequestedMovieIDs = req.body.alreadyRequestedMovieIDs;
-
-    amount = RestrictAmount(amount); //Begrenzung auf max. 10 Filme
-
-    //function variables
     var excludedMovieIDs = [];
-
-    //Get already Swiped Movies
     var newMovies;
-    if(includeSwiped === true)
-    {
-        var swipedMovieIDs;
-        try{ swipedMovieIDs = await SwipeService.FindAllSwipesByUserID(uid) }
-        catch(err){ res.status(400).json({message: err.message}) }
-
+    
+    //Get already Swiped Movies
+    try{ var swipedMovieIDs = await SwipeService.FindAllSwipesByUserID(uid) }
+    catch(err){ res.status(400).json({message: err.message}); return; }
         excludedMovieIDs.push(...swipedMovieIDs);
     }
 
@@ -60,46 +52,155 @@ exports.RequestMovies = async function(req, res){
     {
         await alreadyRequestedMovieIDs.forEach(element => excludedMovieIDs.push(element));
     }
+\end{lstlisting}
 
+Letzlich wird bei vorhandenen zu exkludierenden Filmen die Funktion 'FindMoviesExcept' des Movie-Services aufgerufen.  Ist die Liste 'excludedMovieIDs' dagegen leer, so wird die 'FindExactAmount'-Funktion aufgerufen. Bei Erfolg wird das Response-Objekt mit dem Statuscode 200 und den Movie-Dokumenten als JSON-Objekt im Body der Antwort zurückgeschickt.
+
+\begin{lstlisting}[caption=MovieController - RequestMovie - Excluded Movies, label=lst:MovieControllerExcludedMovies]
     //Request Movies
     if(excludedMovieIDs.length > 0)
     {
         try{ newMovies = await MovieService.FindMoviesExcept(excludedMovieIDs,amount) } 
-        catch(err){ res.status(400).json({message: err.message}) }
-    }
-    else
-    {
+        catch(err){ res.status(400).json({message: err.message}); return; }
+    } else {
         try{ newMovies = await MovieService.FindExactAmount(amount); } 
-        catch(err){ res.status(400).json({message: err.message}) }
+        catch(err){ res.status(400).json({message: err.message}); return; }
     }
 
     res.status(200).json(newMovies);
 \end{lstlisting}
 
 
+
+
+%
+%			User	
+%				Controller
+%
+
+
+
 \paragraph{User Controller}
-Im Folgenden werden..
+Der User-Controller bietet Funktionen, die die users-Collection der Datenbank betreffen. Sie greift dafür auf das User-Service zu. Die folgenden Funktionen greifen teils auch auf andere Collections zu. Daher werden auch die entsprechenden weiteren Services importiert.
+
+\subparagraph{CreateUser}
+Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür werden gleichnamige Eigenschaften des User-Models im Request-Body der eingehenden Anfrage erwartet. Nach erfolgreicher Authentifizierung des Firebase-Tokens und Überprüfung über die 'CheckExistence'-Funktion des User-Services[TODO], ob ein User-Dokument mit der gleichen 'uid' bereits existiert, wird für die weiteren Datenbankabfragen eine Transaktion gestartet.
+
+\begin{lstlisting}[caption=UserController - Create User - Transaktionsstart, label=lst:UserControllertransaction]
+    // 1. Start TRANSACTION!
+    const session = await mongoose.startSession();
+    await session.startTransaction();
+\end{lstlisting}
+
+Das dafür genutzte 'session'-Objekt wird in den weiteren Service-Funktionen übergeben. Im Folgenden wird:
 \begin{itemize}
-	\item CreateUser
-	\item ChangeUser
-	\item InfoUser
-\end{itemize} 
+\item ein Swipe-Dokument über die 'CreateUserSwipeDocument'-Funktion des Swipe-Services erstellt.
+\item ein Match-Dokument über die 'CreateUserMatchDocument'-Funktion des Match-Services erstellt. 
+\item ein User-Dokument über die 'CreateUser'-Funktion des User-Services mit entsprechender Parametrisierung erstellt.
+\item die 'uid' der entsprechenen Stadt über die 'AddUserToCity'-Funktion des City-Services hinzugefügt.
+ \end{itemize}
+Nur wenn alle Operationen erfolgreich ausgeführt wurden, wird die Transaktion über die 'commitTransaction'-Methode ausgeführt. Damit soll sichergestellt sein, dass einzelne, zusammenhängende Dokumente und Informationen nur im Ganzen erstellt werden. Bei Misserfolg einer Operation wird die komplette Transaktion über die 'abortTransaction'-Methode abgebrochen.
+
+\begin{lstlisting}[caption=UserController - Create User - Dokumente erstellen, label=lst:UserControllerdocumentscreation]
+try {
+        // 2. Create SWIPE-Document
+        var createdSwipe = await SwipeService.CreateUserSwipeDocument(uid, session);
+
+        // 3. Create MATCH-Document
+        var createdMatch = await MatchService.CreateUserMatchDocument(uid, session);
+
+        // 4. Create USER
+        var createdUser = await UserService.CreateUser(uid, createdSwipe._id, createdMatch._id, city, malewanted, femalewanted, diversewanted, mygender, session);
+
+        // 5. Add User to City
+        if (createdUser._id)
+            await CityService.AddUserToCity(uid,city,session);
+            
+        // Commit Transaction
+        await session.commitTransaction();
+        res.status(201).json();
+    }
+    catch (Exception) {
+        res.status(501).json({ title: "Server-User Creation Error", message: Exception });
+        await session.abortTransaction();
+    }
+
+    session.endSession();
+\end{lstlisting}
+   
+\subparagraph{ChangeUser}
+Diese Funktion erlaubt einem Nutzer, seine Eigenschaften innerhalb der Datenbank zu aktualisieren. Dafür wird nach erfolgreicher Authentifizierung eine Transaktion gestartet. Im folgendem Try-Block werden die einzelnen Operationen dargestellt, die für eine erfolgreiche Transaktion ausgeführt werden. Über das User-Service werden die Methoden ' ChangeGenderWantedFromUser' und 'ChangeGenderFromUser' aufgerufen. Anschließend muss der Stadteintrag angepasst werden. 
+Dieser muss an mehreren Stellen in der Datenbank geändert werden. 
+So muss zunächst die 'uid' aus dem alten 'city'-Dokument entfernt (Schritt 3 und 4) und dem  Dokument hinzugefügt werden, dass dem aktualisierten Stadtwert entspricht (Schritt 5). Letzlich wird der Wert der 'city'-Eigenschaft über die 'ChangeCityFromUser' des User-Services angepasst.
+
+\begin{lstlisting}[caption=UserController - Change User, label=lst:UserControlleruserchange]
+        //1. ChangeGenderWanted
+        await UserService.ChangeGenderWantedFromUser(uid, malewanted,femalewanted,diversewanted,session);
+
+        //2. ChangeGender
+        await UserService.ChangeGenderFromUser(uid, mygender, session);
+
+        //3. Find Former City
+        var oldCity = await UserService.GetCityFromUser(uid,session);
+
+        //4. Delete from Former City
+        await CityService.RemoveUserFromCity(uid, oldCity, session);
+
+        //5. Add to new City
+        await CityService.AddUserToCity(uid, newCity,session);
+
+        //6. Update User Entry to new City
+        await UserService.ChangeCityFromUser(uid, newCity,session);
+
+        await session.commitTransaction();
+        res.status(200).json();
+\end{lstlisting}
+  
+\subparagraph{InfoUser}     
+Diese Funktion dient dazu, nach erfolgreicher Authentifizierung die gespeicherten Eigenschaft und ihre Werte des abgefragten User-Dokuments zu erhalten. Dafür wird die 'GetInfoFromUser'-Methode des User-Services aufgerufen.
+        
+
+%
+%			Match	
+%				Controller
+%
 
 
 \paragraph{Match Controller}
-Im Folgenden werden..
-\begin{itemize}
-	\item RequestMatches
-	\item DeleteSupermatch
-	\item DeleteNormalmatch
-	\item Received
-	\item Trigger
-\end{itemize} 
+Der Match-Controller bietet Funktionen, die die matches-Collection der Datenbank betreffen. Sie greift dafür vorrangig auf das Match-Service zu.
 
+\subparagraph{RequestMatches} 
+Das Frontend erlaubt es, Matches anzeigen zu lassen. Dafür bietet diese Funktion Informationen über das Match-Dokument des jeweiligen Nutzers. Nach erfolgreicher Authentifizierung wird das zugehörige Match-Dokument über die 'GetMatches'-Methode abgefragt. Das Dokument enthält zwei Listen: supermatches und normalmatches. Beide enthalten jeweils eine Eigenschaft 'removed'. Ist diese auf true gesetzt, so soll impliziert werden, dass der Nutzer den Match entfernt hat. Folglich soll der gelöschte Match nicht mehr angezeigt werden. Daher werden die beiden Listen über die 'filter'-Funktion [TODO] nach den nicht entfernten Matches gefiltert. Bei Erfolg wird ein JSON-Objekt mit beiden Listen und der Eigenschaft 'newChanges' aus dem Match-Dokument zurückgesendet.
+ 
+\begin{lstlisting}[caption=MatchController - RequestMatches, label=lst:matchcontrollerrequestmatches]
+	var match = await MatchService.GetMatches(uid);
+    var filteredSupermatches =  match.supermatches.filter(match => match.removed == false)
+    var filteredNormalmatches =  match.normalmatches.filter(match => match.removed == false)
+    res.status(200).json({ newChanges: match.newChanges,
+            supermatches: filteredSupermatches, 
+            normalmatches: filteredNormalmatches} );
+\end{lstlisting}
+
+
+\subparagraph{DeleteSupermatch} 
+Hier wird die 'SuperMatchMarkAsRemoved'-Methode des Match-Services aufgerufen, um die 'removed'-Eigenschaft des entsprechenden Supermatches auf true zu setzen. Dieser Supermatch wird folglich nicht mehr über die 'RequestMatches'-Funktion zurückgegeben.
+
+\subparagraph{DeleteNormalmatch} 
+Gleiches Prinzip wie 'DeleteSupermatch' mit Normalmatches.
+
+\subparagraph{Received} 
+Hier wird die 'newChanges'-Eigenschaft auf false gesetzt. Es wird impliziert, dass der Nutzer den aktuellsten Stand der Matches hat.
+
+
+\subparagraph{Trigger} 
+Diese Funktion ruft MatchManager.startMatching() aus. Sie ist vorerst nur für die Entwicklung gedacht, und soll es ermöglich, über das Frontend den Matching-Algorhythmus im Backend zu starten.
+
+%
+%			Swipe	
+%				Controller
+%
 
 
 \paragraph{Swipe Controller}
-Im Folgenden werden..
-\begin{itemize}
-	\item CreateSwipe
-\end{itemize} 
+Der Swipe-Controller bietet Funktion, die die swipes-Collection der Datenbank betreffen. Sie greift dafür auf das Swipe-Service zu.
+Sie bietet lediglich die Funktion \textbf{CreateSwipe} an. Sie ruft die SwipeService.AddSwipeToDB-Methode auf.

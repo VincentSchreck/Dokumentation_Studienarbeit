@@ -13,7 +13,7 @@ Für den Datenzugriff auf die Datenbank wurden zu jeder Collection Service-Modul
 %
 
 \paragraph{Movie Service}
-Die Funktionen des Moduls movieService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die  auf die Collection Movie angewandt werden. Der Funktionsspektrum begrenzt sich für diesen Service auf die Funktion 'FindMovieExcept'.
+Die Funktionen des Moduls movieService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die  auf die Collection movies angewandt werden. Der Funktionsspektrum begrenzt sich für diesen Service auf die Funktion 'FindMovieExcept'.
 
 \subparagraph{FindMoviesExcept}
 Diese Funktion erhält als Parameter 'excludedMovies' eine Liste von MovieID's und als Parameter 'amount' einen Integerwert.
@@ -128,7 +128,7 @@ Die Funktion erfüllt die gleiche Funktionalität wie die ChangeCityFromUser-Fun
 
 
 \paragraph{Match Service}
-Die Funktionen des Moduls matchService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection Match angewandt werden. Dieser Service import das Match-Model.
+Die Funktionen des Moduls matchService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection matches angewandt werden. Dieser Service import das Match-Model.
 
 \subparagraph{CreateUserMatchDocument}
 Die Funktion überprüft zunächst, ob ein Match-Dokument mit übergebener 'uid'-Eigenschaft bereits existiert. Ist dies nicht der Fall, wird ein neues Match-Dokument in der matches-Collection erzeugt.
@@ -237,7 +237,7 @@ Anhand einer übergebenen 'uid' und 'matchUid' wird die Eigenschaft 'newChanges'
 %
 
 \paragraph{Swipe Service}
-Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection Swipe angewandt werden. Dieser Service import das Swipe-Model.
+Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection swipes angewandt werden. Dieser Service import das Swipe-Model.
 
 \subparagraph{CreateUserSwipeDocument}
 Die Funktion erfüllt die gleiche Funktionalität wie die CreateUserMatchDocument-Funktionalität des Match-Services mit dem Unterschied, dass anstelle eines Match-Dokuments ein Swipe-Dokument in der swipes-Collection erstellt wird.
@@ -309,7 +309,7 @@ async function RequestSuperlikeSwipes(uid) {
 \subparagraph{FindAllSwipedMoviesByUserID}
 Innerhalb dieser Funktion werden für eine übergebene 'uid' sämtlich movieid's zurückgeben, die in der 'swipes'-Liste des entsprechenden Swipe-Dokuments vorhanden sind.
 
-\begin{lstlisting}[caption=Swipe Service - AddSwipe, label=lst:swipeserviceaddswipe]
+\begin{lstlisting}[caption=Swipe Service - FindAllSwipedMoviesByUserID, label=lst:swipeserviceFindAllSwipedMoviesByUserID]
     var swipedMovieIDs = [];
     
     if (Swipe.exists({"uid": uid)) {
@@ -320,3 +320,30 @@ Innerhalb dieser Funktion werden für eine übergebene 'uid' sämtlich movieid's
     }
     return swipedMovieIDs;
 \end{lstlisting}
+
+
+%
+%              City
+%                   Service
+%
+\paragraph{City Service}
+Die Funktionen des Moduls cityService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection cities angewandt werden. Dieser Service import das Swipe-Model.
+
+\subparagraph{GetAllInhabitedCities}
+Diese Funktion wird im Matching-Algorithmus aufgerufen. Er liefert sämtliche Städte, die mindestens zwei Nutzer aufzuweisen haben. 
+
+\begin{lstlisting}[caption=City Service - GetAllInhabitedCities, label=lst:cityServiceGetAllInhabitedCities]
+async function GetAllInhabitedCities() {
+    var cities;
+    try{ cities = await City.find({ user : {$exists:true},$where:'this.user.length>1'}) }
+    catch (err) { throw err; }
+    return cities;
+}
+\end{lstlisting}
+
+
+\subparagraph{AddUserToCity}
+Diese Funktion fügt einem 'City'-Dokument eine 'uid' hinzu.
+
+\subparagraph{RemoveUserFromCity}
+Diese Funktion entfernt eine 'uid' aus einem 'City'-Dokument.
