@@ -60,21 +60,22 @@ Nach genauerer Recherche kamen drei Webservertechnologien in die engere Betracht
 	\item Node.js
 \end{itemize} 
 
+\noindent
 Im Hinblick auf die Performance sticht Node.js aufgrund seiner ereignisgesteuerter Architektur  und dem Non-Blocking I/O-Mechanismus heraus und verspricht eine bessere Ressourcennutzung. 
 \newline
-Große Firmen wie Uber [Tech1], Ebay und Netflix [Tech2] haben ihre Systeme bereits auf Node.js umgestellt. Die Wahl als Webservertechnologie fällt auf Node.js, da es breite Unterstützung erfährt, die auch durch den mächtigen Paketmanager npm ergänzt wird und eine hohe Performance errichtet.
+Große Firmen wie Uber \footnote{siehe \url{https://eng.uber.com/uber-tech-stack-part-two/ }, letzter Zugriff 18.03.2021}, Ebay und Netflix \footnote{siehe \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff 18.03.2021 } haben ihre Systeme bereits auf Node.js umgestellt. Die Wahl als Webservertechnologie fällt auf Node.js, da es breite Unterstützung erfährt, die auch durch den mächtigen Paketmanager npm ergänzt wird und eine hohe Performance errichtet.
 
 
 \subsection{Datenbank}
-Im Hinblick auf die Speicherung der potenziell hohen Anzahl an Nutzern, deren Swipe-Ent\-schei\-dungen und deren Matches untereinander sowie der Anzahl von über 500.000 Filmen [Tech4] wird ein performanter Umgang der Datenbank mit vielen Datensätzen notwendig sein.  
+Im Hinblick auf die Speicherung der potenziell hohen Anzahl an Nutzern, deren Swipe-Ent\-schei\-dungen und deren Matches untereinander sowie der Anzahl von über 500.000 Filmen\footnote{siehe \url{https://www.themoviedb.org/faq/general}, letzter Zugriff 18.03.2021} wird ein performanter Umgang der Datenbank mit vielen Datensätzen notwendig sein.  
 Um massive Daten speichern zu können sind relationale Datenbanken nicht die passende Wahl. 
-Es hat sich gezeigt, dass je größer die Menge an Daten ist und je mehr Tabellen in einer Anfrage enthalten sind, desto größer ist der Performanceverlust durch SQL. [Tech4.5]
+Es hat sich gezeigt, dass je größer die Menge an Daten ist und je mehr Tabellen in einer Anfrage enthalten sind, desto größer ist der Performanceverlust durch SQL. \cite{4.5}
 \newline
 Die Verwendung von dokumentenbasierten Datenbanken führt dagegen zu einer strukturlosen Zusammensetzung an Daten, bei denen ein Dokument ein einzelnes Objekt repräsentieren kann. 
 Somit muss für die Wiedergabe eines Objekts nur ein Dokument angefragt werden. Die fehlenden Möglichkeiten zur Normalisierung können jedoch zu Redundanzen in den Daten führen, wodurch die Entwicklung der aufrufenden Anwendung komplexer werden kann. 
 Die Redundanz wird jedoch in Kauf genommen, um schnelle Abfragen zu ermöglichen und eine hohe Performance zu erhalten. Da Datensätze in dokumentenbasierten NoSQL-Datenbanken schemalos als JSON-Objekte abgelegt werden, begünstigt dies den generischen Dokumentenaufbau in der Entwicklung.
 \newline
-Einige NoSQL-Datenbanken wie MongoDB verfolgen einen nicht-relationalen Ansatz und werden mit JavaScript-fähigen Schnittstellen bereitgestellt. Durch die Kommunikation im JSON-Format eignen ist ein optimaler Einsatz mit Node.js gegeben. MongoDB ist über seine horizontale Skalierbarkeit darauf ausgelegt, in einem kurzen Zeitraum sehr viele Daten zu verarbeiten [Tech6]. Während relationale Systeme vertikal im Sinne von neuen Tabelleneinträgen skalieren, werden Dokumente hingegen werden in einer Kollektion, die horizontal erweitert werden können, indem Datenmengen im Sinne des Shardings auf mehreren Systemen verteilt werden, anstatt ein einzelnes System zu verwenden.
+Einige NoSQL-Datenbanken wie MongoDB verfolgen einen nicht-relationalen Ansatz und werden mit JavaScript-fähigen Schnittstellen bereitgestellt. Durch die Kommunikation im JSON-Format eignen ist ein optimaler Einsatz mit Node.js gegeben. MongoDB ist über seine horizontale Skalierbarkeit darauf ausgelegt, in einem kurzen Zeitraum sehr viele Daten zu verarbeiten \cite{Tech6}. Während relationale Systeme vertikal im Sinne von neuen Tabelleneinträgen skalieren, werden Dokumente hingegen werden in einer Kollektion, die horizontal erweitert werden können, indem Datenmengen im Sinne des Shardings auf mehreren Systemen verteilt werden, anstatt ein einzelnes System zu verwenden.
 \newline
 Als Datenbank für die Backend-Implementierung wurde aufgrund von Performance, der guten Einbindung an Node.js und der Skalierbarkeit MongoDB ausgewählt. Um die Vorteile der Da\-ten\-kompression sowie der Transaktionen über mehrere Dokumente hinweg zu nutzen, ist die WiredTiger-Engine die Wahl für das genutzte Storage-Engine.  
 

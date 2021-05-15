@@ -27,20 +27,20 @@ app.use('/swipes', swipesRouter)
 \paragraph{Movie Router}
 Innerhalb des Movie Routers wird die '/movies/request' an die Funktion RequestMovie des Movie-Controller weitergeleitet.
 \begin{lstlisting}[caption=Routing in movieRouter.js, label=lst:routingmovie]
-// Require controller modules.
+// Importiere benoetigtes Controllermodul.
 const MovieController = require('../controllers/movieController')
 
-// Send Requests to MovieController
+// Leite Anfragen weiter an MovieController
 router.post('/request', MovieController.RequestMovies)
 \end{lstlisting}
 
 \paragraph{User Router}
 Der User Router leitet '/users/create', '/users/change' und '/users/info' an die entsprechenden Funktionen des User-Controllers weiter.
 \begin{lstlisting}[caption=Routing in userRouter.js, label=lst:routinguser]
-// Require controller modules.
+// Importiere benoetigtes Controllermodul.
 const UserController = require('../controllers/userController')
 
-// Send Request to UserController
+// Leite Anfragen weiter an UserController
 router.post('/create', UserController.CreateUser)
 router.post('/change', UserController.ChangeUser)
 router.post('/info', UserController.InfoUser)
@@ -50,10 +50,10 @@ router.post('/info', UserController.InfoUser)
 Innerhalb des Match Routers werden die unten dargestellten URL's an die Funktion des Match-Controller weitergeleitet.
 
 \begin{lstlisting}[caption=Routing in matchRouter.js, label=lst:routingmatch]
-// Require controller modules.
+// Importiere benoetigtes Controllermodul.
 const MatchController = require('../controllers/matchController')
 
-// Send Request to MatchController
+// Leite Anfragen weiter an MatchController
 router.post('/request', MatchController.RequestMatches)
 router.post('/deleteSupermatch',MatchController.DeleteSupermatch)
 router.post('/deleteNormalmatch',MatchController.DeleteNormalmatch)
@@ -66,10 +66,10 @@ router.post('/trigger', MatchController.Trigger)
 Der Swipe Router leitet '/swipes/create' an die entsprechende Funktionen des Swipe-Controllers weiter.
 
 \begin{lstlisting}[caption=Routing in swipeRouter.js, label=lst:routingswipe]
-// Require controller modules.
+// Importiere benoetigtes Controllermodul.
 const SwipeController = require('../controllers/swipeController')
 
-// Send Request to SwipeController
+// Leite Anfragen weiter an SwipeController
 router.post('/create',  SwipeController.CreateSwipe )
 \end{lstlisting}
 

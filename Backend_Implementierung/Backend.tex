@@ -1,20 +1,9 @@
-Unter dem Begriff "Backend" versteht man Komponenten eines digitalen Systems, die den Betrieb des Programms ermöglichen und vom Benutzer nicht ersichtlich sind. ...[TODO]
+Unter dem Begriff "Backend" versteht man Komponenten eines digitalen Systems, die den Betrieb des Programms ermöglichen und vom Benutzer nicht ersichtlich sind.
 \newline
 Eine Backend-Anwendung kann direkt mit dem Frontend interagieren und dessen Benutzerdienste unterstützen sowie die Schnittstellen mit allen erforderlichen Ressourcen anbieten.
 
 \subsection{Datenbank}
 \input{Backend_Implementierung/Backend_Datenbank}
-
-Die Serverzuständigkeiten lassen sich in folgende Aspekte zusammenfassen:
-\begin{itemize}
-\item Empfangen und Beantworten der Clientanfragen
-\item Routing der Anfragen zu den entsprechenden Abhandlungsroutinen
-\item Überprüfen der Identität des Clients
-\item Kommunikation zur Datenbank für die persistente Speicherung der Zustände der Nutzer und ihrer Präferenzen, Swipes und Matches.
-\item Matching-Algorithmus
-\end{itemize} 
-
-In den folgenden Unterkapitel wird auf die Einrichtung des Node.js-Webservers und der MongoDB-Datenbank, auf die Erstellung der sicheren Kommunikationsschnittstelle und auf die Implementierung der serverzuständigen Funktionalitäten eingegangen.
 
 \subsection{Webserver}
 \input{Backend_Implementierung/Backend_Server}

@@ -5,21 +5,22 @@ Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor,
 Folgender Code zeigt den Aufbau des Schemas für die Swipe-Collection. 
 
 \begin{lstlisting}[caption=Swipe Schema und Model, label=lst:modelswipe]
-	const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
-	const swipeSchema = new mongoose.Schema({
-    uid: {
-        type: String,
-        required: true
-    },
-    swipes :
-     [{ movieid: { type: String },
-        swipeaction: {type: Number}}]
-	})
+const swipeSchema = new mongoose.Schema({
+ uid: {
+  type: String,
+  required: true
+ },
+ swipes :
+ [{ movieid: { type: String },
+    swipeaction: {type: Number}}]
+ })
 
-	module.exports = mongoose.model('Swipe',swipeSchema)
+module.exports = mongoose.model('Swipe',swipeSchema)
 \end{lstlisting}
 
+\noindent
 Die einzelnen Schemata wurden nach dem im Konzept beschriebenen Aufbau [TODO] für jede Collection in separaten Dateien unter dem Verzeichnis '/database/models' erstellt. Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugten Model.
 
 \begin{figure}[h]
