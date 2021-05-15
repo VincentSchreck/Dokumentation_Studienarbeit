@@ -2,7 +2,7 @@ Mobile Geräte sind heutzutage ein sehr großer Teil unseres Tagesablaufs. Durch
 Laut Cisco wird dieser Markt sich jedoch nicht nur auf Industrieländer beruhen, sondern bis 2023 sollen weltweit 71\% der Bevölkerung mobile Konnektivität haben. \cite{cisco2020}
 Diese Entwicklung forcierte viele Firmen immer mehr ihre Anwendungen auch \textit{mobile ready} zu gestalten. Dies kann man bspw. deutlich bei der Anpassung vieler Webseiten an Mobile Seiten- und Größenverhältnisse oder auch dem Anbieten von \textit{Apps}, welche bereits für Desktop o.ä. verfügbar waren, erkennen. \\
 
-Daher ist es für die Wirtschaft und Entwicklung gleichermaßen wichtig sich ständig weiterzuentwickeln und sich nicht auf (Kosten-) ineffiziente Entwicklungsprozesse auszuruhen. Dabei bieten jährliche, wenn nicht sogar halbjährliche Design- und Performanceänderungen von den Geräten selbst oder der Betriebssysteme Herausforderungen an die mobilen Anwendungen - \textit{apps} - und gleichzeitig an deren Programmierumgebung. Trotz einer riesigen Auswahl an \textit{Apps} lassen sich diese allgemein in drei Kategorien eingliedern: Plattformspezifische native Anwendungen, adaptive Webanwendungen und plattformübergreifende Anwendungen.
+Daher ist es für die Wirtschaft und Entwicklung gleichermaßen wichtig sich ständig weiterzuentwickeln und sich nicht auf (kosten-) ineffizienten Entwicklungsprozessen auszuruhen. Dabei bieten jährliche, wenn nicht sogar halbjährliche Design- und Performanceänderungen von den Geräten selbst oder der Betriebssysteme Herausforderungen an die mobilen Anwendungen - \textit{apps} - und gleichzeitig an deren Programmierumgebung. Trotz einer riesigen Auswahl an \textit{Apps} lassen sich diese allgemein in drei Kategorien eingliedern: Plattformspezifische native Anwendungen, adaptive Webanwendungen und plattformübergreifende Anwendungen.
 
 \subsubsection{Begriffe}
 \subparagraph{Eine Plattform} besteht aus der Hardware (System und zusätzlicher Peripherie, wie Sensoren oder Aktoren), dem Betriebssystem, den spezifischen \textit{Software Development Kits (SDK)} und den jeweiligen Basisbibliotheken. 
@@ -99,6 +99,7 @@ Hierbei ist Flutter für diesen Anwendungsfall am interessantesten und wird in K
 Ein Hindernis dieser Art ist die erhöhte Komplexität der einzelnen Frameworks.
 
 \subsection{Frameworks zur mobilen, plattformübergreifenden Entwicklung}
+\label{sec:framework}
 In den folgenden Kapiteln werden einzelne Frameworks zur mobilen, plattformübergreifenden Entwicklung vorgestellt.\\
 In der Statistik \ref{fig:crossplattform_popularity} aus dem Jahr 2020 ist React-Native das beliebteste Framework, dicht gefolgt von Flutter. 
 Wie man deutlich hier auch sehen kann, haben andere, bisher auch sehr erfolgreiche Frameworks einen enormen Rückgang von teilweise über einem Drittel ihrer Nutzer erleben müssen. \\
@@ -190,7 +191,7 @@ React Native bringt die wichtigsten Komponenten mit sich, die \textbf{Core Compo
 Gleichzeitig erlaubt React Native aber auch wiederverwendbare Komponenten in JavaScript aus den Kernkomponenten zusammenstellen. 
 Hierzu lassen sich einzelne Komponente jedoch nicht nur in einander verschachteln, um hier beispielsweise einen \texttt{Text} innerhalb einer \texttt{View}\footnote{Eine \texttt{View} ist die Basiskomponente einer Benutzeroberfläche. In einer \texttt{View} wiederum können wieder Views verschachtelt sein.} anzeigen zu lassen.
 Zusätzlich ist es möglich sogenannte \glqq props\grqq also Eigenschaften (engl.: properties), ähnlich einer normalen Funktion mitzugeben. 
-In diesem Beispiel sind das hier die Namen einzelner Katzen, welche als Text angezeigt werden. \cite{reactnative2021}\\
+In diesem Beispiel sind das hier die Namen einzelner Katzen, welche als Text angezeigt werden \cite{reactnative2021}.\\
 
 \begin{lstlisting}[caption=Eigene Komponenten, label=lst:reactnative_own_components]
 import React from 'react';

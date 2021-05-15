@@ -2,6 +2,7 @@ Den Anforderungen der Entwicklung entsprechend wurde zunächst entschieden, welc
 
 
 \subsection{Server}
+\label{sec:server}
 Der Webserver ist jener Dienst,  der die zugrundeliegenden Funktionalitäten bezüglich der Filmabfragen, der Matching-Logik und der Filmempfehlung bietet. 
 Anforderungen an die genutzte Webservertechnologie sind zum einen eine grundlegend hohe Performance, um mit einer hohen Anzahl an Serveranfragen umzugehen. Des Weiteren sollte die Technologie Skalierbarkeit in Bezug auf die Performance und wachsenden Ressourcen wie Hardware aufweisen und eine Unterstützung, Dokumentation und umfassende Funktionalitäten des Frameworks bieten. 
 Ein Paketmanager, der umfassende Kern-Funktionalitäten zur Verfügung stellt, sollte vorhanden sein, damit diese nicht neu implementiert werden müssen. Um offen für das genutzte Zielbetriebssystem zu bleiben, sollten mehrere Betriebssysteme unterstützt werden. 
@@ -38,10 +39,31 @@ Als Datenbank für die Backend-Implementierung wurde aufgrund von Performance, d
 Als Kommunikationsschnittstelle wird eine WebApi entwickelt, dessen Kommunikation auf HTTP-Nachrichten basiert, deren Informationen im JSON-Format übergeben werden. Diese Technologie bietet eine einfache und dennoch effiziente Form der Kommunikation zwischen Server und Client.
 
 \subsection{Film-Datenbank}
+\label{sec:filmdatenbank}
 =>TMDb API, https://developers.themoviedb.org/4/getting-started/authorization\newline
 OMDb API, http://www.omdbapi.com/\newline
 Verschiedene kleinere Anbieter, https://rapidapi.com/search/movie\newline
     vince?
 \newline
+
+rapid API:
+- Response Time von über 1 Sekunde (rapid am Arsch) [https://rapidapi.com/de/webknox/api/recipe/discussions/4945/API-response-time]
+- 
+
+IMDb:
+- keine Dokumentation
+- Gratisversion mit begrenzter Zugriffszahl [https://rapidapi.com/blog/how-to-use-imdb-api/]
+
+OMDb:
+- Poster API nur für Patreons 
+- keine Dokumentation
+- 
+
+TMDb:
+- Gute Response Time
+- keine Zugriffsbegrenzung
+- Kostenlos
+- Umfangreiche Informationen wie Trailer und viele weitere Metadaten
+
 
 Github.

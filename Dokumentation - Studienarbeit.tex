@@ -123,9 +123,10 @@
 \renewcommand{\subsubsectionmark}[1]{\markright{#1}}
 
 \cfoot{\thepage}
-\newpage
 
 
+% Neue Section, neue Seite
+\clearpage
 \section[Einleitung]{Einleitung \hfill \normalfont \small{Vincent Schreck}}
 \input{Einleitung/Einleitung.tex}
 
@@ -135,7 +136,9 @@
 \subsection{Methode}
 \input{Einleitung/Methode.tex}
 
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \section{Theoretische Grundlagen}
 \subsection{Netzwerkprotokolle}
 \input{Netzwerkprotokolle}
@@ -156,6 +159,7 @@
 \input{Grundlagen_NoSQL_Datenbank}
 \newpage
 \subsection{Firebase}
+\label{sec:firebase}
 \input{Firebase}
 
 \newpage
@@ -170,18 +174,29 @@
 \newpage
 
 \subsection{Recommender System}
+\label{sec:recomandationSystem}
 \input{Recommendationssystem}
 
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \section{Konzept}
 \input{Konzept}
 
 
-\section[Funktionen/Komponenten]{Funktionen/Komponenten \hfill \normalfont \small{Autor-Name}}
-\newpage
+% Neue Section, neue Seite
+\clearpage
+\section{Funktionen/Komponenten}
+
+
+% Neue Section, neue Seite
+\clearpage
 \section{Auswahl geeigneter Technologie}
 \input{TechnologieAuswahl}
 
+
+% Neue Section, neue Seite
+\clearpage
 \section{Backend-Implementierung}
 \input{Backend}
 
@@ -205,7 +220,10 @@
 \input{Barrierefreiheit/BF-Streamswipe.tex}
 
 
-\section[Benutzeroberflächen]{Benutzeroberflächen \hfill \normalfont \small{Vincent Schreck}}
+% Neue Section, neue Seite
+\clearpage
+\section{Benutzeroberflächen}
+\label{sec:UI-allgemein}
 \input{Benutzeroberfläche/UI_Einleitung.tex}
 
 \subsection{Aspekte von Benutzeroberflächen}
@@ -218,6 +236,8 @@
 \subsubsection{Login-Screen}
 \label{sec:loginscreen}
 \input{Benutzeroberfläche/UI_Login.tex}
+% \clearpage %Weil sonst die Bilder ans Ende 
+
 
 
 \subsubsection{Home-Screen}
@@ -240,23 +260,25 @@
 \input{Benutzeroberfläche/UI_Profilseite.tex}
 
 
-\subsection{Filmliste}
+\clearpage
+\section{CodeBeispiele}
 
 
-\section[CodeBeispiele]{CodeBeispiele \hfill \normalfont \small{Autor-Name}}
+\clearpage
+\section{Probleme}
 
 
-\section[Probleme]{Probleme \hfill \normalfont \small{Autor-Name}}
+\clearpage
+\section{Fazit}
 
 
-\section[Fazit]{Fazit \hfill \normalfont \small{Autor-Name}}
-\newpage
-
+\clearpage
 \appendix
 \section{Verfasser einzelner Abschnitte}
 \input{aufteilung}
-\newpage
 
+
+\clearpage
 \section*{Literaturverzeichnis}
 \begin{itemize}
 	\bibitem[1]{aggarwal2016} Aggarwal, C. C. (2016). Recommender systems (Vol. 1). Cham: Springer International Publishing.
