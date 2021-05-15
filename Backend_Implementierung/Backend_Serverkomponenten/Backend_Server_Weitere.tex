@@ -24,7 +24,7 @@ Um Zugriffszeiten auf die Firebase-Schnittstelle, werden in einem lokalen Dictio
 \subparagraph{GetUID}
 Die Funktion erwartet einen Firebase Token als Parameter 'uidtoken', welcher an die Funktion 'verifyIdToken' des FirebaseAdmin-Objeekts weitergeleitet wird. Zurück wird ein Objekt gegeben, dass unter anderem die 'uid' des zum Token zugehörigen Nutzers und die Ablaufzeit schickt. Nach erfolgreichem Überprüfen, ob die 'uid' tatsächlich ein Wert übermittelt bekommen hat, wird das Paar aus UidToken und Uid samt Ablaufzeit in der UID/TokenID-Dictionary gespeichert.
 
-\begin{lstlisting}[caption=Firebase-Service Register, label=lst:firebaseService Register]
+\begin{lstlisting}[caption=Firebase-Service Register, label=lst:firebaseServiceRegister]
 	verifiedUid = await firebaseAdmin.auth().verifyIdToken(uidToken);
 	uid = verifiedUid.uid;
 	expireTime = verifiedUid.exp;
@@ -38,9 +38,96 @@ Die Funktion erwartet einen Firebase Token als Parameter 'uidtoken', welcher an 
 \subparagraph{RefreshList}
 Diese Funktion wird aufgerufen, um abgelaufene Token in der UID/TokenID-Dictionary zu löschen. Sie wird über das Modul TimedEvents periodisch aufgerufen. Dabei wird zu jedem Paar die aktuelle Uhrzeit und die Ablaufszeit verglichen. Stellt die Ablaufszeit ein größeren Wert dar, wird das Schlüsselwertpaar aus der Dictionary entfernt.
 
-
-\paragraph{Matching-Algorithmus}
-
-[UML]
-
 \paragraph{Timed Events}
+Über das 'node-cron'-Modul %
+[//https://www.npmjs.com/package/node-cron]
+können zeitlich definierte und periodische Funktionen ausgeführt werden. Dafür wird das 'node-cron'-Modul in die TimedEvents.js-Datei importiert. Die Funktionalität des Moduls wird beispielsweise für das periodische Aktualisieren der movies-Collection, das periodische Ausführen des Matching-Algorithmus und das Aufrufen der 'firebaseService.RefreshList'-Funktion zum Aktualisieren der UID/TokenID-Dictionary verwendet.
+
+\paragraph{MatchManager}
+\subparagraph{startMatching - Teil 1}
+Die aktuelle Implementierung des Matching-Algorithmus sucht für jede Stadt Nutzerpaare, die einen gleichen Film mit einem Superlike versehen haben. Dafür werden zunächst über die 'GetAllInhabitedCities'-Funktion des City-Services die Städte in einer Liste gespeichert, die mindestens zwei Nutzer aufweisen. Folglich finden eine Verschachtelung von Iterationsabläufen zum Ausführen von Programmcode auf jedem Element einer Liste statt.
+In der ersten Iterationsstufe wird durch die Städte iteriert.
+Die zweite Iterationsstufe vom ersten bis zum vorletzten Nutzereintrag ('uid') innerhalb der aktuell iterierten Stadt. Innerhalb des zugehörigen Codeblocks wird die 'RequestSuperlikeSwipes'-Funktion des SwipeServices aufgerufen mit der 'uid' des aktuell iterierten Nutzers als Parameterübergabe. Die zurückerhaltene Liste enthält sämtliche Film-ID's, die vom Nutzer mit einem Superlike versehen wurden. Die Liste wird samt dem Index des nächsten Users in der Liste, der aktuell iterierten Stadt und dem aktuell iterierten User. Ausserdem wird eine Referenz auf das 'foundSupermatches'-Objekt, dass später mit Informationen zu den errechneten Supermatches gefüllt wird, mitgegeben.
+
+\begin{lstlisting}[caption=matchManager.js - startMatching - Teil 1: Finde Matches, label=lst:findMatches]
+var cities = await CityService.GetAllInhabitedCities();
+
+// City - 1. Iterationsstufe
+for (let cityIterator = 0; cityIterator < cities.length; cityIterator++) {
+	// Foreach user except last one
+	var prelastSupermatchIndex = cities[cityIterator].user.length - 2;
+           
+    // User - 2. Iterationsstufe
+    for (let user1Iterator = 0; user1Iterator <= prelastSupermatchIndex; user1Iterator++) {
+    	var matchingUserNextIndex = user1Iterator + 1;
+    	var User1 = cities[cityIterator].user[user1Iterator];
+      
+    	//SUPERMATCH-CHECK
+    	var user1SuperlikedMovies = await SwipeService.RequestSuperlikeSwipes(User1.uid);
+    	if (user1Superlikes) {
+    	// Check Superlikes with following Users
+    	await checkSuperMatches(matchingUserNextIndex, cities[cityIterator], user1SuperlikedMovies, foundSupermatches, User1);
+                }
+
+    	//NORMALMATCH-CHECK
+    	var user1swipes = await SwipeService.RequestSwipes(User1.uid);
+    	if (user1swipes) {
+    	// Foreach user below
+    	await checkNormalMatches(matchingUserNextIndex, cities[cityIterator], user1swipes, normalmatches, User1);
+    }}}}
+    ... //end Try-Catch-Block
+\end{lstlisting}
+
+\noindent
+\subparagraph{checkSuperMatches} Die Funktion wird im Matching-Algorithmus von der 'findMatches'-Methode aufgerufen. Es wird ausgehened vom übergebenen 'matchingUserNextIndex', welches der Index des nächsten Users nach dem aktuell iterierten Users der 2. Iterationsstufe ist, durch die restliche Nutzerliste der übergebenen Stadt 'currentCity' iteriert. Dies entspricht der 3. Iterationsstufe.
+Hierbei wird zunächst die lokale Funktion 'checkGenderPreference' aufgerufen, die anhand der übergebenen Nutzerobjekte prüft, ob jeweils das Geschlecht des einen Nutzers und das für das Matchen preferierte Geschlecht des anderen Nutzers übereinstimmen. Ist dies der Fall, so werden die Superlikes des zweiten Users angefragt. Abschließend werden die Superlikes-Listen beider Nutzer verglichen. Dabei wird überprüft, ob eines der MovieID's der einen Liste in der anderen vorhanden ist. Bei einem Treffer wird ein Objekt mit den 'uid' der bei Nutzer und die 'movieid' des zugehörigen Films in die 'supermatches'-Liste hinzugefügt. 
+
+
+\begin{lstlisting}[caption=matchManager.js - checkSuperMatches, label=lst:checkSuperMatches]
+async function checkSuperMatches(matchingUserNextIndex, currentCity, user1Superlikes, foundSupermatches, User1) {
+
+ for (let user2Iterator = matchingUserNextIndex; user2Iterator <= currentCity.user.length - 1; user2Iterator++) {
+   var User2 = currentCity.user[user2Iterator];
+   
+  // Check GenderPreference
+  if (!(await checkGenderPreference(User1, User2))) return;
+  
+  //Get Superlikes
+  var user2Superlikes = await SwipeService.RequestSuperlikeSwipes(User2.uid);
+  if (user2Superlikes) {
+        
+  //Diff Both
+   for (let superlikeIterator = 0; superlikeIterator < user1Superlikes.length; superlikeIterator++) {
+    for (let superlike2Iterator = 0; superlike2Iterator < user2Superlikes.length; superlike2Iterator++) {
+    
+      if (user1Superlikes[superlikeIterator].movieid === user2Superlikes[superlike2Iterator].movieid) {
+        foundSupermatches.push({ matchid1: User1.uid,
+                            matchid2: User2.uid, 
+                            movieid: user1Superlikes
+                            [superlikeIterator].movieid });
+                            continue;
+}}}}}}
+\end{lstlisting}
+
+\noindent
+\subparagraph{checkNormalMatches}
+TODO
+
+\subparagraph{startMatching - Teil 2}
+Die 'startMatching'-Funktion wird beendet, nachdem die gefundenen Matchinformationen in den entsprechenden Match-Dokumenten gespeichert werden. Es wird durch die Liste 'foundSupermatches' durchiteriert. Dafür wird zunächst geprüft, dass ein Match der zwei Nutzer noch nicht in der Datenbank hinterlegt ist. Anschließend werden beiden zugehörigen Match-Dokumenten die gegenseitigen 'uid' in die 'supermatches'-Liste hinzugefügt.
+Der Vorgang wird für die 'normalmatches'-Liste wiederholt mit entsprechender Speicherung in die 'normalmatches'-Listen.
+
+\begin{lstlisting}[caption=matchManager.js - startMatching - Teil 2: Speichere Matches, label=lst:startMatchingteil2]
+await session.startTransaction();
+
+for (let i = 0; i < foundSupermatches.length; i++) {        
+ //Check if Match exists
+ if (!(await MatchService.CheckMatch(foundSupermatches[i].matchid1,   foundSupermatches[i].matchid2, session))) {
+  //Add  Match To User1
+  await MatchService.AddSuperMatchToUser(foundSupermatches[i].matchid1, foundSupermatches[i].matchid2, foundSupermatches[i].movieid, session);
+
+  //Add  Match To User2
+  await MatchService.AddSuperMatchToUser(foundSupermatches[i].matchid2,  foundSupermatches[i].matchid1, foundSupermatches[i].movieid, session);
+}}
+await session.commitTransaction();
+\end{lstlisting}
