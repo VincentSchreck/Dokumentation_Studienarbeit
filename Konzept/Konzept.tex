@@ -23,15 +23,6 @@ In Firebase wird für jeden Chat eine weitere Sammlung erstellt. Durch den hiera
 Wie bereits erwähnt wird die Chat-ID bei beiden Usern gespeichert. Abhängig davon ob ein Chat angenommen wurde oder nicht, ist die Chat-ID unter \textit{chatrooms} oder unter \textit{pendigChatrooms} gespeichert. Für den User, der die Unterhaltung beginnt, wird die Chat-ID unter \textit{chatrooms} hinterlegt, für den anderen ist dies solange unter \textit{pendingChatrooms} bis auf die Nachricht geantwortet wird. Sobald beide User die Unterhaltung akzeptiert haben, können sie jeweils die Profilseite des anderen besuchen.
 
 
-%- Nutzer ID von beiden Nutzern bekannt bei der  Erstllung eines Chats
-%- Aus diesen beiden wird eine unique ID für den jeweiligen Chat erstellt und diese wird bei beiden Usern gespeichert
-%- (Firebase ist hierarchisch aufgebaut) Nutzernamen, NutzerID und RoomID werden in einer Sammlung gespeichert. Unter dieser Sammlung werden dann die Nachrichten abgespeichert mit den Informationen Wers gesendet hat, wers empfängt, einen tmestamp und natürlcih den inhalt der nachricht. sendby und sendto werden verwendet um die nachrichten im Chatverlauf anzuordnen und zu entscheiden welcher der beiden beteiligten eine benachrichtigung bekommt
-%- Anzeige der Chats abhängig davon ob die uniqueID in chatrooms oder pendingchatrooms gespeichert ist
-%- Wer die unterhaltung beginnt, erhält die unique ID in chatrooms und der andere in pendingchatrooms
-%- NImmt der andere User den Chat an, wird die ID für ihn ebenfalls in chtarooms verschioben
-%- 
-
-
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=16cm]{images/Konzeptdiagramm.png}
@@ -46,17 +37,4 @@ Wie bereits erwähnt wird die Chat-ID bei beiden Usern gespeichert. Abhängig da
 
 
 
-
-
-
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{images/backendstruktur.PNG}
-\caption{Node.JS Installation}
-\end{figure}
-
-= Warum Module/Komponenten.. Weil bessere Übersichtlichkeit, Wartung etc..
-
-----------------------------
-\newline Mobile Anwendung
-https <-> services <-request/(modell)-> manager <-> UI
 

@@ -9,12 +9,13 @@ NoSQL-Datenbanken werden hauptsächlich in vier verschiedene Kategorien untertei
 \noindent
 \hangindent1cm
 \textbf{Graphendatenbanken:}
-Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen.
+Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen. Das Konzept wird in Abbildung \ref{Graphikdatenbank} illustriert
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[]{images/graphikdatabase.jpg}
-\caption[Graphikdatenbank Beispiel]{Graphikdatenbank Beispiel \protect \footnotemark}
+\caption[Graphikdatenbank Beispiel]{Graphendatenbank Beispiel \protect \footnotemark}
+\label{Graphikdatenbank}
 \end{figure}
 \footnotetext{\url{https://entwickler.de/online/datenbanken/wunderbare-welt-der-graphen-114728.html}, letzter Zugriff: 9. Februar 2021}
 
@@ -68,12 +69,12 @@ Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- u
 \noindent
 \hangindent1cm
 \textbf{Spaltenorientierte Datenbanken:}
-Spaltenorientierte Datenbanken, oder auch „Wide-Column“-Datenbanken genannt, speichern ihre Datensätze in Form von Tabellen.  Sie wirken zunächst den Tabellen der relationalen Datenbanksysteme sehr ähnlich, unterscheiden sich grundlegend aber in der Speicherung der Daten, die nicht zeilenorientiert, sondern spaltenorientiert abgelegt werden. 
-Die zeilen- und die spaltenorientierte Speicherung ist in Abbildung \ref{fig:spalten_zeilen_speicher} dargestellt. Zeilenorientierung bei der Speicherung bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus mehreren Spalten benötigt werden.
+Spaltenorientierte Datenbanken, oder auch „Wide\--Column“-Datenbanken genannt, speichern ihre Datensätze in Form von Tabellen.  Sie wirken zunächst den Tabellen der relationalen Datenbanksysteme sehr ähnlich, unterscheiden sich grundlegend aber in der Speicherung der Daten, die nicht zeilenorientiert, sondern spaltenorientiert abgelegt werden. 
+Die zeilen- und die spaltenorientierte Speicherung ist in Abbildung \ref{fig:Spaltenorientiert} dargestellt. Zeilenorientierung bei der Speicherung bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus mehreren Spalten benötigt werden.
 Spaltenorientierung dagegen eignet sich sehr gut für die Auswertung von Aggregaten.
 \newline
 
-\begin{figure}[tbt]
+\begin{figure}[h]
 	\begin{subfigure}{\textwidth}
 		\centering
 		\includegraphics[width=8cm, height = 3cm]{images/SpaltenorientiereDatenbank.png}
@@ -87,7 +88,8 @@ Spaltenorientierung dagegen eignet sich sehr gut für die Auswertung von Aggrega
 		\caption{ }
 		\label{fig:spalten_zeilen}
 	\end{subfigure}
-	\caption[(a) Spaltenorientierte Datenbank Beispiel (b) Zeilen- und spaltenorientierte Speicherung]{(a) Spaltenorientierte Datenbank Beispiel (b) Zeilen- und spaltenorientierte Speicherung \protect \footnotemark}
+	\caption[Zeilen- und spaltenorientierte Speicherung]{(a) Spaltenorientierte Datenbank Beispiel (b) Zeilen- und spaltenorientierte Speicherung \protect \footnotemark}
+\label{fig:Spaltenorientiert}
 \end{figure}
 \footnotetext{\url{https://www.axiom-net.de/die-datenbank-hana-ist-spaltenorientiert}, letzter Zugriff: 9. Februar 2021}
 
@@ -96,13 +98,14 @@ TODO
 \newline
 
 \subsubsection{CAP-Theorem}
-Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Jahres 2000 die Annahme auf, dass ein System nicht gleichzeitig die drei Kerneigenschaften Consistency (Konsistenz), Availability (Verfügbarkeit) und Partition Tolerance (Ausfalltoleranz) abdecken kann [NoSQL 1.6]. 
+Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Jahres 2000 die Annahme auf, dass ein System nicht gleichzeitig die drei Kerneigenschaften Consistency (Konsistenz), Availability (Verfügbarkeit) und Partition Tolerance (Ausfalltoleranz) abdecken kann [NoSQL 1.6]. Diese Annahme wird in Abbildung \ref{fig:CAP} dargestellt.
 \newline
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=8cm, height=6.5cm]{images/Visualization-of-CAP-theorem.png}
 \caption[Visualization-of-CAP-theorem]{Visualization-of-CAP-theorem \protect \footnotemark}
+\label{fig:CAP}
 \end{figure}
 \footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff: 10. Februar 2021}
 

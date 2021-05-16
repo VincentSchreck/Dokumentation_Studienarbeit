@@ -5,15 +5,16 @@ Um das Jahr 1980 wurden daraufhin von verschiedenen Computerherstellern modulari
 Es musste eine Vielzahl von Aufgaben bewältigt und Anforderung bezüglich Zuverlässigkeit, Sicherheit, Effizienz etc. erfüllt werden. Die Aufgaben reichten dabei von der elektronischen Übertragung der Signale bis zur geregelten Reihenfolge der in der Kommunikation abstrakteren Aufgaben \cite{wikiOsiModell}.
 Aus den zu lösenden Problemen und Anforderung kristallisierten sich sieben Schichten bzw. Ebenen heraus. 
 Jede einzelne Schicht setzt dabei separat eine Anforderung um und kann dabei durch verschiedene Protokolle realisiert werden. In dem sich etablierten OSI-Schichtenmodell bauen die einzelnen Schichten aufeinander auf, wobei die unterste Schicht das Fundament ist. 
-Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. 
+Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. Sie wird in Abbildung \ref{fig:OSISchichten} dargestellt. Die einzelnen Aufgaben werden in der Tabelle \ref{tab:OSISchichtenbeschreibung} beschrieben.
 \newline
 \noindent
-Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Departments of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell \cite{wikiDodModell}.
+Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Department of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell \cite{wikiDodModell}.
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=\textwidth]{images/Netzwerkprotokolle_OSI-Schicht.PNG}
 \caption[Netzwerkprotokolle: OSI-Schichten]{Netzwerkprotokolle: OSI-Schichten \protect \footnotemark}
+\label{fig:OSISchichten}
 \end{figure}
 \footnotetext{\url{Wikipedia. Internetprotokollfamilie, https://de.wikipedia.org/wiki/Internetprotokollfamilie}, letzter Zugriff: 06. April 2021}
 
@@ -21,6 +22,7 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
 
 \begin{table}[tbt]
 \caption[Kurzbeschreibung der OSI-Schichten]{Kurzbeschreibung der OSI-Schichten \cite{ekOSI}}
+\label{tab:OSISchichtenbeschreibung}
 \begin{center}
     \begin{tabular}{ l  p{8cm} }
     \toprule
@@ -60,7 +62,7 @@ wissen Webserver, welches Protokollverfahren genutzt werden soll.
 
 \noindent
 \subsubsection{HTTP}
-Das Hypertext Transfer Protocol, kurz HTTP, ist ein zustandloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht.
+Das Hypertext Transfer Protocol, kurz HTTP, ist ein zustandloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht. \\
 
 \noindent
 \hangindent1cm
@@ -73,6 +75,7 @@ Eine Nachricht besteht aus dem Nachrichtenkopf (Message Header, kurz Header) und
 Der Header enthält generelle Informationen über die Nachricht wie zum Beispiel den Methodentyp, das Datenformat, den genutzten Kompressionsalgorithmus, die Länge der Nachricht oder die verwendete Kodierung im Body. 
 \newline
 \noindent
+In Abbildung \ref{fig:HTTPNachricht} ist der Aufbau der HTTP-Nachrichten dargestellt.
 Die erste Zeile des Nachrichtenkopfs ist dreiteilig und besteht bei der Anfrage aus dem Namen der Anfragemethode, dem Pfad zur angeforderten Ressource (Uniform Resource Locator, kurz URL) und der verwendet HTTP-Version. Die Anfangszeile einer HTTP-Antwort dagegen besteht zunächst aus der verwendeten HTTP-Version, gefolgt von dem zweiteiligem Status-Code. 
 Der Anfangszeile beider Nachrichtentypen folgt eine Reihe von Headerzeilen, wobei jede Zeile aus einem Schlüsselwort/Wert-Paar besteht und die für die Datenübertragung wichtigen Informationen übergibt. 
 Der Nachrichtenrumpf, der mit den Nachrichtenkopf über einen Zeilenumbruch syntaktisch voneinander getrennt wird, enthält schließlich die Nutzdaten.
@@ -82,6 +85,7 @@ Der Nachrichtenrumpf, der mit den Nachrichtenkopf über einen Zeilenumbruch synt
 \centering
 \includegraphics[width=\textwidth]{images/netzwerkprotokolle_http.PNG}
 \caption{HTTP-Nachrichtenaufbau}
+\label{fig:HTTPNachricht}
 \end{figure}
 
 \noindent
@@ -106,10 +110,11 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 \noindent
 \hangindent1cm
 \textbf{Statuscodes:}
-HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben.\newline
+HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben. Tabelle \ref{tab:HTTPStatuscode} stellt die Statuscodes und ihre Beschreiben anhand von Beispielen dar. \newline
 
 \begin{table}[tbt]
 \caption{HTTP Statuscodebeschreibungen}
+\label{tab:HTTPStatuscode}
 \begin{center}
     \begin{tabular}{ l  l   p{8cm} }
     \toprule

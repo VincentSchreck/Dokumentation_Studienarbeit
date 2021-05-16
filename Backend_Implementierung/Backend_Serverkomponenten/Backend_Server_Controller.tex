@@ -1,4 +1,4 @@
-Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen. Die einzelnen Funktionen empfangen jeweils das Request- und das Response-Objekt der Anfrage. Das Füllen und Zurückschicken des Response-Objekts ist ebenfalls Aufgabe der Controller. Zum Zugriff auf die Datenbank greifen sie auf die Services zu.
+Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen (Siehe Abbildung \ref{ControllerStruktur}). Die einzelnen Funktionen empfangen jeweils das Request- und das Response-Objekt der Anfrage. Das Füllen und Zurückschicken des Response-Objekts ist ebenfalls Aufgabe der Controller. Zum Zugriff auf die Datenbank greifen sie auf die Services zu.
 
 
 
@@ -6,6 +6,7 @@ Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen. Die ei
 \centering
 \includegraphics[width=8cm]{images/controllerStruktur.PNG}
 \caption{Node.js Server - Controller Struktur}
+\label{ControllerStruktur}
 \end{figure}
 
 \paragraph{Movie Controller}
@@ -24,7 +25,7 @@ exports.RequestMovies = async function(req, res){
 \noindent
 Er enthält die Funktion 'RequestMovies', welche in engem Kontakt zum SwipeManager des Frontends steht und es Nutzern ermöglichen sollen, neue Filminformationen, die vom Nutzer noch nicht empfangen wurden, abzufragen.
 \newline
-Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Objekts eine Eigenschaft 'uidtoken', dessen Wert eine aus Firebase generierte Token-Referenz zur eindeutigen Authentifizierung des Nutzers ist. Der Token wird an die 'GetUID'-Funktion des Firebase-Services[TODO] weitergeleitet, die bei erfolgreicher Authentifizierung die entsprechende 'uid' zurückschickt. Bei einem aufgetretenen Fehler, wie beispielsweise einem ungültigem Token, wird das Response-Objekt mit dem Statuscode 401 sowie der aufgetretenen Fehlernachricht zurückgeschickt und die Funktion beendet. Der folgende Code kommt in weiteren Funktionen anderer Controller ebenfalls zum Einsatz, wenn eine Authentifizierung benötigt wurde.
+Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Objekts eine Eigenschaft 'uidtoken', dessen Wert eine aus Firebase generierte Token-Referenz zur eindeutigen Authentifizierung des Nutzers ist. Der Token wird an die 'GetUID'-Funktion des Firebase-Services weitergeleitet, die bei erfolgreicher Authentifizierung die entsprechende 'uid' zurückschickt. Bei einem aufgetretenen Fehler, wie beispielsweise einem ungültigem Token, wird das Response-Objekt mit dem Statuscode 401 sowie der aufgetretenen Fehlernachricht zurückgeschickt und die Funktion beendet. Der folgende Code kommt in weiteren Funktionen anderer Controller ebenfalls zum Einsatz, wenn eine Authentifizierung benötigt wurde.
 
 \begin{lstlisting}[caption=Controller Firebase-Authentifizierung, label=lst:controllerfirebaseauth]
     var uid; 
@@ -35,7 +36,7 @@ Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Ob
 \end{lstlisting}
 
 \noindent
-Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenschaftswerte aus dem Request-Body als Variabeln gespeichert. Erwartet wird ein Zahlenwert 'amount', der die Anzahl der abgefragten Filme darstellt. Über die lokale Funktion 'RestrictAmount' wird überprüft, dass die begrenzende Zahl den Wert 10 nicht übersteigt. Damit soll sichergestellt werden, dass die Datenbankabfrage mit den weit über 500.000 Filmen nicht ausgelastet wird. Des Weiteren werden in der Variable 'alreadyRequestedMovieIDs' eine Liste von   eindeutigen Identifizierern aus der Movie-Collection erwartet. Die Werte sollen jene Film-ID's wiederspiegeln, die bereits vom Nutzer abgefragt worden sind, aber noch nicht über einen Swipe-Request[TODO] in der Datenbank hinterlegt wurden. Die vom Nutzer bereits getätigten Swipes werden über die 'FindAllSwipesByUserID'-Funktion[Todo] des SwipeServices abgefragt. Zurück\-gegeben wird eine Liste von Film-ID's, die zusammen mit der Liste der 'alreadyRequestedMovieIDs' in die Variabel 'excludedMovieIDs' gespeichert werden.
+Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenschaftswerte aus dem Request-Body als Variabeln gespeichert. Erwartet wird ein Zahlenwert 'amount', der die Anzahl der abgefragten Filme darstellt. Über die lokale Funktion 'RestrictAmount' wird überprüft, dass die begrenzende Zahl den Wert 10 nicht übersteigt. Damit soll sichergestellt werden, dass die Datenbankabfrage mit den weit über 500.000 Filmen nicht ausgelastet wird. Des Weiteren werden in der Variable 'alreadyRequestedMovieIDs' eine Liste von   eindeutigen Identifizierern aus der Movie-Collection erwartet. Die Werte sollen jene Film-ID's wiederspiegeln, die bereits vom Nutzer abgefragt worden sind, aber noch nicht über einen Swipe-Request in der Datenbank hinterlegt wurden. Die vom Nutzer bereits getätigten Swipes werden über die 'FindAllSwipesByUserID'-Funktion des SwipeServices abgefragt. Zurück\-gegeben wird eine Liste von Film-ID's, die zusammen mit der Liste der 'alreadyRequestedMovieIDs' in die Variabel 'excludedMovieIDs' gespeichert werden.
 
 \begin{lstlisting}[caption=MovieController - RequestMovie - Excluded Movies, label=lst:MovieControllerExcludedMovies]
     var amount = RestrictAmount(req.body.amount);
@@ -84,7 +85,7 @@ Der User-Controller bietet Funktionen, die die users-Collection der Datenbank be
 
 \noindent
 \subparagraph{CreateUser}
-Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür werden gleichnamige Eigenschaften des User-Models im Request-Body der eingehenden Anfrage erwartet. Nach erfolgreicher Authentifizierung des Firebase-Tokens und Überprüfung über die 'CheckExistence'-Funktion des User-Services[TODO], ob ein User-Dokument mit der gleichen 'uid' bereits existiert, wird für die weiteren Datenbankabfragen eine Transaktion gestartet.
+Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür werden gleichnamige Eigenschaften des User-Models im Request-Body der eingehenden Anfrage erwartet. Nach erfolgreicher Authentifizierung des Firebase-Tokens und Überprüfung über die 'CheckExistence'-Funktion des User-Services, ob ein User-Dokument mit der gleichen 'uid' bereits existiert, wird für die weiteren Datenbankabfragen eine Transaktion gestartet.
 
 \begin{lstlisting}[caption=UserController - Create User - Transaktionsstart, label=lst:UserControllertransaction]
     // 1. Starte Transaktion!
@@ -175,7 +176,7 @@ Der Match-Controller bietet Funktionen, die die matches-Collection der Datenbank
 
 \noindent
 \subparagraph{RequestMatches} 
-Das Frontend erlaubt es, Matches anzeigen zu lassen. Dafür bietet diese Funktion Informationen über das Match-Dokument des jeweiligen Nutzers. Nach erfolgreicher Authentifizierung wird das zugehörige Match-Dokument über die 'GetMatches'-Methode abgefragt. Das Dokument enthält zwei Listen: supermatches und normalmatches. Beide enthalten jeweils eine Eigenschaft 'removed'. Ist diese auf true gesetzt, so soll impliziert werden, dass der Nutzer den Match entfernt hat. Folglich soll der gelöschte Match nicht mehr angezeigt werden. Daher werden die beiden Listen über die 'filter'-Funktion [TODO] nach den nicht entfernten Matches gefiltert. Bei Erfolg wird ein JSON-Objekt mit beiden Listen und der Eigenschaft 'newChanges' aus dem Match-Dokument zurückgesendet.
+Das Frontend erlaubt es, Matches anzeigen zu lassen. Dafür bietet diese Funktion Informationen über das Match-Dokument des jeweiligen Nutzers. Nach erfolgreicher Authentifizierung wird das zugehörige Match-Dokument über die 'GetMatches'-Methode abgefragt. Das Dokument enthält zwei Listen: supermatches und normalmatches. Beide enthalten jeweils eine Eigenschaft 'removed'. Ist diese auf true gesetzt, so soll impliziert werden, dass der Nutzer den Match entfernt hat. Folglich soll der gelöschte Match nicht mehr angezeigt werden. Daher werden die beiden Listen über die 'filter'-Funktion nach den nicht entfernten Matches gefiltert. Bei Erfolg wird ein JSON-Objekt mit beiden Listen und der Eigenschaft 'newChanges' aus dem Match-Dokument zurückgesendet.
  
 \begin{lstlisting}[caption=MatchController - RequestMatches, label=lst:matchcontrollerrequestmatches]
 var match = await MatchService.GetMatches(uid);

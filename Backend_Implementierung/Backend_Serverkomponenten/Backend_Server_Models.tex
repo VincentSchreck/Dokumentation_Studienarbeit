@@ -1,7 +1,15 @@
 \subsubsection{Datenbankmodelle und Schemata}
-
 Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung.
-\newline
+
+%TODO Konzeptioneller Aufbau
+\begin{figure}[tbt]
+\centering
+\includegraphics[width=\textwidth]{images/databasemodells.PNG}
+\caption{MongoDB - Aufbau der Collections und Beziehungen}
+\label{fig:databasemodells}
+\end{figure}
+
+\noindent
 Folgender Code zeigt den Aufbau des Schemas für die Swipe-Collection. \\
 
 \begin{lstlisting}[caption=Swipe Schema und Model, label=lst:modelswipe]
@@ -21,7 +29,7 @@ module.exports = mongoose.model('Swipe',swipeSchema)
 \end{lstlisting}
 
 \noindent
-Die einzelnen Schemata wurden nach dem im Konzept beschriebenen Aufbau [TODO] für jede Collection in separaten Dateien unter dem Verzeichnis '/database/models' erstellt. Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugten Model (siehe Abbildung \ref{fig:node_structure}).
+Die einzelnen Schemata wurden nach dem im Diagramm der Abbildung \ref{fig:databasemodells} dargestellten Aufbau für jede Collection in separaten Dateien unter dem Verzeichnis '/database/models' erstellt (siehe Abbildung \ref{fig:node_structure}). Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugten Model.
 
 \begin{figure}[tbt]
 \centering

@@ -86,27 +86,18 @@ Als Kommunikationsschnittstelle wird eine WebApi entwickelt, dessen Kommunikatio
 
 \subsection{Film-Datenbank}
 \label{sec:filmdatenbank}
-=>TMDb API, https://developers.themoviedb.org/4/getting-started/authorization\newline
-OMDb API, http://www.omdbapi.com/\newline
-Verschiedene kleinere Anbieter, https://rapidapi.com/search/movie\newline
-vince?
-\newline
-
-rapid API:
-- Response Time von über 1 Sekunde (rapid am Arsch) [https://rapidapi.com/de/webknox/api/recipe/discussions/4945/API-response-time]
-- 
-
-IMDb:
-- keine Dokumentation
-- Gratisversion mit begrenzter Zugriffszahl [https://rapidapi.com/blog/how-to-use-imdb-api/]
-
-OMDb:
-- Poster API nur für Patreons 
-- keine Dokumentation
-- 
-
-TMDb:
-- Gute Response Time
-- keine Zugriffsbegrenzung
-- Kostenlos
-- Umfangreiche Informationen wie Trailer und viele weitere Metadaten
+Um die Informationen der einzelnen Filme anzeigen zu können, werden zunächst einmal Informationen benötigt.
+Hierfür existieren mehrere Anbieter, wobei die Anbindungen und auch die Datensätze selbst von unterschiedlicher Qualität sind.\\
+\\
+Für die API der OMDb (Open Movie Database) ist leider keine gute Dokumentation frei verfügbar.
+Gleichzeitig ist der Zugriff über 1000 Anfragen pro Tag und eine Poster API zur Anzeige der Filmposter nur verfügbar, falls man eine Spende über Patreon hinterlässt\footnote{Quelle: \url{https://www.omdbapi.com/}, letzter Zugriff: 20. März 2021}.\\
+\\
+Die API von IMDb (Internet Movie Database) ist hingegen sehr gut dokumentiert und bietet auch die wichtigsten Daten (Titel, Beschreibung und Bild) an.
+Problem hieran ist jedoch, dass es zwar einen kostenlosen Zugang gibt, dieser jedoch auf 100 Anfragen täglich beschränkt ist\footnote{Quelle: \url{https://imdb-api.com/}, letzter Zugriff: 20. März 2021}. 
+Gleichzeitig hat diese API eine Verzögerung von knapp 1\,s, was zu schlechter Benutzererfahrung führen kann\footnote{Quelle: \url{https://rapidapi.com/amrelrafie/api/movies-tvshows-data-imdb}, letzter Zugriff: 20. März 2021}.\\
+\\
+Letztendlich wurde die Version 3 der API von TMDb (The Movie Database) gewählt.
+Sie ist außerordentlich gut dokumentiert und bietet mehr Möglichkeiten als für diese Anwendung überhaupt notwendig.
+Beispielsweise lassen sich Filme bewerten, nach Genre Filme suchen oder auch Trailer anzeigen.
+Sie ist gratis für jeden zur Nutzung verfügbar, solange in der Anwendung angegeben ist, dass diese Film-Datenbank verwendet wurde.
+Die Nutzung wiederum ist unbegrenzt, also es existiert keine Abfragenlimitierung\footnote{Quelle: \url{https://developers.themoviedb.org/3/}, letzter Zugriff: 20. März 2021}.
