@@ -1,4 +1,4 @@
-Die Serverzuständigkeiten lassen sich in folgende Aspekte zusammenfassen:
+Die Serverzuständigkeiten des StreamSwipe-Webservers lassen sich in folgende Aspekte zusammenfassen:
 \begin{itemize}
 \item Empfangen und Beantworten der Clientanfragen
 \item Routing der Anfragen zu den entsprechenden Abhandlungsroutinen
@@ -8,10 +8,10 @@ Die Serverzuständigkeiten lassen sich in folgende Aspekte zusammenfassen:
 \end{itemize} 
 
 \noindent
-In den folgenden Unterkapitel wird auf die Einrichtung des Node.js-Webservers und der MongoDB-Datenbank, auf die Erstellung der sicheren Kommunikationsschnittstelle und auf die Implementierung der serverzuständigen Funktionalitäten eingegangen.
+In den folgenden Unterkapitel wird auf die Einrichtung des Node.js-Webservers und der MongoDB-Datenbank, auf die Erstellung der sicheren Kommunikationsschnittstelle und auf die Implementierung der serverzuständigen Funktionalitäten eingegangen. Der StreamSwipe-Webserver wird im weiteren Text in der Kurzform als Webserver bezeichnet. 
 
 \subsubsection{Bereitstellung des Webservers}
-Zunächst wird das Node.js-Installationspaket aus der offiziellen Seite der Hersteller heruntergeladen und ausgeführt. Hierbei werden sowohl die Laufzeitumgebung für Node.JS, als auch der npm package manager installiert (Siehe nächste Abbildung). 
+Zunächst wird das Node.js-Installationspaket aus der offiziellen Seite der Hersteller heruntergeladen und ausgeführt, wie in Abbildung \ref{fig:installation_nodejs} dargestellt. Hierbei werden sowohl die Laufzeitumgebung für Node.JS, als auch der npm package manager installiert (Siehe nächste Abbildung). 
 Zusätzlich wird bei der Installation ausgewählt, dass Node.js sowie npm und dessen Module zu den Umgebungsvariablen hinzugefügt werden. Dabei werden Variablen unter ihrem Applikationsnamen gespeichert und ihre entsprechende Datei-Pfade hinterlegt.
 Über den Zugriff auf diese Umgebungsvariable ist ein schneller Zugriff über ein Terminal beziehungsweise einer anderen Applikation gewährleistet.
 
@@ -60,6 +60,15 @@ Als Applikationsstartpunkt wird die Datei „server.js“ erzeugt und im package
   }
 }
 \end{lstlisting}
+
+\subsubsection{Geplante Architektur}
+Die Software für den StreamSwipe-Server wird in Komponenten/Module aufgeteilt. Vorteile dieser Modularisierung sind, dass die einzelnen Module schneller verstanden und dementsprechend leichter überarbeitet werden. Außerdem können Codeduplizierungen vermieden werden und Softwarekomponenten an verschiedenen Punkten im Code wiederverwendet werden. Abbildung \ref{fig:WebserverArchitektur} stellt die Architektur des Webservers dar. Die Route-Komponenten dienen als Empfangsschnittstelle für HTTPS-Anfragen. Die tatsächlichen Abhandlungsroutinen finden in den Controller-Komponenten statt, welche zum Zugriff auf die Datenbank auf die Service-Komponenten zugreifen und die HTTPS-Antworten zurückschicken.
+\begin{figure}[tbt]
+\centering
+\includegraphics[width=8cm]{images/backendstruktur.PNG}
+\caption{WebserverArchitektur}
+\label{fig:WebserverArchitektur}
+\end{figure}
 
 \subsubsection{Sichere Kommunikation}
 \label{sec:SichereKommunikation}

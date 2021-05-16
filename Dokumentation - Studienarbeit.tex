@@ -183,6 +183,15 @@
 % Neue Section, neue Seite
 \clearpage
 \section{Implementierung der mobilen Anwendung}
+Die Software für die mobile Anwendung wird ebenfalls in Komponenten/Module aufgeteilt. Abbildung \ref{fig:AppArchitektur} stellt die vereinfachte Architektur dar. Die Service-Komponenten dienen als Kommunikationsschnittstelle zum Senden für HTTPS-Anfragen. Die  Manager-Komponenten nutzen diese Schnittstellen und führen im Hintergrund des Programms verschiedene Tätigkeiten aus. Das User Interface (UI) stellt die Benutzeroberflächen dar und kann auf die Funktionen und Daten der Manager zurückgreifen.
+\begin{figure}[tbt]
+\centering
+\includegraphics[width=10cm]{images/AppBackend.PNG}
+\caption{Webserver Architektur}
+\label{fig:AppArchitektur}
+\end{figure}
+
+
 %TODO Ersten 3 Kapitel sind Backend, weitere sind Frontend
 \subsection{Klassenmodelle}		
 \input{ImplementierungMobileApp/Klassenmodelle.tex}

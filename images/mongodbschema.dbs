@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MongoDb" id="Project_16bd" database="MongoDb" >
+	<schema name="StreamSwipeDatabase" >
+		<table name="Collection" />
+		<table name="cities" >
+			<column name="_id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="name" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="user" type="array[object]" length="800" decimal="0" jt="4999545" >
+				<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+				<column name="uid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="matches" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="uid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="supermatches" type="array[object]" length="800" decimal="0" jt="4999545" >
+				<column name="uid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="movieid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="startedChat" type="boolean" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="removed" type="boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			</column>
+			<column name="newChanges" type="boolean" length="800" decimal="0" jt="12" />
+			<column name="normalmatches" type="array[object]" length="800" decimal="0" jt="4999545" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="movies" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="id" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="original_title" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="swipes" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="uid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="swipes" type="array[object]" length="800" decimal="0" jt="4999545" mandatory="y" >
+				<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+				<column name="movieid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+				<column name="swipeaction" type="integer" length="800" decimal="0" jt="4" mandatory="y" />
+			</column>
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+		</table>
+		<table name="users" >
+			<column name="_id" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="uid" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="_swipeid" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="_matchid" type="oid" length="800" decimal="0" jt="-8" mandatory="y" />
+			<column name="city" type="string" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="diversewanted" type="boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="femalewanted" type="boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="malewanted" type="boolean" length="800" decimal="0" jt="12" mandatory="y" />
+			<column name="mygender" type="integer" length="800" decimal="0" jt="4" mandatory="y" />
+			<index name="_id_" unique="PRIMARY_KEY" >
+				<column name="_id" />
+			</index>
+			<fk name="Virtual Relation" virtual="y" to_schema="StreamSwipeDatabase" to_table="matches" >
+				<fk_column name="_matchid" pk="_id" />
+			</fk>
+			<fk name="Virtual Relation" virtual="y" to_schema="StreamSwipeDatabase" to_table="swipes" >
+				<fk_column name="_swipeid" pk="_id" />
+			</fk>
+		</table>
+	</schema>
+	<connector name="MongoDb" database="MongoDb" driver_class="com.dbschema.MongoJdbcDriver" driver_jar="mongojdbc3.1.jar" driver_desc="No Authentication" host="localhost" port="27017" user="admin" />
+	<layout name="Layout" id="Layout_1dc1" show_relation="name" />
+	<layout name="Layout with Tools" id="Layout_7cd" show_column_type="y" show_relation="name" >
+		<entity schema="StreamSwipeDatabase" name="cities" color="BED3F4" x="576" y="320" />
+		<entity schema="StreamSwipeDatabase" name="matches" color="C7F4BE" x="320" y="80" />
+		<entity schema="StreamSwipeDatabase" name="movies" color="3986C1" x="48" y="384" />
+		<entity schema="StreamSwipeDatabase" name="matches" column="supermatches" color="C7F4BE" x="560" y="80" />
+		<entity schema="StreamSwipeDatabase" name="swipes" color="F4DDBE" x="832" y="80" />
+		<entity schema="StreamSwipeDatabase" name="swipes" column="swipes" color="F4DDBE" x="1024" y="80" />
+		<entity schema="StreamSwipeDatabase" name="cities" column="user" color="BED3F4" x="736" y="320" />
+		<entity schema="StreamSwipeDatabase" name="users" color="BEBEF4" x="320" y="384" />
+		<group name="cities" color="ECF0F7" >
+			<entity schema="StreamSwipeDatabase" name="cities" />
+			<entity schema="StreamSwipeDatabase" name="cities" column="user" />
+		</group>
+		<group name="users" color="ECECF7" >
+			<entity schema="StreamSwipeDatabase" name="users" />
+		</group>
+		<group name="matches" color="EEF7EC" >
+			<entity schema="StreamSwipeDatabase" name="matches" />
+			<entity schema="StreamSwipeDatabase" name="matches" column="supermatches" />
+		</group>
+		<group name="swipes" color="F7F2EC" >
+			<entity schema="StreamSwipeDatabase" name="swipes" />
+			<entity schema="StreamSwipeDatabase" name="swipes" column="swipes" />
+		</group>
+		<script name="Sample Query Editor" id="Editor_130a" language="SQL" >
+			<string><![CDATA[StreamSwipeDatabase.matches.find()
+
+//OR
+
+USE StreamSwipeDatabase;
+db.matches.find()
+
+//OR
+
+USE StreamSwipeDatabase;
+db.getCollection('matches').find()]]></string>
+		</script>
+		<browser id="Browse_1d7" name="Sample Relational Data Explorer" confirm_updates="y" >
+			<browse_table schema="StreamSwipeDatabase" entity="matches" x="20" y="20" width="400" height="300" record_view="y" >
+				<browse_table schema="StreamSwipeDatabase" entity="users" fk="Virtual Relation" x="440" y="20" width="500" height="350" record_view="y" >
+					<browse_table schema="StreamSwipeDatabase" entity="swipes" fk="Virtual Relation" x="960" y="20" width="500" height="350" record_view="y" />
+				</browse_table>
+			</browse_table>
+		</browser>
+		<query id="Query_91e" name="Sample Query Builder" >
+			<query_table schema="StreamSwipeDatabase" name="matches" alias="matches" x="48" y="48" >
+				<column name="_id" />
+				<column name="uid" />
+				<column name="supermatches" />
+				<column name="newChanges" />
+				<column name="normalmatches" />
+				<query_table schema="StreamSwipeDatabase" name="users" alias="users" x="256" y="48" fk="Virtual Relation" type="Inner Join" >
+					<column name="_id" />
+					<column name="uid" />
+					<column name="_swipeid" />
+					<column name="_matchid" />
+					<column name="city" />
+					<column name="diversewanted" />
+					<column name="femalewanted" />
+					<column name="malewanted" />
+					<column name="mygender" />
+					<query_table schema="StreamSwipeDatabase" name="swipes" alias="swipes" x="432" y="48" fk="Virtual Relation" type="Inner Join" >
+						<column name="_id" />
+						<column name="uid" />
+						<column name="swipes" />
+					</query_table>
+				</query_table>
+			</query_table>
+		</query>
+	</layout>
+	<layout name="Main Layout" id="Layout_22bb" show_column_type="y" show_relation="name" >
+		<entity schema="StreamSwipeDatabase" name="cities" color="BED3F4" x="656" y="528" />
+		<entity schema="StreamSwipeDatabase" name="matches" color="C7F4BE" x="352" y="336" />
+		<entity schema="StreamSwipeDatabase" name="movies" color="3986C1" x="816" y="336" />
+		<entity schema="StreamSwipeDatabase" name="matches" column="supermatches" color="C7F4BE" x="608" y="336" />
+		<entity schema="StreamSwipeDatabase" name="swipes" column="swipes" color="F4DDBE" x="848" y="688" />
+		<entity schema="StreamSwipeDatabase" name="swipes" color="F4DDBE" x="656" y="688" />
+		<entity schema="StreamSwipeDatabase" name="cities" column="user" color="BED3F4" x="848" y="528" />
+		<entity schema="StreamSwipeDatabase" name="users" color="BEBEF4" x="352" y="592" />
+		<callout x="48" y="80" pointer="Round" >
+			<comment><![CDATA[Double-click collection headers or fields to edit.
+Create multiple layouts (diagrams) with the same or different collections. 
+Saving the model to file will also save the layouts.]]></comment>
+		</callout>
+		<group name="Collection &#039;cities&#039;" color="ECF0F7" >
+			<entity schema="StreamSwipeDatabase" name="cities" />
+			<entity schema="StreamSwipeDatabase" name="cities" column="user" />
+		</group>
+		<group name="Collection &#039;users&#039;" color="ECECF7" >
+			<entity schema="StreamSwipeDatabase" name="users" />
+		</group>
+		<group name="Collection &#039;matches&#039;" color="EEF7EC" >
+			<entity schema="StreamSwipeDatabase" name="matches" />
+			<entity schema="StreamSwipeDatabase" name="matches" column="supermatches" />
+		</group>
+		<group name="Collection &#039;swipes&#039;" color="F7F2EC" >
+			<entity schema="StreamSwipeDatabase" name="swipes" />
+			<entity schema="StreamSwipeDatabase" name="swipes" column="swipes" />
+		</group>
+	</layout>
+</project>
