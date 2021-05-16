@@ -9,6 +9,7 @@ Um Nutzern eine sichere Registrierung, bzw. An- und Abmeldung ermöglichen zu k�
 Dieser Backendservice verfügt über unterschiedliche Authentifizierungsmethoden.
 Um es zu nutzen, muss nur die jeweilige Methode ausgewählt werden. \\
 
+\noindent
 In unserem Fall wurde die E-Mail und Passwort Authentifizierung gewählt, um unabhängig von Drittanbietern zu sein.
 Nun muss das SDK \texttt{firebase\_auth} integriert werden und mithilfe der Funktionen \texttt{createUserWithEmailAndPassword()} bzw. \texttt{signInWithEmailAndPassword()} ein Nutzer registriert und angemeldet werden.
 Hierbei können mithilfe von Fehlercodes geeignete Fehlermeldungen erstellt werden. 
@@ -90,16 +91,17 @@ Mit einer Funktion kann über einen Boolean-Parameter entschieden werden, welche
 Damit Nutzer bei einem erfolgreichen Match sich unterhalten und vielleicht auch verabreden können, muss eine Anwendung dieser Art eine Chatfunktion bieten.
 Diese Funktion jedoch beschränkt sich auf eine 1-zu-1 Kommunikation, es werden also keine Gruppenchats benötigt.\\
 
+\noindent
 Da Google weltweit über Server verfügt, ist diese Chatanwendung mithilfe von Firebase direkt auch global verfügbar.
 Zudem würde der Backend Server, welcher die Filmdaten bereitstellt und Nutzer über Matching Algorithmen zusammenführt, zusätzlich durch Netzwerkverkehr der Chatanwendung belastet.
 Hierfür bietet Firebase extra auf Skalierung ausgelegte Werkzeuge, damit sich Entwickler nicht zwingend mit diesen Problematiken auseinandersetzen müssen.
 
 \subsubsection{Sicherheit}
 Um unbefugte Zugriffe nicht zuzulassen, müssen die Sicherheitsregeln korrekt gewählt werden.
-Diese können mittels der \enquote{Emulator Suite} und Unit Tests (hier das Test Framework \enquote{mocha}) auf ihre Korrektheit getestet werden\footnote{\url{https://firebase.google.com/docs/rules/unit-tests}, zuletzt aufgerufen am 05.05.2021}.\\
+Diese können mittels der \enquote{Emulator Suite} und Unit Tests (hier das Test Framework \enquote{mocha}) auf ihre Korrektheit getestet werden\footnote{\url{https://firebase.google.com/docs/rules/unit-tests}, letzter Zugriff: 05. Mai 2021}.\\
 \\
 Da jeder letztendlich die Profilbilder sehen darf, ist hier nur als Bedingung gegeben, dass der Sender der Anfrage angemeldet sein und die Datei kleiner als 5 MB sein muss (siehe Codebeispiel \ref{lst:storagerules_validation}). 
-Dies wurde gewählt, da ab einer Menge von 5 GB verbrauchter Speicherplatz Kosten in Höhe von 0.026\$ pro GB anfallen.\footnote{\url{https://firebase.google.com/pricing}, zuletzt aufgerufen am 05.05.2021}\\
+Dies wurde gewählt, da ab einer Menge von 5 GB verbrauchter Speicherplatz Kosten in Höhe von 0.026\$ pro GB anfallen.\footnote{\url{https://firebase.google.com/pricing}, letzter Zugriff: 05. Mai 2021}\\
 \\
 Bei den Firestore Regeln ist dies jedoch etwas komplizierter - diese sind im Anhang als Codebeispiel \ref{lst:appendix_firestore_rules} zu finden.
 Die Zeilenabgabe ist bei den folgenden Erklärungen am Ende des Satzes zu finden.

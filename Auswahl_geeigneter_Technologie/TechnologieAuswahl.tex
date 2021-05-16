@@ -8,15 +8,15 @@ Gleichzeitig ist bei der Entwicklung auf die verwendete Programmiersprache, die 
 \\
 Wie bereits in Abbildung \ref{fig:crossplattform_popularity} gezeigt, können sich Marktanteile verschiedener Frameworks sehr schnell ändern. 
 Dies hängt auch deutlich mit den unterliegenden Plattformen und deren Update-Zyklen zusammen.
-Google beispielsweise veröffentlicht beinahe jährlich eine neue Version von Android\footnote{\href{https://engineerbabu.com/blog/evolution-of-android-versions/}{engineerbabu.com}}, weshalb sich eben Programmierumgebungen immer mitentwickeln.
+Google beispielsweise veröffentlicht beinahe jährlich eine neue Version von Android\footnote{\url{https://engineerbabu.com/blog/evolution-of-android-versions/}, letzter Zugriff: 20. April 2021}, weshalb sich eben Programmierumgebungen immer mitentwickeln.
 Die Popularität eines Frameworks spiegelt somit unter anderem wieder, wie gut es mit den neuesten Features und Programmierkonzepten umgeht. 
-Daher wurde sich bei den plattformübergreifenden Frameworks \ref{sec:framework_introduction} auf React Native und Flutter beschränkt. 
+Daher wurde sich bei den plattformübergreifenden Frameworks \ref{sec:framework} auf React Native und Flutter beschränkt. 
 Beide bieten vordefinierte, nativ implementierte Benutzeroberflächenkomponenten - welche im Falle von Flutter sogar auf dem Design System \href{https://material.io/}{\textit{Material Design}} beruht.\\
 Das Konzept aus Kapitel \ref{sec:app_concept} schlägt vor, dem Nutzer die Bewertung einzelner Filme über eine Wisch-Funktion bereitzustellen.
 Allein dieser Bildschirm muss zunächst einmal eine Reihe von Filmen inklusive Titelbild und Informationen über HTTP Anfragen von unserer Datenbank laden, die Animationen und Logik hinter dem Bewertungssystem abarbeiten und zusätzlich die Bewertung wieder zurück an unseren Server senden.
 Aufgrund dieses enorm hohen Performance-Anspruchs sind nativ implementierte Komponente unabdingbar.
 Da sowohl Flutter als auch React Native es ermöglichen, die UI Komponenten in der plattformspezifischen Sprache zu implementieren, erweist sich der Leistungsvergleich beider Frameworks als schwierig.
-Grundlegend kann jedoch angenommen werden, dass Flutter eher weniger CPU-Nutzung beansprucht, jedoch dazu tendiert, mehr Speicher vor der eigentlichen Anwendung anzufordern\cite{bjorn-hansen2020}
+Grundlegend kann jedoch angenommen werden, dass Flutter eher weniger CPU-Nutzung beansprucht, jedoch dazu tendiert, mehr Speicher vor der eigentlichen Anwendung anzufordern \cite{bjorn-hansen2020}.
 
 Somit kristallisierten sich drei Entwicklungsmöglichkeiten per Ausschlussverfahren heraus:
 \begin{itemize}
@@ -47,6 +47,7 @@ Letztendlich wurde die Entscheidung getroffen, das allgemeines Nutzermanagement 
 Da AWS Amplify erst seit Beginn 2021 eine offizielle Unterstützung für Flutter anbieten\footnote{\url{https://aws.amazon.com/de/about-aws/whats-new/2021/02/announcing-general-availability-amplify-flutter-data-authentication-support/}}, wurde Flutter als Frontend-Framework und Firebase als BaaS-Plattform ausgewählt.
 
 \subsection{Server}
+\label{sec:server}
 Der Webserver ist jener Dienst,  der die zugrundeliegenden Funktionalitäten bezüglich der Filmabfragen, der Matching-Logik und der Filmempfehlung bietet. 
 Anforderungen an die genutzte Webservertechnologie sind zum einen eine grundlegend hohe Performance, um mit einer hohen Anzahl an Serveranfragen umzugehen. Des Weiteren sollte die Technologie Skalierbarkeit in Bezug auf die Performance und wachsenden Ressourcen wie Hardware aufweisen und eine Unterstützung, Dokumentation und umfassende Funktionalitäten des Frameworks bieten. 
 Ein Paketmanager, der umfassende Kern-Funktionalitäten zur Verfügung stellt, sollte vorhanden sein, damit diese nicht neu implementiert werden müssen. Um offen für das genutzte Zielbetriebssystem zu bleiben, sollten mehrere Betriebssysteme unterstützt werden. 
@@ -63,11 +64,11 @@ Nach genauerer Recherche kamen drei Webservertechnologien in die engere Betracht
 \noindent
 Im Hinblick auf die Performance sticht Node.js aufgrund seiner ereignisgesteuerter Architektur  und dem Non-Blocking I/O-Mechanismus heraus und verspricht eine bessere Ressourcennutzung. 
 \newline
-Große Firmen wie Uber \footnote{siehe \url{https://eng.uber.com/uber-tech-stack-part-two/ }, letzter Zugriff 18.03.2021}, Ebay und Netflix \footnote{siehe \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff 18.03.2021 } haben ihre Systeme bereits auf Node.js umgestellt. Die Wahl als Webservertechnologie fällt auf Node.js, da es breite Unterstützung erfährt, die auch durch den mächtigen Paketmanager npm ergänzt wird und eine hohe Performance errichtet.
+Große Firmen wie Uber \footnote{siehe \url{https://eng.uber.com/uber-tech-stack-part-two/ }, letzter Zugriff: 18. März 2021}, Ebay und Netflix \footnote{siehe \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff: 18. März 2021 } haben ihre Systeme bereits auf Node.js umgestellt. Die Wahl als Webservertechnologie fällt auf Node.js, da es breite Unterstützung erfährt, die auch durch den mächtigen Paketmanager npm ergänzt wird und eine hohe Performance errichtet.
 
 
 \subsection{Datenbank}
-Im Hinblick auf die Speicherung der potenziell hohen Anzahl an Nutzern, deren Swipe-Ent\-schei\-dungen und deren Matches untereinander sowie der Anzahl von über 500.000 Filmen\footnote{siehe \url{https://www.themoviedb.org/faq/general}, letzter Zugriff 18.03.2021} wird ein performanter Umgang der Datenbank mit vielen Datensätzen notwendig sein.  
+Im Hinblick auf die Speicherung der potenziell hohen Anzahl an Nutzern, deren Swipe-Ent\-schei\-dungen und deren Matches untereinander sowie der Anzahl von über 500.000 Filmen\footnote{siehe \url{https://www.themoviedb.org/faq/general}, letzter Zugriff: 18. März 2021} wird ein performanter Umgang der Datenbank mit vielen Datensätzen notwendig sein.  
 Um massive Daten speichern zu können sind relationale Datenbanken nicht die passende Wahl. 
 Es hat sich gezeigt, dass je größer die Menge an Daten ist und je mehr Tabellen in einer Anfrage enthalten sind, desto größer ist der Performanceverlust durch SQL. \cite{4.5}
 \newline
@@ -84,10 +85,28 @@ Als Datenbank für die Backend-Implementierung wurde aufgrund von Performance, d
 Als Kommunikationsschnittstelle wird eine WebApi entwickelt, dessen Kommunikation auf HTTP-Nachrichten basiert, deren Informationen im JSON-Format übergeben werden. Diese Technologie bietet eine einfache und dennoch effiziente Form der Kommunikation zwischen Server und Client.
 
 \subsection{Film-Datenbank}
+\label{sec:filmdatenbank}
 =>TMDb API, https://developers.themoviedb.org/4/getting-started/authorization\newline
 OMDb API, http://www.omdbapi.com/\newline
 Verschiedene kleinere Anbieter, https://rapidapi.com/search/movie\newline
-    vince?
+vince?
 \newline
 
-Github.
+rapid API:
+- Response Time von über 1 Sekunde (rapid am Arsch) [https://rapidapi.com/de/webknox/api/recipe/discussions/4945/API-response-time]
+- 
+
+IMDb:
+- keine Dokumentation
+- Gratisversion mit begrenzter Zugriffszahl [https://rapidapi.com/blog/how-to-use-imdb-api/]
+
+OMDb:
+- Poster API nur für Patreons 
+- keine Dokumentation
+- 
+
+TMDb:
+- Gute Response Time
+- keine Zugriffsbegrenzung
+- Kostenlos
+- Umfangreiche Informationen wie Trailer und viele weitere Metadaten

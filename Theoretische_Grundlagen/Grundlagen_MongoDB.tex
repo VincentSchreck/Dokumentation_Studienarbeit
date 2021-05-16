@@ -6,10 +6,10 @@ Dem Konzept des CAP-Theorems folgend steht MongoDB für Konsistenz und Partition
 
 \paragraph{Struktur}
 
-\begin{figure}[htb]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=14cm]{images/MongoDB_Architektur.png}
-\caption{Graphikdatenbank Beispiel \protect \footnotemark}
+\caption[Graphikdatenbank Beispiel]{Graphikdatenbank Beispiel \protect \footnotemark}
 \end{figure}
 \footnotetext{\url{https://www.informatik-aktuell.de/betrieb/datenbanken/mongodb-fuer-software-entwickler.html}, letzter Zugriff: 9. Februar 2021}
 
@@ -58,7 +58,7 @@ db.pois.find( {"adresse.ort": "Karlsruhe" } )
 \end{lstlisting}
 
 \noindent
-Dabei kommt das Prinzip Query-by-Example \footnote{Query By Example: \url{https://de.wikipedia.org/wiki/Query_by_Example}, letzter Zugriff 12. Februar 2021} zum Einsatz, bei dem die als JSON-Dokument beschriebenen Suchkriterien als Filter auf die durchsuchte Collection wirkt. Zusätzlich stehen für diese Art von Abfragemöglichkeit sämtliche logische Verknüpfungen und Vergleichsoperatoren zur Verfügung\footnote{Query-Operatoren\url{https://docs.mongodb.com/manual/reference/operator/query/}, letzter Zugriff 12. Februar 2021}.
+Dabei kommt das Prinzip Query-by-Example \footnote{Query By Example: \url{https://de.wikipedia.org/wiki/Query_by_Example}, letzter Zugriff: 12. Februar 2021} zum Einsatz, bei dem die als JSON-Dokument beschriebenen Suchkriterien als Filter auf die durchsuchte Collection wirkt. Zusätzlich stehen für diese Art von Abfragemöglichkeit sämtliche logische Verknüpfungen und Vergleichsoperatoren zur Verfügung\footnote{Query-Operatoren\url{https://docs.mongodb.com/manual/reference/operator/query/}, letzter Zugriff: 12. Februar 2021}.
 Das Ergebnis der obigen Find-"-Operationen liefert dabei einen Cursor zurück, über den die aufrufende Anwendung durch die einzelnen zurückgelieferten Dokumente iterieren kann. Außerdem kann der Cursor modifiziert werden, um beispielsweise Beschränkungen der Trefferanzahl oder Sortierung vorzunehmen.
 \newline
 \begin{lstlisting}[caption=MongoDB Read Modifikation, label=lst:MongoDBReadModifikation]
@@ -67,7 +67,7 @@ db.pois.find().limit(5).sort({"adresse.ort": -1})
 
 \noindent
 \subparagraph{MapReduce}
-MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Verarbeitung von großen Datenmengen in aggregierte Ergebnisse. Dabei unterteilt sich der Algorithmus im Wesentlichen in zwei Operationen \footnote{MapReduce Dokumentation \url{https://docs.mongodb.com/manual/core/map-reduce/}, letzter Zugriff 10. Februar 2021}
+MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Verarbeitung von großen Datenmengen in aggregierte Ergebnisse. Dabei unterteilt sich der Algorithmus im Wesentlichen in zwei Operationen \footnote{MapReduce Dokumentation \url{https://docs.mongodb.com/manual/core/map-reduce/}, letzter Zugriff: 10. Februar 2021}
 \newline
 -	Map: Emittieren der beliebig vielen Key-Value-Paare für jedes Dokument
 \newline
@@ -75,7 +75,7 @@ MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Ver
 
 \noindent
 \subparagraph{Aggregation-Framework}
-Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance\footnote{\url{https://docs.mongodb.com/manual/meta/aggregation-quick-reference/}, letzter Zugriff 14. Februar 2021}. Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden .
+Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance\footnote{\url{https://docs.mongodb.com/manual/meta/aggregation-quick-reference/}, letzter Zugriff: 14. Februar 2021}. Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden .
 \newline 
 
 \begin{lstlisting}[caption=MongoDB Aggregate, label=lst:MongoDBAggregate]
@@ -91,7 +91,7 @@ Es stehen folgende Pipeline-Operatoren zur Verfügung:
  
 
 \begin{table}[tbt]
-\caption{Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]}
+\caption[Aggregation Framework: Pipeline-Operatoren]{Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]}
 \begin{center}
     \begin{tabular}{ l  p{12cm}}
     \toprule
@@ -127,7 +127,7 @@ Es stehen folgende Pipeline-Operatoren zur Verfügung:
     \bottomrule
     \end{tabular}
 \end{center}
-\caption{Aggregation Framework: Pipeline-Operatoren \protect \footnotemark}
+\caption[Aggregation Framework: Pipeline-Operatoren]{Aggregation Framework: Pipeline-Operatoren \protect \footnotemark}
 \end{table}
 \footnotetext{\url{https://www.informatik-aktuell.de/betrieb/datenbanken/mongodb-fuer-software-entwickler.html}, letzter Zugriff: 9. Februar2021}
 
@@ -159,7 +159,8 @@ MongoDB unterstützt eine Vielzahl an Operationen zum Erzeugen, Lesen, Updaten u
 \end{table}
 
 \noindent
-\subparagraph{Create}
+\hangindent1cm
+\textbf{Create:}
 „InsertOne()“ erzeugt ein einzelnes Dokument in der jeweiligen Collection der Datenbank. Dabei wird ein Dokument im JSON-Format als Parameter mitgegeben. ObjectID wird, wenn nicht als Eigenschaft im Dokument angegeben, automatisch von MongoDB erzeugt. Ebenfalls wird die angesprochene Collection automatisch erzeugt, falls sie nicht bereits existiert. Die Funktion „InsertMany()“  erlaubt das Hinzufügen mehrerer Datensätze über ein Array von JSON-Dokumenten als Parameter. Die Methode „Insert“ ist flexibler und bietet beide Parametrisierungsmöglichkeiten\footnote{\url{https://docs.mongodb.com/manual/reference/method/db.collection.insert/\#mongodb-method-db.collection.insert}, letzter Zugriff: 14. Februar 2021}.
 \newline
 \begin{lstlisting}[caption=MongoDB Create, label=lst:MongoDBCreate]
@@ -167,13 +168,15 @@ db.personen.insertOne({"vorname" : "Robin"});
 \end{lstlisting}
 
 \noindent
-\subparagraph{Read}
+\hangindent1cm
+\textbf{Read:}
 Um Datensätze aus der Datenbank zu lesen, wird die find()-Methode zur Verfügung gestellt. Sie gibt alle Dokumente einer Kollektion zurück. Wie im Kapitel Query-By-Example beschrieben, kann die Funktion mit Filtern versehen werden. Die Funktion findOne() bietet die gleiche Funktionsweise, die Dokumentenausgabe ist aber auf ein einzelnes Dokument begrenzt. 
 Ein Beispiel ist dargestellt in Listing \ref{lst:MongoDBRead}.
 \newline\newline
 
 \noindent
-\subparagraph{Update}
+\hangindent1cm
+\textbf{Update:}
 Die Update()-Methode ermöglicht es, Änderungen an Datensätzen vorzunehmen.  Die Methode erhält zwei Parameter, einen zur Angabe der gesuchten Dokumente und den anderen mit  der vorzunehmenden Änderung. Simultan zu den Insert-Methoden gibt es die UpdateOne()-Methode für Änderungen an einem Dokument und UpdateMany()-Methode für mehrere Dokumente.
 \newline
 
@@ -183,7 +186,8 @@ db.personen.updateOne({"vorname" : "Robin"} , currentDate("last_login") );
 \end{lstlisting}
 
 \noindent
-\subparagraph{Delete}
+\hangindent1cm
+\textbf{Delete:}
 Für das Löschen von Datensätzen aus einer Collection gibt es die DeleteOne()- und DeleteMany()-Methode. Über mitgegegeben Parameter können Filter eingestellt werden. Eine ganze Collection kann mit der drop()-Methode entfernt werden.
 \newline
 
@@ -205,17 +209,19 @@ Bei der Inbetriebnahme einer MongoDB Datenbank spielen zwei Prozesse eine wichti
 Der Prozess, der als Controller für sich auf mehreren Datenbanken befindenden verteilte Daten dient, nennt sich „mongos“\footnote{Mongos \url{https://docs.mongodb.com/manual/reference/program/mongos/}, letzter Zugriff: 15. Februar 2021}. Dieser Prozess findet seinen Einsatz hauptsächlich in Kombination mit Sharding, auf die im weiteren Unterkapitel eingegangen wird. \newline
 
 \noindent
-\subparagraph{Engine}
+\hangindent1cm
+\textbf{Engine:}
 Als Storage Engine, oder auch Datenbank-Engine, wird die zugrundeliegende Softwarekomponente eines Datenbanksystems zum Verwalten der Daten bezeichnet. Die gebräuch"-lich"-sten Engines in MongoDB sind die MMAPv1-Engine und die WiredTiger-Engine.\newline
 Bis vor Version 3.2 war MMAPv1-Engine die Standard-Storage Engine von MongoDB. Eine Kompression der Daten wurde nicht unterstützt und Transaktionen waren nur auf einem Dokument ausführbar. Ab MongoDB 3.2 wird standardmäßig die Wired Tiger-Engine eingesetzt. Neben der Kompression der Daten und der miteingehenden Verringerung des benötigten Speicherplatzes bietet diese Engine auch eine Verschlüsselung der Daten an. Abhängig des benutzten Kompressionsalgorithmus kann der benötigte Verbrauch um 70\% für Daten und um 50\% für Indizes reduziert werden \cite{DB3.5}. Die WiredTiger-Engine skaliert im Vergleich zur MMAPv1 mit der Anzahl der CPU-Kerne und ermöglicht Transaktionen über mehrere Dokumente hinweg. Die genutzte Engine kann in den Konfigurationen eingestellt werden.
 \newline
 
 \noindent
-\subparagraph{Replica Sets}
+\hangindent1cm
+\textbf{Replica Sets:}
 Im standardmäßgen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden \cite{DB3.6}. MongoDB realisiert die Replikation der Daten über Replica Sets\cite{DB3.7}. Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten.
 Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten 'Oplogs' (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird \cite{DB3.8}. Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab.
 
-\begin{figure}[htb]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=7cm]{images/replicaset1.png}
 \caption{MongoDB Replica Set}
@@ -224,8 +230,9 @@ Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderunge
 
 
 \noindent
-\subparagraph{Sharding}
-Hierbei ist die Rede von der Methodik zur Aufteilung der Daten auf mehrere Datenbanken\cite{DB4.1}.
+\hangindent1cm
+\textbf{Sharding:}
+Hierbei ist die Rede von der Methodik zur Aufteilung der Daten auf mehrere Datenbanken \cite{DB4.1}.
 Der Datenbestand wird nach logischen Kriterien in  Teilstücke, die sogenannten „Shards“, zerlegt und über mehrere Replica Sets verteilt.
 In Hinblick auf das hinzufügen weiterer Server gewährt das Sharding eine horizontale Skalierbarkeit.
 Des Weiteren werden durch die Tatsache, dass jeder Shard für seinen Bestandteil zuständig ist,  Suchanfragen schneller durchgeführt. 
@@ -234,14 +241,17 @@ Der mongos-Prozess leitet Anfragen an die jeweiligen Shards weiter und dient als
 
 \paragraph{Verwaltungswerkzeuge}
 \noindent
-\subparagraph{Mongo Shell}
+\hangindent1cm
+\textbf{Mongo Shell:}
 Der „mongo“-Prozess ist eine interaktive JavaScript Schnittstelle auf der Kommandozeile. Er bietet umfassende Funktionalitäten für die Systemadministration des Datenbankensystems als auch Zugriff auf die Datensätze\footnote{Mongo \url{https://docs.mongodb.com/manual/reference/program/mongo/}, letzter Zugriff: 15. Februar 2021}. Dazu erhält man eine Eingabeaufforderung, auf dem Befehle in der Sprache JavaScript ausgeführt werden können.
 \noindent
-\subparagraph{Treiber}
-MongoDB bietet für viele Programmiersprachen bzw. Frameworks Softwarebibliotheken zum Zugriff auf die Datenbank an.\footnote{MongoDB Treiber \url{https://docs.mongodb.com/drivers/}, letzter Zugriff 01. Mai 2021}  Eine offiziell unterstützte ist Mongoose für das Node.js-Framework\footnote{Mongoose - Offizielle Webpage \url{https://mongoosejs.com/docs/}, letzter Zugriff: 01. Mai 2021}
+\hangindent1cm
+\textbf{Treiber:}
+MongoDB bietet für viele Programmiersprachen bzw. Frameworks Softwarebibliotheken zum Zugriff auf die Datenbank an.\footnote{MongoDB Treiber \url{https://docs.mongodb.com/drivers/}, letzter Zugriff: 01. Mai 2021}  Eine offiziell unterstützte ist Mongoose für das Node.js-Framework\footnote{Mongoose - Offizielle Webpage \url{https://mongoosejs.com/docs/}, letzter Zugriff: 01. Mai 2021}
 \newpage
 \noindent
-\subparagraph{Grafische Oberflächen}
+\hangindent1cm
+\textbf{Grafische Oberflächen:}
 Es gibt einige Anwendungen zur visuellen Darstellung und Bearbeitung der Datenbanken in MongoDB, die eine grafische Benutzeroberfläche bieten. Zum Beispiel MongoDB Compass, Studio3T oder Fang of Mongo. 
 
 

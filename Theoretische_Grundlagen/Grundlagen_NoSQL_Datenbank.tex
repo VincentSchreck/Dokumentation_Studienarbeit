@@ -1,4 +1,4 @@
-Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellenförmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit. \cite{DB1}
+Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellenförmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit \cite{DB1}.
 Zu den bekanntesten NoSQL-Datenbanken gehören beispielsweise Apache Cassandra, MongoDB und CouchDB.
 \newline
 
@@ -7,22 +7,24 @@ NoSQL-Datenbanken werden hauptsächlich in vier verschiedene Kategorien untertei
 \newline
 
 \noindent
-\subparagraph{Graphendatenbanken}
+\hangindent1cm
+\textbf{Graphendatenbanken:}
 Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen.
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
 \includegraphics[]{images/graphikdatabase.jpg}
-\caption{Graphikdatenbank Beispiel \protect \footnotemark}
+\caption[Graphikdatenbank Beispiel]{Graphikdatenbank Beispiel \protect \footnotemark}
 \end{figure}
 \footnotetext{\url{https://entwickler.de/online/datenbanken/wunderbare-welt-der-graphen-114728.html}, letzter Zugriff: 9. Februar 2021}
 
 \noindent
-\subparagraph{Dokumentenorientierte Datenbanken}
+\hangindent1cm
+\textbf{Dokumentenorientierte Datenbanken:}
 Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. 
 Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. 
 Dokumente können weitere Dokumente als Attribut oder in einer Liste einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  
-In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML. 
+In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML.\\
 
 \begin{lstlisting}
 {
@@ -36,57 +38,58 @@ In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Da
 \end{lstlisting}
 
 \noindent
-\subparagraph{Key-Value-Datenbanken}
-Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. 
+\hangindent1cm
+\textbf{Key-Value-Datenbanken:}
+Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. %(siehe Tabelle \ref{tab:key_value_db}).
 
-\begin{table}[tbt]
-\caption{Key-Value Beispiel}
-\begin{center}
-    \begin{tabular}{ l  l }
-	\toprule
-    \textbf{Key} & \textbf{Value} \\
-    \midrule
-    K1 & AAA,BBB,CCC\\
-    
-
-    K2 &  AAA,BBB\\
-
-
-	K3 & AAA,DDD\\
-
-
-    K4 & BBB,2,01/01/2015 \\
-	\bottomrule
-    \end{tabular}
-\end{center}
-\end{table}
+%\begin{table}[tbt]
+%\caption{Key-Value Beispiel}
+%\begin{center}
+%    \begin{tabular}{ l  l }
+%	\toprule
+%    \textbf{Key} & \textbf{Value} \\
+%    \midrule
+%    K1 & AAA,BBB,CCC\\
+%    
+%
+%    K2 &  AAA,BBB\\
+%
+%
+%	K3 & AAA,DDD\\
+%
+%
+%    K4 & BBB,2,01/01/2015 \\
+%	\bottomrule
+%    \end{tabular}
+%\end{center}
+%\label{tab:key_value_db}
+%\end{table}
 
 \noindent
-\subparagraph{Spaltenorientierte Datenbanken}
+\hangindent1cm
+\textbf{Spaltenorientierte Datenbanken:}
 Spaltenorientierte Datenbanken, oder auch „Wide-Column“-Datenbanken genannt, speichern ihre Datensätze in Form von Tabellen.  Sie wirken zunächst den Tabellen der relationalen Datenbanksysteme sehr ähnlich, unterscheiden sich grundlegend aber in der Speicherung der Daten, die nicht zeilenorientiert, sondern spaltenorientiert abgelegt werden. 
-
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=8cm, height = 3cm]{images/SpaltenorientiereDatenbank.png}
-\caption{Spaltenorientierte Datenbank Beispiel \cite{DB1.5]}}
-\end{figure}
-
-Nachfolgend ist die zeilen- und die spaltenorientierte Speicherung dargestellt. Zeilenorientierung bei der Speicherung bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus mehreren Spalten benötigt werden.
+Die zeilen- und die spaltenorientierte Speicherung ist in Abbildung \ref{fig:spalten_zeilen_speicher} dargestellt. Zeilenorientierung bei der Speicherung bietet vorallem Vorteile bei Abfragen, bei denen Informationen aus mehreren Spalten benötigt werden.
 Spaltenorientierung dagegen eignet sich sehr gut für die Auswertung von Aggregaten.
 \newline
 
-
-
-\begin{figure}[htb]
-\centering
-\includegraphics[width=15cm]{images/zeilenspaltenorientiert.png}
-\caption{Zeilen- und spaltenorientierte Speicherung \protect \footnotemark }
+\begin{figure}[tbt]
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=8cm, height = 3cm]{images/SpaltenorientiereDatenbank.png}
+		\caption{}
+		\label{fig:spalten_zeilen_speicher}
+	\end{subfigure}
+	\newline
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=15cm]{images/zeilenspaltenorientiert.png}
+		\caption{ }
+		\label{fig:spalten_zeilen}
+	\end{subfigure}
+	\caption[(a) Spaltenorientierte Datenbank Beispiel (b) Zeilen- und spaltenorientierte Speicherung]{(a) Spaltenorientierte Datenbank Beispiel (b) Zeilen- und spaltenorientierte Speicherung \protect \footnotemark}
 \end{figure}
 \footnotetext{\url{https://www.axiom-net.de/die-datenbank-hana-ist-spaltenorientiert}, letzter Zugriff: 9. Februar 2021}
-
-
-
 
 \subsubsection{BASE}
 TODO
@@ -96,12 +99,12 @@ TODO
 Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Jahres 2000 die Annahme auf, dass ein System nicht gleichzeitig die drei Kerneigenschaften Consistency (Konsistenz), Availability (Verfügbarkeit) und Partition Tolerance (Ausfalltoleranz) abdecken kann [NoSQL 1.6]. 
 \newline
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=8cm, height=6.5cm]{images/Visualization-of-CAP-theorem.png}
-\caption{Visualization-of-CAP-theorem \protect \footnotemark}
+\caption[Visualization-of-CAP-theorem]{Visualization-of-CAP-theorem \protect \footnotemark}
 \end{figure}
-\footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff 10. Februar 2021}
+\footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff: 10. Februar 2021}
 
 \noindent
 Die \textbf{Konsistenz (C)} beschreibt, dass Datenzustände, die in einem verteilten System geändert  werden, in jedem zusammenhängenden System gleich sein müssen. Der Zustand der Daten soll somit im gesamten System übereinstimmen. Ein System, das einen ununterbrochenen Betrieb und eine akzeptable Antwortzeit aufweisen kann, besitzt eine hohe \textbf{Verfügbarkeit (A)}. Die \textbf{Ausfalltoleranz (P)} steht für ein Verhalten, bei dem es bei Ausfallen eines Bestandteiles innerhalb eines Systems  zu keinem Gesamtausfall kommt.
@@ -109,4 +112,3 @@ Die \textbf{Konsistenz (C)} beschreibt, dass Datenzustände, die in einem vertei
 \newpage
 \subsubsection{MongoDB}
 \input{Theoretische_Grundlagen/Grundlagen_MongoDB}
-\newpage

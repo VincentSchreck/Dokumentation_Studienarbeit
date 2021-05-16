@@ -1,19 +1,25 @@
 \label{sec:mobile_development}
-Mobile Geräte sind heutzutage ein sehr großer Teil unseres Tagesablaufs. Durchschnittlich verbringen wir 3:54 Stunden pro Tag an mobilen Geräten (hier bezogen aus Bürger der USA). Die meiste Zeit hiervon wird in Apps (ca. 90\%). \footnote{\url{https://www.emarketer.com/content/us-time-spent-with-mobile-2019}, zuletzt aufgerufen: 26.02.2021}
-Laut Cisco wird dieser Markt sich jedoch nicht nur auf Industrieländer beruhen, sondern bis 2023 sollen weltweit 71\% der Bevölkerung mobile Konnektivität haben. \cite{cisco2020}
+Mobile Geräte sind heutzutage ein sehr großer Teil unseres Tagesablaufs. Durchschnittlich verbringen wir 3:54 Stunden pro Tag an mobilen Geräten (hier bezogen aus Bürger der USA). Die meiste Zeit hiervon wird in Apps (ca. 90\%). \footnote{\url{https://www.emarketer.com/content/us-time-spent-with-mobile-2019}, letzter Zugriff: 26. Februar 2021}
+Laut Cisco wird dieser Markt sich jedoch nicht nur auf Industrieländer beruhen, sondern bis 2023 sollen weltweit 71\% der Bevölkerung mobile Konnektivität haben \cite{cisco2020}.
 Diese Entwicklung forcierte viele Firmen immer mehr ihre Anwendungen auch \textit{mobile ready} zu gestalten. Dies kann man bspw. deutlich bei der Anpassung vieler Webseiten an Mobile Seiten- und Größenverhältnisse oder auch dem Anbieten von \textit{Apps}, welche bereits für Desktop o.ä. verfügbar waren, erkennen. \\
 
 \noindent
 Daher ist es für die Wirtschaft und Entwicklung gleichermaßen wichtig sich ständig weiterzuentwickeln und sich nicht auf (kosten-) ineffizienten Entwicklungsprozessen auszuruhen. Dabei bieten jährliche, wenn nicht sogar halbjährliche Design- und Performanceänderungen von den Geräten selbst oder der Betriebssysteme Herausforderungen an die mobilen Anwendungen - \textit{apps} - und gleichzeitig an deren Programmierumgebung. Trotz einer riesigen Auswahl an \textit{Apps} lassen sich diese allgemein in drei Kategorien eingliedern: Plattformspezifische native Anwendungen, adaptive Webanwendungen und plattformübergreifende Anwendungen.
 
 \subsubsection{Begriffe}
-\subparagraph{Eine Plattform} besteht aus der Hardware (System und zusätzlicher Peripherie, wie Sensoren oder Aktoren), dem Betriebssystem, den spezifischen \textit{Software Development Kits (SDK)} und den jeweiligen Basisbibliotheken. 
+\noindent
+\hangindent1cm
+\textbf{Eine Plattform:} besteht aus der Hardware (System und zusätzlicher Peripherie, wie Sensoren oder Aktoren), dem Betriebssystem, den spezifischen \textit{Software Development Kits (SDK)} und den jeweiligen Basisbibliotheken. 
 Zusammen bietet eine Plattform die Grundlage um Software für sie zu entwickeln.
 
-\noindent\subparagraph{Ein \textit{Framework}} definiert eine Architektur für Anwendungen und stellt Komponenten bereit, mit welchen das Entwickeln einer Anwendung erleichtert sein soll. \cite{johnson1988}
+\noindent
+\hangindent1cm
+\textbf{Ein Framework:} definiert eine Architektur für Anwendungen und stellt Komponenten bereit, mit welchen das Entwickeln einer Anwendung erleichtert sein soll \cite{johnson1988}.
 Ein platt"-form"-über"-grei"-fendes Framework muss somit Anwendungscode für mehrere Plattformen wiederverwenden, jedoch müssen auch plattformspezifische Funktionen, wie Architektur oder Benutzeroberflächen API, bereitgestellt werden. Mehr dazu in Kapitel \ref{plattformuebergreifende_anwendungen}.
 
-\subparagraph{Eine mobile Anwendung} ist eine Anwendung, geschrieben für eine Plattform eines mobilen Endgerätes, welche die jeweiligen Features nutzen könnte - dazu zählen Kamera(s), Beschleunigungssensoren oder auch \textit{Global Positioning System (GPS)}. Webseiten als solches sind demnach keine mobilen Anwendungen.
+\noindent
+\hangindent1cm
+\textbf{Eine mobile Anwendung:} ist eine Anwendung, geschrieben für eine Plattform eines mobilen Endgerätes, welche die jeweiligen Features nutzen könnte - dazu zählen Kamera(s), Beschleunigungssensoren oder auch \textit{Global Positioning System (GPS)}. Webseiten als solches sind demnach keine mobilen Anwendungen.
 
 
 \subsubsection{Plattformspezifische native Apps}
@@ -136,11 +142,19 @@ Allgemein bietet das Framework die Möglichkeit plattformübergreifende Apps fü
 Grundlegend wurde React Native als Plattform-agnostisch designt. Entwickler schreiben also plattformunabhängigen JavaScript React Code, während das Framework den erstellten React Baum in Plattform-spezifischen Code umschreibt. Hierbei wurde 2013 (noch intern) die Web-Technologie React mit nativen Plattformen (nur interne) vereint, jedoch war dieses Design aufgrund eines einzigen Threads sehr langsam. Um dies zu verbessern basierte das Framework lange Zeit auf drei unterschiedlichen Threads, welche über eine Brücke verbunden sind.
 
 \begin{figure}[tbt]
-	\begin{center}
+	\begin{subfigure}{\textwidth}
+		\centering
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/reactnative_architecture_old.png}
-	\end{center}
-	\caption[Alte Architektur von React Native]{Alte Architektur von React Native \protect \footnotemark}
-	\label{fig:reactnative_architecture_old}
+		\caption{}
+		\label{fig:reactnative_architecture_old}
+	\end{subfigure}\\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/reactnative_architecture.png}
+		\caption{}
+		\label{fig:reactnative_architecture}
+	\end{subfigure}
+	\caption[Alte und neue Architektur von React Native]{(a) Alte und (b) neue Architektur von React Native \protect \footnotemark}
 \end{figure}
 \footnotetext{Quelle: \url{https://litslink.com/blog/new-react-native-architecture}, letzter Zugriff: 15. April 2021}
 
@@ -153,15 +167,6 @@ Grundlegend wurde React Native als Plattform-agnostisch designt. Entwickler schr
 \noindent
 Ein Hauptproblem dieses Ansatzes ist, dass die Brücke grundlegend eine asynchrone Warteschlange ist, da der JS Thread und der native Thread unabhängig voneinander arbeiten. Zusätzlich werden während der gesamten Datenübertragung die Daten im JSON Format serialisiert und deserialisiert .
 Daher kann es zu Performance-Einbrüchen und somit zu schlechter Nutzererfahrung, durch bspw. Eingabeverzögerung, kommen.
-
-\begin{figure}[tbt]
-	\begin{center}
-		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/reactnative_architecture.png}
-	\end{center}
-	\caption[Neue Architektur von React Native]{Neue Architektur von React Native \protect \footnotemark}
-	\label{fig:reactnative_architecture}
-\end{figure}
-\footnotetext{Quelle: \url{https://litslink.com/blog/new-react-native-architecture}, letzter Zugriff: 15. April 2021}
 
 \noindent
 Nach der Ankündigung 2018 veröffentlichte Facebook im Juli 2020 die neue Architektur. Mit ihr wurde der Bottleneck (die Brücke) ersetzt durch das JavaScript Interface.
@@ -235,8 +240,7 @@ export default Cafe;
 \paragraph{State}
 Für eine interaktive Benutzeroberfläche fehlt jedoch noch das Kernprinzip eines deklarativen UI. Ein sogenannter \textit{State} wird verwendet um die Daten, welche sich mit der Zeit oder über Nutzerinteraktion ändern, auf der Oberfläche anzuzeigen. Dieses Konzept wird ebenfalls von dem zweiten Framework verwendet und ist in Abbildung \ref{fig:flutter_state} visualisiert.\\
 \\
-Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion einen \textit{State} hinzuzufügen. Hooks sind Funktionen, welche es Entwicklern ermöglichen sich in React Features einzuhaken. Bisher wurde dies über Klassenkomponenten ermöglicht, wodurch es jedoch komplizierter ist \textit{stateful logic} zwischen Komponenten wiederzuverwenden. Daher entkoppelt man diese Logik von den Komponenten und erlaubt unter anderem das separate Testen.
-
+Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion einen \textit{State} hinzuzufügen. Hooks sind Funktionen, welche es Entwicklern ermöglichen sich in React Features einzuhaken. Bisher wurde dies über Klassenkomponenten ermöglicht, wodurch es jedoch komplizierter ist \textit{stateful logic} zwischen Komponenten wiederzuverwenden. Daher entkoppelt man diese Logik von den Komponenten und erlaubt unter anderem das separate Testen.\\
 
 \begin{lstlisting}[caption=State mit \texttt{useState} Hook, label=lst:reactnative_state]
 	import React, { useState } from "react";
@@ -276,7 +280,7 @@ Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion
 \end{lstlisting}
 
 \noindent
-Im Beispiel \ref{lst:reactnative_state} wird in Zeile 6 der \texttt{useState}-Hook verwendet. Diese Funktion erzeugt eine State-Variable mit dem Initialwert \texttt{true} und erstellt gleichzeitig eine Funktion zur Änderung des States (\texttt{setIsHungry}). Daraufhin wird, abhängig ob die Katze hungrig ist, dies im Text angezeigt, der Knopf zum füttern (de-)aktiviert bzw. auch hier den Text verändert. \cite{reactnative2021}\\
+Im Beispiel \ref{lst:reactnative_state} wird in Zeile 6 der \texttt{useState}-Hook verwendet. Diese Funktion erzeugt eine State-Variable mit dem Initialwert \texttt{true} und erstellt gleichzeitig eine Funktion zur Änderung des States (\texttt{setIsHungry}). Daraufhin wird, abhängig ob die Katze hungrig ist, dies im Text angezeigt, der Knopf zum füttern (de-)aktiviert bzw. auch hier den Text verändert \cite{reactnative2021}.\\
 
 \subsubsection{Flutter}
 \label{flutter}
@@ -302,13 +306,19 @@ Während der Entwicklung werden Flutter-Apps in einer virtuellen Maschine (VM) g
 \end{displayquote}
 
 \noindent
-Grundlegend ist das Framework in drei Prozesseinheiten gegliedert. Diese bestehen wiederum jeweils aus, für sie charakteristischen APIs und Bibliotheken:
+Grundlegend ist das Framework in drei Prozesseinheiten gegliedert. Diese bestehen wiederum jeweils aus, für sie charakteristischen APIs und Bibliotheken:\\
 
-\begin{itemize}
-	\item \textit{Flutter embedder}: Der Einstiegspunkt in die jeweilige Plattform. Er koordiniert Zugriffe auf Services des Betriebssystems; er ist also zuständig für bspw. die Kommunikation mit dem Input Method Editor (IME) und den Lifecycle Events der App. Daher ist der Embedder in der, von der Plattform unterstützten Programmiersprache geschrieben: derzeit wird Java und C++ für Android, Objective-C/Objective-C++ für iOS und macOS, und C++ für Windows und Linux verwendet.
-	\item \textit{Flutter Engine}: Der Kern von Flutter, geschrieben hauptsächlich in C und C++, ist die \textit{low-level} Implementierung der Flutter Kern Programmierschnittstelle (API). Daher ist sie zuständig für das graphische Darstellen (Rasterisierung) des Codes sobald ein neuer \textit{Frame} angezeigt werden muss. Im Flutter Framework wird die \textit{Engine} als dart:ui Bibliothek offengelegt - der zugrundeliegende C++ Code wird in Dart Klassen eingefügt. 
-	\item \textit{Flutter Framework}: Das Framework, mit welchem der Entwickler schlussendlich meistens arbeiten wird. Es ist in Dart geschrieben und bietet sogenannte \textit{Layer} für Animationen, Layout und Widgets. Widgets werden von Flutter als Einheit der Komposition von Benutzeroberflächen verwendet und sind als einzelne Bausteine zu verstehen, welche zusammengefügt ein Objekt oder sogar einen kompletten Bildschirm ergeben.
-\end{itemize}
+\noindent
+\hangindent1cm
+\textbf{Flutter embedder}: Der Einstiegspunkt in die jeweilige Plattform. Er koordiniert Zugriffe auf Services des Betriebssystems; er ist also zuständig für bspw. die Kommunikation mit dem Input Method Editor (IME) und den Lifecycle Events der App. Daher ist der Embedder in der, von der Plattform unterstützten Programmiersprache geschrieben: derzeit wird Java und C++ für Android, Objective-C/Objective-C++ für iOS und macOS, und C++ für Windows und Linux verwendet.\\
+
+\noindent
+\hangindent1cm
+\textbf{Flutter Engine}: Der Kern von Flutter, geschrieben hauptsächlich in C und C++, ist die \textit{low-level} Implementierung der Flutter Kern Programmierschnittstelle (API). Daher ist sie zuständig für das graphische Darstellen (Rasterisierung) des Codes sobald ein neuer \textit{Frame} angezeigt werden muss. Im Flutter Framework wird die \textit{Engine} als dart:ui Bibliothek offengelegt - der zugrundeliegende C++ Code wird in Dart Klassen eingefügt.\\
+
+\noindent
+\hangindent1cm
+\textbf{Flutter Framework}: Das Framework, mit welchem der Entwickler schlussendlich meistens arbeiten wird. Es ist in Dart geschrieben und bietet sogenannte \textit{Layer} für Animationen, Layout und Widgets. Widgets werden von Flutter als Einheit der Komposition von Benutzeroberflächen verwendet und sind als einzelne Bausteine zu verstehen, welche zusammengefügt ein Objekt oder sogar einen kompletten Bildschirm ergeben.\\
 
 \noindent
 Bei der Entwicklung mit Flutter wird ein Baum von Widgets erzeugt, welcher als Bauplan der Applikation angesehen werden kann. Nach diesem Plan wird mithilfe von States der einzelnen Widgets schlussendlich das User Interface (UI) gerendert \cite{flutter2021}.
@@ -317,10 +327,10 @@ Bei der Entwicklung mit Flutter wird ein Baum von Widgets erzeugt, welcher als B
 	\begin{center}
 		\includegraphics[scale=0.25]{Theoretische_Grundlagen/images/flutter_architektur.png}
 	\end{center}
-	\caption{Bibliotheken und Ebenen der Flutter Plattform \protect \footnotemark}
+	\caption[Bibliotheken und Ebenen der Flutter Plattform]{Bibliotheken und Ebenen der Flutter Plattform \protect \footnotemark}
 	\label{fig:flutter_plattform}
 \end{figure}
-\footnotetext{Quelle: \url{https://github.com/flutter/flutter}}
+\footnotetext{Quelle: \url{https://github.com/flutter/flutter}, letzter Zugriff: 17. März 2021}
 
 \paragraph{Dart}
 Während der Entwicklung von Flutter standen sicherlich mehrere Sprachen zur Auswahl: \\Wie in Kapitel \ref{plattformuebergreifende_anwendungen} gelernt, gibt es viele unterschiedliche Ansätze mit beispielsweise webbasierten Sprachen wie JavaScript, mit nativen Sprachen wie Java oder Swift, oder auch mit anderen objektorientierten Sprachen wie C\#. Wieso wurde also genau Dart als Programmiersprache und Runtime ausgewählt?\\
@@ -346,16 +356,19 @@ OEM Widgets, also Widgets von und für eine spezifische Plattform werden von Flu
 	\begin{center}
 		\includegraphics[scale=0.5]{Theoretische_Grundlagen/images/flutter_widget_tree.png}
 	\end{center}
-	\caption{Widget Baum einer beispielhaften Anwendung \protect \footnotemark}
+	\caption[Widget Baum einer beispielhaften Anwendung]{Widget Baum einer beispielhaften Anwendung \protect \footnotemark}
 	\label{fig:flutter_widget_tree}
 \end{figure}
-\footnotetext{Quelle: \url{https://flutter.dev/docs/development/ui/layout}}
+\footnotetext{Quelle: \url{https://flutter.dev/docs/development/ui/layout}, letzter Zugriff: 21. März 2021}
 	
 
 \paragraph{States}
-Flutter ist deklarativ - das bedeutet, die Benutzeroberfläche wird anhand von dem aktuellen \textit{State} der App erzeugt. Im Gegensatz dazu muss der Entwickler beim imperativen Stil die Übergänge der einzelnen \textit{States}. Hier wird dies durch das Framework gelöst.
+Flutter ist deklarativ - das bedeutet, die Benutzeroberfläche wird anhand von dem aktuellen \textit{State} der App erzeugt. 
+Im Gegensatz dazu muss der Entwickler beim imperativen Stil die Übergänge der einzelnen \textit{States}. 
+Die Abbildung \ref{fig:flutter_state} stellt eine deklarative Benutzeroberfläche dar. 
+Hier wird dies durch das Framework gelöst. 
 	
-\begin{figure}[H]
+\begin{figure}[tbt]
 	\begin{center}
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/flutter_state.png}
 	\end{center}

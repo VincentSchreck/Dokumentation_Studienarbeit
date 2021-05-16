@@ -6,15 +6,15 @@ Solche Filtersysteme, auch Recommendation System genannt, nutzt bisher gesammelt
 Ein sogenannter \textit{Candidate Generator} ist hierbei ein Recommendation System, welches die Menge $M$ als Eingabe erhält und für jeden Nutzer eine Menge $N$ ausgibt. Hierbei umfasst $M$ alle Objekte und gleichzeitig gilt $N \subset M$. 
 
 \noindent
-Die Bestimmung einer solchen Menge $N$ beruht grundlegend auf zwei Informationsarten. Erstens die sogenannten Nutzer-Objekt Interaktionen, also beispielsweise Bewertungen oder auch Verhaltensmuster; Und zweitens die Attributwerte von jeweils Nutzer oder Item, also beispielsweise Vorlieben von Nutzern oder Eigenschaften von Items.\cite{aggarwal2016}
+Die Bestimmung einer solchen Menge $N$ beruht grundlegend auf zwei Informationsarten. Erstens die sogenannten Nutzer-Objekt Interaktionen, also beispielsweise Bewertungen oder auch Verhaltensmuster; Und zweitens die Attributwerte von jeweils Nutzer oder Item, also beispielsweise Vorlieben von Nutzern oder Eigenschaften von Items \cite{aggarwal2016}.
 Systeme, welche zum Bewerten ersteres benutzen, werden \textit{collaborative filtering} Modelle genannt. Andere, welche zweiteres verwenden, werden \textit{content-based filtering} Modelle genannt. Wichtig hierbei ist jedoch, dass \textit{content-based filtering} Modelle ebenfalls Nutzer-Objekt Interaktionen (v.a. Bewertungen) verwenden können, jedoch bezieht sich dieses Modell nur auf einzelne Nutzer - \textit{collaborative filtering} basiert auf Verhaltensmustern von allen Nutzern bzw. allen Objekten.
 
 \noindent
 Ein solches Recommendation System kann im einfachsten Fall wie in \ref{Recommendation Matrix} als Matrix dargestellt werden.
 
 \begin{table}[tbt]
-	\caption{Nutzer-Item Matrix mit Bewertungen. Jede Zelle $r_{u;i}$ steht hierbei für die Bewertung des Nutzers $u$ an der Stelle $i$}
 	\centering
+	\caption{Nutzer-Item Matrix mit Bewertungen. Jede Zelle $r_{u;i}$ steht hierbei für die Bewertung des Nutzers $u$ an der Stelle $i$}
 	\label{Recommendation Matrix}
 	\begin{tabular}{lcllllll}
 		& \multicolumn{7}{c}{Items}                                                                                                                                                        \\
@@ -51,13 +51,13 @@ Nimmt man an, Film 1 und Film 2 haben ähnliche Eigenschaften (gleiches Genre, g
 Das System ist also unabhängig von anderen Nutzerdaten, da die Vorschläge nur auf Präferenzen eines einzelnen Nutzers basieren. Dies bietet im Hinblick auf eine App auch gute Skalierungs"-möglich"-keiten. Zudem kann auf Nischen-Präferenzen gut eingegangen werden, da nicht mit anderen Nutzerdaten verglichen wird, sondern nur ein Nutzer für sich betrachtet wird.
 
 \noindent
-Gleichzeitig schlagen \textit{content-based filtering} Systeme aber eher offensichtliche Objekte vor, da Nutzer oft unzureichend genaue "Beschreibungen", also Vorlieben mit sich bringen. Dadurch, dass nur basierend auf Schlüsselwörter neue Objekte vorgeschlagen und andere Nutzerwertungen nicht miteinbezogen werden, sind die Vorschläge sehr wahrscheinlich oftmals ähnlich bis gleich - man "verfängt" sich quasi in eine Richtung.\cite{aggarwal2016}
+Gleichzeitig schlagen \textit{content-based filtering} Systeme aber eher offensichtliche Objekte vor, da Nutzer oft unzureichend genaue "Beschreibungen", also Vorlieben mit sich bringen. Dadurch, dass nur basierend auf Schlüsselwörter neue Objekte vorgeschlagen und andere Nutzerwertungen nicht miteinbezogen werden, sind die Vorschläge sehr wahrscheinlich oftmals ähnlich bis gleich - man "verfängt" sich quasi in eine Richtung \cite{aggarwal2016}.
 
 \subsubsection{Collaborative Filtering}
 Unter \textit{collaborative filtering} versteht man das Betrachten von Ähnlichkeiten im Verhalten von Nutzern anhand von Bewertungen und Prä"-fer"-enzen, bzw. anhand der Ähn"-lich"-keiten von Objekten.
 
 \noindent
-Generell unterscheidet man in zwei Typen:\cite{aggarwal2016}
+Generell wird bei \cite{aggarwal2016} in zwei Typen unterschieden:
 
 \begin{enumerate}		
 	\item \textit{Memory-based Methoden}: Es wird, wie oben beschrieben, aus gesammelten Daten Ähn"-lich"-keit herausgearbeitet und Nutzer-Objekt Kombinationen durch eben diese vorhergesagt. Daher wird dieser Typ auch \textit{neighborhood-based collaborative filtering} genannt. Man unterscheidet weiter in:

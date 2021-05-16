@@ -3,7 +3,6 @@
 \usepackage[german]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{setspace}
@@ -11,8 +10,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{listings}
-\renewcommand*{\lstlistlistingname}{Quellcodeverzeichnis}
+\usepackage[hyphens]{url}
 \usepackage{icomma}
 \usepackage{float}
 \usepackage{pdfpages}
@@ -103,6 +101,8 @@
 \newpage
 \listoffigures
 \newpage
+\listoftables
+\newpage
 \lstlistoflistings
 \newpage
 \pagenumbering{arabic}
@@ -161,7 +161,7 @@
 % Neue Section, neue Seite
 \clearpage
 \section{Planung}
-\input{Konzept/Konzept.tex}
+\input{Konzept.tex}
 
 
 % Neue Section, neue Seite
@@ -176,21 +176,12 @@
 \input{Backend_Implementierung/Backend.tex}
 
 \newpage
-\section{Frontend-Implementierung}
-\subsection{Swipe/Aussuchen/Voting}
-\subsection{Matches/Chat}		
-\subsection{Film-/Serienvorschläge}
-\subsection{Gespeicherte Filme/Filmliste}
-\subsection{Barrierefreiheit}
-\label{sec:barrierefreiheit}
-\input{Barrierefreiheit/BF-Einleitung.tex}
-\subsubsection{Barrierefreiheit in mobilen Anwendungen}
-\input{Barrierefreiheit/BF-Apps.tex}
-\subsubsection{Barrierefreiheit in Filmen und Serien}
-\input{Barrierefreiheit/BF-Filme.tex}
-\subsubsection{Barrierefreiheit bei StreamSwipe}
-\label{sec:bf-streamswipe}
-\input{Barrierefreiheit/BF-Streamswipe.tex}
+%\section{Frontend-Implementierung}
+%\subsection{Swipe/Aussuchen/Voting}
+%\subsection{Matches/Chat}		
+%\subsection{Film-/Serienvorschläge}
+%\subsection{Gespeicherte Filme/Filmliste}
+
 \clearpage
 
 % Neue Section, neue Seite
@@ -219,6 +210,16 @@
 \subsubsection{Benutzerprofil}
 \label{sec:benutzerprofil}
 \input{Benutzeroberfläche/UI_Profilseite.tex}
+\subsection{Barrierefreiheit}
+\label{sec:barrierefreiheit}
+\input{Barrierefreiheit/BF-Einleitung.tex}
+\subsubsection{Barrierefreiheit in mobilen Anwendungen}
+\input{Barrierefreiheit/BF-Apps.tex}
+\subsubsection{Barrierefreiheit in Filmen und Serien}
+\input{Barrierefreiheit/BF-Filme.tex}
+\subsubsection{Barrierefreiheit bei StreamSwipe}
+\label{sec:bf-streamswipe}
+\input{Barrierefreiheit/BF-Streamswipe.tex}
 
 
 \clearpage
@@ -291,7 +292,7 @@ Ausblick:
 
 \bibitem[Prot3]{wikiDodModell} Wikipedia. DoD-Schichtenmodell. \url{https://de.wikipedia.org/wiki/DoD-Schichtenmodell}. letzter Zugriff: 06.04.2021
 
-\bibitem[Prot4]{ekOSI} Elektronik Kompendium. OSI-Schichtenmodell. \url{https://www.elektronik-kompendium.de/sites/kom/0301201.htm}, letzter Zugriff 06.04.2021
+\bibitem[Prot4]{ekOSI} Elektronik Kompendium. OSI-Schichtenmodell. \url{https://www.elektronik-kompendium.de/sites/kom/0301201.htm}, letzter Zugriff: 06. April 2021
 
 %
 %
@@ -304,24 +305,24 @@ Ausblick:
 
 \bibitem[JS2]{JS1.05} Philip Ackerman (2018). JavaScript Das umfassende Handbuch. Rheinwerk Computing. Pp 45. ISBN 978-3-8362-5696-4
 
-\bibitem[JS3]{JS1.06} Ingo Pakalski, 15 Jahre WWW: Die Browserkriege - Golem.de. \url{http://www.golem.de/0805/59377.html}, letzter Zugriff 03.04.2021
+\bibitem[JS3]{JS1.06} Ingo Pakalski, 15 Jahre WWW: Die Browserkriege - Golem.de. \url{http://www.golem.de/0805/59377.html}, letzter Zugriff: 03. April 2021
 
 \bibitem[JS4]{JS1.07} Ben Ilegbodu, History of ECMAScript.
-\url{https://www.benmvp.com/blog/learning-es6-history-of-ecmascript/}, letzter Zugriff 03.04.2021
+\url{https://www.benmvp.com/blog/learning-es6-history-of-ecmascript/}, letzter Zugriff: 03. April 2021
 
-\bibitem[JS5]{JS1.08} ECMA International, ECMAScript®2020 Language Specification \url{https://www.ecma-international.org/publications-and-standards/standards/ecma-262/},letzter Zugriff 03.04.2021
+\bibitem[JS5]{JS1.08} ECMA International, ECMAScript®2020 Language Specification \url{https://www.ecma-international.org/publications-and-standards/standards/ecma-262/},letzter Zugriff: 03. April 2021
 
-\bibitem[JS6]{JS1.09} Paul Krill, ECMAScript 2021 spec for JavaScript nears the finish line. \url{https://www.infoworld.com/article/3613948/ecmascript-2021-spec-for-javascript-nears-the-finish-line.html}, letzter Zugriff 03.04.2021
+\bibitem[JS6]{JS1.09} Paul Krill, ECMAScript 2021 spec for JavaScript nears the finish line. \url{https://www.infoworld.com/article/3613948/ecmascript-2021-spec-for-javascript-nears-the-finish-line.html}, letzter Zugriff: 03. April 2021
 
 \bibitem[JS7]{JS1.091} David Flanagan, JavaScript The Definitive Guide,  Seite 1, ISBN 858-1-1222-6666-3
 
 \bibitem[JS8]{JS1.1} David Flanagan, JavaScript The Definitive Guide,  Seite 2, ISBN 858-1-1222-6666-3
 
-\bibitem[JS9]{JS1.2} Wikipedia, JavaScript, \url{https://en.wikibooks.org/wiki/JavaScript/Relation_to_other_languages}, letzter Zugriff 03.04.2021
+\bibitem[JS9]{JS1.2} Wikipedia, JavaScript, \url{https://en.wikibooks.org/wiki/JavaScript/Relation_to_other_languages}, letzter Zugriff: 03. April 2021
 
-\bibitem[JS10]{JS1.29} Programiz, JavaScript object properties, \url{https://www.programiz.com/javascript/object}, letzter Zugriff 03.04.2021
+\bibitem[JS10]{JS1.29} Programiz, JavaScript object properties, \url{https://www.programiz.com/javascript/object}, letzter Zugriff: 03. April 2021
 
-\bibitem[JS11]{JS1.3} Dipl.-Ing. (FH) Stefan Luber, Stephan Augsten. \url{https://www.dev-insider.de/was-ist-javascript-a-586580/}, letzter Zugriff 03.04.2021
+\bibitem[JS11]{JS1.3} Dipl.-Ing. (FH) Stefan Luber, Stephan Augsten. \url{https://www.dev-insider.de/was-ist-javascript-a-586580/}, letzter Zugriff: 03. April 2021
 
 \bibitem[JS12]{JS1.4} Philip Ackerman, JavaScript Das umfassende Handbuch (2018), Rheinwerk Computing, Seite 46ff, ISBN 978-3-8362-5696-4
 
@@ -336,32 +337,32 @@ Ausblick:
 
 \bibitem[Node1]{Node1.05} Basarat Ali Syed , Beginning Node.js 2014 Seite 23ff. ISBN 978-1-4842-0187-9
 
-\bibitem[Node2]{Node1.1} StrongLoop, What Makes Node.js Faster Than Java? \url{http://strongloop.com/strongblog/node-js-is-faster-than-java/}, letzter Zugriff 03. April 2021
+\bibitem[Node2]{Node1.1} StrongLoop, What Makes Node.js Faster Than Java? \url{http://strongloop.com/strongblog/node-js-is-faster-than-java/}, letzter Zugriff: 03. April 2021
 
 \bibitem[Node3]{Node1.2} Philip Ackerman (2018). JavaScript Das umfassende Handbuch. Rheinwerk Computing. Seite 868ff. ISBN 978-3-8362-5696-4
 
-\bibitem[Node4]{Node1.21} Node.js documentation. \url{https://nodejs.org/api/modules.html#modules_caching},letzter Zugriff Stand 05.04.2021
+\bibitem[Node4]{Node1.21} Node.js documentation. \url{https://nodejs.org/api/modules.html#modules_caching},letzter Zugriff: Stand 05. April 2021
 
-\bibitem[Node5]{Node1.3} Wikipedia. NPM. \url{https://de.wikipedia.org/wiki/Npm_(Software)}, letzter Zugriff 05.04.2021
+\bibitem[Node5]{Node1.3} Wikipedia. NPM. \url{https://de.wikipedia.org/wiki/Npm_(Software)}, letzter Zugriff: 05. April 2021
 
-\bibitem[Node6]{Node1.4} Ahmad Nassri, So long, and thanks for all the packages! \url{https://blog.npmjs.org/post/615388323067854848/so-long-and-thanks-for-all-the-packages.html}, letzter Zugriff 03.04.2021
+\bibitem[Node6]{Node1.4} Ahmad Nassri, So long, and thanks for all the packages! \url{https://blog.npmjs.org/post/615388323067854848/so-long-and-thanks-for-all-the-packages.html}, letzter Zugriff: 03. April 2021
 
 \bibitem[Node7]{Node1.5} Alexander Neuman, Node.js 0.6.3 integriert npm
-\url{https://www.heise.de/developer/meldung/Node-js-0-6-3-integriert-npm-1386141.html},letzter Zugriff 03.04.2021
+\url{https://www.heise.de/developer/meldung/Node-js-0-6-3-integriert-npm-1386141.html},letzter Zugriff: 03. April 2021
 
-\bibitem[Node8]{Node1.6} https://expressjs.com/de/, letzter Zugriff Stand 04.04.2021
+\bibitem[Node8]{Node1.6} https://expressjs.com/de/, letzter Zugriff: Stand 04. April 2021
 
-\bibitem[Node9]{Node1.8} \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction}, letzter Zugriff 04.04.2021
+\bibitem[Node9]{Node1.8} \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction}, letzter Zugriff: 04. April 2021
 
 \bibitem[Node10]{Node1.9} Philip Ackerman (2018). JavaScript Das umfassende Handbuch. Rheinwerk Computing. Seite 895ff. ISBN 978-3-8362-5696-4
 
-\bibitem[Node11]{Node2.0} Lee Brandt, Build and Understand Express Middleware through Examples \url{https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples}, letzter Zugriff 04.04.2021
+\bibitem[Node11]{Node2.0} Lee Brandt, Build and Understand Express Middleware through Examples \url{https://developer.okta.com/blog/2018/09/13/build-and-understand-express-middleware-through-examples}, letzter Zugriff: 04. April 2021
 
-\bibitem[Node12]{Node2.1} Express, API-Dokumentation. \url{https://expressjs.com/de/api.html}, letzter Zugriff Stand 05.04.2021
+\bibitem[Node12]{Node2.1} Express, API-Dokumentation. \url{https://expressjs.com/de/api.html}, letzter Zugriff: Stand 05. April 2021
 
-\bibitem[Node13]{Node2.15} Weiterleitung (Routing). \url{https://expressjs.com/de/guide/routing.html},letzter Zugriff Stand 05.04.2021
+\bibitem[Node13]{Node2.15} Weiterleitung (Routing). \url{https://expressjs.com/de/guide/routing.html},letzter Zugriff: Stand 05. April 2021
 
-\bibitem[Node14]{Node2.5} Binariks, Express.js Mobile App Development: Pros and Cons for Developers. \url{https://binariks.com/blog/tools/express-js-mobile-app-development-pros-cons-developers/}, letzter Zugriff 05.04.2021
+\bibitem[Node14]{Node2.5} Binariks, Express.js Mobile App Development: Pros and Cons for Developers. \url{https://binariks.com/blog/tools/express-js-mobile-app-development-pros-cons-developers/}, letzter Zugriff: 05. April 2021
 
 \bibitem[Node15]{Node2.55} Basarat Ali Syed, Beginning Node.js, Seite 275, ISBN 978-1-4842-0187-9
 
@@ -386,24 +387,23 @@ Ausblick:
 
 \bibitem[DB3]{DB1.65} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 26, ISBN 9-781-4842-0648-5
 
-\bibitem[DB4]{DB1.7} https://db-engines.com/de/ranking
+\bibitem[DB4]{DB1.7} \url{https://db-engines.com/de/ranking}, letzter Zugriff: 10. Februar 2021
 
-\bibitem[DB5]{DB1.8} https://www.mongodb.com/json-and-bson, letzter Zugriff: 10.02.2021
+\bibitem[DB5]{DB1.8} \url{https://www.mongodb.com/json-and-bson}, letzter Zugriff: 10. Februar 2021
 
 \bibitem[DB6]{DB1.85} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 32, ISBN 9-781-4842-0648-5
-1
 
 \bibitem[DB7]{DB2.4} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 83, ISBN 9-781-4842-0648-5
 
 \bibitem[DB8]{DB3.5} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 160, ISBN 9-781-4842-0648-5
 
-\bibitem[DB9]{DB3.6} \url{https://de.wikipedia.org/wiki/Replikation_(Datenverarbeitung)}, letzter Zugriff 10.02.2021
+\bibitem[DB9]{DB3.6} \url{https://de.wikipedia.org/wiki/Replikation_(Datenverarbeitung)}, letzter Zugriff: 10. Februar 2021
 
-\bibitem[DB10]{DB3.7} \url{https://docs.mongodb.com/manual/replication/}, letzter Zugriff 10.02.2021
+\bibitem[DB10]{DB3.7} \url{https://docs.mongodb.com/manual/replication/}, letzter Zugriff: 10. Februar 2021
 
-\bibitem[DB11]{DB3.8} \url{https://docs.mongodb.com/manual/core/replica-set-oplog/}, letzter Zugriff 10.02.2021
+\bibitem[DB11]{DB3.8} \url{https://docs.mongodb.com/manual/core/replica-set-oplog/}, letzter Zugriff: 10. Februar 2021
 
-\bibitem[DB12]{DB4.1} \url{https://docs.mongodb.com/manual/sharding/}, letzter Zugriff 11.02.2021
+\bibitem[DB12]{DB4.1} \url{https://docs.mongodb.com/manual/sharding/}, letzter Zugriff: 11. Februar 2021
 
 %
 %
@@ -413,7 +413,7 @@ Ausblick:
 %
 
 
-\bibitem[Tech1]{Tech3} \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff 18.03.2021
+\bibitem[Tech1]{Tech3} \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff: 18. März 2021
 
 \bibitem[Tech2]{Tech4.5} J. Batra und S. Batra, „MONGODB Versus SQL: A Case Study on Electricity, Seite 297-298
 

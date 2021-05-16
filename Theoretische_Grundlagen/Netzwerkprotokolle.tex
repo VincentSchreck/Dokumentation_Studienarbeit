@@ -8,19 +8,19 @@ Jede einzelne Schicht setzt dabei separat eine Anforderung um und kann dabei dur
 Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. 
 \newline
 \noindent
-Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Departments of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell \cite{wikiDodModell}. .
+Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Departments of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell \cite{wikiDodModell}.
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=\textwidth]{images/Netzwerkprotokolle_OSI-Schicht.PNG}
-\caption{Netzwerkprotokolle: OSI-Schichten \protect \footnotemark}
+\caption[Netzwerkprotokolle: OSI-Schichten]{Netzwerkprotokolle: OSI-Schichten \protect \footnotemark}
 \end{figure}
 \footnotetext{\url{Wikipedia. Internetprotokollfamilie, https://de.wikipedia.org/wiki/Internetprotokollfamilie}, letzter Zugriff: 06. April 2021}
 
 \newpage
 
 \begin{table}[tbt]
-\caption{Kurzbeschreibung der OSI-Schichten [1.2]}
+\caption[Kurzbeschreibung der OSI-Schichten]{Kurzbeschreibung der OSI-Schichten \cite{ekOSI}}
 \begin{center}
     \begin{tabular}{ l  p{8cm} }
     \toprule
@@ -43,15 +43,16 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
     \bottomrule
     \end{tabular}
 \end{center}
-\caption{Kurzbeschreibung der OSI-Schichten \cite{ekOSI}}
 \end{table}
 
 \noindent
-\subparagraph{IP}
-In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Über\-tra\-gungs\-mediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32 Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128 Bit.
+\hangindent1cm
+\textbf{IP:}
+In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Über\-tra\-gungs\-mediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32 Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128 Bit.\\
 
 \noindent
-\subparagraph{TCP/UDP}
+\hangindent1cm
+\textbf{TCP/UDP:}
 In der Transportschicht wird eine Ende-zu-Ende-Kommunikation ermöglicht. Sie ist das Bindeglied zwischen den anwendungsorientierten und den transportorientierten Schichten. Die geläufigsten Protokolle sind das verbindungslose, unzuverlässige, aber weniger Overhead belastete User Datagram Protocol (UDP) und das verbindungsorientierte und datentransferzuverlässige Transmission Control Protocol (TCP). Jedes netzwerkfähige Gerät enthält eine Vielzahl von Ports, die primär zur
 Unterscheidung zwischen Datenströmen aus Anwendungen bei Netzwerkverbindungen
 genutzt werden. Anhand des genutzten Ports bei Netzwerkanfragen
@@ -62,7 +63,8 @@ wissen Webserver, welches Protokollverfahren genutzt werden soll.
 Das Hypertext Transfer Protocol, kurz HTTP, ist ein zustandloses Protokoll zur Übertragung von Daten auf der Anwendungsschicht.
 
 \noindent
-\subparagraph{Kommunikation}
+\hangindent1cm
+\textbf{Kommunikation:}
 Unter einer Nachricht versteht man in HTTP die Kommunikationseinheiten zwischen dem Zentralrechner (Server) und dem, der einen Dienst vom Server abruft (Client). 
 Man unterscheidet dabei zwischen der Anfrage (Request) vom Client an den Server und der Antwort (Response) als Reaktion vom Server zum Client. 
 \newline
@@ -83,9 +85,9 @@ Der Nachrichtenrumpf, der mit den Nachrichtenkopf über einen Zeilenumbruch synt
 \end{figure}
 
 \noindent
-\subparagraph{Methoden}
+\hangindent1cm
+\textbf{Methoden:}
 HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiedene Aufgaben gedacht sind. Im Folgenden werden die wichtigsten Methoden beschrieben:
-
 \begin{enumerate}
 		\item \textit{GET} ist die gebräuchlichste Methode. Sie fordert vom Server eine Ressource, die bei Erfolg in der Antwort im Body zurückgegeben wird. 
 		
@@ -102,11 +104,12 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 \end{enumerate}
 \newpage
 \noindent
-\subparagraph{Statuscodes}
+\hangindent1cm
+\textbf{Statuscodes:}
 HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben.\newline
 
 \begin{table}[tbt]
-\caption{Module}
+\caption{HTTP Statuscodebeschreibungen}
 \begin{center}
     \begin{tabular}{ l  l   p{8cm} }
     \toprule

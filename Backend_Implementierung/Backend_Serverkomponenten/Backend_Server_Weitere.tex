@@ -1,14 +1,15 @@
 Nachfolgend werden weitere Systemfunktionalitäten des Backends dargestellt.
 
 \paragraph{Firebase-Service}
-Um unberechtigte Zugriffe zu vermeiden, findet für die nutzerbezogenenen Anfragen eine Authentifizierung statt. Die erste Authentifizierung des Nutzers findet über den Login des Frontends in Firebase statt. Nachträglich muss bei Anfragen an den Webserver sichergestellt werden, dass der Nutzer weiterhin authentifiziert ist. Ohne diesen Vorgang könnte man sich über das Schicken einer willkürlich übermittelten Nutzer-Uid fälschlicherweise als anderer Nutzer ausgeben. Für den Zugriff auf die Firebase-Authentifizierungsfunktionen wird in die firebaseService.js-Datei das Modul 'firebase-Admin' importiert. \footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup}}
+Um unberechtigte Zugriffe zu vermeiden, findet für die nutzerbezogenenen Anfragen eine Authentifizierung statt. Die erste Authentifizierung des Nutzers findet über den Login des Frontends in Firebase statt. Nachträglich muss bei Anfragen an den Webserver sichergestellt werden, dass der Nutzer weiterhin authentifiziert ist. Ohne diesen Vorgang könnte man sich über das Schicken einer willkürlich übermittelten Nutzer-Uid fälschlicherweise als anderer Nutzer ausgeben. Für den Zugriff auf die Firebase-Authentifizierungsfunktionen wird in die firebaseService.js-Datei das Modul 'firebase-Admin' importiert. \footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup}, letzter Zugriff: 3. April 2021}
 
 \noindent
-\subparagraph{Register}
+\hangindent1cm
+\textbf{Register:}
 Um die Anwendung bei Firebase zu registrieren, wird die Funktion 'initializeApp' des Firebase-Moduls ausgeführt. 
 Ein aus Firebase generierter Authentifizierungsschlüssel wird dabei für den Zugriff auf die StreamSwipe-Umgebung mitübergeben.
 Die Register-Methode wird anschließend nach außen exportiert und zu Beginn des Serverstarts in der Server.js-Datei ausgeführt. 
-\footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup\#initialize-without-parameters}}
+\footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup\#initialize-without-parameters}, letzter Zugriff: 3. April 2021}
    
 \begin{lstlisting}[caption=Firebase-Service Register, label=lst:firebaseService Register]
 var serviceAccount = require("../sslcert/streamswipe-firebase-adminsdk-uiyci-80bc08a5b2.json");
@@ -19,11 +20,13 @@ firebaseAdmin.initializeApp({
 \end{lstlisting}
 
 \noindent
-\subparagraph{UID/TokenID-Dictionary}
+\hangindent1cm
+\textbf{UID/TokenID-Dictionary:}
 Um Zugriffszeiten auf die Firebase-Schnittstelle, werden in einem lokalen Dictionary aus Schlüsselwertpaaren der Zusammenhang zwischen TokenID und den UID samt ihrem Ablaufsdatum zwischen\-gespeichert.
 
 \noindent
-\subparagraph{GetUID}
+\hangindent1cm
+\textbf{GetUID:}
 Die Funktion erwartet einen Firebase Token als Parameter 'uidtoken', welcher an die Funktion 'verifyIdToken' des FirebaseAdmin-Objeekts weitergeleitet wird. Zurück wird ein Objekt gegeben, dass unter anderem die 'uid' des zum Token zugehörigen Nutzers und die Ablaufzeit schickt. Nach erfolgreichem Überprüfen, ob die 'uid' tatsächlich ein Wert übermittelt bekommen hat, wird das Paar aus UidToken und Uid samt Ablaufzeit in der UID/TokenID-Dictionary gespeichert.
 
 \begin{lstlisting}[caption=Firebase-Service Register, label=lst:firebaseServiceRegister]
@@ -37,16 +40,18 @@ return uid;
 \end{lstlisting}
    
 \noindent
-\subparagraph{RefreshList}
+\hangindent1cm
+\textbf{RefreshList:}
 Diese Funktion wird aufgerufen, um abgelaufene Token in der UID/TokenID-Dictionary zu löschen. Sie wird über das Modul TimedEvents periodisch aufgerufen. Dabei wird zu jedem Paar die aktuelle Uhrzeit und die Ablaufszeit verglichen. Stellt die Ablaufszeit ein größeren Wert dar, wird das Schlüsselwertpaar aus der Dictionary entfernt.
 
 \paragraph{Timed Events}
-Über das 'node-cron'-Modul \footnote{Siehe Dokumentation: \url{//https://www.npmjs.com/package/node-cron}}
+Über das 'node-cron'-Modul \footnote{Siehe Dokumentation: \url{//https://www.npmjs.com/package/node-cron}, letzter Zugriff: 26. April 2021}
 können zeitlich definierte und periodische Funktionen ausgeführt werden. Dafür wird das 'node-cron'-Modul in die TimedEvents.js-Datei importiert. Die Funktionalität des Moduls wird beispielsweise für das periodische Aktualisieren der movies-Collection, das periodische Ausführen des Matching-Algorithmus und das Aufrufen der 'firebaseService.RefreshList'-Funktion zum Aktualisieren der UID/TokenID-Dictionary verwendet.
 
 \paragraph{MatchManager}
 \noindent
-\subparagraph{StartMatching - Teil 1}
+\hangindent1cm
+\textbf{StartMatching - Teil 1:}
 Die aktuelle Implementierung des Matching-Algorithmus sucht für jede Stadt Nutzerpaare, die einen gleichen Film mit einem Superlike versehen haben. Dafür werden zunächst über die 'GetAllInhabitedCities'-Funktion des City-Services die Städte in einer Liste gespeichert, die mindestens zwei Nutzer aufweisen. Folglich finden eine Verschachtelung von Iterationsabläufen zum Ausführen von Programmcode auf jedem Element einer Liste statt.
 In der ersten Iterationsstufe wird durch die Städte iteriert.
 Die zweite Iterationsstufe vom ersten bis zum vorletzten Nutzereintrag ('uid') innerhalb der aktuell iterierten Stadt. Innerhalb des zugehörigen Codeblocks wird die 'RequestSuperlikeSwipes'-Funktion des SwipeServices aufgerufen mit der 'uid' des aktuell iterierten Nutzers als Parameterübergabe. Die zurückerhaltene Liste enthält sämtliche Film-ID's, die vom Nutzer mit einem Superlike versehen wurden. Die Liste wird samt dem Index des nächsten Users in der Liste, der aktuell iterierten Stadt und dem aktuell iterierten User. Ausserdem wird eine Referenz auf das 'foundSupermatches'-Objekt, dass später mit Informationen zu den errechneten Supermatches gefüllt wird, mitgegeben.
@@ -80,9 +85,9 @@ for (let cityIterator = 0; cityIterator < cities.length; cityIterator++) {
 \end{lstlisting}
 
 \noindent
-\subparagraph{checkSuperMatches} Die Funktion wird im Matching-Algorithmus von der 'findMatches'-Methode aufgerufen. Es wird ausgehened vom übergebenen 'matchingUserNextIndex', welches der Index des nächsten Users nach dem aktuell iterierten Users der 2. Iterationsstufe ist, durch die restliche Nutzerliste der übergebenen Stadt 'currentCity' iteriert. Dies entspricht der 3. Iterationsstufe.
+\hangindent1cm
+\textbf{checkSuperMatches:} Die Funktion wird im Matching-Algorithmus von der 'findMatches'-Methode aufgerufen. Es wird ausgehened vom übergebenen 'matchingUserNextIndex', welches der Index des nächsten Users nach dem aktuell iterierten Users der 2. Iterationsstufe ist, durch die restliche Nutzerliste der übergebenen Stadt 'currentCity' iteriert. Dies entspricht der 3. Iterationsstufe.
 Hierbei wird zunächst die lokale Funktion 'checkGenderPreference' aufgerufen, die anhand der übergebenen Nutzerobjekte prüft, ob jeweils das Geschlecht des einen Nutzers und das für das Matchen preferierte Geschlecht des anderen Nutzers übereinstimmen. Ist dies der Fall, so werden die Superlikes des zweiten Users angefragt. Abschließend werden die Superlikes-Listen beider Nutzer verglichen. Dabei wird überprüft, ob eines der MovieID's der einen Liste in der anderen vorhanden ist. Bei einem Treffer wird ein Objekt mit den 'uid' der bei Nutzer und die 'movieid' des zugehörigen Films in die 'supermatches'-Liste hinzugefügt. 
-
 
 \begin{lstlisting}[caption=matchManager.js - checkSuperMatches, label=lst:checkSuperMatches]
 async function checkSuperMatches(matchingUserNextIndex, currentCity, user1Superlikes, foundSupermatches, User1) {
@@ -111,11 +116,13 @@ async function checkSuperMatches(matchingUserNextIndex, currentCity, user1Superl
 \end{lstlisting}
 
 \noindent
-\subparagraph{checkNormalMatches}
+\hangindent1cm
+\textbf{checkNormalMatches:}
 TODO
 
 \noindent
-\subparagraph{StartMatching - Teil 2}
+\hangindent1cm
+\textbf{StartMatching - Teil 2:}
 Die 'startMatching'-Funktion wird beendet, nachdem die gefundenen Matchinformationen in den entsprechenden Match-Dokumenten gespeichert werden. Es wird durch die Liste 'foundSupermatches' durchiteriert. Dafür wird zunächst geprüft, dass ein Match der zwei Nutzer noch nicht in der Datenbank hinterlegt ist. Anschließend werden beiden zugehörigen Match-Dokumenten die gegenseitigen 'uid' in die 'supermatches'-Liste hinzugefügt.
 Der Vorgang wird für die 'normalmatches'-Liste wiederholt mit entsprechender Speicherung in die 'normalmatches'-Listen.
 

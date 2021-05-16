@@ -16,14 +16,15 @@ Zusätzlich wird bei der Installation ausgewählt, dass Node.js sowie npm und de
 Über den Zugriff auf diese Umgebungsvariable ist ein schneller Zugriff über ein Terminal beziehungsweise einer anderen Applikation gewährleistet.
 
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=8cm]{images/nodejs_install.png}
 \caption{Node.JS Installation}
+\label{fig:installation_nodejs}
 \end{figure}
 
 \noindent
-Nach der Installation von Node.js kann das Projekt mithilfe des Befehls „npm init“ im Terminal initializiert werden. 
+Nach der Installation von Node.js (siehe Abbildung \ref{fig:installation_nodejs}) kann das Projekt mithilfe des Befehls „npm init“ im Terminal initializiert werden. 
 Hier werden nacheinander Input für relevante Projektaspekte wie dem Projektnamen, der Initialversion, der Startprogrammdatei oder dem GIT-Repository abgefragt.  
 Im Anschluss wird im aktuellen Verzeichnis eine Datei „package.json“ erstellt,  bei der es sich um eine Manifest-Datei im JSON- Format handelt, die unter anderem die benötigten Pakete sowie dessen Version, als auch projektspezifische Meta-Informationen wie den Projektnamen, der Projektversion, der Projektbeschreibung und dem Author enthält.
 \newline
@@ -62,7 +63,8 @@ Als Applikationsstartpunkt wird die Datei „server.js“ erzeugt und im package
 
 \subsubsection{Sichere Kommunikation}
 
-Das http-Modul ermöglicht eine Kommunikation über das http-Protokoll. 
+Das http-Modul ermöglicht eine Kommunikation über das http-Protokoll.\\
+ 
 \begin{lstlisting}[caption=Einfache Verbindung, label=lst:nodejs_easyconnection]
 {
  const app = express();
@@ -74,13 +76,13 @@ Das http-Modul ermöglicht eine Kommunikation über das http-Protokoll.
 \end{lstlisting}
 
 \noindent
-Dabei werden jedoch die Daten unverschlüsselt versendet. Um ausreichend Datenschutz zu gewährleisten, wird stattdessen das https-modul genutzt. \footnote{Siehe Dokumentation: \url{https://nodejs.org/api/https.html}}
+Dabei werden jedoch die Daten unverschlüsselt versendet. Um ausreichend Datenschutz zu gewährleisten, wird stattdessen das https-modul genutzt. \footnote{Siehe Dokumentation: \url{https://nodejs.org/api/https.html}, letzter Zugriff: 24. April 2021}
 \newline
 Benötigt für einen HTTPS-Server werden ein Sicherheitszertifikat und ein privater Schlüssel, die zunächst mithilfe des Tools OpenSSL erzeugt werden.  
 Dabei ist zu beachten, dass während der Entwicklungsphase das Zertifikat nicht von einer zuständigen Zertfikatsstelle signiert wird und somit von anderen Gegenstellen nicht akzeptiert wird. => TODO Frondendkommunikation, Ausblick
 \newline
-In der Anwendung wird zunächst ein Objekt 'httpsOptions' erzeugt, dass unter dem Attribut 'cert' das generierte Sicherheitszertifikat und unter dem Attribut 'key' den privaten Schlüssel enthält. Anschließend wird über die Funktion 'createServer' des https-Objekts der https-Server gestartet, woraufhin ein Objekt vom Typ https.Server zurückgegeben wird \footnote{Siehe Dokumentation:  \url{[https://nodejs.org/api/https.html\#https_class_https_server]}}. 
-Diesem Serverobjekt wird über seine Methode 'listen' aufgefordet, auf eingehende Nachrichten in dem als Parameter übergebenem Port einzugehen.
+In der Anwendung wird zunächst ein Objekt 'httpsOptions' erzeugt, dass unter dem Attribut 'cert' das generierte Sicherheitszertifikat und unter dem Attribut 'key' den privaten Schlüssel enthält. Anschließend wird über die Funktion 'createServer' des https-Objekts der https-Server gestartet, woraufhin ein Objekt vom Typ https.Server zurückgegeben wird \footnote{Siehe Dokumentation:  \url{[https://nodejs.org/api/https.html\#https_class_https_server]}, letzter Zugriff: 24. April 2021}. 
+Diesem Serverobjekt wird über seine Methode 'listen' aufgefordet, auf eingehende Nachrichten in dem als Parameter übergebenem Port einzugehen.\\
 
 \begin{lstlisting}[caption=Gesicherte Verbindung, label=lst:nodejs_safeconnection]
 {
@@ -101,7 +103,7 @@ Wie bereits erwähnt, wird das Modul „mongoose“ für die Verbindung mit der 
 Da der Quellcode in anderen Dateien hinterlegt ist, muss für den Zugriff auf dessen Funktionalitäten das entsprechende Modul zunächst inkludiert werden. Dazu wird die require-Methode aufgerufen, die ein Objekt zurückgibt, dass die aus dem Modul exportierten Methoden enthält und im Folgenden als Variabel mit dem Namen „mongoose“ gespeichert wird. 
 \newline
 Über die connect-Methode des zurückgelieferten Objekts wird nun bei Parameterübergabe der URL der Datenbank versucht, eine Verbindung aufzubauen.  
-Dabei wird unter der Objekt-Membervariabel  „connection“ ein Objekt vom Typ „Connection“ hinterlegt, über das bei erfolgreicher Verbindung mit der Datenbank kommuniziert werden kann und das nachfolgend unter der Variabel „database“ abgespeichert ist. 
+Dabei wird unter der Objekt-Membervariabel  „connection“ ein Objekt vom Typ „Connection“ hinterlegt, über das bei erfolgreicher Verbindung mit der Datenbank kommuniziert werden kann und das nachfolgend unter der Variabel „database“ abgespeichert ist.\\
 
 \begin{lstlisting}[caption=Verbindung zur MongoDB-Datenbank, label=lst:mongodbconnection]
 {
