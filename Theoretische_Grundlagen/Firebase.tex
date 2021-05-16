@@ -125,6 +125,7 @@ Hierzu wird in den Sicherheitsregeln nach jedem Schreibzugriff auf ein \texttt{c
 \medskip
 
 \subsubsection{Cloud Storage}
+\label{sec:firebase_storage}
 Um Filme, Videos oder andere Nutzer-generierte Inhalte abspeichern zu können, bietet Firebase Cloud Storage an. 
 Durch das Firebase SDK für Cloud Storage können Dateien direkt von Client-Anwendungen hoch- bzw. heruntergeladen werden.
 Aufgrund von möglicher schlechter Verbindung kann mithilfe von robusten Operationen der Prozess des Hoch- bzw. Herunterladens bei besserer Verbindung an der Stelle weiter geladen werden, an welcher dieser unterbrochen wurde.
@@ -137,8 +138,8 @@ Im Code \ref{lst:storagerules_validation} können Dateien nur hochgeladen werden
 	service firebase.storage {
 		match /b/{bucket}/o {
 			match /images/{imageId} {
-				allow write: if request.resource.size < 5 * 1024 * 1024
-				&& request.resource.contentType.matches('image/.*');
+				allow read, write: if request.resource.size < 5 * 1024 * 1024
+				&& request.auth != null;
 			}
 		}
 		
