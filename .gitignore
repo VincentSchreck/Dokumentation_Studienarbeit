@@ -2,7 +2,9 @@
 
 images/old
 
-
+*.bbl
+*.blg
+*.lot
 *.log
 *.aux
 *.lof
