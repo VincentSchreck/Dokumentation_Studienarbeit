@@ -1,15 +1,17 @@
-Nachfolgend werden die Klassenmodelle innerhalb der mobilen Anwendung dargestellt.
+Die Manager-Klassen regeln die Backend-Funktionalitäten, die vom Nutzer nicht direkt ersichtlich sind. \\
 
-\paragraph{Swipe Manager}
-Inkludiert swipe service und movie service.
-\newline Handelt Movieliste für swipen.
-\newline Schickt getätigte Swipes an Webserver.
+\noindent
+\textbf{Swipe Manager: }
+Der Swipe Manager verwaltet sowohl die Filme, die in der Benutzeroberfläche geswipet werden können, als auch getätigten Swipes des Nutzers. Er agiert im Hintergrund des Programms. Dabei pflegt er eine Liste von Filmen, dessen Anzahl er periodisch überprüft. Wird eine bestimmte Mindestanzahl erreicht, frägt er den Webserver nach neuen Filmen, die der Nutzer weder bereits geswipet, noch geladen hat. 
+Anschließend werden für jeden erhaltenen Film sämtliche Funktion des TMDB-Services mit der jeweiligen Film-ID aufgerufen und die zurückerhaltenen Objekte als TMDBMovie-Objekte in einer weiteren Liste gespeichert. Die daraus generierte Liste kann nun an das User-Interface zum Swipen übergeben werden.
+Ein Swipen hat zur Folge, dass der davon betroffene Film aus der Liste entfernt wird und der Webserver die Informationen über diesen Swipe-Vorgang erhält.
+Für die entsprechenden Anfragen an den Webserver nutzt der Swipe Manager den Movie- und den Swipe-Service. \\
 
-\subparagraph{Movies Request}
-..
+\noindent
+\textbf{User Manager:}
+Dieser Manager verwaltet userbezogene Daten der mobilen Anwendung. Sie ist ausserdem für die Verwaltung des Firebase-Tokens zuständig und frägt bei abgelaufenem oder invaliden Token einen neuen ab. \\
 
-\paragraph{User Manager}
-..
-
-\paragraph{Match Manager}
-..
+\noindent
+\textbf{Match Manager:}
+Der Match Manager delegiert die Match-bezogenen Anfragen an den Match-Service weiter. Ausserdem verwaltet er bereits abgefragte Matches. Innerhalb der 'RequestMatches'-Funktion ruft er neben der Delegierung an den Match-Service weitere Funktionen aus. Zum einen werden anhand der mitüberlieferten Film'IDs Anfragen über den TMDB-Service an den TMDB-Server gesendet, mit dem Zweck, den zugehörigen Filmtitel und Posterpfad abzufragen. Zum Anderen wird eine Anfrage an Firebase zum Erhalt der 'uid' des gematchen Nutzers geschickt.
+Zur Verhinderung von redundanten Abfragen der Zusatzinformationen zwischen aufeinanderfolgenden Match-Abfragen wird innerhalb der Funktion 'requestMovies' zunächst auf die erhaltene 'newChanges'-Eigenschaft geprüft. Nur wenn dessen Wert dem booleschen Wert true gleicht, werden die Anfragen an TMDB und Firebase ausgeführt. Andernfalls wird die gleiche Liste, die aus vorherigen Match-Anfrageresultaten im Match-Manager zwischengespeichert wurden, zurückgegeben. \\

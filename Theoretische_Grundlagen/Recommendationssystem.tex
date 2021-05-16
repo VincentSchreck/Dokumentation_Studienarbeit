@@ -78,28 +78,28 @@ Diese Art leidet sehr unter dem \textit{sparsity} Problem, also dass die Nutzer 
 Sowohl bei \textit{collaborative filtering}, als auch bei \textit{content-based filtering} wird jedes Objekt und jeder Nutzer als ein Vektor im Vektorraum-Modell $E = \mathbb{R}^d$ (englisch \textit{embedding space}) erfasst. Sind Objekte beispielsweise ähnlich, haben sie eine geringe Distanz voneinander. 
 
 \noindent
-Ähnlichkeitsfunktionen sind Funktionen $s : E \times E  \rightarrow \mathbb{R}$ welche aus zwei Vektoren beispielsweise von einem Objekt $q \in E$ und einem Nutzer $x \in E$ ein Skalar berechnen, welches die Ähnlichkeit dieser zwei beschreibt $s(q,x)$.
+Ähn"-lich"-keits"-funk"-tion"-en sind Funktionen $s : E \times E  \rightarrow \mathbb{R}$ welche aus zwei Vektoren beispielsweise von einem Objekt $q \in E$ und einem Nutzer $x \in E$ ein Skalar berechnen, welches die Ähnlichkeit dieser zwei beschreibt $s(q,x)$.
 
 \noindent
-Hierfür werden mindestens eine der folgenden Funktionen verwendet:
-\begin{itemize}
-	\item Cosinus-Funktion
-	\item Skalarprodukt
-	\item Euklidischer Abstand
-\end{itemize} 
+Hierfür werden mindestens eine der folgenden Funktionen verwendet:\\
 
-\paragraph{Cosinus-Funktion}
-Hier wird einfach der Winkel zwischen beiden Vektoren berechnet: $s(q,x) = \cos(q,x)$
+\noindent
+\hangindent1cm
+\textbf{Cosinus-Funktion:}
+Hier wird einfach der Winkel zwischen beiden Vektoren berechnet: $s(q,x) = \cos(q,x)$ \\
 
-\paragraph{Skalarprodukt}
-Je größer das Skalarprodukt, desto ähnlicher sind sich die Vektoren. $s(q,x) = q \circ x = \sum_{i=1}^{d}q_i x_i$ 
+\noindent
+\hangindent1cm
+\textbf{Skalarprodukt:}
+Je größer das Skalarprodukt, desto ähnlicher sind sich die Vektoren. $s(q,x) = q \circ x = \sum_{i=1}^{d}q_i x_i$ \\
 
-\paragraph{Euklidischer Abstand}
-$s(q,x) = ||q-x|| = [\sum_{i=1}^{d}(q_i - x_i)^2]^\frac{1}{2}$
+\noindent
+\hangindent1cm
+\textbf{Euklidischer Abstand:}
+$s(q,x) = ||q-x|| = [\sum_{i=1}^{d}(q_i - x_i)^2]^\frac{1}{2}$\\
 
-
-
-
-
-\url{https://dl.acm.org/doi/pdf/10.1145/3383313.3412488}
-\url{http://www.microlinkcolleges.net/elib/files/undergraduate/Photography/504703.pdf}
+\noindent
+Dadurch, dass die Ähnlichkeit des Skalarprodukts deutlich mit der Größe der Norm eines Vektors steigt.
+Da populäre Objekte, beispielsweise beliebte YouTube Videos, öfter in einem Satz von Trainingsdaten auftauchen, besitzen diese eine höhere Norm.
+Somit würden über das Skalarprodukt auch eher populäre Objekte vorgeschlagen werden.
+Je nach Anwendungsfall muss also die Ähn"-lich"-keits"-funk"-tion gewählt sein.\footnote{Quelle: \url{https://developers.google.com/machine-learning/recommendation/}, letzter Zugriff: 07. Januar 2021}

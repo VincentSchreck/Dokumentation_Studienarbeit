@@ -12,19 +12,20 @@ Herkömmliche Webserver erstellten zunächst für jede ankommende Anfrage einen 
 \noindent
 Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu einer Form von blockierender Ein- und Ausgabe (Blocking Input/Output kurz Blocking I/O) kommen: zum Beispiel beim Suchen in einer Datenbank oder dem Laden einer Datei im Dateisystem.
  Während der Abarbeitung wartet der Thread solange, bis die Operation ein Ergebnis zurückwirft und belegt dabei weiterhin Speicherplatz. 
- Bei hohem Aufkommen von Anfragen kommt es dadurch zu einer hohen Speicherauslastung des Servers. Zudem kosten die Kontextwechsel zwischen den Threads im Betriebssystem weitere Rechenzeit \cite{Node1.05}. Man spricht bei diesem Architekturkonzept auch vom Multi-Threaded Server.
+ Bei hohem Aufkommen von Anfragen kommt es dadurch zu einer hohen Speicherauslastung des Servers. Zudem kosten die Kontextwechsel zwischen den Threads im Betriebssystem weitere Rechenzeit \cite{Node1.05}. Man spricht bei diesem Architekturkonzept auch vom Multi-Threaded Server. Graphisch dargestellt ist das Konzept in Abbildung \ref{fig:Multithreaded}.
 \newline
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=10cm, height = 5.5cm]{images/nodejs_otherthreading.png}
 \caption[Multithreaded / Blocking I/O]{Multithreaded / Blocking I/O \cite{Node1.1}}
+\label{fig:Multithreaded}
 \end{figure}
  
 \newpage
 
 \noindent
-Node.js verfolgt einen anderen Ansatz: Anfragen werden nur in einem einzigen Thread, dem Hauptthread, abgearbeitet und in einer Warteschlange verwaltet. Dadurch bleiben Kontextwechsel zwischen Threads erspart. Hierbei handelt es sich also um einen Single-Threaded Server. Der Hauptthread verwaltet eine Schleife, die sogenannte Event Loop, die permanent Anfragen aus der Event-Warteschlange überprüft und Ereignisse, die von Ein- und Ausgangsoperationen ausgerufen werden, verarbeitet.
+Node.js verfolgt einen anderen Ansatz: Wie in Abbildung \ref{SingleThreaded} dargestellt, werden Anfragen nur in einem einzigen Thread, dem Hauptthread, abgearbeitet und in einer Warteschlange verwaltet. Dadurch bleiben Kontextwechsel zwischen Threads erspart. Hierbei handelt es sich also um einen Single-Threaded Server. Der Hauptthread verwaltet eine Schleife, die sogenannte Event Loop, die permanent Anfragen aus der Event-Warteschlange überprüft und Ereignisse, die von Ein- und Ausgangsoperationen ausgerufen werden, verarbeitet.
 \newline
 
 \noindent
@@ -39,6 +40,7 @@ Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch
 \centering
 \includegraphics[width=10cm, height = 5.5cm]{images/nodejs_nodethreading.png}
 \caption[Single Threaded / Non Blocking I/0]{Single Threaded / Non Blocking I/0 \cite{Node1.1}}
+\label{SingleThreaded}
 \end{figure}
  
 
@@ -87,7 +89,7 @@ Das bedeutet, dass jeder require()-Aufruf auf ein Modul dasselbe Objekt zurückl
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter \cite{Node1.3}. Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten \cite{Node1.4}. Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit \cite{Node1.5}.
 
 \paragraph{Express}
-„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.  Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation [??TODO] ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}
+„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.  Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}
 \newline
 \newline
 \textbf{Beispiel}
@@ -124,7 +126,7 @@ Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Fun
 \noindent
 \textbf{Middleware:}
 Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion \cite{Node1.9}.
-Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in Abbildung \ref{fig:middleware} illustriert:
+Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in Abbildung \ref{fig:middleware} illustriert.
 \newline
 
 \begin{figure}[tbt]
@@ -314,12 +316,10 @@ const options = {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true,
-	useFindAndModify: false,
 	autoIndex: false,
 	poolSize: 10, // Anzahl der max. Socket Connections
 	serverSelectionTimeoutMS: 5000, // TimeOut bis verbunden
-	socketTimeoutMS: 45000, // Schliesse Socket bei 45s                 
-	                        // Inaktivitaet
+	socketTimeoutMS: 45000, // Schliesse Socket bei 45s Inaktivitaet
 	family:4 // Use IPv4
 }
 \end{lstlisting}
@@ -327,9 +327,10 @@ const options = {
 
 
 \paragraph{Weitere Module}
-
+Weitere relevante Module werden in Tabelle \ref{tab:ExpressModule} beschrieben.
 \begin{table}[h]
 \caption{Express.js Module}
+\label{tab:ExpressModule}
 \begin{center}
     \begin{tabular}{l p{8cm}}
 	 \toprule

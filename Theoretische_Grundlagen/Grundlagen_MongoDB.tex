@@ -9,24 +9,22 @@ Dem Konzept des CAP-Theorems folgend steht MongoDB für Konsistenz und Partition
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=14cm]{images/MongoDB_Architektur.png}
-\caption[Graphikdatenbank Beispiel]{Graphikdatenbank Beispiel \protect \footnotemark}
+\caption[MongoDB Architektur]{MongoDB Architektur \protect \footnotemark}
+\label{fig:MongoDBArchitektur}
 \end{figure}
 \footnotetext{\url{https://www.informatik-aktuell.de/betrieb/datenbanken/mongodb-fuer-software-entwickler.html}, letzter Zugriff: 9. Februar 2021}
 
 \noindent
-Letztere Abbildung stellt die grundsätzliche Struktur einer Mongo"-DB-"-Instanz dar.
-Ein \textbf{Server} kann mehrere logische \textbf{Datenbanken} verwalten, die ihrerseits einen oder mehrere logische Namensräume enthalten, die sogenannten \textbf{Collections}. Eine Collection verwaltet die einzelnen Datensätze, die als \textbf{Dokumente} bekannt sind. 
-\newline
+Die Abbildung \ref{fig:MongoDBArchitektur} stellt die grundsätzliche Struktur einer Mongo"-DB-"-Instanz dar.
+Ein \textbf{Server} kann mehrere logische \textbf{Datenbanken} verwalten, die ihrerseits einen oder mehrere logische Namensräume enthalten, die sogenannten \textbf{Collections}. Eine Collection verwaltet die einzelnen Datensätze, die als \textbf{Dokumente} bekannt sind.  \\
 
 \noindent
-\subparagraph{Schema-Freiheit}
-Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kein vorausgesetztes Schema. Aufgrund der Schema-Freiheut dürfen dennoch Architekturentscheidungen bei der Datenmodellierung nicht ignoriert werden. Stattdessen werden diese Entscheidungen des Schema-Managements auf die Anwendungsentwicklung verlagert.
-\newline
+\textbf{Schema-Freiheit:}
+Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kein vorausgesetztes Schema. Aufgrund der Schema-Freiheut dürfen dennoch Architekturentscheidungen bei der Datenmodellierung nicht ignoriert werden. Stattdessen werden diese Entscheidungen des Schema-Managements auf die Anwendungsentwicklung verlagert. \\
 
 \noindent
-\subparagraph{BSON}
+\textbf{BSON:}
 Während MongoDB für Datenaustausch das JSON-Format nutzt, hält es seine Dokumente im Binary JSON-Format (BSON), einer binärcodiertem Erweiterung des JSON-Formats. Daten im BSON-Format enthalten zusätzlich Informationen zum Typ und zur Länge der Informationen, wodurch schnelleres Parsen von Daten möglich ist. Des Weiteren ist BSON um zusätzliche Datentypen wie 32- und 64-bit Integer oder das Datum erweitert \footnote{\url{https://www.mongodb.com/json-and-bson]}, letzter Zugriff: 12. Februar 2021}.
-\newline
 
 \begin{lstlisting}[caption=JSON - BSON Vergleich, label=lst:JSONBSON]
 /* JSON */
@@ -42,15 +40,15 @@ hello\x00                  // Feldname
 
 
 \noindent
-\subparagraph{ObjectID und Primärschlüssel}
-Für die eindeutige Identifikation eines Dokuments vergibt MongoDB automatisch erstellte '\_id\'-Felder. Dabei wird bei der Generierung des BSON-Dokuments für den Wert das '\_id'-Feld ein Datentyp 'ObjectId\'  hinzugefügt. Dieses Identifikationsfeld ist gleichzusetzen mit den Primärschlüsseln aus relationalen Datenbanken \cite{DB1.85}. Ist eine automatische Generierung des eindeutigen Identifikationsfeldes nicht erwünscht, kann der Anwendungsentwickler dieses Feld auch selbst erzeugen, indem er die Eigenschaft explizit dem zu erstellenden Objekt hinzufügt und mit einem Wert verseht.
+\textbf{ObjectID und Primärschlüssel:}
+Für die eindeutige Identifikation eines Dokuments vergibt MongoDB automatisch erstellte '\_id'-Felder. Dabei wird bei der Generierung des BSON-Dokuments für den Wert das '\_id'-Feld ein Datentyp 'ObjectId\'  hinzugefügt. Dieses Identifikationsfeld ist gleichzusetzen mit den Primärschlüsseln aus relationalen Datenbanken \cite{DB1.85}. Ist eine automatische Generierung des eindeutigen Identifikationsfeldes nicht erwünscht, kann der Anwendungsentwickler dieses Feld auch selbst erzeugen, indem er die Eigenschaft explizit dem zu erstellenden Objekt hinzufügt und mit einem Wert verseht.
 \newline
 
 \paragraph{Datenbankabfrage}
 Im Vergleich zu relationalen Datenbanken benutzt MongoDB keine Abfragesprache wie SQL. Stattdessen ermöglicht dieses Datenbanksystem drei Arten von Abfragen, wobei eine Abfrage sich immer auf genau eine Collection bezieht. Ein Bezug einer Abfrage zu mehreren Collections, wie es relationale Datenbanken mit „Join“-Operationen erlauben, ist hier nicht gegeben und muss in der Anwendung realisiert werden \cite{1.9}. Abfragen in MongoDB werden grundsätzlich in Form von Dokumenten formuliert. Dieses Verfahren ermöglicht schnelles Abhandeln komplexer Abfragen von tief geschachtelten Dokumentenstrukturen. Nachfolgend werden die drei Abfragemöglichkeiten erläutert.
 
 \noindent
-\subparagraph{Query-By-Example}
+\textbf{Query-By-Example:}
 Das folgende Beispiel zeigt einen Aufruf aller Einträge, die als Ort Karlsruhe eingespeichert haben. 
 \newline
 \begin{lstlisting}[caption=MongoDB Read, label=lst:MongoDBRead]
@@ -59,24 +57,23 @@ db.pois.find( {"adresse.ort": "Karlsruhe" } )
 
 \noindent
 Dabei kommt das Prinzip Query-by-Example \footnote{Query By Example: \url{https://de.wikipedia.org/wiki/Query_by_Example}, letzter Zugriff: 12. Februar 2021} zum Einsatz, bei dem die als JSON-Dokument beschriebenen Suchkriterien als Filter auf die durchsuchte Collection wirkt. Zusätzlich stehen für diese Art von Abfragemöglichkeit sämtliche logische Verknüpfungen und Vergleichsoperatoren zur Verfügung\footnote{Query-Operatoren\url{https://docs.mongodb.com/manual/reference/operator/query/}, letzter Zugriff: 12. Februar 2021}.
-Das Ergebnis der obigen Find-"-Operationen liefert dabei einen Cursor zurück, über den die aufrufende Anwendung durch die einzelnen zurückgelieferten Dokumente iterieren kann. Außerdem kann der Cursor modifiziert werden, um beispielsweise Beschränkungen der Trefferanzahl oder Sortierung vorzunehmen.
-\newline
+Das Ergebnis der obigen Find-"-Operationen liefert dabei einen Cursor zurück, über den die aufrufende Anwendung durch die einzelnen zurückgelieferten Dokumente iterieren kann. Außerdem kann der Cursor modifiziert werden, um beispielsweise Beschränkungen der Trefferanzahl oder Sortierung vorzunehmen. \\
+
 \begin{lstlisting}[caption=MongoDB Read Modifikation, label=lst:MongoDBReadModifikation]
 db.pois.find().limit(5).sort({"adresse.ort": -1})
 \end{lstlisting}
 
 \noindent
-\subparagraph{MapReduce}
-MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Verarbeitung von großen Datenmengen in aggregierte Ergebnisse. Dabei unterteilt sich der Algorithmus im Wesentlichen in zwei Operationen \footnote{MapReduce Dokumentation \url{https://docs.mongodb.com/manual/core/map-reduce/}, letzter Zugriff: 10. Februar 2021}
+\textbf{MapReduce:}
+MapReduce ist ein allgmeines Programmiermodell zur verteilten und parallelen Verarbeitung von großen Datenmengen in aggregierte Ergebnisse. Dabei unterteilt sich der Algorithmus im Wesentlichen in zwei Operationen \footnote{MapReduce Dokumentation \url{https://docs.mongodb.com/manual/core/map-reduce/}, letzter Zugriff: 10. Februar 2021}:
 \newline
 -	Map: Emittieren der beliebig vielen Key-Value-Paare für jedes Dokument
 \newline
--	Reduce: Zusammenfassen aller Daten, die einem Kriterium entsprechen.
+-	Reduce: Zusammenfassen aller Daten, die einem Kriterium entsprechen.\\
 
 \noindent
-\subparagraph{Aggregation-Framework}
-Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance\footnote{\url{https://docs.mongodb.com/manual/meta/aggregation-quick-reference/}, letzter Zugriff: 14. Februar 2021}. Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden .
-\newline 
+\textbf{Aggregation-Framework:}
+Das Aggregation-Framework bietet als Alternative zum MapReduce-Verfahren den Vorteil der besseren Performance\footnote{\url{https://docs.mongodb.com/manual/meta/aggregation-quick-reference/}, letzter Zugriff: 14. Februar 2021}. Dabei wird eine Pipeline genutzt, die das resultierende Dokument einer Operation an die Eingabe der nächsten Operation weiterleitet. Die entsprechende Funktion ist die Aggregate()-Operation, deren Parameter als Array von Dokumenten die Pipeline-Operatoren abbilden . Tabelle \ref{tab:AggregationFrameworkPipelineOperatoren} zeigt die zur Verfügung stehenden Pipeline-Operatoren.\\
 
 \begin{lstlisting}[caption=MongoDB Aggregate, label=lst:MongoDBAggregate]
 db.pois.aggregate([
@@ -85,13 +82,9 @@ db.pois.aggregate([
 ])
 \end{lstlisting}
 
-
-Es stehen folgende Pipeline-Operatoren zur Verfügung:
-
- 
-
-\begin{table}[tbt]
+\begin{table}[h]
 \caption[Aggregation Framework: Pipeline-Operatoren]{Aggregation Framework: Pipeline-Operatoren [MongoDB1.9]}
+\label{tab:AggregationFrameworkPipelineOperatoren}
 \begin{center}
     \begin{tabular}{ l  p{12cm}}
     \toprule
@@ -127,19 +120,19 @@ Es stehen folgende Pipeline-Operatoren zur Verfügung:
     \bottomrule
     \end{tabular}
 \end{center}
-\caption[Aggregation Framework: Pipeline-Operatoren]{Aggregation Framework: Pipeline-Operatoren \protect \footnotemark}
 \end{table}
 \footnotetext{\url{https://www.informatik-aktuell.de/betrieb/datenbanken/mongodb-fuer-software-entwickler.html}, letzter Zugriff: 9. Februar2021}
 
 
 
-\paragraph{CRUD} TODO TABLE :(
+\paragraph{CRUD}
 MongoDB unterstützt eine Vielzahl an Operationen zum Erzeugen, Lesen, Updaten und Löschen von Daten.
-Über folgende Kommandos lassen sich die CRUD-Operationen realisieren:
+Tabelle \ref{CRUDOperatoren} stellt die Kommandos zur Realisierung der CRUD-Operationen in MongoDB dar.
 \newline
 
 \begin{table}[tbt]
 \caption{CRUD-Operatoren}
+\label{CRUDOperatoren}
 \begin{center}
     \begin{tabular}{ l  p{8cm}  l }
     \toprule
@@ -218,13 +211,14 @@ Bis vor Version 3.2 war MMAPv1-Engine die Standard-Storage Engine von MongoDB. E
 \noindent
 \hangindent1cm
 \textbf{Replica Sets:}
-Im standardmäßgen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden \cite{DB3.6}. MongoDB realisiert die Replikation der Daten über Replica Sets\cite{DB3.7}. Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten.
-Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten 'Oplogs' (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird \cite{DB3.8}. Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab.
+Im standardmäßigen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden \cite{DB3.6}. MongoDB realisiert die Replikation der Daten über Replica Sets\cite{DB3.7}. Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten.
+Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten 'Oplogs' (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird \cite{DB3.8}. Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab. Das Konzept der Replica Sets wird in Abbildung \ref{fig:ReplicaSet} dargestellt.
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=7cm]{images/replicaset1.png}
 \caption{MongoDB Replica Set}
+\label{fig:ReplicaSet}
 \end{figure}
 \footnotetext{Bild aus \cite{DB3.8}}
 
@@ -252,11 +246,12 @@ MongoDB bietet für viele Programmiersprachen bzw. Frameworks Softwarebibliothek
 \noindent
 \hangindent1cm
 \textbf{Grafische Oberflächen:}
-Es gibt einige Anwendungen zur visuellen Darstellung und Bearbeitung der Datenbanken in MongoDB, die eine grafische Benutzeroberfläche bieten. Zum Beispiel MongoDB Compass, Studio3T oder Fang of Mongo. 
+Es gibt einige Anwendungen zur visuellen Darstellung und Bearbeitung der Datenbanken in MongoDB, die eine grafische Benutzeroberfläche bieten. Zum Beispiel MongoDB Compass, Studio3T oder Fang of Mongo. In Abbildung \ref{MongoDBCompass} wird die Benutzeroberfläche von MongoDBCompass dargestellt
 
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=15cm]{images/mongodb_compass.png}
-\caption{CRUD-Besipielfunktionen eines Mongoose-Models}
+\caption{MongoDBCompass Benutzeroberfläche}
+\label{MongoDBCompass}
 \end{figure}

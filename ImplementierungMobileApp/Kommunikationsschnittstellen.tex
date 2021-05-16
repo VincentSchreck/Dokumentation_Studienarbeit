@@ -1,48 +1,80 @@
-Nachfolgend werden die Klassenmodelle innerhalb der mobilen Anwendung dargestellt.
+Die Kommunikationsanfragen an den Webserver und den Filmdatenbankserver TMDB werden auf einzelne Service-Komponenten aufgeteilt, die jeweils das von Dart zur Verfügung gestellte HTTP-Package \footnote{Offizielle Homepage : \url{https://pub.dev/packages/http}} implementieren.\\
+Da der Webserver in der Entwicklungsphase einen selbstsigniertes Sicherheitszertifikat hat, wird für die HTTPS-Kommunikation die 'badCertificateCallback'-Funktion des 'HttpClient'-Objekts im HTTP-Package umgeschrieben. Es sei zu erwähnen, dass dieser Workaround nur in der Entwicklung genutzt werden soll. 
 
-\paragraph{Kommunikation}
-import 'package:http/http.dart' as http;
-Zur Kommunikation mit unserem Webserver und dem Filmdatenbankserver TMDB.
+\begin{lstlisting}[caption=Bad Certificate - Workaround, label=lst:badcertificateworkaround]
+class DevHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext context) {
+    return super.createHttpClient(context)
+      ..badCertificateCallback =
+          (X509Certificate cert, String host, int port) => true;
+  }
+}
+\end{lstlisting}
+
+\noindent
+Die Implementierung soll im Weiteren anhand der 'MoviesRequest'-Funktion des Movie-Services dargestellt werden. Die Funktionen der User-, Match- und Swipe-Services sind im ähnlichen Stil gehandhabt. \\
+
+\noindent
+\textbf{Movie Service:}
+Der Movie-Service bietet die Funktion 'MoviesRequest', welche einen Post-Anfrage über HTTPS an die Serveradresse (URL) und dem dazugehörigen relativen Pfad '/movies/request' sendet. Dafür wird zunächst ein Objekt 'data' erstellt, das mit den als Parameter übergebenen Daten gefüllt wird, die für die serverseitige Abhandlung der Anfrage benötigt werden. Über die 'post'-Funktion wird die Anfrage an die übergebene URL gesendet. Dem Header muss bei Übergabe von JSON-Daten der Eigenschaft 'Content-Type' der Wert 'application/json' hinzugefügt werden. Dem Body wird das aus 'data' in JSON codierte Objekt übergeben. Nach Ankunft der Antwort wird über den Statuscode geprüft, ob die Anfrage problemfrei ausgeführt werden konnte. Letztlich wird eine Liste von Movie-Objekten, die aus den im Body der Antwort befindlichen JSON-Daten konvertiert wurden, erstellt und zurückgegeben.
+
+\begin{lstlisting}[caption=Movie Service - MoviesRequest, label=lst:MoviesRequest]
+static Uri _url_Request = Uri.parse('https://' + URL + ':3001/movies/request');
+
+static Future<List<Movie>> MoviesRequest(final List<String> internMovieList,
+final int movieAmount,final bool includeSwiped) async {
+ var _responseBody;
+ String _uidtoken = await UserManager().getUserToken();
+
+ //Body mit JSON fuellen
+ Map data = { 'alreadyRequestedMovieIDs': internMovieList,
+              'includeSwiped': includeSwiped,
+              'amount': movieAmount,
+              'uidtoken': _uidtoken };
+              
+ var body = json.encode(data);
+ // Daten senden
+ try { var response = await http.post(_url_Request,
+       headers: {"Content-Type": "application/json"},
+       body: body).timeout(Duration(seconds: 10),onTimeout: (){
+                                          throw Exception(); });
+      
+       _responseBody = response.body;
+       if(response.statusCode != 200)
+       { throw(_responseBody);}
+ }
+ catch(Exception){return null;}
+
+ List collection = json.decode(_responseBody);
+ return collection.map((json) => Movie.fromJson(json)).toList();
+}
+\end{lstlisting}
 
 
-\paragraph{Movie Service}
-..
-\subparagraph{Movies Request}
-..
-\paragraph{User Service}
-..
-\subparagraph{Create User}
-..
-\subparagraph{Change User}
-..
 
-\paragraph{Match Service}
-..
-\subparagraph{Matches Request}
-..
-\subparagraph{Delete Supermatch}
-..
-\subparagraph{Delete Normalmatch}
-..
-\subparagraph{Trigger}
-Nur für die Entwicklung
+\noindent
+\textbf{User Service:} Dieser Service enthält die User-bezogenen Funktionen 'CreateUser' und 'ChangeUser', die entsprechende Anfragen an den Webserver schicken.\\
 
+\noindent
+\textbf{Match Service:} Dieser Service enthält die Match-bezogenen Funktionen 'MatchesRequest', 'DeleteSupermatch' und 'DeleteNormalmatch'.
+Ausserdem wird für die Entwicklungsphase die 'Trigger'-Funktion angeboten.
+Die Funktionen des Match-Services senden die dem Namen entsprechenden Anfragen an den Webserver.\\
 
-\paragraph{Swipe Service}
-\subparagraph{Create Swipe}
-..
+\noindent
+\textbf{Swipe Service:}
+Dieser Service enthält lediglich die Funktion 'CreateSwipe', die die entsprechende Anfrage an den Webserver schickt.\\
 
-\paragraph{TMDB Service}
-\subparagraph{Request Details}
-..
+\noindent
+\textbf{TMDB Service:}
+Der TMDB-Server bietet eine Programmierschnittstelle, auch Application Programming Interface (API) genannt, zum Abfragen von Daten\footnote{Offizielle Seite der API: \url{https://www.themoviedb.org/documentation/api}}. 
+Die nachfolgend aufgelisteten Funktionen fragen entsprechend dem benötigten Informationsgehalt unterschiedliche URL'S an. 
+Dabei wird jeweils der URL eine ID eines Filmes mitgegeben. Die in der Antwort zurückgesendeten Daten beziehen sich auf die übergebene Film-ID. 
+Dem Namen der Funktion entsprechend wird ein Objekt der Klasse 'TMDBMovieDetails', 'TMDBMovieCredits', 'TMDBMovieProviders' oder 'TMDBMovieTranslations' zurückgegeben.
 
-\subparagraph{Request Credits}
-..
-
-\subparagraph{Create Providers}
-..
-
-\subparagraph{Create Translations}
-..
-
-%TODO auth, database?
+\begin{itemize}
+\item Request Details
+\item Request Credits
+\item Request Providers
+\item Request Translations
+\end{itemize}
