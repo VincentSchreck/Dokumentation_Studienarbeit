@@ -20,8 +20,18 @@
 \usepackage{csquotes}
 \usepackage[left=2.5cm,right=2.5cm,top=2cm,bottom=3.5cm]{geometry}
 
-\title{StreamSwipe\\Tinder für Filme\vspace{10px}}
-\author{Leon Gieringer, Robin Meckler,Vincent Schreck \\ \\ Studienarbeit \\ \\ \\}
+\title{\normalsize{Duale Hochschule Baden-Württemberg Karlsruhe}\\
+		Fachbereich technische Informatik\\ \vspace{2cm}
+		\huge{\textbf{Entwicklung und Erstellung einer }}\\
+		\textbf{Dating-App auf Basis von Film- und }\\
+		\textbf{Serienpräferenzen für mobile Endgeräte}\\ \vspace{2cm}
+		\normalsize{Studienarbeit} von\\
+		}
+\author{\textbf{Leon Gieringer, Robin Meckler \& Vincent Schreck} \\ \vspace{2cm} \\
+		betreut durch \\ \\
+		\textbf{Prof. Dr. Kai Becher} \\ \vspace{2cm} \\
+		abgegeben am
+		}
 \date{\today}
 \usepackage{wrapfig}
 \usepackage{colortbl}
@@ -112,17 +122,19 @@
 \renewcommand{\subsubsectionmark}[1]{\markright{#1}}
 
 \cfoot{\thepage}
-\newpage
 
 
-\section[Einleitung]{Einleitung \hfill \normalfont \small{Vincent Schreck}}
+% Neue Section, neue Seite
+\clearpage
+\section{Einleitung}
 \input{Einleitung/Einleitung.tex}
 \subsection{Motivation}
 \input{Einleitung/Motivation.tex}
 \subsection{Methode}
 \input{Einleitung/Methode.tex}
-\clearpage
 
+% Neue Section, neue Seite
+\clearpage
 \section{Theoretische Grundlagen}
 \subsection{Netzwerkprotokolle}
 \input{Theoretische_Grundlagen/Netzwerkprotokolle.tex}
@@ -132,39 +144,43 @@
 \newpage
 \subsection{Node.JS}
 \input{Theoretische_Grundlagen/Framework_NodeJS}
+%\subsection{Representational State Transfer - Application Programming Interface}
+%\input{Grundlagen_RestAPI}
 \newpage
 \subsection{NoSQL-Datenbank}
 \input{Theoretische_Grundlagen/Grundlagen_NoSQL_Datenbank}
 \subsection{Firebase}
+\label{sec:firebase}
 \input{Theoretische_Grundlagen/Firebase}
 \subsection{Anwendungsentwicklung für mobile Endgeräte}
 \input{Theoretische_Grundlagen/Mobil_Anwendungsentwicklung}
 \subsection{Recommender System}
+\label{sec:recomandationSystem}
 \input{Theoretische_Grundlagen/Recommendationssystem}
-\clearpage
 
-\section{Konzept}
-\label{sec:konzept}
+% Neue Section, neue Seite
+\clearpage
+\section{Planung}
 \input{Konzept/Konzept.tex}
+
+
+% Neue Section, neue Seite
 \clearpage
-
-%\section[Funktionen/Komponenten]{Funktionen/Komponenten \hfill \normalfont \small{Autor-Name}}
-%\clearpage
-
 \section{Auswahl geeigneter Technologie}
 \input{Auswahl_geeigneter_Technologie/TechnologieAuswahl}
-\clearpage
 
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \section{Backend-Implementierung}
 \input{Backend_Implementierung/Backend.tex}
 
 \newpage
 \section{Frontend-Implementierung}
-\subsection{Swipe/Aussuchen/Voting}		
+\subsection{Swipe/Aussuchen/Voting}
 \subsection{Matches/Chat}		
 \subsection{Film-/Serienvorschläge}
-\subsection{Gespeicherte Filme/Filmliste}		
+\subsection{Gespeicherte Filme/Filmliste}
 \subsection{Barrierefreiheit}
 \label{sec:barrierefreiheit}
 \input{Barrierefreiheit/BF-Einleitung.tex}
@@ -177,12 +193,16 @@
 \input{Barrierefreiheit/BF-Streamswipe.tex}
 \clearpage
 
-\section[Benutzeroberflächen]{Benutzeroberflächen \hfill \normalfont \small{Vincent Schreck}}
+% Neue Section, neue Seite
+\clearpage
+\section{Benutzeroberflächen}
+\label{sec:UI-allgemein}
 \input{Benutzeroberfläche/UI_Einleitung.tex}
 \subsection{Aspekte von Benutzeroberflächen}
 \label{sec:UI-Aspekte}
 \input{Benutzeroberfläche/UI_Aspekte.tex}
 \subsection{Oberflächen von StreamSwipe}
+\label{sec:UI-alle}
 \input{Benutzeroberfläche/UI_StreamSwipe.tex}
 \subsubsection{Login-Screen}
 \label{sec:loginscreen}
@@ -199,18 +219,26 @@
 \subsubsection{Benutzerprofil}
 \label{sec:benutzerprofil}
 \input{Benutzeroberfläche/UI_Profilseite.tex}
-\subsection{Filmliste}
+
+
 \clearpage
+\section{Probleme}
+\label{sec:probleme}
+\input{Probleme/Probleme.tex}
 
-\section[Probleme]{Probleme \hfill \normalfont \small{Autor-Name}}
+
 \clearpage
+\section{Anwendbarkeit}
+\label{sec:anwendbarkeit}
+\input{Anwendbarkeit/Anwendbarkeit.tex}
 
-\section[Fazit]{Fazit \hfill \normalfont \small{Autor-Name}}
 
+\clearpage
+\section{Ausblick}
 Ausblick:
 \begin{itemize}
 \item Bilder zwischenspeichern
-\item Matches nach Filmgeschmack 
+\item Matches nach Filmgeschmack
 \item Angabe bevorzugter Genres
 \item Serien
 \item Algorithmus zur Aktualisierung der Datenbank
@@ -220,8 +248,17 @@ Ausblick:
 \item Trailer abspielen in der App
 \item ...
 \end{itemize}
-\clearpage
+\label{sec:ausblick}
+\input{Ausblick/Ausblick.tex}
 
+
+\clearpage
+\section{Fazit}
+\label{sec:fazit}
+\input{Fazit/Fazit.tex}
+
+
+\clearpage
 \appendix
 \section{Verfasser einzelner Abschnitte}
 \input{Anhang/Aufteilung.tex}
@@ -233,12 +270,13 @@ Ausblick:
 %TODO Abkürzungsverzeichnis
 \section*{Abkürzungsverzeichnis}
 
-- ECMA European Computer Manufacturers Association 
+- ECMA European Computer Manufacturers Association
 
 \newpage
 
-\section*{Literaturverzeichnis}
 
+\clearpage
+\section*{Literaturverzeichnis}
 \begin{itemize}
 %
 %
@@ -268,7 +306,7 @@ Ausblick:
 
 \bibitem[JS3]{JS1.06} Ingo Pakalski, 15 Jahre WWW: Die Browserkriege - Golem.de. \url{http://www.golem.de/0805/59377.html}, letzter Zugriff 03.04.2021
 
-\bibitem[JS4]{JS1.07} Ben Ilegbodu, History of ECMAScript. 
+\bibitem[JS4]{JS1.07} Ben Ilegbodu, History of ECMAScript.
 \url{https://www.benmvp.com/blog/learning-es6-history-of-ecmascript/}, letzter Zugriff 03.04.2021
 
 \bibitem[JS5]{JS1.08} ECMA International, ECMAScript®2020 Language Specification \url{https://www.ecma-international.org/publications-and-standards/standards/ecma-262/},letzter Zugriff 03.04.2021
@@ -311,7 +349,7 @@ Ausblick:
 \bibitem[Node7]{Node1.5} Alexander Neuman, Node.js 0.6.3 integriert npm
 \url{https://www.heise.de/developer/meldung/Node-js-0-6-3-integriert-npm-1386141.html},letzter Zugriff 03.04.2021
 
-\bibitem[Node8]{Node1.6} https://expressjs.com/de/, letzter Zugriff Stand 04.04.2021 
+\bibitem[Node8]{Node1.6} https://expressjs.com/de/, letzter Zugriff Stand 04.04.2021
 
 \bibitem[Node9]{Node1.8} \url{https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction}, letzter Zugriff 04.04.2021
 
@@ -342,22 +380,22 @@ Ausblick:
 %
 %
 
-\bibitem[DB1]{DB1} Andreas Meier, Grundlagen, Systeme und Nutzungspotenziale, Seite 149, ISBN: 9783658115890 
+\bibitem[DB1]{DB1} Andreas Meier, Grundlagen, Systeme und Nutzungspotenziale, Seite 149, ISBN: 9783658115890
 
-\bibitem[DB2]{DB1.6} Andreas Meier, Big Data, Grundlagen, Systeme und Nutzungspotenziale, Seite 34, ISBN: 9-783-6581-1589-0 
+\bibitem[DB2]{DB1.6} Andreas Meier, Big Data, Grundlagen, Systeme und Nutzungspotenziale, Seite 34, ISBN: 9-783-6581-1589-0
 
-\bibitem[DB3]{DB1.65} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 26, ISBN 9-781-4842-0648-5 
+\bibitem[DB3]{DB1.65} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 26, ISBN 9-781-4842-0648-5
 
-\bibitem[DB4]{DB1.7} https://db-engines.com/de/ranking 
+\bibitem[DB4]{DB1.7} https://db-engines.com/de/ranking
 
 \bibitem[DB5]{DB1.8} https://www.mongodb.com/json-and-bson, letzter Zugriff: 10.02.2021
- 
-\bibitem[DB6]{DB1.85} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 32, ISBN 9-781-4842-0648-5 
+
+\bibitem[DB6]{DB1.85} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 32, ISBN 9-781-4842-0648-5
 1
 
-\bibitem[DB7]{DB2.4} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 83, ISBN 9-781-4842-0648-5 
+\bibitem[DB7]{DB2.4} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 83, ISBN 9-781-4842-0648-5
 
-\bibitem[DB8]{DB3.5} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 160, ISBN 9-781-4842-0648-5 
+\bibitem[DB8]{DB3.5} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 160, ISBN 9-781-4842-0648-5
 
 \bibitem[DB9]{DB3.6} \url{https://de.wikipedia.org/wiki/Replikation_(Datenverarbeitung)}, letzter Zugriff 10.02.2021
 
@@ -375,19 +413,19 @@ Ausblick:
 %
 
 
-\bibitem[Tech1]{Tech3} \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff 18.03.2021 
+\bibitem[Tech1]{Tech3} \url{https://entwickler.de/online/javascript/7-gruende-node-js-579924149.html}, letzter Zugriff 18.03.2021
 
 \bibitem[Tech2]{Tech4.5} J. Batra und S. Batra, „MONGODB Versus SQL: A Case Study on Electricity, Seite 297-298
 
-\bibitem[Tech3]{Tech5} G. Roden, Node.js und Co: Skalierbare hochperformante und echtzeitfähige Webanwendungen professionell in JavaScript entwickeln, ISBN 9-783-8986-4829-5 
+\bibitem[Tech3]{Tech5} G. Roden, Node.js und Co: Skalierbare hochperformante und echtzeitfähige Webanwendungen professionell in JavaScript entwickeln, ISBN 9-783-8986-4829-5
 
-[Tech5] 
+[Tech5]
 
 
 %
 %
 %   	Der Rest...
-%			
+%
 %
 %
 
@@ -396,11 +434,11 @@ Ausblick:
 
 	\bibitem[2]{fentaw2020} Fentaw, A. E. (2020). Cross platform mobile application development: a comparison study of React Native Vs Flutter.
 
-	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, Zuletzt aufgerufen am: 13.04.2021
+	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, letzter Zugriff: 13. April 2021
 
-	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, Zuletzt aufgerufen am: 13.04.2021
+	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, letzter Zugriff: 13. April 2021
 
-	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, Aufgerufen am: 04.03.2021
+	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, letzter Zugriff: 04. März 2021
 
 	\bibitem[6]{johnson1988} Johnson R. E. \&  Foote B. “Designing Reusable Classes.” Journal of ObjectOriented Programming 1, 2 (June/July 1988). Page 22-35.
 
@@ -416,7 +454,7 @@ Ausblick:
 
 	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
 
-	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, Aufgerufen am: 25.04.2021
+	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, letzter Zugriff: 25. April 2021
 
     \bibitem[14]{scheidungen} Meinungsforschungsinstituts Civey (2020):  \url{https://www.presseportal.de/pm/145489/4627304}, letzter Zugriff: 13. Mai 2021
 
@@ -427,6 +465,10 @@ Ausblick:
     \bibitem[17]{behindertengleichstellungsgesetz} Behindertengleichstellungsgesetz (2002): \url{https://www.gesetze-im-internet.de/bgg/BGG.pdf}, letzter Zugriff: 19. April 2021
 
     \bibitem[18]{sehhilfen} Institut für Demoskopie Allensbach (2019): \textit{Untersuchung zum Sehbewusstsein der Deutschen},  \url{file:///C:/Users/Vincent/AppData/Local/Temp/ZVA_Brillenstudie_2019-1.pdf}, letzter Zugriff: 11. Mai 2021
+
+    \bibitem[19]{playstore_release} Google Support (2021): \textit{App veröffentlichen}, \url{https://support.google.com/googleplay/android-developer/answer/9859751?hl=de}, letzter Zugriff: 14. Mai 2021
+
+    \bibitem[20]{appstore_release} Apple Support (2021): \textit{Infos zum Apple Developer Program}, \url{https://developer.apple.com/de/support/compare-memberships/}, letzter Zugriff: 14. Mai 2021
 \end{itemize}
 \end{document}
 

@@ -1,4 +1,4 @@
-Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellenförmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit \cite{DB1}. 
+Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellenförmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit. \cite{DB1}
 Zu den bekanntesten NoSQL-Datenbanken gehören beispielsweise Apache Cassandra, MongoDB und CouchDB.
 \newline
 
@@ -15,7 +15,7 @@ Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sog
 \includegraphics[]{images/graphikdatabase.jpg}
 \caption{Graphikdatenbank Beispiel \protect \footnotemark}
 \end{figure}
-\footnotetext{\url{https://entwickler.de/online/datenbanken/wunderbare-welt-der-graphen-114728.html}, letzter Zugriff: 9.02.2021}
+\footnotetext{\url{https://entwickler.de/online/datenbanken/wunderbare-welt-der-graphen-114728.html}, letzter Zugriff: 9. Februar 2021}
 
 \noindent
 \subparagraph{Dokumentenorientierte Datenbanken}
@@ -39,25 +39,26 @@ In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Da
 \subparagraph{Key-Value-Datenbanken}
 Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. 
 
-\begin{table}[h]
+\begin{table}[tbt]
+\caption{Key-Value Beispiel}
 \begin{center}
-    \begin{tabular}{| l | p{8cm} |}
-    \hline
-    \textbf{Key} & \textbf{Value} \\ \hline
+    \begin{tabular}{ l  l }
+	\toprule
+    \textbf{Key} & \textbf{Value} \\
+    \midrule
     K1 & AAA,BBB,CCC\\
     
-    \hline
+
     K2 &  AAA,BBB\\
-    
-    \hline
+
+
 	K3 & AAA,DDD\\
-	
-    \hline    
-    K4 & BBB,2,01/01/2015 \\ 
-       \hline  
+
+
+    K4 & BBB,2,01/01/2015 \\
+	\bottomrule
     \end{tabular}
 \end{center}
-\caption{Key-Value Beispiel}
 \end{table}
 
 \noindent
@@ -82,7 +83,7 @@ Spaltenorientierung dagegen eignet sich sehr gut für die Auswertung von Aggrega
 \includegraphics[width=15cm]{images/zeilenspaltenorientiert.png}
 \caption{Zeilen- und spaltenorientierte Speicherung \protect \footnotemark }
 \end{figure}
-\footnotetext{\url{https://www.axiom-net.de/die-datenbank-hana-ist-spaltenorientiert}, letzter Zugriff: 9.02.2021}
+\footnotetext{\url{https://www.axiom-net.de/die-datenbank-hana-ist-spaltenorientiert}, letzter Zugriff: 9. Februar 2021}
 
 
 
@@ -100,7 +101,7 @@ Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Ja
 \includegraphics[width=8cm, height=6.5cm]{images/Visualization-of-CAP-theorem.png}
 \caption{Visualization-of-CAP-theorem \protect \footnotemark}
 \end{figure}
-\footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff 10.02.2021}
+\footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff 10. Februar 2021}
 
 \noindent
 Die \textbf{Konsistenz (C)} beschreibt, dass Datenzustände, die in einem verteilten System geändert  werden, in jedem zusammenhängenden System gleich sein müssen. Der Zustand der Daten soll somit im gesamten System übereinstimmen. Ein System, das einen ununterbrochenen Betrieb und eine akzeptable Antwortzeit aufweisen kann, besitzt eine hohe \textbf{Verfügbarkeit (A)}. Die \textbf{Ausfalltoleranz (P)} steht für ein Verhalten, bei dem es bei Ausfallen eines Bestandteiles innerhalb eines Systems  zu keinem Gesamtausfall kommt.

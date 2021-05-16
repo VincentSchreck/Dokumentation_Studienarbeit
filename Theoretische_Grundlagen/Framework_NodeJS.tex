@@ -1,12 +1,14 @@
-Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code\footnote{\url{https://v8.dev/}, letzter Zugriff 03.04.2021}. 
+Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code\footnote{\url{https://v8.dev/}, letzter Zugriff: 03.April 2021}.
 
 
 \subsubsection{Architektur}
 Eine wesentliche Eigenschaft von Node.js ist die hohe Performance. Im Folgenden soll der Unterschied der Node.js-Architektur zu traditionellen Webservern und der damit verbundenen höheren Performance dargestellt werden.
 \newline
+
 \noindent
 Herkömmliche Webserver erstellten zunächst für jede ankommende Anfrage einen neuen Thread. Dieses Vorgehen ist eng mit steigendem Speicher- und Rechenaufwand verbunden. Um sich Rechenzeit, die durch die Erstellung und Zerstörung von Threads entstanden, zu sparen, wurden Threadpools eingerichtet. Dieser Threadpool enthält mehrere Threads, denen Aufgaben zugewiesen werden können. Nach erfolgreicher Abarbeitung einer Operation kann einem Thread eine weitere Aufgabe zugeordnet werden.
 \newline
+
 \noindent
 Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu einer Form von blockierender Ein- und Ausgabe (Blocking Input/Output kurz Blocking I/O) kommen: zum Beispiel beim Suchen in einer Datenbank oder dem Laden einer Datei im Dateisystem.
  Während der Abarbeitung wartet der Thread solange, bis die Operation ein Ergebnis zurückwirft und belegt dabei weiterhin Speicherplatz. 
@@ -20,14 +22,17 @@ Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu eine
 \end{figure}
  
 \newpage
+
 \noindent
 Node.js verfolgt einen anderen Ansatz: Anfragen werden nur in einem einzigen Thread, dem Hauptthread, abgearbeitet und in einer Warteschlange verwaltet. Dadurch bleiben Kontextwechsel zwischen Threads erspart. Hierbei handelt es sich also um einen Single-Threaded Server. Der Hauptthread verwaltet eine Schleife, die sogenannte Event Loop, die permanent Anfragen aus der Event-Warteschlange überprüft und Ereignisse, die von Ein- und Ausgangsoperationen ausgerufen werden, verarbeitet.
 \newline
+
 \noindent
 Bei Ankommen einer Nutzeranfrage an einen Node.js Server wird zunächst in der Event Loop geprüft, ob diese Anfrage Blocking I/O benötigt. Falls nicht, kann die Anfrage direkt bearbeitet werden und die Antwort an den Nutzer zurückgesendet werden. 
 \newline
+
 \noindent
-Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch Threads sind, aufgerufen, um die jeweilige Operation auszuführen. Dabei wird eine Callback-Funktion mitgegeben, die vom Worker aufgerufen wird, sobald die Operation ausgeführt wurde. Diese Callback-Funktion kann anschließend als Ereignis von der Event Loop registriert werden. Man spricht hierbei auch von ereignisgesteuerter Architektur\cite{Node1.4}.
+Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch Threads sind, aufgerufen, um die jeweilige Operation auszuführen. Dabei wird eine Callback-Funktion mitgegeben, die vom Worker aufgerufen wird, sobald die Operation ausgeführt wurde. Diese Callback-Funktion kann anschließend als Ereignis von der Event Loop registriert werden. Man spricht hierbei auch von ereignisgesteuerter Architektur. [1.4]
 \newline
  
 \begin{figure}[h]
@@ -36,6 +41,7 @@ Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch
 \caption{Single Threaded / Non Blocking I/0 \cite{Node1.1}}
 \end{figure}
  
+
 \noindent
 Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein- und Aus\-gabeoperationen nicht anhält, und weitere Anfragen bearbeiten kann. (Non Blocking I/O - Prinzip) 
 \newline
@@ -43,7 +49,8 @@ Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein
 \newpage
 \subsubsection{Module}
 
-Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen. 
+\noindent
+Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen.
 Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponenten, die den Hauptteil des Moduls repräsentiert, exportiert werden. 
 Bei der anderen Möglichkeit, des sogenannten ‚benannten Exports‘ werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist in nachfolgender Abbildung dargestellt. 
 \newline
@@ -58,8 +65,9 @@ module.exports.foo = foo;
 module.exports.bar = bar;
 \end{lstlisting}
 
+
 \noindent
-Für den Import stehen verschiedene Möglichkeiten zur Verfügung. 
+Für den Import stehen verschiedene Möglichkeiten zur Verfügung.
 Im folgender Abbildung ist ein Import über die require()-Funktion dargestellt. 
 Mit mitgeliefertem Modul-Pfad als Parameter gibt diese Funktion ein Objekt des Moduls wieder, das die exportierten Objekte (und Funktionen) enthält.
 \newline
@@ -84,6 +92,7 @@ Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js,
 \newline
 \textbf{Beispiel}
  \newline
+
 \noindent
 Das Erstellen einer einfachen Express-Applikation wird im folgenden Beispiel dargestellt:\newline
 
@@ -104,7 +113,7 @@ app.listen(port, () => {
 \noindent
 Die require()-Funktion importiert das Express-Modul und gibt ein Express-Objekt zurück. 
 Dieses Objekt als Funktion aufgerufen gibt wiederum ein Objekt der Express-Applikation zurück, welche traditionell „app“ genannt wird, das Kernstück des Express-Frameworks ist und sämtliche Methoden wie das Weiterleiten von HTTP Anfragen, das Konfigurieren von Middleware oder das Modifizieren des Webserver-Verhaltens beinhaltet \cite{Node1.8}.
-\newline 
+\newline
 \noindent
 Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion spezifiziert eine Callback-Funktion, die ein „request“- und „response“-Objekt als Parameter erhält und aufgerufen wird, sobald eine HTTP Anfrage der Methode GET mit dem Pfad ‚/‘ empfangen wird. Das Request-Objekt enthält sämtliche Informationen über die HTTP-Anfrage. Das Response-Objekt kann dagegen in der Callback-Funktion mit Informationen gefüllt werden und über die send()-Funktion als HTTP-Antwort an den Sender zurückgesendet werden.
 \newline
@@ -114,7 +123,7 @@ Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Fun
 \noindent
 \subparagraph{Middleware}
 Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion \cite{Node1.9}.
-Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in folgender Abbildung illustriert: 
+Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in folgender Abbildung illustriert:
 \newline
 
 \begin{figure}[h]
@@ -131,7 +140,8 @@ Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware ge
 \noindent
 \subparagraph{Middleware: express.json}
 
-Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts \cite{Node2.1}. 
+\noindent
+Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts. [nodejs 2.1]
 \newline
 
 \begin{lstlisting}[caption=Express.json Middleware benutzen,label=lst:ExpressNutzen]
@@ -149,10 +159,12 @@ app.use(express.json());
 \noindent
 \subparagraph{Middleware: Router}
 
-Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen“ \cite{Node2.15}
-\newline
 \noindent
-Die in express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middleware- und Routingsystem zu sehen und wird deshalb auch als 'Mini-App' angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
+Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ [nodejs 2.15]
+\newline
+
+\noindent
+Die in express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middleware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
 \newline
 
 
@@ -178,7 +190,7 @@ router.get('/about', function(req,req){
 });
 module.exports = router;
 \end{lstlisting}
-\footnotetext{Express, API-Dokumentation Router. \url{https://expressjs.com/en/api.html\#router}, letzter Zugriff 05.04.2021}
+\footnotetext{Express, API-Dokumentation Router. \url{https://expressjs.com/en/api.html\#router}, letzter Zugriff: 05.April 2021}
 
 \noindent
 In oberem Beispiel wird ein Routerhandler für das Verzeichnis ‚/birds‘ mit eigen implementierter Middleware und zwei Anwendungsendpunkte ‚/‘ (bezieht sich auf das Stammverzeichnis) und ‚/about‘ erstellt. Der Code wird unter der Datei birds.js abgespeichert. 
@@ -193,12 +205,12 @@ app.use('birds', birds);
 
 %
 %       Mongoose
-%			
+%
 %
 
 \newpage
 \paragraph{Mongoose}
-Mongoose ist ein öffentliches Modul, das zum Zeitpunkt der Dokumentation[TODO??] im npm Package Manager in der Version 5.12.3 zur Verfügung steht \footnote{npm mongoose. \url{https://www.npmjs.com/package/mongoose}, letzter Zugriff 05.04.2021}. Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM \cite{Node2.55}. Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
+Mongoose ist ein öffentliches Modul, das zum Zeitpunkt der Dokumentation[TODO??] im npm Package Manager in der Version 5.12.3 zur Verfügung steht \footnote{npm mongoose. \url{https://www.npmjs.com/package/mongoose}, letzter Zugriff: 05.April 2021}. Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM \cite{Node2.55}. Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
 \newline
 
 %
@@ -220,7 +232,7 @@ NoSQL Mapper nutzen vom Entwickler definierte Datenschemata, die das Objekt besc
 
 \noindent
 \subparagraph{Schema}
-Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität eine Collection. Mongoose Schemata werden für jede Collection definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
+Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer Mongo"-DB-"-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität eine Collection. Mongoose Schemata werden für jede Collection definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
 \newline
 
 
@@ -317,12 +329,13 @@ const options = {
 	family:4 // Use IPv4
 }
 \end{lstlisting}
-\footnotetext{Mongoose Connections, \url{https://mongoosejs.com/docs/connections.html}, letzter Zugriff 05.04.2021}
+\footnotetext{Mongoose Connections, \url{https://mongoosejs.com/docs/connections.html}, letzter Zugriff: 05.April 2021}
 
 
 \paragraph{Weitere Module}
 
-\begin{table}[h]
+\begin{table}[tbt]
+\caption{Module}
 \begin{center}
     \begin{tabular}{| l | p{8cm} |}
     \hline
@@ -345,5 +358,4 @@ const options = {
     \hline
     \end{tabular}
 \end{center}
-\caption{Module}
 \end{table}
