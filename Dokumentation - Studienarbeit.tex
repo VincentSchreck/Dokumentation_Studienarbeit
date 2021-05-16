@@ -138,15 +138,21 @@
 \section{Theoretische Grundlagen}
 \subsection{Netzwerkprotokolle}
 \input{Theoretische_Grundlagen/Netzwerkprotokolle.tex}
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \subsection{JavaScript}
 \input{Theoretische_Grundlagen/Language_JavaScript}
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \subsection{Node.JS}
 \input{Theoretische_Grundlagen/Framework_NodeJS}
 %\subsection{Representational State Transfer - Application Programming Interface}
 %\input{Grundlagen_RestAPI}
-\newpage
+
+% Neue Section, neue Seite
+\clearpage
 \subsection{NoSQL-Datenbank}
 \input{Theoretische_Grundlagen/Grundlagen_NoSQL_Datenbank}
 \subsection{Firebase}
@@ -169,19 +175,36 @@
 \section{Auswahl geeigneter Technologie}
 \input{Auswahl_geeigneter_Technologie/TechnologieAuswahl}
 
+% Neue Section, neue Seite
+\clearpage
+\section{Serverseitige Implementierung}
+\input{Backend_Implementierung/Backend.tex}
 
 % Neue Section, neue Seite
 \clearpage
-\section{Backend-Implementierung}
-\input{Backend_Implementierung/Backend.tex}
-
-\newpage
-%\section{Frontend-Implementierung}
-%\subsection{Swipe/Aussuchen/Voting}
-%\subsection{Matches/Chat}		
-%\subsection{Film-/Serienvorschläge}
-%\subsection{Gespeicherte Filme/Filmliste}
-
+\section{Implementierung der mobilen Anwendung}
+%TODO Ersten 3 Kapitel sind Backend, weitere sind Frontend
+\subsection{Klassenmodelle}		
+\input{ImplementierungMobileApp/Klassenmodelle.tex}
+\subsection{Kommunikationschnittstellen}
+\input{ImplementierungMobileApp/Kommunikationsschnittstellen.tex}	
+\subsection{Manager}	
+\input{ImplementierungMobileApp/Manager.tex}
+%-------------------------------------
+\subsection{Swipe/Aussuchen/Voting}		
+\subsection{Matches/Chat}		
+\subsection{Film-/Serienvorschläge}
+\subsection{Gespeicherte Filme/Filmliste}		
+\subsection{Barrierefreiheit}
+\label{sec:barrierefreiheit}
+\input{Barrierefreiheit/BF-Einleitung.tex}
+\subsubsection{Barrierefreiheit in mobilen Anwendungen}
+\input{Barrierefreiheit/BF-Apps.tex}
+\subsubsection{Barrierefreiheit in Filmen und Serien}
+\input{Barrierefreiheit/BF-Filme.tex}
+\subsubsection{Barrierefreiheit bei StreamSwipe}
+\label{sec:bf-streamswipe}
+\input{Barrierefreiheit/BF-Streamswipe.tex}
 \clearpage
 
 % Neue Section, neue Seite

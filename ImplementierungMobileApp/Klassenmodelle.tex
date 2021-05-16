@@ -1,0 +1,59 @@
+Nachfolgend werden die Klassenmodelle innerhalb der mobilen Anwendung dargestellt.
+
+\paragraph{Modellierung der Filmklassen}
+Die Filmdaten, die der Nutzer für das Swipen auf der Oberfläche erhält, werden aus dem Webserver bezogen. Der Informationsgehalt eines Films beschränkt sich dabei auf den eindeutigen Identifikator (ID) und den Titel des Films.
+Im weiteren Schritt werden anhand der Film-ID's die weiteren benötigten Informationen aus dem TMDB-Server angefragt. 
+
+\subparagraph{Movie Modell}
+Zum Konvertieren des JSON-Objekts aus dem Webserver und zum Speichern der Daten in die Umgebung der mobilen Anwendung wird die Klasse 'movie\_Model'\footnote{Zum Konvertieren von JSON Objekten in Dart-Code wurde die Online-Konvertierung \url{https://app.quicktype.io/} genutzt.}. 
+
+
+
+
+\begin{lstlisting}[caption=Movie Modell - JSON Konvertierung, label=lst:moviemodel]
+Movie movieFromJson(String str) => Movie.fromJson(json.decode(str));
+String movieToJson(Movie data) => json.encode(data.toJson());
+
+class Movie {
+  Movie({
+    this.original_title,
+    this.id
+  });
+
+  String original_title;
+  String id;
+
+  factory Movie.fromJson(Map<String, dynamic> json) => Movie(
+    original\_title: json["original_title"],
+    id: json["id"],
+  );
+
+  Map<String, dynamic> toJson() => {
+    "original\_title": original_title,
+    "id": id,
+  };
+}
+\end{lstlisting}
+
+
+\paragraph{TMDB-Movie Modell}
+Die Klasse 'tmdbmovie\_model' ist eine Zusammenstellung mehrerer Daten. Sie enthält jeweils ein Objekt der folgenden aufgelisteten Klassen:
+
+\begin{itemize}
+\item Tmdb-Movie-Details Modell: Enthält filmbezogene Informationen wie Titel, Posterpfad, Rating..
+\item Tmdb-Movie-Credits Modell: Enthält Informationen zu den mitwirkenden Personen wie Schauspieler und Regisseure.
+\item Tmdb-Movie-Provider Modell: Enthält Informationen bezüglich anbietenden Streaming-Providern.
+\item Tmdb-Movie-Translations Modell: Enthält Informationen zu Sprachen zum Film.
+\end{itemize}
+
+\paragraph{Match Modell}
+Nutzer werden ihre Matches vom Webserver abfragen. Hierbei erhalten erhalten sie zwei Listen 'supermatches' und 'normalmatches' sowie die Informationen 'newChanges', die Auskunft darüber gibt, ob es seit der letzten Anfrage zu Änderungen kam. Die Listen sind jeweils mit den entsprechenden Matchinformationen gefüllt. Der Informationsgehalt beg 'uid' der Nutzer und die 'id' des Films/der Filme, über das sie gematcht sind. Für diese Informationen wurde die Klasse 
+
+
+\noindent
+\subparagraph{PartInfo-Match Modell}
+...
+
+\noindent
+\subparagraph{FullInfo-Match Modell}
+...

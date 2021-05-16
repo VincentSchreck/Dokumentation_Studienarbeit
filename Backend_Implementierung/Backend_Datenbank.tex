@@ -1,12 +1,9 @@
 \subsubsection{Bereitstellung der Datenbank}
-Über die offizielle Seite der MongoDB-Hersteller wird das Community-Installationspaket heruntergeladen und ausgeführt. []
-%https://www.mongodb.com/try/download/community
-Ausserdem wird die Kommandozeilenanwendung MongDBShell[] und die
-%https://www.mongodb.com/try/download/shell
-graphische Benutzeroberfläche MongoDBCompass installiert. []
-%https://www.mongodb.com/try/download/compass
-Nach erfolgreichem Initiieren eines Replica-Sets[]
-%https://docs.mongodb.com/manual/tutorial/deploy-replica-set/
+Über die offizielle Seite der MongoDB-Hersteller wird das Community-Installationspaket heruntergeladen und ausgeführt. \footnote{MongoDB Download: \url{ https://www.mongodb.com/try/download/community}}
+Ausserdem wird die Kommandozeilenanwendung MongDBShell\footnote{MongDBShell Download: \url{ https://www.mongodb.com/try/download/shell}} und die
+graphische Benutzeroberfläche MongoDBCompass installiert\footnote{MongDBShell Download: \url{https://www.mongodb.com/try/download/compass}}. 
+
+Nach erfolgreichem Initiieren eines Replica-Sets\footnote{MongDBShell Download: \url{https://docs.mongodb.com/manual/tutorial/deploy-replica-set/}}
 kann der mongod-Prozess unter Angabe des zu verwendenden Replica-Sets, des Ports und des Datenspeicherpfads gestartet werden. \newline
 
 %\begin{lstlisting}[caption=Mongod-Aufruf, %label=lst:mongodcall]
@@ -14,8 +11,8 @@ kann der mongod-Prozess unter Angabe des zu verwendenden Replica-Sets, des Ports
 %\end{lstlisting} %TODO
 
 \noindent
-Standardmäßig wird bei Installation von MongoDB eine Konfigurationsdatei erstellt, dessen Name und Verzeichnis anhängig vom benutzten Betriebssystem sind. Auf diese Datei wird bei fehlender Angabe im mongod-ausführendem Kommando zugegriffen. [] 
-%https://docs.mongodb.com/manual/reference/configuration-options/
+Standardmäßig wird bei Installation von MongoDB eine Konfigurationsdatei erstellt, dessen Name und Verzeichnis anhängig vom benutzten Betriebssystem sind. Auf diese Datei wird bei fehlender Angabe im mongod-ausführendem Kommando zugegriffen\footnote{MongDB Konfiguration: \url{https://docs.mongodb.com/manual/reference/configuration-options/}}.
+
 Sie ermöglicht das Konfigurieren der zu nutzen Storage-Engine. Dementsprechend wird als Storage Engine die WiredTiger-Engine eingestellt. 
 Über die graphische Benutzeroberfläche MongoDBCompass wird nach erfolgreicher Verbindung mit der MongoDB-Datenbanksystem eine neue Datenbank hinzugefügt namens 'StreamSwipeDatabase'. Ihr werden die benötigten Collections hinzugefügt:
 
@@ -27,8 +24,7 @@ Sie ermöglicht das Konfigurieren der zu nutzen Storage-Engine. Dementsprechend 
 \end{itemize}
 
 \subsubsection{Importieren der Film- und Städtedaten}
-Um Nutzer innerhalb einer Stadt miteinander matchen zu können, werden Städtenamendaten auf der Datenbank benötigt. Auf der Webseite "datenboerse.net" wird eine Liste deutscher Städtenamen zur Verfügung gestellt[].\newline
-%https://www.datenbörse.net/item/Liste_von_deutschen_Staedtenamen_.csv
+Um Nutzer innerhalb einer Stadt miteinander matchen zu können, werden Städtenamendaten auf der Datenbank benötigt. Auf der Webseite "datenboerse.net" wird eine Liste deutscher Städtenamen zur Verfügung gestellt\footnote{MongDB Konfiguration: \url{https://www.datenbörse.net/item/Liste_von_deutschen_Staedtenamen_.csv}}.\newline
 
 \noindent
 Die von uns genutzte Filmdatenbank TMDB bietet eine Liste der datenbankseitig vorhandenen Filme. Sie kann über Filmdatenbankanbieter-API heruntergeladen werden.[]
