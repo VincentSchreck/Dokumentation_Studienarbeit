@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.10)  15 MAY 2021 23:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.9.10)  16 MAY 2021 05:18
 entering extended mode
 **"./Dokumentation - Studienarbeit.tex"
 ("Dokumentation - Studienarbeit.tex"
@@ -648,13 +648,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `"Dokumentation - Studienarbeit.toc"'.
 
  [2]
-("Dokumentation - Studienarbeit.lof"
-Overfull \hbox (22.63286pt too wide) in paragraph at lines 29--29
- \OT1/cmr/m/n/10.95 dem far-bi-ge Ak-zen-te nicht der In-for-ma-tio-nen[]ubertr
-agung die-nen um die Zug[]anglichkeit 
- []
-
-)
+("Dokumentation - Studienarbeit.lof")
 \tf@lof=\write5
 \openout5 = `"Dokumentation - Studienarbeit.lof"'.
 
@@ -662,7 +656,7 @@ agung die-nen um die Zug[]anglichkeit
 \tf@lol=\write6
 \openout6 = `"Dokumentation - Studienarbeit.lol"'.
 
- [4]
+[4]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 119.
@@ -680,11 +674,11 @@ l.141 \clearpage
                  [1
 
 ] (Netzwerkprotokolle.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--11
+Underfull \hbox (badness 10000) in paragraph at lines 2--10
 
  []
 
-<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=568, 445.665pt x 134.00063pt>
+<images/Netzwerkprotokolle_OSI-Schicht.PNG, id=550, 445.665pt x 134.00063pt>
 File: images/Netzwerkprotokolle_OSI-Schicht.PNG Graphic file (type png)
 <use images/Netzwerkprotokolle_OSI-Schicht.PNG>
 Package pdftex.def Info: images/Netzwerkprotokolle_OSI-Schicht.PNG  used on inp
@@ -693,70 +687,58 @@ ut line 16.
 [2
 
  <./images/Netzwerkprotokolle_OSI-Schicht.PNG>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 22.
-
-
-Underfull \hbox (badness 1264) in paragraph at lines 41--42
+Underfull \hbox (badness 1264) in paragraph at lines 40--41
 \OT1/cmr/m/n/10.95 der Pa-ke-te in Fra-mes und Hin-zuf[]ugen von
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
 
-Overfull \hbox (1.9493pt too wide) in paragraph at lines 56--60
+Overfull \hbox (1.9493pt too wide) in paragraph at lines 53--57
 \OT1/cmr/m/n/10.95 Sie ist das Bin-de-glied zwi-schen den an-wen-dungs-ori-en-t
 ier-ten und den trans-por-t-ori-en-tier-ten Schich-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--77
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 
  []
 
 [3]
-<images/netzwerkprotokolle_http.PNG, id=581, 549.55313pt x 176.15813pt>
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
+
+ []
+
+<images/netzwerkprotokolle_http.PNG, id=563, 549.55313pt x 176.15813pt>
 File: images/netzwerkprotokolle_http.PNG Graphic file (type png)
 <use images/netzwerkprotokolle_http.PNG>
 Package pdftex.def Info: images/netzwerkprotokolle_http.PNG  used on input line
- 80.
+ 79.
 (pdftex.def)             Requested size: 455.24411pt x 145.93164pt.
- [4 <./images/netzwerkprotokolle_http.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
+[4 <./images/netzwerkprotokolle_http.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--142
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
-)
-Overfull \hbox (4.84016pt too wide) in paragraph at lines 146--145
-\OT1/cmr/m/n/10.95 Be-ginn der Kom-mu-ni-ka-ti-on an den Web-cli-ent ge-sen-det
- wird, be-schei-nigt die Ver-trau-ensw[]urdigkeit
- []
-
-[5] (Language_JavaScript.tex
+) [5] (Language_JavaScript.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -767,38 +749,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--13
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--25
+Overfull \hbox (35.62065pt too wide) in paragraph at lines 26--30
+\OT1/cmr/m/n/10.95 JavaScript ist ei-ne in-ter-pre-tier-te Pro-gram-mier-spra-c
+he mit ob-jek-t-ori-en-tier-ten Umsetzungs-m[]oglichkeiten.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--30
 
  []
 
 [6]
-<images/JavaScript_Object.PNG, id=603, 545.03625pt x 143.03438pt>
+<images/JavaScript_Object.PNG, id=585, 545.03625pt x 143.03438pt>
 File: images/JavaScript_Object.PNG Graphic file (type png)
 <use images/JavaScript_Object.PNG>
-Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 28.
+Package pdftex.def Info: images/JavaScript_Object.PNG  used on input line 33.
 (pdftex.def)             Requested size: 455.24411pt x 119.46927pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
 
@@ -808,192 +796,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--10
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
-<images/nodejs_otherthreading.png, id=609, 1118.1775pt x 675.52374pt>
+<images/nodejs_otherthreading.png, id=591, 1118.1775pt x 675.52374pt>
 File: images/nodejs_otherthreading.png Graphic file (type png)
 <use images/nodejs_otherthreading.png>
-Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 1
-8.
+Package pdftex.def Info: images/nodejs_otherthreading.png  used on input line 2
+0.
 (pdftex.def)             Requested size: 284.52579pt x 156.49072pt.
 [8 <./images/nodejs_otherthreading.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
+Underfull \hbox (badness 10000) in paragraph at lines 34--37
 
  []
 
-<images/nodejs_nodethreading.png, id=615, 1098.1025pt x 656.4525pt>
+<images/nodejs_nodethreading.png, id=597, 1098.1025pt x 656.4525pt>
 File: images/nodejs_nodethreading.png Graphic file (type png)
 <use images/nodejs_nodethreading.png>
-Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 35
+Package pdftex.def Info: images/nodejs_nodethreading.png  used on input line 40
 .
 (pdftex.def)             Requested size: 284.52808pt x 156.49005pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--42
+Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
 [9 <./images/nodejs_nodethreading.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 46--50
+Underfull \hbox (badness 10000) in paragraph at lines 52--57
 
  []
 
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 52.
+nput line 59.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 53.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 60.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--71
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 74--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--96
+Underfull \hbox (badness 10000) in paragraph at lines 101--105
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--105
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 99.
-
+Package Listings Warning: Text dropped after begin of listing on input line 109
+.
 
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-109.
+119.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
+ []
+
+
+Overfull \hbox (15.75858pt too wide) in paragraph at lines 137--138
+\OT1/cmr/m/n/10.95 Der un-ter-ste Block star-tet den Webser-ver auf dem mit-ge-
+ge-be-nen Port []uber die Funk-ti-on app.listen().
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
-
- []
-
-<images/nodejs_middleware.png, id=652, 956.57375pt x 256.96pt>
-File: images/nodejs_middleware.png Graphic file (type png)
-<use images/nodejs_middleware.png>
-Package pdftex.def Info: images/nodejs_middleware.png  used on input line 135.
-(pdftex.def)             Requested size: 341.43306pt x 91.71742pt.
-
 Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
+<images/nodejs_middleware.png, id=634, 956.57375pt x 256.96pt>
+File: images/nodejs_middleware.png Graphic file (type png)
+<use images/nodejs_middleware.png>
+Package pdftex.def Info: images/nodejs_middleware.png  used on input line 148.
+(pdftex.def)             Requested size: 341.43306pt x 91.71742pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--157
+
+ []
+
 [12 <./images/nodejs_middleware.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--163
+Overfull \hbox (26.56374pt too wide) in paragraph at lines 176--179
+\OT1/cmr/m/n/10.95 ten-hand-ler (Wei-ter-lei-tungs-rou-ti-nen) zu er-stel-len. 
+Ei-ne Router-Instanz ist als vollst[]andiges Middleware-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 164
+Package Listings Warning: Text dropped after begin of listing on input line 180
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 208--212
 
  []
 
 
-Package Listings Warning: Text dropped after begin of listing on input line 196
+Package Listings Warning: Text dropped after begin of listing on input line 213
 .
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 210--212
+Underfull \hbox (badness 10000) in paragraph at lines 227--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--218
+Underfull \hbox (badness 10000) in paragraph at lines 231--235
 
  []
 
 
-Overfull \hbox (15.98344pt too wide) in paragraph at lines 220--222
-[] [] \OT1/cmr/bx/n/10.95 Sche-ma[] \OT1/cmr/m/n/10.95 Mongoose-Schemata de-fi-
-nie-ren die Struk-tur der ge-spei-cher-ten Da-ten ei-ner MongoDB-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--222
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 275--277
+Underfull \hbox (badness 10000) in paragraph at lines 293--296
 
  []
 
 [15]
-Overfull \hbox (6.57996pt too wide) in paragraph at lines 301--304
+Overfull \hbox (6.57996pt too wide) in paragraph at lines 320--323
 \OT1/cmr/m/n/10.95 ge-nutz-ten Da-ten-bank und des Da-ten-bank-pfads her-ge-ste
 llt wer-den. []Uber das mongoose.connection-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--304
+Underfull \hbox (badness 10000) in paragraph at lines 320--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+Underfull \hbox (badness 10000) in paragraph at lines 338--341
 
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 354--355
+Underfull \hbox (badness 1132) in paragraph at lines 375--376
 []|\OT1/cmr/m/n/10.95 Erm[]oglicht Da-ten-trans-fer []uber das Pro-to-kol
  []
 
 ) (Grundlagen_RestAPI.tex) [16] (Grundlagen_NoSQL_Datenbank.tex
-Overfull \hbox (9.14607pt too wide) in paragraph at lines 1--4
-\OT1/cmr/m/n/10.95 Unter NoS-QL ([]Not on-ly SQL\) wer-den Da-ten-bank-sy-ste-m
-e be-zeich-net, die einen nicht-relationalen
- []
-
-
-Overfull \hbox (3.02235pt too wide) in paragraph at lines 1--4
-\OT1/cmr/m/n/10.95 An-satz ver-fol-gen. Im Ver-gleich zu re-la-tio-na-len Da-te
-n-ban-ken, wel-che die Da-ten in ta-bel-lenf[]ormigen
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
@@ -1003,52 +985,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-<images/graphikdatabase.jpg, id=750, 341.3553pt x 257.0403pt>
+<images/graphikdatabase.jpg, id=732, 341.3553pt x 257.0403pt>
 File: images/graphikdatabase.jpg Graphic file (type jpg)
 <use images/graphikdatabase.jpg>
 Package pdftex.def Info: images/graphikdatabase.jpg  used on input line 14.
 (pdftex.def)             Requested size: 341.35445pt x 257.03967pt.
 [17 <./images/graphikdatabase.jpg>]
-Overfull \hbox (1.37259pt too wide) in paragraph at lines 67--68
+Overfull \hbox (1.37259pt too wide) in paragraph at lines 68--69
 \OT1/cmr/m/n/10.95 zun[]achst den Ta-bel-len der re-la-tio-na-len Da-ten-bank-s
 y-ste-me sehr []ahnlich, un-ter-schei-den sich grund-
  []
 
-<images/SpaltenorientiereDatenbank.png, id=755, 576.1525pt x 261.97874pt>
+<images/SpaltenorientiereDatenbank.png, id=737, 576.1525pt x 261.97874pt>
 File: images/SpaltenorientiereDatenbank.png Graphic file (type png)
 <use images/SpaltenorientiereDatenbank.png>
 Package pdftex.def Info: images/SpaltenorientiereDatenbank.png  used on input l
-ine 72.
+ine 73.
 (pdftex.def)             Requested size: 227.62608pt x 85.35794pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
-<images/zeilenspaltenorientiert.png, id=756, 473.51906pt x 103.13531pt>
+<images/zeilenspaltenorientiert.png, id=738, 473.51906pt x 103.13531pt>
 File: images/zeilenspaltenorientiert.png Graphic file (type png)
 <use images/zeilenspaltenorientiert.png>
 Package pdftex.def Info: images/zeilenspaltenorientiert.png  used on input line
- 90.
+ 91.
 (pdftex.def)             Requested size: 426.79134pt x 92.96095pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
 
 [18 <./images/SpaltenorientiereDatenbank.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
 
  []
 
-<images/Visualization-of-CAP-theorem.png, id=772, 853.1875pt x 770.88pt>
+<images/Visualization-of-CAP-theorem.png, id=754, 853.1875pt x 770.88pt>
 File: images/Visualization-of-CAP-theorem.png Graphic file (type png)
 <use images/Visualization-of-CAP-theorem.png>
 Package pdftex.def Info: images/Visualization-of-CAP-theorem.png  used on input
- line 104.
+ line 105.
 (pdftex.def)             Requested size: 227.61678pt x 184.93263pt.
 
-Overfull \hbox (2.00333pt too wide) in paragraph at lines 108--109
+Overfull \hbox (2.00333pt too wide) in paragraph at lines 109--110
 []\OT1/cmr/m/n/10.95 Die \OT1/cmr/bx/n/10.95 Kon-si-stenz (C) \OT1/cmr/m/n/10.9
 5 be-schreibt, dass Da-ten-zust[]ande, die in ei-nem ver-teil-ten Sy-stem ge[]a
 ndert
@@ -1060,7 +1042,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<images/MongoDB_Architektur.png, id=778, 881.2925pt x 418.56375pt>
+<images/MongoDB_Architektur.png, id=760, 881.2925pt x 418.56375pt>
 File: images/MongoDB_Architektur.png Graphic file (type png)
 <use images/MongoDB_Architektur.png>
 Package pdftex.def Info: images/MongoDB_Architektur.png  used on input line 11.
@@ -1082,12 +1064,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--27
  []
 
 [20 <./images/MongoDB_Architektur.png (PNG copy)>]
-Overfull \hbox (8.53453pt too wide) in paragraph at lines 43--45
-\OT1/cmr/m/n/10.95 goDB1.85] Ist ei-ne au-to-ma-ti-sche Ge-ne-rie-rung des ein-
-deu-ti-gen Iden-ti-fi-ka-ti-ons-fel-des nicht erw[]unscht,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
  []
@@ -1095,12 +1071,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--45
 
 Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
- []
-
-
-Overfull \hbox (18.98996pt too wide) in paragraph at lines 57--60
-\OT1/cmr/m/n/10.95 Ver-gleichs-ope-ra-to-ren zur Verf[]ugung. [ sie-he Mon-goDB
-2.1] Das Er-geb-nis der obi-gen Find-Operationen
  []
 
 
@@ -1120,69 +1090,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--74
  []
 
 
-Overfull \hbox (18.55766pt too wide) in paragraph at lines 89--117
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--161
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+Underfull \hbox (badness 10000) in paragraph at lines 159--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--174
+Underfull \hbox (badness 10000) in paragraph at lines 164--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--185
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Overfull \hbox (19.53738pt too wide) in paragraph at lines 191--194
-\OT1/cmr/m/n/10.95 wa-re-kom-po-nen-te ei-nes Da-ten-bank-sy-stems zum Ver-wal-
-ten der Da-ten be-zeich-net. Die ge-br[]auchlichsten
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 192--195
 
  []
 
 [24]
-<images/replicaset1.png, id=828, 465.74pt x 422.57875pt>
+<images/replicaset1.png, id=810, 465.74pt x 422.57875pt>
 File: images/replicaset1.png Graphic file (type png)
 <use images/replicaset1.png>
-Package pdftex.def Info: images/replicaset1.png  used on input line 201.
+Package pdftex.def Info: images/replicaset1.png  used on input line 202.
 (pdftex.def)             Requested size: 199.16928pt x 180.71231pt.
  [25 <./images/replicaset1.png>]
-<images/mongodb_compass.png, id=835, 1028.84375pt x 472.76625pt>
+<images/mongodb_compass.png, id=817, 1028.84375pt x 472.76625pt>
 File: images/mongodb_compass.png Graphic file (type png)
 <use images/mongodb_compass.png>
 Package pdftex.def Info: images/mongodb_compass.png  used on input line 227.
@@ -1214,56 +1173,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
  []
 
 [27]
-<images/firestore_datastucture.png, id=856, 702.625pt x 542.025pt>
+<images/firestore_datastucture.png, id=838, 702.625pt x 542.025pt>
 File: images/firestore_datastucture.png Graphic file (type png)
 <use images/firestore_datastucture.png>
 Package pdftex.def Info: images/firestore_datastucture.png  used on input line 
 35.
 (pdftex.def)             Requested size: 159.33821pt x 122.91801pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--56
+Underfull \hbox (badness 1028) in paragraph at lines 42--57
+[]\OT1/cmr/m/n/10.95 Das Da-ten-mo-dell ist hier-ar-chisch auf-ge-baut, wo-bei
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--56
+Underfull \hbox (badness 10000) in paragraph at lines 42--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--77
+Underfull \hbox (badness 10000) in paragraph at lines 67--78
 
  []
 
-[28 <./images/firestore_datastucture.png>] [29]
-<images/firebase_functions_notify.png, id=909, 1927.2pt x 1084.05pt>
+[28 <./images/firestore_datastucture.png>]
+Overfull \hbox (8.68248pt too wide) in paragraph at lines 101--109
+\OT1/cmr/m/n/10.95 Samm-lun-gen: \OT1/cmtt/m/n/10.95 cities \OT1/cmr/m/n/10.95 
+und \OT1/cmtt/m/n/10.95 countries\OT1/cmr/m/n/10.95 . Je-des \OT1/cmtt/m/n/10.9
+5 country \OT1/cmr/m/n/10.95 Do-ku-ment bein-hal-tet das Feld \OT1/cmtt/m/n/10.
+95 last[]updated
+ []
+
+[29]
+<images/firebase_functions_notify.png, id=891, 1927.2pt x 1084.05pt>
 File: images/firebase_functions_notify.png Graphic file (type png)
 <use images/firebase_functions_notify.png>
 Package pdftex.def Info: images/firebase_functions_notify.png  used on input li
-ne 160.
+ne 162.
 (pdftex.def)             Requested size: 385.43318pt x 216.80615pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--170
+Underfull \hbox (badness 10000) in paragraph at lines 152--172
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
 
  []
 
-<images/firebase_cloudmessaging_architecture.png, id=933, 1927.2pt x 1084.05pt>
+<images/firebase_cloudmessaging_architecture.png, id=915, 1927.2pt x 1084.05pt>
 
 File: images/firebase_cloudmessaging_architecture.png Graphic file (type png)
 <use images/firebase_cloudmessaging_architecture.png>
 Package pdftex.def Info: images/firebase_cloudmessaging_architecture.png  used 
-on input line 192.
+on input line 194.
 (pdftex.def)             Requested size: 443.24669pt x 249.32625pt.
 [31 <./images/firebase_functions_notify.png>]
-<images/firebase_admob_ads.PNG, id=943, 659.46375pt x 148.30406pt>
+<images/firebase_admob_ads.PNG, id=925, 659.46375pt x 148.30406pt>
 File: images/firebase_admob_ads.PNG Graphic file (type png)
 <use images/firebase_admob_ads.PNG>
-Package pdftex.def Info: images/firebase_admob_ads.PNG  used on input line 208.
+Package pdftex.def Info: images/firebase_admob_ads.PNG  used on input line 210.
 
 (pdftex.def)             Requested size: 362.70618pt x 81.56747pt.
 ) [32 <./images/firebase_cloudmessaging_architecture.png (PNG copy)> <./images/
@@ -1274,258 +1246,221 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--4
  []
 
 
-Overfull \hbox (22.15442pt too wide) in paragraph at lines 10--12
-\OT1/cmr/m/n/10.95 reit, mit wel-chen das Ent-wickeln ei-ner An-wen-dung er-lei
-ch-tert sein soll. [[]] Ein platt-form[]ubergreifendes
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
 
  []
 
 [33]
-<images/crossplattform_unterteilung.png, id=967, 965.6075pt x 348.30125pt>
+<images/crossplattform_unterteilung.png, id=949, 965.6075pt x 348.30125pt>
 File: images/crossplattform_unterteilung.png Graphic file (type png)
 <use images/crossplattform_unterteilung.png>
 Package pdftex.def Info: images/crossplattform_unterteilung.png  used on input 
-line 34.
+line 39.
 (pdftex.def)             Requested size: 453.83559pt x 163.7016pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
 
  []
 
 [34 <./images/crossplattform_unterteilung.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 54--59
+Underfull \hbox (badness 10000) in paragraph at lines 61--66
 
  []
 
-<images/hybride-anwendungen-struktur.PNG, id=983, 485.56406pt x 422.32782pt>
+<images/hybride-anwendungen-struktur.PNG, id=966, 485.56406pt x 422.32782pt>
 File: images/hybride-anwendungen-struktur.PNG Graphic file (type png)
 <use images/hybride-anwendungen-struktur.PNG>
 Package pdftex.def Info: images/hybride-anwendungen-struktur.PNG  used on input
- line 65.
+ line 73.
 (pdftex.def)             Requested size: 218.5018pt x 190.04576pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--84
+Underfull \hbox (badness 10000) in paragraph at lines 82--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--84
+Underfull \hbox (badness 10000) in paragraph at lines 82--92
 
  []
 
 [35 <./images/hybride-anwendungen-struktur.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 86--94
+Underfull \hbox (badness 10000) in paragraph at lines 94--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--94
+Underfull \hbox (badness 10000) in paragraph at lines 94--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--108
+Underfull \hbox (badness 10000) in paragraph at lines 111--116
 
  []
 
 [36]
-<images/crossplattform_popularity.png, id=1024, 1003.75pt x 745.78625pt>
+<images/crossplattform_popularity.png, id=1007, 1003.75pt x 745.78625pt>
 File: images/crossplattform_popularity.png Graphic file (type png)
 <use images/crossplattform_popularity.png>
 Package pdftex.def Info: images/crossplattform_popularity.png  used on input li
-ne 111.
+ne 119.
 (pdftex.def)             Requested size: 401.49289pt x 298.30922pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 128--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
+Underfull \hbox (badness 10000) in paragraph at lines 128--134
 
  []
 
 [37 <./images/crossplattform_popularity.png>]
-<images/reactnative_architecture_old.png, id=1042, 1204.5pt x 412.54124pt>
+<images/reactnative_architecture_old.png, id=1025, 1204.5pt x 412.54124pt>
 File: images/reactnative_architecture_old.png Graphic file (type png)
 <use images/reactnative_architecture_old.png>
 Package pdftex.def Info: images/reactnative_architecture_old.png  used on input
- line 131.
+ line 139.
 (pdftex.def)             Requested size: 481.79147pt x 165.01357pt.
 
-Overfull \hbox (26.54736pt too wide) in paragraph at lines 131--132
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 139--140
  [] 
  []
 
-<images/reactnative_architecture.png, id=1046, 1204.5pt x 497.86pt>
+<images/reactnative_architecture.png, id=1029, 1204.5pt x 497.86pt>
 File: images/reactnative_architecture.png Graphic file (type png)
 <use images/reactnative_architecture.png>
 Package pdftex.def Info: images/reactnative_architecture.png  used on input lin
-e 149.
+e 158.
 (pdftex.def)             Requested size: 481.79147pt x 199.14047pt.
 
-Overfull \hbox (26.54736pt too wide) in paragraph at lines 149--150
+Overfull \hbox (26.54736pt too wide) in paragraph at lines 158--159
  [] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[][]\OT1/cmr/m/n/9 Quelle: Re-act Na-ti-ve's re-architecture (2020): []$\OT1/cm
+tt/m/n/9 https : / / medium . com / swlh /
+ []
 
 [38 <./images/reactnative_architecture_old.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 [39 <./images/reactnative_architecture.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 183--189
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--189
+Underfull \hbox (badness 10000) in paragraph at lines 193--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--195
+Underfull \hbox (badness 10000) in paragraph at lines 201--205
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--229
+Underfull \hbox (badness 10000) in paragraph at lines 235--238
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 268--269
+Underfull \hbox (badness 10000) in paragraph at lines 277--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
-<images/dart-diagram.png, id=1157, 803.0pt x 437.635pt>
+<images/dart-diagram.png, id=1143, 803.0pt x 437.635pt>
 File: images/dart-diagram.png Graphic file (type png)
 <use images/dart-diagram.png>
-Package pdftex.def Info: images/dart-diagram.png  used on input line 281.
+Package pdftex.def Info: images/dart-diagram.png  used on input line 291.
 (pdftex.def)             Requested size: 361.34666pt x 196.93393pt.
 [42 <./images/dart-diagram.png (PNG copy)>]
-<images/flutter_architektur.png, id=1175, 1842.885pt x 1511.6475pt>
+<images/flutter_architektur.png, id=1160, 1842.885pt x 1511.6475pt>
 File: images/flutter_architektur.png Graphic file (type png)
 <use images/flutter_architektur.png>
-Package pdftex.def Info: images/flutter_architektur.png  used on input line 305
+Package pdftex.def Info: images/flutter_architektur.png  used on input line 318
 .
 (pdftex.def)             Requested size: 460.72012pt x 377.91095pt.
 
-Overfull \hbox (5.47601pt too wide) in paragraph at lines 305--306
+Overfull \hbox (5.47601pt too wide) in paragraph at lines 318--319
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--324
-
- []
-
-[43]
 Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--337
+
+ []
+
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 339--344
+
+ []
+
 [44 <./images/flutter_architektur.png>]
-<images/flutter_widget_tree.png, id=1196, 602.25pt x 528.97626pt>
+<images/flutter_widget_tree.png, id=1181, 602.25pt x 528.97626pt>
 File: images/flutter_widget_tree.png Graphic file (type png)
 <use images/flutter_widget_tree.png>
-Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 334
+Package pdftex.def Info: images/flutter_widget_tree.png  used on input line 347
 .
 (pdftex.def)             Requested size: 301.12425pt x 264.48747pt.
-<images/flutter_state.png, id=1200, 764.8575pt x 277.035pt>
+<images/flutter_state.png, id=1185, 764.8575pt x 277.035pt>
 File: images/flutter_state.png Graphic file (type png)
 <use images/flutter_state.png>
-Package pdftex.def Info: images/flutter_state.png  used on input line 347.
+Package pdftex.def Info: images/flutter_state.png  used on input line 360.
 (pdftex.def)             Requested size: 305.93758pt x 110.81203pt.
 ) [45 <./images/flutter_widget_tree.png> <./images/flutter_state.png>] (Recomme
-ndationssystem.tex
-
-Package caption Warning: \label without proper reference on input line 14.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `Recommendation Matrix' on page 46 undefined on input 
-line 10.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 12.
-
-[46]
-Overfull \hbox (12.41096pt too wide) in paragraph at lines 45--46
-[]\OT1/cmr/m/n/10.95 Das Sy-stem ist al-so un-abh[]angig von an-de-ren Nut-zer-
-da-ten, da die Vor-schl[]age nur auf Pr[]aferenzen
- []
-
-
-Overfull \hbox (41.40706pt too wide) in paragraph at lines 45--46
-\OT1/cmr/m/n/10.95 ei-nes ein-zel-nen Nut-zers ba-sie-ren. Dies bie-tet im Hin-
-blick auf ei-ne App auch gu-te Ska-lie-rungsm[]oglichkeiten.
- []
-
-
-Overfull \hbox (9.25497pt too wide) in paragraph at lines 55--56
-[]\OT1/cmr/m/it/10.95 Memory-based Me-tho-den\OT1/cmr/m/n/10.95 : Es wird, wie 
-oben be-schrie-ben, aus ge-sam-mel-ten Da-ten []Ahnlichkeit
- []
-
-[47])
-Overfull \hbox (18.33556pt too wide) in paragraph at lines 92--179
+ndationssystem.tex [46] [47])
+Overfull \hbox (18.33556pt too wide) in paragraph at lines 104--179
 [][]$\OT1/cmtt/m/n/10.95 https : / / dl . acm . org / doi / pdf / 10 . 1145 / 3
 383313 . 3412488$[] []$http : / / www . microlinkcolleges .
  []
 
 [48] (Konzept.tex
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
 [49
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 30--31
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-<images/Konzeptdiagramm.png, id=1260, 2350.7825pt x 1367.1075pt>
+<images/Konzeptdiagramm.png, id=1245, 1971.365pt x 2031.59pt>
 File: images/Konzeptdiagramm.png Graphic file (type png)
 <use images/Konzeptdiagramm.png>
-Package pdftex.def Info: images/Konzeptdiagramm.png  used on input line 37.
-(pdftex.def)             Requested size: 455.24408pt x 264.73875pt.
+Package pdftex.def Info: images/Konzeptdiagramm.png  used on input line 39.
+(pdftex.def)             Requested size: 455.24408pt x 469.14685pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [50] [51 <./images/Konzeptdiagramm.png>] [52
-
-] (TechnologieAuswahl.tex
-[53
+) [50] [51 <./images/Konzeptdiagramm.png>] (TechnologieAuswahl.tex [52
 
 ]
 Overfull \hbox (7.03014pt too wide) in paragraph at lines 39--40
@@ -1550,19 +1485,19 @@ Overfull \hbox (64.44121pt too wide) in paragraph at lines 53--56
 be-grenz-ter Zu-griffs-zahl [https://rapidapi.com/blog/how-
  []
 
-) [54] (Backend.tex (Backend_Server.tex) (Backend_Datenbank.tex)
+) [53] (Backend.tex (Backend_Server.tex) (Backend_Datenbank.tex)
 (Backend_Kommunikationsschnittstelle.tex)) (Barrierefreiheit/BF-Einleitung.tex)
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--211
+Underfull \hbox (badness 10000) in paragraph at lines 2--206
 
  []
 
 (Barrierefreiheit/BF-Apps.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 1--214
+Underfull \hbox (badness 10000) in paragraph at lines 1--209
 
  []
 
-[55
+[54
 
 ] (Barrierefreiheit/BF-Filme.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
@@ -1579,14 +1514,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--7
 
  []
 
-[56]
-<Barrierefreiheit/images/bsp-swipe.png, id=1300, 1084.05pt x 1927.2pt>
+[55]
+<Barrierefreiheit/images/bsp-swipe.png, id=1280, 1084.05pt x 1927.2pt>
 File: Barrierefreiheit/images/bsp-swipe.png Graphic file (type png)
 <use Barrierefreiheit/images/bsp-swipe.png>
 Package pdftex.def Info: Barrierefreiheit/images/bsp-swipe.png  used on input l
 ine 12.
 (pdftex.def)             Requested size: 162.60048pt x 289.06754pt.
-<Barrierefreiheit/images/bsp-profil.png, id=1301, 1084.05pt x 1927.2pt>
+<Barrierefreiheit/images/bsp-profil.png, id=1281, 1084.05pt x 1927.2pt>
 File: Barrierefreiheit/images/bsp-profil.png Graphic file (type png)
 <use Barrierefreiheit/images/bsp-profil.png>
 Package pdftex.def Info: Barrierefreiheit/images/bsp-profil.png  used on input 
@@ -1597,7 +1532,7 @@ Overfull \hbox (2.43333pt too wide) in paragraph at lines 10--22
 []$[]$ $[]$ 
  []
 
-[57 <./Barrierefreiheit/images/bsp-swipe.png> <./Barrierefreiheit/images/bsp-pr
+[56 <./Barrierefreiheit/images/bsp-swipe.png> <./Barrierefreiheit/images/bsp-pr
 ofil.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
@@ -1613,7 +1548,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
-) [58] (Benutzeroberfläche/UI_Einleitung.tex)
+) [57] (Benutzeroberfläche/UI_Einleitung.tex)
 (Benutzeroberfläche/UI_Aspekte.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
@@ -1644,7 +1579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[59
+[58
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 25--28
@@ -1652,7 +1587,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--28
  []
 
 ) (Benutzeroberfläche/UI_StreamSwipe.tex) (Benutzeroberfläche/UI_Login.tex
-<Benutzeroberfläche/images/screenshot_login_1.png, id=1337, 1084.05pt x 1927.2
+<Benutzeroberfläche/images/screenshot_login_1.png, id=1318, 1084.05pt x 1927.2
 pt>
 File: Benutzeroberfläche/images/screenshot_login_1.png Graphic file (type png)
 
@@ -1660,7 +1595,7 @@ File: Benutzeroberfläche/images/screenshot_login_1.png Graphic file (type png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_login_1.png  use
 d on input line 8.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_login_2.png, id=1338, 1084.05pt x 1927.2
+<Benutzeroberfläche/images/screenshot_login_2.png, id=1319, 1084.05pt x 1927.2
 pt>
 File: Benutzeroberfläche/images/screenshot_login_2.png Graphic file (type png)
 
@@ -1668,7 +1603,7 @@ File: Benutzeroberfläche/images/screenshot_login_2.png Graphic file (type png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_login_2.png  use
 d on input line 14.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_login_3.png, id=1339, 1084.05pt x 1927.2
+<Benutzeroberfläche/images/screenshot_login_3.png, id=1320, 1084.05pt x 1927.2
 pt>
 File: Benutzeroberfläche/images/screenshot_login_3.png Graphic file (type png)
 
@@ -1676,7 +1611,7 @@ File: Benutzeroberfläche/images/screenshot_login_3.png Graphic file (type png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_login_3.png  use
 d on input line 20.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_login_4.png, id=1340, 1084.05pt x 1927.2
+<Benutzeroberfläche/images/screenshot_login_4.png, id=1321, 1084.05pt x 1927.2
 pt>
 File: Benutzeroberfläche/images/screenshot_login_4.png Graphic file (type png)
 
@@ -1684,7 +1619,7 @@ File: Benutzeroberfläche/images/screenshot_login_4.png Graphic file (type png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_login_4.png  use
 d on input line 27.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_login_5.png, id=1341, 1084.05pt x 1927.2
+<Benutzeroberfläche/images/screenshot_login_5.png, id=1322, 1084.05pt x 1927.2
 pt>
 File: Benutzeroberfläche/images/screenshot_login_5.png Graphic file (type png)
 
@@ -1692,7 +1627,7 @@ File: Benutzeroberfläche/images/screenshot_login_5.png Graphic file (type png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_login_5.png  use
 d on input line 33.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_darkmode_3.png, id=1342, 1084.05pt x 192
+<Benutzeroberfläche/images/screenshot_darkmode_3.png, id=1323, 1084.05pt x 192
 7.2pt>
 File: Benutzeroberfläche/images/screenshot_darkmode_3.png Graphic file (type p
 ng)
@@ -1701,17 +1636,17 @@ Package pdftex.def Info: Benutzeroberfläche/images/screenshot_darkmode_3.png
 used on input line 39.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
 )
-[60] (Benutzeroberfläche/UI_Home-Screen.tex
+[59] (Benutzeroberfläche/UI_Home-Screen.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
  []
 
-[61 <./Benutzeroberfläche/images/screenshot_login_1.png> <./Benutzeroberfläch
+[60 <./Benutzeroberfläche/images/screenshot_login_1.png> <./Benutzeroberfläch
 e/images/screenshot_login_2.png> <./Benutzeroberfläche/images/screenshot_login
 _3.png> <./Benutzeroberfläche/images/screenshot_login_4.png> <./Benutzeroberfl
 äche/images/screenshot_login_5.png> <./Benutzeroberfläche/images/screenshot_d
 arkmode_3.png>]
-<Benutzeroberfläche/images/screenshot_homescreen_1.png, id=1361, 1084.05pt x 1
+<Benutzeroberfläche/images/screenshot_homescreen_1.png, id=1342, 1084.05pt x 1
 927.2pt>
 File: Benutzeroberfläche/images/screenshot_homescreen_1.png Graphic file (type
  png)
@@ -1719,7 +1654,7 @@ File: Benutzeroberfläche/images/screenshot_homescreen_1.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_homescreen_1.png
   used on input line 10.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_homescreen_2.png, id=1362, 1084.05pt x 1
+<Benutzeroberfläche/images/screenshot_homescreen_2.png, id=1343, 1084.05pt x 1
 927.2pt>
 File: Benutzeroberfläche/images/screenshot_homescreen_2.png Graphic file (type
  png)
@@ -1727,7 +1662,7 @@ File: Benutzeroberfläche/images/screenshot_homescreen_2.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_homescreen_2.png
   used on input line 16.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_darkmode_1.png, id=1363, 1084.05pt x 192
+<Benutzeroberfläche/images/screenshot_darkmode_1.png, id=1344, 1084.05pt x 192
 7.2pt>
 File: Benutzeroberfläche/images/screenshot_darkmode_1.png Graphic file (type p
 ng)
@@ -1735,10 +1670,10 @@ ng)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_darkmode_1.png  
 used on input line 22.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-) (Benutzeroberfläche/UI_Swipe-Screen.tex [62 <./Benutzeroberfläche/images/sc
+) (Benutzeroberfläche/UI_Swipe-Screen.tex [61 <./Benutzeroberfläche/images/sc
 reenshot_homescreen_1.png> <./Benutzeroberfläche/images/screenshot_homescreen_
 2.png> <./Benutzeroberfläche/images/screenshot_darkmode_1.png>]
-<Benutzeroberfläche/images/screenshot_swipescreen1.png, id=1378, 1084.05pt x 1
+<Benutzeroberfläche/images/screenshot_swipescreen1.png, id=1358, 1084.05pt x 1
 927.2pt>
 File: Benutzeroberfläche/images/screenshot_swipescreen1.png Graphic file (type
  png)
@@ -1746,7 +1681,7 @@ File: Benutzeroberfläche/images/screenshot_swipescreen1.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_swipescreen1.png
   used on input line 11.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_swipescreen2.png, id=1379, 1084.05pt x 1
+<Benutzeroberfläche/images/screenshot_swipescreen2.png, id=1359, 1084.05pt x 1
 927.2pt>
 File: Benutzeroberfläche/images/screenshot_swipescreen2.png Graphic file (type
  png)
@@ -1754,7 +1689,7 @@ File: Benutzeroberfläche/images/screenshot_swipescreen2.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_swipescreen2.png
   used on input line 17.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_swipescreen3.png, id=1380, 813.0375pt x 
+<Benutzeroberfläche/images/screenshot_swipescreen3.png, id=1360, 813.0375pt x 
 1445.4pt>
 File: Benutzeroberfläche/images/screenshot_swipescreen3.png Graphic file (type
  png)
@@ -1762,7 +1697,7 @@ File: Benutzeroberfläche/images/screenshot_swipescreen3.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_swipescreen3.png
   used on input line 23.
 (pdftex.def)             Requested size: 141.62617pt x 251.77988pt.
-<Benutzeroberfläche/images/screenshot_swipescreen4.png, id=1381, 1084.05pt x 1
+<Benutzeroberfläche/images/screenshot_swipescreen4.png, id=1361, 1084.05pt x 1
 927.2pt>
 File: Benutzeroberfläche/images/screenshot_swipescreen4.png Graphic file (type
  png)
@@ -1770,7 +1705,7 @@ File: Benutzeroberfläche/images/screenshot_swipescreen4.png Graphic file (type
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_swipescreen4.png
   used on input line 30.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_darkmode_2.png, id=1382, 1084.05pt x 192
+<Benutzeroberfläche/images/screenshot_darkmode_2.png, id=1362, 1084.05pt x 192
 7.2pt>
 File: Benutzeroberfläche/images/screenshot_darkmode_2.png Graphic file (type p
 ng)
@@ -1778,47 +1713,47 @@ ng)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_darkmode_2.png  
 used on input line 36.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-) [63] (Benutzeroberfläche/UI_Chat.tex [64 <./Benutzeroberfläche/images/scree
+) [62] (Benutzeroberfläche/UI_Chat.tex [63 <./Benutzeroberfläche/images/scree
 nshot_swipescreen1.png> <./Benutzeroberfläche/images/screenshot_swipescreen2.p
 ng> <./Benutzeroberfläche/images/screenshot_swipescreen3.png> <./Benutzeroberf
 läche/images/screenshot_swipescreen4.png> <./Benutzeroberfläche/images/screen
 shot_darkmode_2.png>]
-<Benutzeroberfläche/images/screenshot_chat_1.png, id=1403, 813.0375pt x 1445.4
+<Benutzeroberfläche/images/screenshot_chat_1.png, id=1384, 813.0375pt x 1445.4
 pt>
 File: Benutzeroberfläche/images/screenshot_chat_1.png Graphic file (type png)
 <use Benutzeroberfläche/images/screenshot_chat_1.png>
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_chat_1.png  used
  on input line 9.
 (pdftex.def)             Requested size: 141.62617pt x 251.77988pt.
-<Benutzeroberfläche/images/screenshot_chat_2.png, id=1404, 813.0375pt x 1445.4
+<Benutzeroberfläche/images/screenshot_chat_2.png, id=1385, 813.0375pt x 1445.4
 pt>
 File: Benutzeroberfläche/images/screenshot_chat_2.png Graphic file (type png)
 <use Benutzeroberfläche/images/screenshot_chat_2.png>
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_chat_2.png  used
  on input line 15.
 (pdftex.def)             Requested size: 141.62617pt x 251.77988pt.
-<Benutzeroberfläche/images/screenshot_chat_3.png, id=1405, 813.0375pt x 1445.4
+<Benutzeroberfläche/images/screenshot_chat_3.png, id=1386, 813.0375pt x 1445.4
 pt>
 File: Benutzeroberfläche/images/screenshot_chat_3.png Graphic file (type png)
 <use Benutzeroberfläche/images/screenshot_chat_3.png>
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_chat_3.png  used
  on input line 21.
 (pdftex.def)             Requested size: 141.62617pt x 251.77988pt.
-<Benutzeroberfläche/images/screenshot_chat_4.png, id=1406, 813.0375pt x 1445.4
+<Benutzeroberfläche/images/screenshot_chat_4.png, id=1387, 813.0375pt x 1445.4
 pt>
 File: Benutzeroberfläche/images/screenshot_chat_4.png Graphic file (type png)
 <use Benutzeroberfläche/images/screenshot_chat_4.png>
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_chat_4.png  used
  on input line 28.
 (pdftex.def)             Requested size: 141.55174pt x 251.64754pt.
-<Benutzeroberfläche/images/screenshot_chat_5.png, id=1407, 1084.05pt x 1927.2p
+<Benutzeroberfläche/images/screenshot_chat_5.png, id=1388, 1084.05pt x 1927.2p
 t>
 File: Benutzeroberfläche/images/screenshot_chat_5.png Graphic file (type png)
 <use Benutzeroberfläche/images/screenshot_chat_5.png>
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_chat_5.png  used
  on input line 34.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_darkmode_4.png, id=1408, 1084.05pt x 192
+<Benutzeroberfläche/images/screenshot_darkmode_4.png, id=1389, 1084.05pt x 192
 7.2pt>
 File: Benutzeroberfläche/images/screenshot_darkmode_4.png Graphic file (type p
 ng)
@@ -1826,12 +1761,12 @@ ng)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_darkmode_4.png  
 used on input line 40.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-) [65] (Benutzeroberfläche/UI_Profilseite.tex [66 <./Benutzeroberfläche/image
+) [64] (Benutzeroberfläche/UI_Profilseite.tex [65 <./Benutzeroberfläche/image
 s/screenshot_chat_1.png> <./Benutzeroberfläche/images/screenshot_chat_2.png> <
 ./Benutzeroberfläche/images/screenshot_chat_3.png> <./Benutzeroberfläche/imag
 es/screenshot_chat_4.png> <./Benutzeroberfläche/images/screenshot_chat_5.png> 
 <./Benutzeroberfläche/images/screenshot_darkmode_4.png>]
-<Benutzeroberfläche/images/screenshot_profilseite_1.png, id=1430, 1084.05pt x 
+<Benutzeroberfläche/images/screenshot_profilseite_1.png, id=1411, 1084.05pt x 
 1927.2pt>
 File: Benutzeroberfläche/images/screenshot_profilseite_1.png Graphic file (typ
 e png)
@@ -1839,7 +1774,7 @@ e png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_profilseite_1.pn
 g  used on input line 11.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_profilseite_2.png, id=1431, 1084.05pt x 
+<Benutzeroberfläche/images/screenshot_profilseite_2.png, id=1412, 1084.05pt x 
 1927.2pt>
 File: Benutzeroberfläche/images/screenshot_profilseite_2.png Graphic file (typ
 e png)
@@ -1847,7 +1782,7 @@ e png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_profilseite_2.pn
 g  used on input line 17.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-<Benutzeroberfläche/images/screenshot_profilseite_3.png, id=1432, 1084.05pt x 
+<Benutzeroberfläche/images/screenshot_profilseite_3.png, id=1413, 1084.05pt x 
 1927.2pt>
 File: Benutzeroberfläche/images/screenshot_profilseite_3.png Graphic file (typ
 e png)
@@ -1855,82 +1790,104 @@ e png)
 Package pdftex.def Info: Benutzeroberfläche/images/screenshot_profilseite_3.pn
 g  used on input line 23.
 (pdftex.def)             Requested size: 140.93144pt x 250.5448pt.
-) [67] [68 <./Benutzeroberfläche/images/screenshot_profilseite_1.png> <./Benut
+) [66] [67 <./Benutzeroberfläche/images/screenshot_profilseite_1.png> <./Benut
 zeroberfläche/images/screenshot_profilseite_2.png> <./Benutzeroberfläche/imag
-es/screenshot_profilseite_3.png>] [69
+es/screenshot_profilseite_3.png>] (Probleme/Probleme.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
-] [70
+ []
 
-] [71
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+LaTeX Warning: Reference `sec:flutter' on page 68 undefined on input line 9.
+
+) [68
+
+] [69] (Anwendbarkeit/Anwendbarkeit.tex) [70
+
+] (Ausblick/Ausblick.tex)
+[71
+
+] (Fazit/Fazit.tex) [72
 
 ] (aufteilung.tex
 Overfull \hbox (7.5472pt too wide) in paragraph at lines 6--57
  [][] 
  []
 
-) [72
+) [73
 
 ]
-Overfull \hbox (20.85497pt too wide) in paragraph at lines 288--289
+Overfull \hbox (20.85497pt too wide) in paragraph at lines 296--297
 []\OT1/cmr/m/n/10.95 Facebook Inc. (2021) Re-act Na-ti-ve do-cu-men-ta-ti-on. [
 On-li-ne] Verf[]ugbar: []$\OT1/cmtt/m/n/10.95 https : / / reactnative .
  []
 
 
-Overfull \hbox (131.25366pt too wide) in paragraph at lines 298--299
+Overfull \hbox (131.25366pt too wide) in paragraph at lines 306--307
 []$\OT1/cmtt/m/n/10.95 https : / / www . cisco . com / c / en / us / solutions 
 / collateral / executive-[]perspectives / annual-[]internet-[]report /
  []
 
 
-Overfull \hbox (8.84721pt too wide) in paragraph at lines 312--313
+Overfull \hbox (8.84721pt too wide) in paragraph at lines 320--321
 \OT1/cmtt/m/n/10.95 marketingstrategie / konsumenten-[]auf-[]der-[]serien-[]wel
 le / 15146374$[]\OT1/cmr/m/n/10.95 , letz-ter Zu-griff: 14.
  []
 
 
-Overfull \hbox (36.45518pt too wide) in paragraph at lines 314--315
+Overfull \hbox (36.45518pt too wide) in paragraph at lines 322--323
 []\OT1/cmr/m/n/10.95 Statistisches Bun-des-amt (2020): []$\OT1/cmtt/m/n/10.95 h
 ttps : / / www . destatis . de / DE / Themen / Gesellschaft-[]Umwelt /
  []
 
 
-Overfull \hbox (34.02597pt too wide) in paragraph at lines 314--315
+Overfull \hbox (34.02597pt too wide) in paragraph at lines 322--323
 \OT1/cmtt/m/n/10.95 Gesundheit / Behinderte-[]Menschen / Tabellen / schwerbehin
 derte-[]alter-[]geschlecht-[]quote .
  []
 
 
-Overfull \hbox (10.96101pt too wide) in paragraph at lines 314--315
+Overfull \hbox (10.96101pt too wide) in paragraph at lines 322--323
 \OT1/cmtt/m/n/10.95 html ; jsessionid = 885260788D4FFC7F670576B72E5089F4 . live
 741$[]\OT1/cmr/m/n/10.95 , letz-ter Zu-griff: 17. April
  []
 
 
-Overfull \hbox (14.14342pt too wide) in paragraph at lines 316--317
+Overfull \hbox (14.14342pt too wide) in paragraph at lines 324--325
 []\OT1/cmr/m/n/10.95 Behindertengleichstellungsgesetz (2002): []$\OT1/cmtt/m/n/
 10.95 https : / / www . gesetze-[]im-[]internet . de / bgg / BGG .
  []
 
 
-Overfull \hbox (1.07079pt too wide) in paragraph at lines 318--319
+Overfull \hbox (1.07079pt too wide) in paragraph at lines 326--327
 \OT1/cmr/m/it/10.95 schen\OT1/cmr/m/n/10.95 , []$\OT1/cmtt/m/n/10.95 file : / /
  /C : /Users / Vincent / AppData / Local / Temp / ZVA _ Brillenstudie _ 2019-[]
 1 .
  []
 
-[73
+[74
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
- [74]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
+Overfull \hbox (0.65819pt too wide) in paragraph at lines 328--329
+[]\OT1/cmr/m/n/10.95 Google Sup-port (2021): \OT1/cmr/m/it/10.95 App ver[]offen
+tlichen\OT1/cmr/m/n/10.95 , []$\OT1/cmtt/m/n/10.95 https : / / support . google
+ . com / googleplay /
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
+[75]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
  ("Dokumentation - Studienarbeit.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 326.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
 Package rerunfilecheck Info: File `"Dokumentation - Studienarbeit".out' has not
  changed.
-(rerunfilecheck)             Checksum: BE13F82A59CC4EC2DAEA91AC895EA8DD;5540.
+(rerunfilecheck)             Checksum: 479992291C9844DB9D02E3CBDA74DE8A;5526.
 
 
 LaTeX Warning: There were undefined references.
@@ -1938,36 +1895,18 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 338.
  ) 
 Here is how much of TeX's memory you used:
- 14747 strings out of 481165
- 231880 string characters out of 2912165
- 577175 words of memory out of 3000000
- 29412 multiletter control sequences out of 15000+200000
+ 14777 strings out of 481165
+ 233250 string characters out of 2912165
+ 578191 words of memory out of 3000000
+ 29425 multiletter control sequences out of 15000+200000
  547275 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,47p,1418b,1912s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not ex
 ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.25} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.24} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.21} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{Hfootnote.20} has been referenced but does not exis
-t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.19} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1978,10 +1917,10 @@ t, replaced by a fixed one
 pdfTeX warning (dest): name{Hfootnote.17} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.15} has been referenced but does not exis
+pdfTeX warning (dest): name{Hfootnote.16} has been referenced but does not exis
 t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not exis
@@ -2043,10 +1982,10 @@ mr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Dokumentation - Studienarbeit.pdf" (79 pages, 15763064 bytes
+Output written on "Dokumentation - Studienarbeit.pdf" (80 pages, 15794934 bytes
 ).
 PDF statistics:
- 1669 PDF objects out of 1728 (max. 8388607)
- 551 named destinations out of 1000 (max. 500000)
+ 1673 PDF objects out of 1728 (max. 8388607)
+ 548 named destinations out of 1000 (max. 500000)
  885 words of extra memory for PDF output out of 10000 (max. 10000000)
 

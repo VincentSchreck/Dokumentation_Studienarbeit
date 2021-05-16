@@ -1,4 +1,4 @@
-Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellenförmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit. [NoSQL 1.1]
+Unter NoSQL („Not only SQL“) werden Datenbanksysteme bezeichnet, die einen nicht-"-relationalen Ansatz verfolgen. Im Vergleich zu relationalen Datenbanken, welche die Daten in tabellen"-förmigen Strukturen mit Spalten und Zeilen speichern, nutzt eine NoSQL-Datenbank andere Strukturkonzepte für die Speicherung der Daten wie zum Beispiel Wertpaare, Dokumente, Objekte oder Listen und Reihen. Da NoSQL einige der bekannten Schwächen von relationalen Datenbank, wie Performance-Schwierigkeiten bei hohem Lastaufkommen oder bei dem Umgang mit großen Datenmengen, vermeidet, erfreut sich diese Technologie in der heutigen Zeit des großen Datenaufkommens immer größerer Beliebtheit. [NoSQL 1.1]
 Zu den bekanntesten NoSQL-Datenbanken gehören beispielsweise Apache Cassandra, MongoDB und CouchDB.
 \newline
 
@@ -36,25 +36,26 @@ In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Da
 \subparagraph{Key-Value-Datenbanken}
 Key-Value-Datenbanksysteme bilden mit einer Abbildung der Daten in Schlüssel- und Wertpaare die einfachste NoSQL-Datenbankumsetzung ab. Bei diesem Konzept werden eindeutigen Schlüsselattributen (Key) jeweils ein beliebiger Wert (Value) zugeordnet. 
 
-\begin{table}[h]
+\begin{table}[tbt]
+\caption{Key-Value Beispiel [NoSql 1.5]}
 \begin{center}
-    \begin{tabular}{| l | p{8cm} |}
-    \hline
-    \textbf{Key} & \textbf{Value} \\ \hline
+    \begin{tabular}{ l  l }
+	\toprule
+    \textbf{Key} & \textbf{Value} \\
+    \midrule
     K1 & AAA,BBB,CCC\\
     
-    \hline
-    K2 &  AAA,BBB\\
     
-    \hline
+    K2 &  AAA,BBB\\
+
+
 	K3 & AAA,DDD\\
-	
-    \hline    
+
+
     K4 & AAA,2,01/01/2015 \\ 
-       \hline  
+	\bottomrule
     \end{tabular}
 \end{center}
-\caption{Key-Value Beispiel [NoSql 1.5]}
 \end{table}
 
 %\begin{figure}[h]

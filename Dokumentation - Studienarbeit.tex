@@ -127,7 +127,7 @@
 
 % Neue Section, neue Seite
 \clearpage
-\section[Einleitung]{Einleitung \hfill \normalfont \small{Vincent Schreck}}
+\section{Einleitung}
 \input{Einleitung/Einleitung.tex}
 
 \subsection{Motivation}
@@ -180,13 +180,8 @@
 
 % Neue Section, neue Seite
 \clearpage
-\section{Konzept}
+\section{Planung}
 \input{Konzept}
-
-
-% Neue Section, neue Seite
-\clearpage
-\section{Funktionen/Komponenten}
 
 
 % Neue Section, neue Seite
@@ -231,12 +226,13 @@
 \input{Benutzeroberfläche/UI_Aspekte.tex}
 
 \subsection{Oberflächen von StreamSwipe}
+\label{sec:UI-alle}
 \input{Benutzeroberfläche/UI_StreamSwipe.tex}
 
 \subsubsection{Login-Screen}
 \label{sec:loginscreen}
 \input{Benutzeroberfläche/UI_Login.tex}
-% \clearpage %Weil sonst die Bilder ans Ende 
+% \clearpage %Weil sonst die Bilder ans Ende rutschen
 
 
 
@@ -261,15 +257,27 @@
 
 
 \clearpage
-\section{CodeBeispiele}
+\section{Probleme}
+\label{sec:probleme}
+\input{Probleme/Probleme.tex}
 
 
 \clearpage
-\section{Probleme}
+\section{Anwendbarkeit}
+\label{sec:anwendbarkeit}
+\input{Anwendbarkeit/Anwendbarkeit.tex}
+
+
+\clearpage
+\section{Ausblick}
+\label{sec:ausblick}
+\input{Ausblick/Ausblick.tex}
 
 
 \clearpage
 \section{Fazit}
+\label{sec:fazit}
+\input{Fazit/Fazit.tex}
 
 
 \clearpage
@@ -285,11 +293,11 @@
 
 	\bibitem[2]{fentaw2020} Fentaw, A. E. (2020). Cross platform mobile application development: a comparison study of React Native Vs Flutter.
 
-	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, Zuletzt aufgerufen am: 13.04.2021
+	\bibitem[3]{reactnative2021} Facebook Inc. (2021) React Native documentation. [Online] Verfügbar: \url{https://reactnative.dev/docs/getting-started}, letzter Zugriff: 13. April 2021
 
-	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, Zuletzt aufgerufen am: 13.04.2021
+	\bibitem[4]{react2021} Facebook Inc. (2021) React documentation. [Online] Verfügbar: \url{https://reactjs.org/docs/getting-started.html}, letzter Zugriff: 13. April 2021
 
-	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, Aufgerufen am: 04.03.2021
+	\bibitem[5]{flutter2021} Flutter (2021) Flutter architectural overview [Online] Verfügbar: \url{https://flutter.dev/docs/resources/architectural-overview}, letzter Zugriff: 04. März 2021
 
 	\bibitem[6]{johnson1988} Johnson R. E. \&  Foote B. “Designing Reusable Classes.” Journal of ObjectOriented Programming 1, 2 (June/July 1988). Page 22-35.
 
@@ -305,7 +313,7 @@
 
 	\bibitem[12]{stahl2006} Stahl T, Volter M (2006) Model-driven software development. Wiley, Chichester
 
-	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, Aufgerufen am: 25.04.2021
+	\bibitem[13]{firebase2021} Firebase Inc. (2021) Firebase documentation. [Online] Verfügbar: \url{https://firebase.google.com/docs}, letzter Zugriff: 25. April 2021
 
     \bibitem[14]{scheidungen} Meinungsforschungsinstituts Civey (2020):  \url{https://www.presseportal.de/pm/145489/4627304}, letzter Zugriff: 13. Mai 2021
 
@@ -316,6 +324,10 @@
     \bibitem[17]{behindertengleichstellungsgesetz} Behindertengleichstellungsgesetz (2002): \url{https://www.gesetze-im-internet.de/bgg/BGG.pdf}, letzter Zugriff: 19. April 2021
 
     \bibitem[18]{sehhilfen} Institut für Demoskopie Allensbach (2019): \textit{Untersuchung zum Sehbewusstsein der Deutschen},  \url{file:///C:/Users/Vincent/AppData/Local/Temp/ZVA_Brillenstudie_2019-1.pdf}, letzter Zugriff: 11. Mai 2021
+    
+    \bibitem[19]{playstore_release} Google Support (2021): \textit{App veröffentlichen}, \url{https://support.google.com/googleplay/android-developer/answer/9859751?hl=de}, letzter Zugriff: 14. Mai 2021
+    
+    \bibitem[20]{appstore_release} Apple Support (2021): \textit{Infos zum Apple Developer Program}, \url{https://developer.apple.com/de/support/compare-memberships/}, letzter Zugriff: 14. Mai 2021
 \end{itemize}
 
 %\bibitem[99]{muster} Mustermann, Max (2020): Methode und Nutzung der Literatur-Zitierweise, 2. Aufl., Boston: Harvard’s Eleven Publications.

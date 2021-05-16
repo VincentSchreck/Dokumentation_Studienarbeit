@@ -16,19 +16,19 @@
 \contentsline {figure}{\numberline {15}{\ignorespaces Cloud Functions Anwendungsfall Benachrichtigung\relax }}{31}{figure.caption.21}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Firebase Cloud Messaging Architektur\relax }}{32}{figure.caption.22}%
 \contentsline {figure}{\numberline {17}{\ignorespaces Google AdMob Anzeigemöglichkeiten\relax }}{32}{figure.caption.23}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite {majchrzak2015} \relax }}{34}{figure.caption.24}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Struktur einer hybriden Anwendung \footnotemark \relax }}{35}{figure.caption.25}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \footnotemark \relax }}{37}{figure.caption.26}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Alte Architektur von React Native \footnotemark \relax }}{38}{figure.caption.27}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Neue Architektur von React Native \footnotemark \relax }}{39}{figure.caption.28}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Kompatibilität der Dart Plattform \footnotemark \relax }}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Kategorisierung verschiedener plattformübergreifender Ansätze}}{34}{figure.caption.24}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Struktur einer hybriden Anwendung}}{35}{figure.caption.25}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung}}{37}{figure.caption.26}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Alte Architektur von React Native}}{38}{figure.caption.27}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Neue Architektur von React Native}}{39}{figure.caption.28}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Kompatibilität der Dart Plattform}}{42}{figure.caption.29}%
 \contentsline {figure}{\numberline {24}{\ignorespaces Bibliotheken und Ebenen der Flutter Plattform \footnotemark \relax }}{44}{figure.caption.30}%
 \contentsline {figure}{\numberline {25}{\ignorespaces Widget Baum einer beispielhaften Anwendung \footnotemark \relax }}{45}{figure.caption.31}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Deklarative Benutzeroberfläche \footnotemark \relax }}{45}{figure.caption.32}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Deklarative Benutzeroberfläche}}{45}{figure.caption.32}%
 \contentsline {figure}{\numberline {27}{\ignorespaces Komponentendiagramm\relax }}{51}{figure.caption.34}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Screenshots aus der App StreamSwipe als Beispiele zu (a) schlichtem Design, bei dem farbige Akzente nicht der Informationenübertragung dienen um die Zugänglichkeit für farbblinde Menschen zu verbessern und für einen Icon in (b), welcher sonst durch sehgeschädigte Menschen nicht wahrnehmbar ist, wird exemplarisch eine Semantik implementiert.\relax }}{57}{figure.caption.35}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Screenshots der Anmeldeseiten}}{61}{figure.caption.36}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Screenshots des Home-Screens}}{62}{figure.caption.37}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Screenshots des Swipe-Screen}}{64}{figure.caption.38}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Screenshots der Chat-Seiten}}{66}{figure.caption.39}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Screenshots der Profilseite}}{68}{figure.caption.40}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Screenshots als Beispiele für Barrierefreiheit}}{56}{figure.caption.35}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Screenshots der Anmeldeseiten}}{60}{figure.caption.36}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Screenshots des Home-Screens}}{61}{figure.caption.37}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Screenshots des Swipe-Screen}}{63}{figure.caption.38}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Screenshots der Chat-Seiten}}{65}{figure.caption.39}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Screenshots der Profilseite}}{67}{figure.caption.40}%

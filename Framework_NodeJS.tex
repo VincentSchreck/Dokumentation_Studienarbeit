@@ -5,9 +5,11 @@ Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V
 Eine wesentliche Eigenschaft von Node.js ist die hohe Performance. Im Folgenden soll der Unterschied der Node.js-Architektur zu traditionellen Webservern und der damit verbundenen höheren Performance dargestellt werden.
 \newline
 
+\noindent
 Herkömmliche Webserver erstellten zunächst für jede ankommende Anfrage einen neuen Thread. Dieses Vorgehen ist eng mit steigendem Speicher- und Rechenaufwand verbunden. Um sich Rechenzeit, die durch die Erstellung und Zerstörung von Threads entstanden, zu sparen, wurden Threadpools eingerichtet. Dieser Threadpool enthält mehrere Threads, denen Aufgaben zugewiesen werden können. Nach erfolgreicher Abarbeitung einer Operation kann einem Thread eine weitere Aufgabe zugeordnet werden.
 \newline
 
+\noindent
 Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu einer Form von blockierender Ein- und Ausgabe (Blocking Input/Output kurz Blocking I/O) kommen: zum Beispiel beim Suchen in einer Datenbank oder dem Laden einer Datei im Dateisystem.
  Während der Abarbeitung wartet der Thread solange, bis die Operation ein Ergebnis zurückwirft und belegt dabei weiterhin Speicherplatz. 
  Bei hohem Aufkommen von Anfragen kommt es dadurch zu einer hohen Speicherauslastung des Servers. Zudem kosten die Kontextwechsel zwischen den Threads im Betriebssystem weitere Rechenzeit. [Node.js 1.05] Man spricht bei diesem Architekturkonzept auch vom Multi-Threaded Server.
@@ -21,12 +23,15 @@ Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu eine
  
 \newpage
 
+\noindent
 Node.js verfolgt einen anderen Ansatz: Anfragen werden nur in einem einzigen Thread, dem Hauptthread, abgearbeitet und in einer Warteschlange verwaltet. Dadurch bleiben Kontextwechsel zwischen Threads erspart. Hierbei handelt es sich also um einen Single-Threaded Server. Der Hauptthread verwaltet eine Schleife, die sogenannte Event Loop, die permanent Anfragen aus der Event-Warteschlange überprüft und Ereignisse, die von Ein- und Ausgangsoperationen ausgerufen werden, verarbeitet.
 \newline
 
+\noindent
 Bei Ankommen einer Nutzeranfrage an einen Node.js Server wird zunächst in der Event Loop geprüft, ob diese Anfrage Blocking I/O benötigt. Falls nicht, kann die Anfrage direkt bearbeitet werden und die Antwort an den Nutzer zurückgesendet werden. 
 \newline
 
+\noindent
 Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch Threads sind, aufgerufen, um die jeweilige Operation auszuführen. Dabei wird eine Callback-Funktion mitgegeben, die vom Worker aufgerufen wird, sobald die Operation ausgeführt wurde. Diese Callback-Funktion kann anschließend als Ereignis von der Event Loop registriert werden. Man spricht hierbei auch von ereignisgesteuerter Architektur. [1.4]
 \newline
  
@@ -37,12 +42,14 @@ Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch
 \end{figure}
  
  
+\noindent
 Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein- und Aus\-gabeoperationen nicht anhält, und weitere Anfragen bearbeiten kann. (Non Blocking I/O - Prinzip) 
 \newline
 
 \newpage
 \subsubsection{Module}
 
+\noindent
 Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen. 
 Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponenten, die den Hauptteil des Moduls repräsentiert, exportiert werden. 
 Bei der anderen Möglichkeit, des sogenannten ‚benannten Exports‘ werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist in nachfolgender Abbildung dargestellt. 
@@ -64,6 +71,7 @@ module.exports.bar = bar;
 %\caption{Benannter Export von Modulen}
 %\end{figure}
  
+\noindent
 Für den Import stehen verschiedene Möglichkeiten zur Verfügung. 
 Im folgender Abbildung ist ein Import über die require()-Funktion dargestellt. 
 Mit mitgeliefertem Modul-Pfad als Parameter gibt diese Funktion ein Objekt des Moduls wieder, das die exportierten Objekte (und Funktionen) enthält.
@@ -81,6 +89,7 @@ const bar = require('./module/path');
 %\caption{Import von Modulen}
 %\end{figure}
 
+\noindent
 Eine wichtige Besonderheit ist, dass importierte Module  beim ersten Aufruf gecached werden. 
 Das bedeutet, dass jeder require()-Aufruf auf ein Modul dasselbe Objekt zurückliefert. [nodejs 1.21]
 
@@ -94,6 +103,7 @@ Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js,
 \textbf{Beispiel}
  \newline
 
+\noindent
 Das Erstellen einer einfachen Express-Applikation wird im folgenden Beispiel dargestellt:\newline
 
 \begin{lstlisting}[caption=Einfacher Webserver [nodejs 1.8],label=lst:Middleware]
@@ -117,11 +127,14 @@ app.listen(port, () => {
 %\end{figure}
 
 
+\noindent
 Die require()-Funktion importiert das Express-Modul und gibt ein Express-Objekt zurück. 
 Dieses Objekt als Funktion aufgerufen gibt wiederum ein Objekt der Express-Applikation zurück, welche traditionell „app“ genannt wird, das Kernstück des Express-Frameworks ist und sämtliche Methoden wie das Weiterleiten von HTTP Anfragen, das Konfigurieren von Middleware oder das Modifizieren des Webserver-Verhaltens beinhaltet. [nodejs 1.8]\newline 
 
+\noindent
 Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion spezifiziert eine Callback-Funktion, die ein „request“- und „response“-Objekt als Parameter erhält und aufgerufen wird, sobald eine HTTP Anfrage der Methode GET mit dem Pfad ‚/‘ empfangen wird. Das Request-Objekt enthält sämtliche Informationen über die HTTP-Anfrage. Das Response-Objekt kann dagegen in der Callback-Funktion mit Informationen gefüllt werden und über die send()-Funktion als HTTP-Antwort an den Sender zurückgesendet werden.\newline
 
+\noindent
 Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Funktion app.listen(). Ihr kann auch eine Callback-Funktion mitgegeben werden, die aufgerufen wird, sobald der Server erfolgreich gestartet ist.\newpage
 
 \subparagraph{Middleware}
@@ -138,6 +151,7 @@ Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware ge
 
 \subparagraph{Middleware: express.json}
 
+\noindent
 Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts. [nodejs 2.1]
 \newline
 
@@ -155,9 +169,11 @@ app.use(express.json());
 \newpage
 \subparagraph{Middleware: Router}
 
+\noindent
 Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ [nodejs 2.15]
 \newline
 
+\noindent
 Die in express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middleware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
 \newline
 
@@ -189,6 +205,7 @@ module.exports = router;
 %\caption{Routinghandler erstellen[nodejs 2.2]}
 %\end{figure}
 
+\noindent
 In oberem Beispiel wird ein Routerhandler für das Verzeichnis ‚/birds‘ mit eigen implementierter Middleware und zwei Anwendungsendpunkte ‚/‘ (bezieht sich auf das Stammverzeichnis) und ‚/about‘ erstellt. Der Code wird unter der Datei birds.js abgespeichert. 
 Abschließend kann das Routermodul in die Anwendung geladen werden: 
 \newline
@@ -217,7 +234,7 @@ NoSQL Mapper nutzen vom Entwickler definierte Datenschemata, die das Objekt besc
 \newline
 
 \subparagraph{Schema}
-Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer MongoDB-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität eine Collection. Mongoose Schemata werden für jede Collection definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
+Mongoose-Schemata definieren die Struktur der gespeicherten Daten einer Mongo"-DB-"-Collection in der Anwendungsschicht und werden in der JSON-Notation beschrieben. Dokumentenbasierte Datenbanken wie MongoDB enthalten für jede Wurzelentität eine Collection. Mongoose Schemata werden für jede Collection definiert. Innerhalb der JSON-notierten Schemabeschreibung können den einzelnen Eigenschaften bestimmtes Verhalten zugeordnet werden. Zum Beispiel lässt sich explizit der Datentyp angeben (type), eine Eigenschaft verpflichtend (required) oder in Kleinbuchstaben einstellen (lowercase).
 \newline
 
 %\begin{figure}[h]
@@ -257,6 +274,7 @@ module.exports = mongoose.model('test',testSchema);
 %\caption{Model erstellen und exportieren}
 %\end{figure}
 
+\noindent
 An anderer Stelle kann das Model nun importiert werden. Aus dem Model kann ein Objekt instanziiert werden, welches über die save()-Funktion in der Datenbank gespeichert werden kann.
 
 \begin{lstlisting}[caption=Model importieren - Objekt instanziieren und persistent speichern,label=lst:MongooseObjectInstance]
@@ -272,6 +290,7 @@ await testInstanz.save();
 %\caption{Model importieren, Objekt instanziieren und persistent speichern}
 %\end{figure}
 
+\noindent
 Mongoose Models enthalten ohne Instanziierung des Weiteren auch Schnittstellen, um Daten der zugehörigen Collection zu kreieren, abfragen, bearbeiten oder löschen. (Create, Receive, Update, Delete oder auch kurz CRUD).
 \newline
 
@@ -316,6 +335,7 @@ mongooose.connection.on('open',() => console.log('Connected'));
 %\caption{Mongoose: Verbindung zur Datenbank aufbauen}
 %\end{figure}
 
+\noindent
 Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann ein Objekt wie in folgendem Beispiel erstellt werden, dass die zugehörigen Optionen als Attribute beinhaltet. 
 \newline
 
@@ -342,7 +362,8 @@ const options = {
 
 \paragraph{Weitere Module}
 
-\begin{table}[h]
+\begin{table}[tbt]
+\caption{Module}
 \begin{center}
     \begin{tabular}{| l | p{8cm} |}
     \hline
@@ -365,5 +386,4 @@ const options = {
     \hline
     \end{tabular}
 \end{center}
-\caption{Module}
 \end{table}

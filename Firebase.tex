@@ -1,4 +1,4 @@
-Firebase ist eine Backend-as-a-Service (BaaS) Plattform von Google für mobile oder Web-Anwendungen. 
+Firebase ist eine Backend as a Service-Plattform (BaaS)  von Google für mobile und Web-Anwendungen. 
 Sie soll es dem Entwickler ermöglichen, einfacher und effizienter Funktionen auf verschiedenen Plattformen bereitzustellen stellt Tools und Infrastruktur zur Verfügung.
 Mit dem Firebase SDK bietet die Plattform API Schnittstellen zu den jeweiligen Tools, welche direkt in die Anwendung integriert werden können, ohne dass serverseitiger Code dafür notwendig ist.
 Die Firebase Inc. wurde 2011 von James Tamplin und Andrew Lee gegründet und letztendlich 2014 von Google übernommen.\footnote{\href{https://firebase.googleblog.com/2014/10/firebase-is-joining-google.html}{firebase.googleblog.com}, zuletzt aufgerufen am 03.05.2021}
@@ -39,6 +39,7 @@ Zusätzlich zu REST und RPC APIs in iOS, Android und web SDKs ist Firestore auch
 \end{wrapfigure}
 \footnotetext{Quelle: \cite{firebase2021}}
 
+\noindent
 Das Datenmodell ist hierarchisch aufgebaut, wobei Daten in Dokumenten (documents) und Dokumente in Sammlungen (collections) gespeichert sind. 
 Mithilfe von Sammlungen werden die Daten voneinander abgetrennt und hierüber können Abfragen erstellt werden.
 Grundlegende Datentypen sind String, Integer und Boolean, jedoch können auch komplexe Datentypen wie Maps, Arrays oder Geopoints. Unter-Sammlungen und darin verstaute Dokumente sind ebenfalls möglich.\\
@@ -97,6 +98,7 @@ Wichtig zu wissen ist hierzu noch, dass falls mehrere \texttt{allow} Ausdrücke 
 \end{lstlisting}
 \medskip
 
+\noindent
 Wie bereits oben besprochen können diese Regeln auch zur Validierung von Daten genutzt werden, damit die atomare Eigenschaft von Transaktionen bestehen bleibt.
 Hierzu kann die \texttt{getAfter()} Funktion genutzt werden. 
 Mit dieser kann man auf Zustand eines Dokumentes zugreifen und diesen validieren, nachdem einer Folge von Anweisungen ausgeführt, jedoch diese noch nicht auf der Firestore Datenbank abgeschlossen wurde.
@@ -198,12 +200,12 @@ Hierbei wird es grundlegend in das Erstellen, Transportieren und Empfangen der N
 \subsubsection{Google AdMob}
 Google AdMob bietet eine einfache Art, gezielte Werbung innerhalb der Anwendung zu schalten und somit die Anwendung zu monetarisieren.
 Zusätzlich bietet das Tool in Kombination mit Google Analytics\footnote{Ein freies Analysetool, welches über alle Tools hinweg Ereignisse sammelt und diese Werte direkt graphisch darstellt. Da es für die Implementierung nicht weiter relevant ist, wird es nicht detaillierter besprochen. Zusätzliche Informationen unter \href{https://firebase.google.com/docs/analytics}{firebase.google.com}.} zusätzliche Anwendungsdaten und Analysefähigkeiten.\\
-Werbung lässt sich in unterschiedlicher Weise anzeigen (siehe Abbildung \ref{fig:firebase_admob})und lässt sich reibungslos in UI Komponenten integrieren. 
+Werbung lässt sich in unterschiedlicher Weise anzeigen (siehe Abbildung \ref{fig:firebase_admob}) und lässt sich reibungslos in UI Komponenten integrieren. 
 Verschiedene Features sind hier jedoch plattformabhängig. 
 Auf der Android Plattform ist es für Nutzer möglich, beworbene Produkte direkt aus der Anwendung heraus zu kaufen.\\
 Ein weiteres Werbetool \textit{Google Mobile Ads SDK} ist eine alleinstehende SDK, hingegen Google AdMob bietet einfache Integration in Firebase und weitere Tools.\cite{firebase2021}
 
-\begin{figure}[htb]
+\begin{figure}[tbt]
 	\begin{center}
 		\includegraphics[scale=0.55]{images/firebase_admob_ads.PNG}
 	\end{center}

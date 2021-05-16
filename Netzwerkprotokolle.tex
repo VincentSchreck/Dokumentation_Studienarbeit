@@ -1,5 +1,4 @@
 \subsubsection{Schichtenmodell}
-
 Eine der gängigsten Arten der Kommunikation findet heutzutage über das Internet statt. 
 Dabei handelt es sich um ein weltweit verbundenes Netz von Rechnern. Zur Gewährleistung einer effizienten und geregelten Datenübertragung der heterogenen Computer im Internet wurden Regelwerke, die sogenannten Netzwerkprotokolle, benötigt.
 Um das Jahr 1980 wurden daraufhin von verschiedenen Computerherstellern modularisierte Protokolle entwickelt, die fortan als Standard für die digitale Übertragung innerhalb von Rechnernetzen gelten sollen.[1.0] 
@@ -9,6 +8,7 @@ Jede einzelne Schicht setzt dabei separat eine Anforderung um und kann dabei dur
 Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. 
 \newline
 
+\noindent
 Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Departments of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell. [1.06]
 
 \begin{figure}[h]
@@ -19,33 +19,30 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
 
 \newpage
 
-\begin{table}[]
+\begin{table}[tbt]
+\caption{Kurzbeschreibung der OSI-Schichten [1.2]}
 \begin{center}
-    \begin{tabular}{| l | p{8cm} |}
-    \hline
+    \begin{tabular}{ l  p{8cm} }
+    \toprule
      OSI-Schicht & Aufgabe \\ 
-     \hline
+     \midrule
         
-       Anwendungen & Funktionen für Anwendungen, sowie die Dateneingabe und -ausgabe. \\
-    \hline    
-       Darstellung & Umwandlung der systemabhängigen Daten in ein unabhängiges Format.  \\
-    \hline   
-       Sitzung & Steuerung der Verbindungen und des Datenaustauschs.  \\
-    \hline  
-        Transport & Zuordnung der Datenpakete zu einer Anwendung. \\ 
+    Anwendungen & Funktionen für Anwendungen, sowie die Dateneingabe und -ausgabe. \\
+
+    Darstellung & Umwandlung der systemabhängigen Daten in ein unabhängiges Format.  \\
+ 
+    Sitzung & Steuerung der Verbindungen und des Datenaustauschs.  \\
+
+    Transport & Zuordnung der Datenpakete zu einer Anwendung. \\ 
     
-    \hline     
-    	Vermittlung & Routing der Datenpakete zum nächsten Knoten. \\
+	Vermittlung & Routing der Datenpakete zum nächsten Knoten. \\
 	
-    \hline       
-      Sicherung & Fehlererkennungsmechanismen / Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen.  \\   
-    \hline
+	Sicherung & Fehlererkennungsmechanismen / Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen.  \\   
     
     Bitübertragung & Umwandlung der Bits in ein zum Medium passendes Signal und physikalische Übertragung.\\ 
-    \hline    
+    \bottomrule
     \end{tabular}
 \end{center}
-\caption{Kurzbeschreibung der OSI-Schichten [1.2]}
 \end{table}
 
 \subparagraph{IP}
@@ -66,16 +63,18 @@ Unter einer Nachricht versteht man in HTTP die Kommunikationseinheiten zwischen 
 Man unterscheidet dabei zwischen der Anfrage (Request) vom Client an den Server und der Antwort (Response) als Reaktion vom Server zum Client. 
 \newline
 
+\noindent
 Eine Nachricht besteht aus dem Nachrichtenkopf (Message Header, kurz Header) und dem Nachrichtenrumpf (Message Body, kurz Body). 
 Der Header enthält generelle Informationen über die Nachricht wie zum Beispiel den Methodentyp, das Datenformat, den genutzten Kompressionsalgorithmus, die Länge der Nachricht oder die verwendete Kodierung im Body. 
 \newline
 
+\noindent
 Die erste Zeile des Nachrichtenkopfs ist dreiteilig und besteht bei der Anfrage aus dem Namen der Anfragemethode, dem Pfad zur angeforderten Ressource (Uniform Resource Locator, kurz URL) und der verwendet HTTP-Version. Die Anfangszeile einer HTTP-Antwort dagegen besteht zunächst aus der verwendeten HTTP-Version, gefolgt von dem zweiteiligem Status-Code. 
 Der Anfangszeile beider Nachrichtentypen folgt eine Reihe von Headerzeilen, wobei jede Zeile aus einem Schlüsselwort/Wert-Paar besteht und die für die Datenübertragung wichtigen Informationen übergibt. 
 Der Nachrichtenrumpf, der mit den Nachrichtenkopf über einen Zeilenumbruch syntaktisch voneinander getrennt wird, enthält schließlich die Nutzdaten.
 \newline
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
 \includegraphics[width=\textwidth]{images/netzwerkprotokolle_http.PNG}
 \caption{HTTP-Nachrichtenaufbau}
@@ -103,29 +102,26 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 \subparagraph{Statuscodes}
 HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben.\newline
 
-\begin{table}[h]
+\begin{table}[tbt]
+\caption{Module}
 \begin{center}
-    \begin{tabular}{| l | l |  p{8cm} |}
-    \hline
-    Typ & Status-Code & Beispiele \\ \hline
+    \begin{tabular}{ l  l   p{8cm} }
+    \toprule
+    Typ & Status-Code & Beispiele \\
+    \midrule
     
     Informational & 1xx & 100 Continue, 101 Switching\\
     
-    \hline
     Success & 2xx & 200 OK, 201 Created, 202 Accepted  \\
     
-    \hline
 	Redirection & 3xx & 300 Multiple Choice, 301 Moved Permanently  \\
 	
-    \hline    
     Client Error & 4xx & 400 Bad Request, 403 Forbidden\\ 
     
-    \hline    
     Server Error & 5xx & 500 Internal Server Error \\
-    \hline
+    \bottomrule
     \end{tabular}
 \end{center}
-\caption{Module}
 \end{table}
 
 %\begin{figure}[h]
@@ -140,7 +136,9 @@ Die Daten können bei der Übertragung von Dritten empfangen, gelesen und verän
 Dafür dienen zwei Konzepte:
 \newline
 
+\noindent
 Ersteres ist das Verschlüsseln der Kommunikation von Sender und Empfänger. Die zugrundeliegende Technik nennt sich Transport Layer Security (TLS), ist aber auch als Secure Sockets Layer (SSL) bekannt. Die Idee dahinter ist, dass jeder Teilnehmer der Kommunikation einen öffentlich bekannten Schlüssel (Public Key) und einen geheimen, nicht-öffentlichen Schlüssel (Private Key) besitzen. Über den Public-Key des Empfängers verschlüsselt der Sender seine Nachricht. Diese kann nur über den Private-Key des Empfängers entschlüsselt werden, der vom Empfänger nicht weitergegeben werden sollte.
 \newline
 
-Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, dass zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauenswürdigkeit des Senders. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.
+\noindent
+Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, dass zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauens"-würdig"-keit des Senders. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.

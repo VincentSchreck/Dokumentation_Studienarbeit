@@ -48,19 +48,19 @@
 \contentsline {subparagraph}{Query-By-Example}{21}{paragraph.2.5.4.2}%
 \contentsline {subparagraph}{MapReduce}{22}{lstnumber.14.1}%
 \contentsline {subparagraph}{Aggregation-Framework}{22}{lstnumber.14.1}%
-\contentsline {paragraph}{\numberline {2.5.4.3}CRUD}{22}{paragraph.2.5.4.3}%
-\contentsline {subparagraph}{Create}{22}{table.caption.17}%
+\contentsline {paragraph}{\numberline {2.5.4.3}CRUD}{23}{paragraph.2.5.4.3}%
+\contentsline {subparagraph}{Create}{23}{table.caption.17}%
 \contentsline {subparagraph}{Read}{23}{lstnumber.16.1}%
 \contentsline {subparagraph}{Update}{23}{lstnumber.16.1}%
-\contentsline {subparagraph}{Delete}{23}{lstnumber.17.2}%
-\contentsline {paragraph}{\numberline {2.5.4.4}Atomare Operationen}{23}{paragraph.2.5.4.4}%
+\contentsline {subparagraph}{Delete}{24}{lstnumber.17.2}%
+\contentsline {paragraph}{\numberline {2.5.4.4}Atomare Operationen}{24}{paragraph.2.5.4.4}%
 \contentsline {paragraph}{\numberline {2.5.4.5}Architektur}{24}{paragraph.2.5.4.5}%
 \contentsline {subparagraph}{Engine}{24}{paragraph.2.5.4.5}%
-\contentsline {subparagraph}{Replica Sets}{24}{paragraph.2.5.4.5}%
+\contentsline {subparagraph}{Replica Sets}{25}{paragraph.2.5.4.5}%
 \contentsline {subparagraph}{Sharding}{25}{figure.caption.18}%
-\contentsline {paragraph}{\numberline {2.5.4.6}Verwaltungswerkzeuge}{25}{paragraph.2.5.4.6}%
-\contentsline {subparagraph}{Mongo Shell}{25}{paragraph.2.5.4.6}%
-\contentsline {subparagraph}{Treiber}{25}{paragraph.2.5.4.6}%
+\contentsline {paragraph}{\numberline {2.5.4.6}Verwaltungswerkzeuge}{26}{paragraph.2.5.4.6}%
+\contentsline {subparagraph}{Mongo Shell}{26}{paragraph.2.5.4.6}%
+\contentsline {subparagraph}{Treiber}{26}{paragraph.2.5.4.6}%
 \contentsline {subparagraph}{Grafische Oberflächen}{26}{paragraph.2.5.4.6}%
 \contentsline {subsection}{\numberline {2.6}Firebase}{27}{subsection.2.6}%
 \contentsline {subsubsection}{\numberline {2.6.1}Firebase Authentifizierung}{27}{subsubsection.2.6.1}%
@@ -88,7 +88,7 @@
 \contentsline {paragraph}{\numberline {2.8.1.3}Komponenten}{40}{paragraph.2.8.1.3}%
 \contentsline {paragraph}{\numberline {2.8.1.4}State}{41}{paragraph.2.8.1.4}%
 \contentsline {subsubsection}{\numberline {2.8.2}Flutter}{42}{subsubsection.2.8.2}%
-\contentsline {paragraph}{\numberline {2.8.2.1}Architektur}{43}{paragraph.2.8.2.1}%
+\contentsline {paragraph}{\numberline {2.8.2.1}Architektur}{42}{paragraph.2.8.2.1}%
 \contentsline {paragraph}{\numberline {2.8.2.2}Dart}{43}{paragraph.2.8.2.2}%
 \contentsline {paragraph}{\numberline {2.8.2.3}Widgets}{44}{paragraph.2.8.2.3}%
 \contentsline {paragraph}{\numberline {2.8.2.4}States}{45}{paragraph.2.8.2.4}%
@@ -102,41 +102,41 @@
 \contentsline {paragraph}{\numberline {2.9.4.1}Cosinus-Funktion}{48}{paragraph.2.9.4.1}%
 \contentsline {paragraph}{\numberline {2.9.4.2}Skalarprodukt}{48}{paragraph.2.9.4.2}%
 \contentsline {paragraph}{\numberline {2.9.4.3}Euklidischer Abstand}{48}{paragraph.2.9.4.3}%
-\contentsline {section}{\numberline {3}Konzept}{49}{section.3}%
+\contentsline {section}{\numberline {3}Planung}{49}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Konzept}{49}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Komponenten}{49}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Funktionen/Komponenten}{52}{section.4}%
-\contentsline {section}{\numberline {5}Auswahl geeigneter Technologie}{53}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Server}{53}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Datenbank}{53}{subsection.5.2}%
+\contentsline {section}{\numberline {4}Auswahl geeigneter Technologie}{52}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Server}{52}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Datenbank}{52}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Kommunikationsschnittstelle}{53}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Film-Datenbank}{53}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Backend-Implementierung}{54}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Server}{54}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Einrichtung}{54}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Sicherheit}{54}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Webserver}{54}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Datenbank}{54}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Einrichtung}{54}{subsubsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.3}Kommunikationsschnittstelle}{54}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Film-Datenbank}{54}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Backend-Implementierung}{55}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Server}{55}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}Einrichtung}{55}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}Sicherheit}{55}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}Webserver}{55}{subsubsection.6.1.3}%
-\contentsline {subsection}{\numberline {6.2}Datenbank}{55}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}Einrichtung}{55}{subsubsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.3}Kommunikationsschnittstelle}{55}{subsection.6.3}%
-\contentsline {subsubsection}{\numberline {6.3.1}Implementierung}{55}{subsubsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.4}Swipe/Aussuchen/Voting}{55}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Matches/Chat}{55}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Film-/Serienvorschläge}{55}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Gespeicherte Filme/Filmliste}{55}{subsection.6.7}%
-\contentsline {subsection}{\numberline {6.8}Barrierefreiheit}{55}{subsection.6.8}%
-\contentsline {subsubsection}{\numberline {6.8.1}Barrierefreiheit in mobilen Anwendungen}{56}{subsubsection.6.8.1}%
-\contentsline {subsubsection}{\numberline {6.8.2}Barrierefreiheit in Filmen und Serien}{56}{subsubsection.6.8.2}%
-\contentsline {subsubsection}{\numberline {6.8.3}Barrierefreiheit bei StreamSwipe}{56}{subsubsection.6.8.3}%
-\contentsline {section}{\numberline {7}Benutzeroberflächen}{59}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Aspekte von Benutzeroberflächen}{59}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Oberflächen von StreamSwipe}{60}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Login-Screen}{60}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Home-Screen}{62}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Swipe-Screen}{63}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Chat}{65}{subsubsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.5}Benutzerprofil}{66}{subsubsection.7.2.5}%
-\contentsline {section}{\numberline {8}CodeBeispiele}{69}{section.8}%
-\contentsline {section}{\numberline {9}Probleme}{70}{section.9}%
-\contentsline {section}{\numberline {10}Fazit}{71}{section.10}%
-\contentsline {section}{\numberline {A}Verfasser einzelner Abschnitte}{72}{appendix.A}%
+\contentsline {subsubsection}{\numberline {5.3.1}Implementierung}{54}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}Swipe/Aussuchen/Voting}{54}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Matches/Chat}{54}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Film-/Serienvorschläge}{54}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Gespeicherte Filme/Filmliste}{54}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Barrierefreiheit}{54}{subsection.5.8}%
+\contentsline {subsubsection}{\numberline {5.8.1}Barrierefreiheit in mobilen Anwendungen}{55}{subsubsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.2}Barrierefreiheit in Filmen und Serien}{55}{subsubsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.3}Barrierefreiheit bei StreamSwipe}{55}{subsubsection.5.8.3}%
+\contentsline {section}{\numberline {6}Benutzeroberflächen}{58}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Aspekte von Benutzeroberflächen}{58}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Oberflächen von StreamSwipe}{59}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Login-Screen}{59}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Home-Screen}{61}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Swipe-Screen}{62}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Chat}{64}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}Benutzerprofil}{65}{subsubsection.6.2.5}%
+\contentsline {section}{\numberline {7}Probleme}{68}{section.7}%
+\contentsline {section}{\numberline {8}Anwendbarkeit}{70}{section.8}%
+\contentsline {section}{\numberline {9}Ausblick}{71}{section.9}%
+\contentsline {section}{\numberline {10}Fazit}{72}{section.10}%
+\contentsline {section}{\numberline {A}Verfasser einzelner Abschnitte}{73}{appendix.A}%
