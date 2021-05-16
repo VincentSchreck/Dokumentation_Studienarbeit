@@ -1,0 +1,123 @@
+Firebase bietet viele verschiedene Werkzeuge zur Entwicklung und Überwachung von Mobil- und Webanwendungen.
+Nach dem Konzept nach Kapitel \ref{sec:konzept} beschränkt sich der Aufgabenbereich des Firebase Backends auf Nutzerauthentifizierung, Verwaltung der Nutzerdaten und der Chatfunktion.
+Die hierfür genutzten Werkzeuge werden im Folgenden besprochen.\\
+Grundlegend muss zunächst eine Anwendung erstellt, ein Firebase Projekt aufgesetzt und diese zusammen verknüpft werden.
+Sobald dieser Prozess abgeschlossen ist, muss sichergestellt sein, dass Firebase in der Anwendung initialisiert wird.
+
+\subsubsection{Authentifizierung}
+Um Nutzern eine sichere Registrierung, bzw. An- und Abmeldung ermöglichen zu können bietet Firebase das Authentifizierungswerkzeug. 
+Dieser Backendservice verfügt über unterschiedliche Authentifizierungsmethoden.
+Um es zu nutzen, muss nur die jeweilige Methode ausgewählt werden. \\
+
+In unserem Fall wurde die E-Mail und Passwort Authentifizierung gewählt, um unabhängig von Drittanbietern zu sein.
+Nun muss das SDK \texttt{firebase\_auth} integriert werden und mithilfe der Funktionen \texttt{createUserWithEmailAndPassword()} bzw. \texttt{signInWithEmailAndPassword()} ein Nutzer registriert und angemeldet werden.
+Hierbei können mithilfe von Fehlercodes geeignete Fehlermeldungen erstellt werden. 
+Zusätzlich besitzt die Klasse \texttt{User} das Feld \texttt{emailVerified} (Boolean) und die Methode \texttt{sendEmailVerification()}, wodurch eine Verifizierung der E-Mail über Nachrichtenvorlage durchgeführt wird.
+Ist ein Nutzer einmal authentifiziert, muss unterschieden werden, welchen Bildschirm er sehen darf.
+Hierzu wird darauf geachtet ob ein aktueller Nutzerobjekt existiert.
+Ist dies nicht der Fall, wird der Anmeldebildschirm angezeigt; ansonsten der Hauptbildschirm.
+\medspace
+\begin{lstlisting}[caption= Anzeige abhängig ob ein aktueller Nutzer existiert]
+	// Globale Instanz des Authentifizierungsservice
+	final AuthService auth = Provider.of(context).auth;
+	return FutureBuilder<User>(
+		future: auth.getCurrentUser(),
+		builder: (BuildContext context, AsyncSnapshot<User> snapshot) {
+			// Existiert ein Nutzer, wird der Hauptbildschirm angezeigt
+			if (snapshot.hasData) {
+				return MessageHandler();
+			} 
+			// Zeige ansonsten den Login-Bildschirm
+			else {
+				return SignUpScreen(authFormType: AuthFormType.signIn);
+			}
+		}
+	);
+\end{lstlisting}
+\medspace
+
+\subsubsection{Nutzerdaten}
+Bei der Authentifizierung eines Nutzers wird mittels des Auth-Services ein Nutzerobjekt erstellt.
+Dieses kann folgende Felder besitzen:
+\begin{itemize}
+	\item Einzigartige Identifikation (UID)
+	\item E-Mail Adresse
+	\item Namen
+	\item Bild-URL
+\end{itemize}
+Es ist jedoch nicht möglich über diesen Service weitere Eigenschaften abzuspeichern.
+Diese müssen über zusätzliche Speicherwerkzeuge, wie beispielsweise Cloud Firestore (siehe \ref{sec:firestore}) gesichert werden.\\
+\\
+Hierzu wurde die Sammlung \enquote{users} erstellt und bei der Registrierung für jeden Nutzer ein Dokument mit der selben ID, wie die Nutzer UID erstellt. 
+Dadurch ist sichergestellt, dass es ein einzigartiges Dokument und der Zugriff einfach geregelt ist.
+Hier werden nun weitere Eigenschaften gesichert, welche teilweise ausschließlich zu Anzeigezwecken in Firebase doppelt abgespeichert werden.
+\begin{itemize}
+	\item Anzeigename
+	\item E-Mail
+	\item Wohnort, welcher aus den wichtigsten Städten Deutschlands bestehen
+	\item Geschlechter, nach welchen gesucht wird
+	\item Eigenes Geschlecht
+	\item Lieblingsfilm
+\end{itemize}
+Unser Nutzer jedoch speichert seine Profil und Hintergrundbilder weder im Auth-Service Nutzerobjekt noch im Cloud Firestore Dokument.
+Bei Auth-Service lässt sich lediglich die URL zu einem einzigen Bild hinterlegen.
+Bei Firestore ist es zwar möglich eine theoretisch unbegrenzte Menge an Bild URLs abzuspeichern, jedoch muss der Nutzer die Möglichkeit haben seine eigenen Bilder hochzuladen und nicht nur eine URL auf ein bereits hochgeladenes Bild abspeichern.\\
+\\
+Hierfür bietet Firestore das Werkzeug Storage. 
+Wie in Kapitel \ref{sec:firebase_storage} beschrieben, können hier Nutzerinhalte hoch- und heruntergeladen werden. 
+Dazu wird beim ersten Hochladen ein Ordner für jeden Nutzer erstellt.
+Darin werden daraufhin die Bilder unter dem Namen \texttt{profile-picture} oder \texttt{background-picture} jeweils abgespeichert und eventuell überschrieben.
+Mit einer Funktion kann über einen Boolean-Parameter entschieden werden, welches Bild somit angezeigt wird.
+\medspace
+\begin{lstlisting}
+	Future<String> getPictureFromStorage(String uid, bool isProfilePicture) async {
+		try {
+			// Die Referenz auf Storage
+			Reference storage = FirebaseStorage.instance.ref();
+			// Ordner UID mit Datei profile-picture oder background-picture
+			Reference ref = storage.child(uid)
+				.child(isProfilePicture ? '/profile-picture' : '/background-picture');
+			// Gebe die URL zum Download zurueck
+			return await ref.getDownloadURL();
+		} on Exception catch (e) {
+			// Fehlerbehandlung eine Ebene oberhalb
+			throw e;
+		}
+	}
+\end{lstlisting}
+\medspace
+\subsubsection{Chatfunktion}
+Damit Nutzer bei einem erfolgreichen Match sich unterhalten und vielleicht auch verabreden können, muss eine Anwendung dieser Art eine Chatfunktion bieten.
+Diese Funktion jedoch beschränkt sich auf eine 1-zu-1 Kommunikation, es werden also keine Gruppenchats benötigt.\\
+
+Da Google weltweit über Server verfügt, ist diese Chatanwendung mithilfe von Firebase direkt auch global verfügbar.
+Zudem würde der Backend Server, welcher die Filmdaten bereitstellt und Nutzer über Matching Algorithmen zusammenführt, zusätzlich durch Netzwerkverkehr der Chatanwendung belastet.
+Hierfür bietet Firebase extra auf Skalierung ausgelegte Werkzeuge, damit sich Entwickler nicht zwingend mit diesen Problematiken auseinandersetzen müssen.
+
+\subsubsection{Sicherheit}
+Um unbefugte Zugriffe nicht zuzulassen, müssen die Sicherheitsregeln korrekt gewählt werden.
+Diese können mittels der \enquote{Emulator Suite} und Unit Tests (hier das Test Framework \enquote{mocha}) auf ihre Korrektheit getestet werden\footnote{\url{https://firebase.google.com/docs/rules/unit-tests}, zuletzt aufgerufen am 05.05.2021}.\\
+\\
+Da jeder letztendlich die Profilbilder sehen darf, ist hier nur als Bedingung gegeben, dass der Sender der Anfrage angemeldet sein und die Datei kleiner als 5 MB sein muss (siehe Codebeispiel \ref{lst:storagerules_validation}). 
+Dies wurde gewählt, da ab einer Menge von 5 GB verbrauchter Speicherplatz Kosten in Höhe von 0.026\$ pro GB anfallen.\footnote{\url{https://firebase.google.com/pricing}, zuletzt aufgerufen am 05.05.2021}\\
+\\
+Bei den Firestore Regeln ist dies jedoch etwas komplizierter - diese sind im Anhang als Codebeispiel \ref{lst:appendix_firestore_rules} zu finden.
+Die Zeilenabgabe ist bei den folgenden Erklärungen am Ende des Satzes zu finden.
+Grundsätzlich ist für Nutzer essentiell wichtig, dass Zugriffe nur gewährt werden, falls man authentifiziert ist.
+Ein Nutzer soll logischerweise Schreibrechte auf seinen eigenen Eintrag in der Datenbank haben (5).
+Ein Fremder hingegen darf dieses Lesen, falls er einen Eintrag in der Datenbank besitzt, damit keine Fehler auf der Oberfläche entstehen, falls veraltete Accounts (ohne Eintrag in der Datenbank) auf etwas zugreifen wollen (6).
+Auf die eigene Untersammlung \texttt{tokens} darf nur der Nutzer selbst zugreifen, damit zum Beispiel Benachrichtigungen nicht auch fälschlicherweise auf anderen Geräten angezeigt werden kann (7).\\
+Die eigenen Chaträume darf ebenfalls nur der Nutzer selbst sehen und verändern (11).
+Die eingehenden Chatanfragen in der Untersammlung \texttt{pendingChatrooms} darf jeder Lesen, der einen existenten Eintrag in der Datenbank besitzt, da die Funktion \texttt{isPartOfChat()} für unseren Anwendungsfall Fehler liefern würde (14).
+Der Ursprung liegt bei der Überprüfung der Chat-Anwendung, ob ein Nutzer das Profil des anderen sehen darf oder nicht.
+Es wird also überprüft, ob der Nutzer in der eingehenden Chatanfrage des anderen Nutzers ist.
+Es tritt ein Fehler auf, welcher in der Testumgebung bisher nicht reproduziert werden konnte.
+Gleichzeitig schreiben darf nur jemand, der Teil des Chats ist oder eben der Nutzer selbst (15).\\
+Auf die Sammlung \texttt{unreadMessage} hat jeder angemeldete Nutzer mit Datenbankeintrag Zugriff, damit jeder Benachrichtigungen an Personen versenden kann (18).\\
+Ein Chatraum darf jeder valide Nutzer erstellen (22) und die generellen Informationen über ihn auch lesen (24).
+Das Lesen hatte gleiche Hintergründe, wie bei (14).
+Schreibzugriff durch beispielsweise Namensänderungen besitzt jeder, der Teil des Chats ist (23).
+Um einzelne Nachrichten im Chat lesen und schreiben zu dürfen, muss der Nutzer auf jeden Fall Teil des Chats und valide sein.\\
+\\
+Da auf Nutzerdaten, welche im Auth-Service abgespeichert werden sowieso nur der eigentliche Nutzer zugreifen darf, gibt es hier auch keine Regeln.
+

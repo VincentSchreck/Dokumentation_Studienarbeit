@@ -1,0 +1,55 @@
+\begin{lstlisting}[caption=Sicherheitsregeln Firestore, label=lst:appendix_firestore_rules]
+	rules_version = '2';
+	service cloud.firestore {
+		match /databases/{database}/documents {
+			match /users/{user} {
+				allow write: if isAuthenticated() && request.resource.id == request.auth.uid;
+				allow read: if isAuthenticated() && userExists();
+				match /tokens/{token} {
+					allow read, write: if isAuthenticated() && user == request.auth.uid;
+				}
+				match /chatRooms/{chatroom} {
+					allow read, write: if isAuthenticated() && user == request.auth.uid;
+				}
+				match /pendingChatRooms/{chatroom} {
+					allow read: if isAuthenticated() && userExists();
+					allow write: if isPartOfChat(request.resource.id, request.auth.uid) || user == request.auth.uid;
+				}
+			}
+			match /unreadMessages/{unreadMessage} {
+				allow read, write: if isAuthenticated() && userExists()
+			}
+			match /chatroom/{chatRoomId} {
+				allow create: if isAuthenticated() && userExists();
+				allow write: if isPartOfChat(chatRoomId, request.auth.uid);
+				allow read: if isAuthenticated() && userExists();
+				
+				match /messages/{messageId} {
+					allow write, read: if isAuthenticated()  && userExists() && isPartOfChat(chatRoomId, request.auth.uid);
+				}
+			}    
+			/******* Hilfsfunktionen *******/
+			// Ueberprueft, ob der Anfragende angemeldet ist
+			function isAuthenticated() {
+				return request.auth != null;
+			}
+			// Ueberprueft, ob der Nuter einen Eintrag in Firestore besitzt
+			function userExists() {
+				return exists(userRef(request.auth.uid));
+			}
+			// Ueberprueft, ob das Array "users" in einem Chatraum die UID des Anfragenden enthaelt
+			function isPartOfChat(chatRoomId, userId) {
+				return (get(chatroomRef(chatRoomId)).data.users[0] == userId)
+				|| (get(chatroomRef(chatRoomId)).data.users[1] == userId)
+			}
+		
+			/******* Hilfsreferenzen *******/
+			function chatroomRef(id){
+				return /databases/$(database)/documents/chatroom/$(id);
+			}
+			function userRef(id) {
+				return /databases/$(database)/documents/users/$(id);
+			}
+		}
+	}
+\end{lstlisting}

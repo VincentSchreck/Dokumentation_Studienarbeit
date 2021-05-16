@@ -30,7 +30,7 @@ Beide bieten jeweils Plattform eigene Services an, beispielsweise das direkte Ve
 Die Entwicklung einer plattformübergreifenden Anwendung zeichnet sich generell durch die Möglichkeit aus, nur einmal Code schreiben zu müssen, diesen jedoch auf mehreren Plattformen ausführen zu können. \\
 Verschiedene Ansätze einer solchen Anwendung sind in Abbildung \ref{fig:crossplattform_architecture} kategorisiert. Im Folgenden werden jene Entwicklungsmöglichkeiten detaillierter besprochen.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.47]{Theoretische_Grundlagen/images/crossplattform_unterteilung.png}
 	\end{center}
@@ -107,14 +107,14 @@ Wie man deutlich hier auch sehen kann, haben andere, bisher auch sehr erfolgreic
 \\
 Aus diesen Gründen werden im weiteren Verlauf nur die Frameworks React-Native und Flutter weiter besprochen.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/crossplattform_popularity.png}
 	\end{center}
 	\caption{Beliebtheit nach Framework im Bereich der plattformübergreifenden mobilen Entwicklung \protect \footnotemark}
 	\label{fig:crossplattform_popularity}
 \end{figure}
-\footnotetext{Quelle: \href{https://www.statista.com/statistics/869224/worldwide-software-developer-working-hours/}{www.statista.com}, zuletzt aufgerufen am 22.04.2021}
+\footnotetext{Quelle: \url{https://www.statista.com/statistics/869224/worldwide-software-developer-working-hours/}, zuletzt aufgerufen am 22.04.2021}
 
 \subsubsection{React Native}
 \label{react-native}
@@ -127,14 +127,14 @@ Allgemein bietet das Framework die Möglichkeit plattformübergreifende Apps fü
 \paragraph{Architektur}
 Grundlegend wurde React Native als Plattform-agnostisch designet. Entwickler schreiben also plattformunabhängigen JavaScript React Code, während das Framework den erstellten React Baum in Plattform-spezifischen Code umschreibt. Hierbei wurde 2013 (noch intern) die Web-Technologie React mit nativen Plattformen (nur interne) vereint, jedoch war dieses Design aufgrund eines einzigen Threads sehr langsam. Um dies zu verbessern basierte das Framework lange Zeit auf drei unterschiedlichen Threads, welche über eine Brücke verbunden sind.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/reactnative_architecture_old.png}
 	\end{center}
 	\caption{Alte Architektur von React Native \protect \footnotemark}
 	\label{fig:reactnative_architecture_old}
 \end{figure}
-\footnotetext{Quelle: \href{https://litslink.com/blog/new-react-native-architecture}{React Native Re-Architecture}, zuletzt aufgerufen am 15.04.2021}
+\footnotetext{Quelle: \url{https://litslink.com/blog/new-react-native-architecture}, zuletzt aufgerufen am 15.04.2021}
 
 \begin{itemize}
 	\item \textit{JavaScript Thread}. Hier wird der gesamte JavaScript Code abgelegt und interpretiert. Alles wird über die JSC Engine ausgeführt.
@@ -145,20 +145,20 @@ Grundlegend wurde React Native als Plattform-agnostisch designet. Entwickler sch
 Ein Hauptproblem dieses Ansatzes ist, dass die Brücke grundlegend eine asynchrone Warteschlange ist, da der JS Thread und der native Thread unabhängig voneinander arbeiten. Zusätzlich werden während der gesamten Datenübertragung die Daten im JSON Format serialisiert und deserialisiert .
 Daher kann es zu Performance-Einbrüchen und somit zu schlechter Nutzererfahrung, durch bspw. Eingabeverzögerung, kommen.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/reactnative_architecture.png}
 	\end{center}
 	\caption{Neue Architektur von React Native \protect \footnotemark}
 	\label{fig:reactnative_architecture}
 \end{figure}
-\footnotetext{Quelle: \href{https://litslink.com/blog/new-react-native-architecture}{React Native Re-Architecture}, zuletzt aufgerufen am 15.04.2021}
+\footnotetext{Quelle: \url{https://litslink.com/blog/new-react-native-architecture}, zuletzt aufgerufen am 15.04.2021}
 
 Nach der Ankündigung 2018 veröffentlichte Facebook im Juli 2020 die neue Architektur. Mit ihr wurde der Bottleneck (die Brücke) ersetzt durch das JavaScript Interface. 
 Es ermöglicht nicht nur die komplette Synchronisierung der beiden Threads, sondern auch die direkte Kommunikation untereinander - vor allem das Konzept von \glqq shared ownership\grqq ist hier tragend, weshalb auch keine Serialisierung mehr nötig ist.
 Zudem  ist man nun nicht mehr an JSC gebunden, sondern kann auch jegliche hoch-performante JavaScript Engines als Laufzeitumgebung verwenden.
 Native Module werden nun nur noch bei Bedarf geladen anstatt alle beim Start der App.\\
-Weiter wurde veralteten Legacy-Code aus dem Kern von React Native entfernt und nicht-essenzielle Teile aus dem Kern ausgelagert. Dadurch zeigt sich die aktuelle Architektur von React Native in Abbildung \ref{fig:reactnative_architecture}.\footnote{Quelle: \href{https://medium.com/swlh/react-natives-re-architecture-in-2020-9bb82659792c}{React Native's re-architecture in 2020}}
+Weiter wurde veralteten Legacy-Code aus dem Kern von React Native entfernt und nicht-essenzielle Teile aus dem Kern ausgelagert. Dadurch zeigt sich die aktuelle Architektur von React Native in Abbildung \ref{fig:reactnative_architecture}.\footnote{Quelle: \url{https://medium.com/swlh/react-natives-re-architecture-in-2020-9bb82659792c}}
 
 \paragraph{JSX mit nativen Komponenten}
 React (Native) verwendet als Programmiersprache JSX. Diese ist eine syntaktische Erweiterung von JavaScript (\textbf{J}ava\textbf{S}cript e\textbf{X}tention), welche zur fundamentalen Beschreibung der Nutzeroberfläche dient. JSX wird in normale JavaScript Objekte kompiliert, weshalb es nicht zwingend ist. \\
@@ -277,7 +277,7 @@ Flutter verwendet \href{https://skia.org/}{Skia} als 2D Grafikbibliothek, welche
 Während der Entwicklung werden Flutter Apps in einer Virtuellen Maschine (VM) gestartet, welche \textit{stateful hot reload} ermöglicht - bei Änderungen muss die App also nicht komplett neu kompiliert werden. Wird die App nun veröffentlicht, wird sie in die Maschinencode der beschriebenen Plattformen übersetzt.
 \\
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.45]{Theoretische_Grundlagen/images/dart-diagram.png}
 	\end{center}
@@ -343,7 +343,7 @@ OEM Widgets, also Widgets von und für eine spezifische Plattform werden von Flu
 \paragraph{States}
 Flutter ist deklarativ - das bedeutet, die Benutzeroberfläche wird anhand von dem aktuellen \textit{State} der App erzeugt. Im Gegensatz dazu muss der Entwickler beim imperativen Stil die Übergänge der einzelnen \textit{States}. Hier wird dies durch das Framework gelöst.
 	
-\begin{figure}[H]
+\begin{figure}[ht]
 	\begin{center}
 		\includegraphics[scale=0.4]{Theoretische_Grundlagen/images/flutter_state.png}
 	\end{center}
