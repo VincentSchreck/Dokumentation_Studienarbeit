@@ -1,4 +1,4 @@
-Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code\footnote{\url{https://v8.dev/}, letzter Zugriff: 03. April 2021}.
+Im Jahr 2009 veröffentlichte Ryan Dahl das Framework Node.js, das auf Googles V8-Engine\footnote{\url{https://v8.dev/}, letzter Zugriff: 03. April 2021}, welche auch als JavaScript-Engine in Googles Browser Chrome zum Einsatz kommt, basiert und sich hervorragend für hochperformante, skalierbare und schnelle Webanwendungen eignet. Zudem ermöglicht es Webentwicklern die Entwicklung von serverseitigem JavaScript-Code.
 
 
 \subsubsection{Architektur}
@@ -33,7 +33,7 @@ Bei Ankommen einer Nutzeranfrage an einen Node.js Server wird zunächst in der E
 \newline
 
 \noindent
-Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch Threads sind, aufgerufen, um die jeweilige Operation auszuführen. Dabei wird eine Callback-Funktion mitgegeben, die vom Worker aufgerufen wird, sobald die Operation ausgeführt wurde. Diese Callback-Funktion kann anschließend als Ereignis von der Event Loop registriert werden. Man spricht hierbei auch von ereignisgesteuerter Architektur. [1.4]
+Im anderen Fall wird einer von Node.js interner Workern, welche prinzipiell auch Threads sind, aufgerufen, um die jeweilige Operation auszuführen. Dabei wird eine Callback-Funktion mitgegeben, die vom Worker aufgerufen wird, sobald die Operation ausgeführt wurde. Diese Callback-Funktion kann anschließend als Ereignis von der Event Loop registriert werden. Man spricht hierbei auch von ereignisgesteuerter Architektur. \cite{Node1.4}
 \newline
  
 \begin{figure}[tbt]
@@ -70,7 +70,7 @@ module.exports.bar = bar;
 
 \noindent
 Für den Import stehen verschiedene Möglichkeiten zur Verfügung.
-Im folgender Abbildung ist ein Import über die require()-Funktion dargestellt. 
+Im folgenden Quellcode ist ein Import über die require()-Funktion dargestellt. 
 Mit mitgeliefertem Modul-Pfad als Parameter gibt diese Funktion ein Objekt des Moduls wieder, das die exportierten Objekte (und Funktionen) enthält.
 \newline
   
@@ -82,14 +82,15 @@ const bar = require('./module/path');
 
 \noindent
 Eine wichtige Besonderheit ist, dass importierte Module  beim ersten Aufruf gecached werden. 
-Das bedeutet, dass jeder require()-Aufruf auf ein Modul dasselbe Objekt zurückliefert \cite{Node1.21}.
+Das bedeutet, dass jeder require()-Aufruf innerhalb eines Programms auf ein Modul dasselbe Objekt zurückliefert \cite{Node1.21}.
 
 
 \paragraph{npm}
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter \cite{Node1.3}. Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten \cite{Node1.4}. Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit \cite{Node1.5}.
 
 \paragraph{Express}
-„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.  Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, dass durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}
+„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.  
+Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, das durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}.
 \newline
 \newline
 \textbf{Beispiel}
@@ -98,7 +99,7 @@ Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js,
 \noindent
 Das Erstellen einer einfachen Express-Applikation wird im folgenden Beispiel dargestellt:\newline
 
-\begin{lstlisting}[caption=Einfacher Webserver [nodejs 1.8],label=lst:Middleware]
+\begin{lstlisting}[caption=Einfacher Webserver \protect \footnotemark,label=lst:Middleware]
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -111,10 +112,11 @@ app.listen(port, () => {
 	console.log("Example app listening on port ${port}!")
 });
 \end{lstlisting}
+\footnotetext{Vergleiche \cite{Node1.8}}
 
 \noindent
 Die require()-Funktion importiert das Express-Modul und gibt ein Express-Objekt zurück. 
-Dieses Objekt als Funktion aufgerufen gibt wiederum ein Objekt der Express-Applikation zurück, welche traditionell „app“ genannt wird, das Kernstück des Express-Frameworks ist und sämtliche Methoden wie das Weiterleiten von HTTP Anfragen, das Konfigurieren von Middleware oder das Modifizieren des Webserver-Verhaltens beinhaltet \cite{Node1.8}.
+Dieses Objekt als Funktion aufgerufen, gibt wiederum ein Objekt der Express-Applikation zurück, welche traditionell „app“ genannt wird, das Kernstück des Express-Frameworks ist und sämtliche Methoden wie das Weiterleiten von HTTP Anfragen, das Konfigurieren von Middleware oder das Modifizieren des Webserver-Verhaltens beinhaltet \cite{Node1.8}.
 \newline
 \noindent
 Im mittleren Block befindet sich eine Routendefinition. Die app.get() Funktion spezifiziert eine Callback-Funktion, die ein „request“- und „response“-Objekt als Parameter erhält und aufgerufen wird, sobald eine HTTP Anfrage der Methode GET mit dem Pfad ‚/‘ empfangen wird. Das Request-Objekt enthält sämtliche Informationen über die HTTP-Anfrage. Das Response-Objekt kann dagegen in der Callback-Funktion mit Informationen gefüllt werden und über die send()-Funktion als HTTP-Antwort an den Sender zurückgesendet werden.
@@ -143,7 +145,7 @@ Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware ge
 
 \noindent
 \textbf{express.json:}
-Hierbei handelt es sich um eine in express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts \cite{Node2.1}.
+Hierbei handelt es sich um eine in Express eingebaute Middleware, die die in JSON formatierten Daten im Nachrichtenrumpf aus einer eingehenden HTTP-Anfrage grammatisch analysiert.  Dabei ist zu beachten, dass der Nachrichtenrumpf nur dann analysiert wird, wenn bei der Anfrage eine Header-Informationen namens „Content-Type“ mit dem entsprechenden JSON-Typ als Wert übergeben wird. Nach erfolgreicher Analyse erstellt die Middleware aus den JSON-Informationen eine neues body-Objekt innerhalb des übergebenen request-Objekts \cite{Node2.1}.
 \newline
 
 \begin{lstlisting}[caption=Express.json Middleware benutzen,label=lst:ExpressNutzen]
@@ -163,7 +165,7 @@ Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express �
 \newline
 
 \noindent
-Die in express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middleware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
+Die in Express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middle\-ware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
 \newline
 
 \begin{lstlisting}[caption=Routinghandler erstellen \protect \footnotemark,label=lst:RoutingHandlerCreate]
@@ -218,7 +220,7 @@ Mongoose ist ein öffentliches Modul, das zum Zeitpunkt der Dokumentation im npm
 \noindent
 \textbf{Object Document Mapping (ODM):}
 Object-Relational Mappers (ORM) finden haupt\-sächlich Einsatz in objektorientieren Anwendungen, dessen Daten in relationalen Datenbanken sind. Dabei werden die Tabellen in persistente Objekte gemappt.
-Das Mappen ist aber auch für NoSQL-Datenbanken nützlich \cite{Node2.56}. Die meistverbreiteten NoSQL-Datenbanken basieren auf Dokument-Systemen. Dementsprechend werden für diese Datenbanken Object-Document Mapper für das Mappen zwischen Dokumenten und Objekten genutzt. Einige ODM’s sind Mongoose\footnote{Mongoose Webpage, \url{http://mongoosejs.com}, letzter Zugriff: 04. April 2021}, Morphia\footnote{Morphia Webpage, \url{https://github.com/mongodb/morphia}, letzter Zugriff: 04. April 2021}, Doctrine \footnote{Doctrine Project Webpage, \url{http://www.doctrine-project.org/}, letzter Zugriff 04.04.2021} und Mandango\footnote{Mandango Webpage, \url{https://mandango.readthedocs.io/en/latest/}, letzter Zugriff: 04. April 2021.}
+Das Mappen ist aber auch für NoSQL-Datenbanken nützlich \cite{Node2.56}. Die meistverbreiteten NoSQL-Datenbanken basieren auf Dokument-Systemen. Dementsprechend werden für diese Datenbanken Object-Document Mapper für das Mappen zwischen Dokumenten und Objekten genutzt. Einige ODM’s sind Mongoose\footnote{Mongoose Webpage, \url{http://mongoosejs.com}, letzter Zugriff: 04. April 2021}, Morphia\footnote{Morphia Webpage, \url{https://github.com/mongodb/morphia}, letzter Zugriff: 04. April 2021}, Doctrine \footnote{Doctrine Project Webpage, \url{http://www.doctrine-project.org/}, letzter Zugriff 04.04.2021} und Mandango\footnote{Mandango Webpage, \url{https://mandango.readthedocs.io/en/latest/}, letzter Zugriff: 04. April 2021}.
 NoSQL Mapper nutzen vom Entwickler definierte Datenschemata, die das Objekt beschreiben. Ein daraus abgeleitetes Model-Objekt ermöglicht dann die Kommunikation zwischen dem im Schema beschriebenen Objekt und der entsprechenden Datenbank-Collection.
 \newline
 

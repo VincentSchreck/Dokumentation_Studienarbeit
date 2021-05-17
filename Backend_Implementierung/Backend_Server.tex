@@ -65,8 +65,9 @@ Als Applikationsstartpunkt wird die Datei \glqq server.js\grqq \, erzeugt und im
 Die Software für den StreamSwipe-Server wird in Komponenten/Module aufgeteilt. Vorteile dieser Modularisierung sind, dass die einzelnen Module schneller verstanden und dementsprechend leichter überarbeitet werden können. Außerdem können Codeduplizierungen vermieden werden und Softwarekomponenten an verschiedenen Punkten im Code wiederverwendet werden. Abbildung \ref{fig:WebserverArchitektur} stellt die Architektur des Webservers dar. Die Route-Komponenten dienen als Empfangsschnittstelle für HTTPS-Anfragen. Die tatsächlichen Abhandlungsroutinen finden in den Controller-Komponenten statt, welche zum Zugriff auf die Datenbank auf die Service-Komponenten zugreifen und die HTTPS-Antworten zurückschicken.
 \begin{figure}[tbt]
 \centering
+
 \includegraphics[width=13cm]{images/backendstruktur.PNG}
-\caption{WebserverArchitektur}
+\caption{Webserver Architektur}
 \label{fig:WebserverArchitektur}
 \end{figure}
 

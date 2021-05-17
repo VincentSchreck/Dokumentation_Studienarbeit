@@ -9,13 +9,13 @@ NoSQL-Datenbanken werden hauptsächlich in vier verschiedene Kategorien untertei
 \noindent
 \hangindent1cm
 \textbf{Graphendatenbanken:}
-Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen. Das Konzept wird in Abbildung \ref{Graphikdatenbank} illustriert
+Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sogenannten Graphen ab. Die einzelnen Informationselemente werden durch Knoten mit Eigenschaften repräsentiert. Um die Beziehungen zwischen den Knoten darzustellen, werden Kanten genutzt, die gerichtet und benannt sein können und ebenfalls Eigenschaften besitzen. Das Konzept wird in Abbildung \ref{Graphendatenbank} illustriert
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[]{images/graphikdatabase.jpg}
-\caption[Graphikdatenbank Beispiel]{Graphendatenbank Beispiel \protect \footnotemark}
-\label{Graphikdatenbank}
+\caption[Graphendatenbank Beispiel]{Graphendatenbank Beispiel \protect \footnotemark}
+\label{Graphendatenbank}
 \end{figure}
 \footnotetext{\url{https://entwickler.de/online/datenbanken/wunderbare-welt-der-graphen-114728.html}, letzter Zugriff: 9. Februar 2021}
 
@@ -23,7 +23,7 @@ Dieses Datenbankenkonzept speichert die Informationen in Netzstrukturen, den sog
 \hangindent1cm
 \textbf{Dokumentenorientierte Datenbanken:}
 Im Kontext der dokumentenorientierte Datenbanken sind Dokumente Objekte mit Eigenschaften, die in einer Sammlung gespeichert werden. 
-Während eine Sammlung eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. 
+Während eine Sammlung (Collection) eine Tabelle im relationalen Datenbank widerspiegelt, ist ein Dokument als ein Eintrag beziehungsweise einer Zeile dieser Tabelle gleichzusetzen, mit dem großen Unterschied, dass dokumentenorientierte Datenbanken schemafrei sind und kein bestimmtes Datenschema voraussetzen. 
 Dokumente können weitere Dokumente als Attribut oder in einer Liste einbetten und bieten so die Möglichkeit, komplexe Datenstrukturen zu speichern.  
 In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Datenformate wie JSON oder XML.\\
 
@@ -36,6 +36,7 @@ In aktuellen Datenbanksystemen wie CouchDB und MongoDB nutzen diese Dokumente Da
 	"Adresse": "Musterstrasse 34, MusterStadt",
 	"Kinder":  ["Junior","Elenor"]
 }
+\caption{Inhalt eines dokumentenorientieren Datensatzes}
 \end{lstlisting}
 
 \noindent
@@ -104,7 +105,7 @@ Der Informatiker Eric Brewer von der Universität Berkeley stellte Anfang des Ja
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=8cm, height=6.5cm]{images/Visualization-of-CAP-theorem.png}
-\caption[Visualization-of-CAP-theorem]{Visualization-of-CAP-theorem \protect \footnotemark}
+\caption[Visualisierung des CAP-Theorems]{Visualization-of-CAP-theorem \protect \footnotemark}
 \label{fig:CAP}
 \end{figure}
 \footnotetext{\url{https://www.researchgate.net/profile/Hamzeh-Khazaei/publication/282679529/figure/fig2/AS:614316814372880@1523475950595/Visualization-of-CAP-theorem.png}, letzter Zugriff: 10. Februar 2021}

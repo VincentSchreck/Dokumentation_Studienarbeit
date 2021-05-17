@@ -1,4 +1,4 @@
-MongoDB ist ein in C++ geschriebenes, dokumentenorientiertes NoSQL-Datenbanksystem, das im Jahre 2009 von den Entwicklern Horowitz und Merriman als Open-Source Datenbank veröffentlicht wurde und die am weitest-verbreiteste NoSQL-Datenbank (Stand April 2021) \cite{DB1.7}. Die Intention der Gründer war es, eine Datenbank mit höherer Skalierbarkeit, Flexibilät und Performance zu entwerfen, die auf auf einer einfachen Handhabung beruht \cite{DB1.65}.
+MongoDB ist ein in C++ geschriebenes, dokumentenorientiertes NoSQL-Datenbanksystem, das im Jahre 2009 von den Entwicklern Horowitz und Merriman als Open-Source Datenbank veröffentlicht wurde und die am weitest-verbreiteste NoSQL-Datenbank ist (Stand April 2021) \cite{DB1.7}. Die Intention der Gründer war es, eine Datenbank mit höherer Skalierbarkeit, Flexibilät und Performance zu entwerfen, die auf auf einer einfachen Handhabung beruht \cite{DB1.65}.
 Gründe der Popularität der Datenbank ist neben den oben erwähnten Eigenschaften die flexible Gestaltungsmöglichkeit der Datenstrukturen sowie die Unterstützung durch zahlreiche Programmiersprachen und Betriebssysteme.
 \noindent
 Dem Konzept des CAP-Theorems folgend steht MongoDB für Konsistenz und Partitionstoleranz, dafür ordnet sich die Verfügbarkeit den anderen Eigenschaften unter.
@@ -20,7 +20,7 @@ Ein \textbf{Server} kann mehrere logische \textbf{Datenbanken} verwalten, die ih
 
 \noindent
 \textbf{Schema-Freiheit:}
-Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kein vorausgesetztes Schema. Aufgrund der Schema-Freiheut dürfen dennoch Architekturentscheidungen bei der Datenmodellierung nicht ignoriert werden. Stattdessen werden diese Entscheidungen des Schema-Managements auf die Anwendungsentwicklung verlagert. \\
+Collections sind schemafrei. Dadurch gibt es für die zugehörigen Dokumente kein vorausgesetztes Schema. Aufgrund der Schema-Freiheit dürfen dennoch Architekturentscheidungen bei der Datenmodellierung nicht ignoriert werden. Stattdessen werden diese Entscheidungen des Schema-Managements auf die Anwendungsentwicklung verlagert. \\
 
 \noindent
 \textbf{BSON:}
@@ -45,7 +45,7 @@ Für die eindeutige Identifikation eines Dokuments vergibt MongoDB automatisch e
 \newline
 
 \paragraph{Datenbankabfrage}
-Im Vergleich zu relationalen Datenbanken benutzt MongoDB keine Abfragesprache wie SQL. Stattdessen ermöglicht dieses Datenbanksystem drei Arten von Abfragen, wobei eine Abfrage sich immer auf genau eine Collection bezieht. Ein Bezug einer Abfrage zu mehreren Collections, wie es relationale Datenbanken mit „Join“-Operationen erlauben, ist hier nicht gegeben und muss in der Anwendung realisiert werden \cite{1.9}. Abfragen in MongoDB werden grundsätzlich in Form von Dokumenten formuliert. Dieses Verfahren ermöglicht schnelles Abhandeln komplexer Abfragen von tief geschachtelten Dokumentenstrukturen. Nachfolgend werden die drei Abfragemöglichkeiten erläutert.
+Im Vergleich zu relationalen Datenbanken benutzt MongoDB keine Abfragesprache wie SQL. Stattdessen ermöglicht dieses Datenbanksystem drei Arten von Abfragen, wobei eine Abfrage sich immer auf genau eine Collection bezieht. Ein Bezug einer Abfrage zu mehreren Collections, wie es relationale Datenbanken mit „Join“-Operationen erlauben, ist hier nicht gegeben und muss in der Anwendung realisiert werden \cite{DB1.9}. Abfragen in MongoDB werden grundsätzlich in Form von Dokumenten formuliert. Dieses Verfahren ermöglicht schnelles Abhandeln komplexer Abfragen von tief geschachtelten Dokumentenstrukturen. Nachfolgend werden die drei Abfragemöglichkeiten erläutert.\\
 
 \noindent
 \textbf{Query-By-Example:}
@@ -154,7 +154,7 @@ Tabelle \ref{CRUDOperatoren} stellt die Kommandos zur Realisierung der CRUD-Oper
 \noindent
 \hangindent1cm
 \textbf{Create:}
-„InsertOne()“ erzeugt ein einzelnes Dokument in der jeweiligen Collection der Datenbank. Dabei wird ein Dokument im JSON-Format als Parameter mitgegeben. ObjectID wird, wenn nicht als Eigenschaft im Dokument angegeben, automatisch von MongoDB erzeugt. Ebenfalls wird die angesprochene Collection automatisch erzeugt, falls sie nicht bereits existiert. Die Funktion „InsertMany()“  erlaubt das Hinzufügen mehrerer Datensätze über ein Array von JSON-Dokumenten als Parameter. Die Methode „Insert“ ist flexibler und bietet beide Parametrisierungsmöglichkeiten\footnote{\url{https://docs.mongodb.com/manual/reference/method/db.collection.insert/\#mongodb-method-db.collection.insert}, letzter Zugriff: 14. Februar 2021}.
+„insertOne()“ erzeugt ein einzelnes Dokument in der jeweiligen Collection der Datenbank. Dabei wird ein Dokument im JSON-Format als Parameter mitgegeben. ObjectID wird, wenn nicht als Eigenschaft im Dokument angegeben, automatisch von MongoDB erzeugt. Ebenfalls wird die angesprochene Collection automatisch erzeugt, falls sie nicht bereits existiert. Die Funktion „insertMany()“  erlaubt das Hinzufügen mehrerer Datensätze über ein Array von JSON-Dokumenten als Parameter. Die Methode „insert“ ist flexibler und bietet beide Parametrisierungsmöglichkeiten\footnote{\url{https://docs.mongodb.com/manual/reference/method/db.collection.insert/\#mongodb-method-db.collection.insert}, letzter Zugriff: 14. Februar 2021}.
 \newline
 \begin{lstlisting}[caption=MongoDB Create, label=lst:MongoDBCreate]
 db.personen.insertOne({"vorname" : "Robin"});
@@ -170,7 +170,7 @@ Ein Beispiel ist dargestellt in Listing \ref{lst:MongoDBRead}.
 \noindent
 \hangindent1cm
 \textbf{Update:}
-Die Update()-Methode ermöglicht es, Änderungen an Datensätzen vorzunehmen.  Die Methode erhält zwei Parameter, einen zur Angabe der gesuchten Dokumente und den anderen mit  der vorzunehmenden Änderung. Simultan zu den Insert-Methoden gibt es die UpdateOne()-Methode für Änderungen an einem Dokument und UpdateMany()-Methode für mehrere Dokumente.
+Die update()-Methode ermöglicht es, Änderungen an Datensätzen vorzunehmen.  Die Methode erhält zwei Parameter, einen zur Angabe der gesuchten Dokumente und den anderen mit  der vorzunehmenden Änderung. Simultan zu den Insert-Methoden gibt es die updateOne()-Methode für Änderungen an einem Dokument und updateMany()-Methode für mehrere Dokumente.
 \newline
 
 \begin{lstlisting}[caption=MongoDB Update, label=lst:MongoDBUpdate]
@@ -181,7 +181,7 @@ db.personen.updateOne({"vorname" : "Robin"} , currentDate("last_login") );
 \noindent
 \hangindent1cm
 \textbf{Delete:}
-Für das Löschen von Datensätzen aus einer Collection gibt es die DeleteOne()- und DeleteMany()-Methode. Über mitgegegeben Parameter können Filter eingestellt werden. Eine ganze Collection kann mit der drop()-Methode entfernt werden.
+Für das Löschen von Datensätzen aus einer Collection gibt es die deleteOne()- und deleteMany()-Methode. Über mitgegebenem Parameter können Filter eingestellt werden. Eine ganze Collection kann mit der drop()-Methode entfernt werden.
 \newline
 
 \begin{lstlisting}[caption=MongoDB Remove, label=lst:MongoDBRemove]
@@ -211,8 +211,8 @@ Bis vor Version 3.2 war MMAPv1-Engine die Standard-Storage Engine von MongoDB. E
 \noindent
 \hangindent1cm
 \textbf{Replica Sets:}
-Im standardmäßigen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren(Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden \cite{DB3.6}. MongoDB realisiert die Replikation der Daten über Replica Sets\cite{DB3.7}. Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten.
-Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten 'Oplogs' (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird \cite{DB3.8}. Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab. Das Konzept der Replica Sets wird in Abbildung \ref{fig:ReplicaSet} dargestellt.
+Im standardmäßigen Standalone-Modus besteht bei Ausfall des Servers die potenzielle Gefahr des Datenverlusts. Das Problem lässt sich durch Replikation beheben. Hierbei spricht man von der bloßen Herstellung von Mehrexemplaren (Kopien) derselben Daten, die meistens regelmäßig abgeglichen werden \cite{DB3.6}. MongoDB realisiert die Replikation der Daten über Replica Sets \cite{DB3.7}. Dabei handelt es sich um eine Gruppe von mongod-Prozessen, die dieselben Daten enthalten. Nach dem CAP-Theorem ist MongoDB nicht auf Verfügbarkeit ausgelegt. Dennoch umgeht die Datenbank diesen Nachteil über die Anwendung von Replica Sets. Das Replica Set besteht aus einem primären Knoten und daraus replizierenden Sekundären Knoten.
+Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderungen werden in sogenannten 'Oplogs' (Operations logs) gespeichert, die zum Austausch der Daten innerhalb des Replica Sets genutzt wird \cite{DB3.8}. Bei den Oplog-Dateien handelt es sich um Collections mit festgelegten Speichergrößen, den sogenannten „capped collections“. Während die Oplog-Dateien ähnlich wie ein Logbuch mit allen Veränderungen in den Datensätzen der Datenbank beschrieben werden, werden bei erreichter Maximalgröße der Collection die ältesten Daten von den neuen Daten überschrieben. Dabei enthält jeder Knoten des Replica Sets seine eigene Kopie des Oplogs und gleicht ihn mit dem des primären Knotens ab. Das Konzept der Replica Sets wird in Abbildung \ref{fig:ReplicaSet} dargestellt. \\
 
 \begin{figure}[tbt]
 \centering
@@ -228,7 +228,7 @@ Nur der primäre Knoten führt datensatzändernde Operationen aus. Veränderunge
 \textbf{Sharding:}
 Hierbei ist die Rede von der Methodik zur Aufteilung der Daten auf mehrere Datenbanken \cite{DB4.1}.
 Der Datenbestand wird nach logischen Kriterien in  Teilstücke, die sogenannten „Shards“, zerlegt und über mehrere Replica Sets verteilt.
-In Hinblick auf das hinzufügen weiterer Server gewährt das Sharding eine horizontale Skalierbarkeit.
+In Hinblick auf das Hinzufügen weiterer Server gewährt das Sharding eine horizontale Skalierbarkeit.
 Des Weiteren werden durch die Tatsache, dass jeder Shard für seinen Bestandteil zuständig ist,  Suchanfragen schneller durchgeführt. 
 Sharding ist besonders bei großen Datenmengen in Bezug auf Performance von Vorteil.
 Der mongos-Prozess leitet Anfragen an die jeweiligen Shards weiter und dient als Schnittstelle zwischen den Clientanwendungen.
@@ -237,12 +237,13 @@ Der mongos-Prozess leitet Anfragen an die jeweiligen Shards weiter und dient als
 \noindent
 \hangindent1cm
 \textbf{Mongo Shell:}
-Der „mongo“-Prozess ist eine interaktive JavaScript Schnittstelle auf der Kommandozeile. Er bietet umfassende Funktionalitäten für die Systemadministration des Datenbankensystems als auch Zugriff auf die Datensätze\footnote{Mongo \url{https://docs.mongodb.com/manual/reference/program/mongo/}, letzter Zugriff: 15. Februar 2021}. Dazu erhält man eine Eingabeaufforderung, auf dem Befehle in der Sprache JavaScript ausgeführt werden können.
+Der „mongo“-Prozess ist eine interaktive JavaScript Schnittstelle auf der Kommandozeile. Er bietet umfassende Funktionalitäten für die Systemadministration des Datenbankensystems als auch Zugriff auf die Datensätze\footnote{Mongo \url{https://docs.mongodb.com/manual/reference/program/mongo/}, letzter Zugriff: 15. Februar 2021}. Dazu erhält man eine Eingabeaufforderung, auf dem Befehle in der Sprache JavaScript ausgeführt werden können. \\
+
 \noindent
 \hangindent1cm
 \textbf{Treiber:}
-MongoDB bietet für viele Programmiersprachen bzw. Frameworks Softwarebibliotheken zum Zugriff auf die Datenbank an.\footnote{MongoDB Treiber \url{https://docs.mongodb.com/drivers/}, letzter Zugriff: 01. Mai 2021}  Eine offiziell unterstützte ist Mongoose für das Node.js-Framework\footnote{Mongoose - Offizielle Webpage \url{https://mongoosejs.com/docs/}, letzter Zugriff: 01. Mai 2021}
-\newpage
+MongoDB bietet für viele Programmiersprachen bzw. Frameworks Softwarebibliotheken zum Zugriff auf die Datenbank an.\footnote{MongoDB Treiber \url{https://docs.mongodb.com/drivers/}, letzter Zugriff: 01. Mai 2021}  Eine offiziell unterstützte ist Mongoose für das Node.js-Framework\footnote{Mongoose - Offizielle Webpage \url{https://mongoosejs.com/docs/}, letzter Zugriff: 01. Mai 2021}. \\
+
 \noindent
 \hangindent1cm
 \textbf{Grafische Oberflächen:}

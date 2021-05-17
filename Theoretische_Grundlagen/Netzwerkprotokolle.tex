@@ -109,8 +109,8 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 \newpage
 \noindent
 \hangindent1cm
-\textbf{Statuscodes:}
-HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben. Tabelle \ref{tab:HTTPStatuscode} stellt die Statuscodes und ihre Beschreiben anhand von Beispielen dar. \newline
+\textbf{Status-Codes:}
+HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Status-Codes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben. Tabelle \ref{tab:HTTPStatuscode} stellt die Status-Codes und ihre Beschreibungen anhand von Beispielen dar. \newline
 
 \begin{table}[tbt]
 \caption{HTTP Statuscodebeschreibungen}
@@ -143,8 +143,8 @@ Dafür dienen zwei Konzepte:
 
 \noindent
 \noindent
-Ersteres ist das Verschlüsseln der Kommunikation von Sender und Empfänger. Die zugrundeliegende Technik nennt sich Transport Layer Security (TLS), ist aber auch als Secure Sockets Layer (SSL) bekannt. Die Idee dahinter ist, dass jeder Teilnehmer der Kommunikation einen öffentlich bekannten Schlüssel (Public Key) und einen geheimen, nicht-öffentlichen Schlüssel (Private Key) besitzen. Über den Public-Key des Empfängers verschlüsselt der Sender seine Nachricht. Diese kann nur über den Private-Key des Empfängers entschlüsselt werden, der vom Empfänger nicht weitergegeben werden sollte.
+Ersteres ist das Verschlüsseln der Kommunikation von Sender und Empfänger. Die zugrundeliegende Technik nennt sich Transport Layer Security (TLS), ist aber auch als Secure Sockets Layer (SSL) bekannt. Die Idee dahinter ist, dass jeder Teilnehmer der Kommunikation einen öffentlich bekannten Schlüssel (Public Key) und einen geheimen, nicht-öffentlichen Schlüssel (Private Key) besitzt. Über den Public-Key des Empfängers verschlüsselt der Sender seine Nachricht. Diese kann nur über den Private-Key des Empfängers entschlüsselt werden, der vom Empfänger nicht weitergegeben werden sollte.
 \newline
 
 \noindent
-Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, dass zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauens"-würdig"-keit des Senders. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.
+Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, das zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauens"-würdig"-keit des Servers. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.
