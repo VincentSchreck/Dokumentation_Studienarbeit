@@ -10,7 +10,7 @@ Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor,
 \end{figure}
 
 \noindent
-Folgender Code zeigt den Aufbau des Schemas für die Swipe-Collection. \\
+Listing \ref{lst:modelswipe} zeigt den Aufbau des Schemas für die Swipe-Collection. \\
 
 \begin{lstlisting}[caption=Swipe Schema und Model, label=lst:modelswipe]
 const mongoose = require('mongoose')
@@ -29,7 +29,7 @@ module.exports = mongoose.model('Swipe',swipeSchema)
 \end{lstlisting}
 
 \noindent
-Die einzelnen Schemata wurden nach dem im Diagramm der Abbildung \ref{fig:databasemodells} dargestellten Aufbau für jede Collection in separaten Dateien unter dem Verzeichnis '/database/models' erstellt (siehe Abbildung \ref{fig:node_structure}). Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugten Model.
+Die einzelnen Schemata wurden nach dem in Abbildung \ref{fig:databasemodells} dargestellten Aufbau für jede Collection in separate Dateien unter dem Verzeichnis '/database/models' erstellt (siehe Abbildung \ref{fig:node_structure}). Jede Datei exportiert dabei das aus dem zugehörigen Schema erzeugte Model.
 
 \begin{figure}[tbt]
 \centering

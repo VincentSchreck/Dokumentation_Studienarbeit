@@ -1,4 +1,4 @@
-Für den Datenzugriff auf die Datenbank wurden zu jeder Collection Service-Module unter dem Verzeichnis '/services' erstellt, die entsprechenden Zugriff gewähren. Dafür wurden innerhalb der Service-Modulen  die benötigten Zugriffsfunktionen implementiert (siehe Abbildung \ref{fig:node_service_structure}).
+Für den Datenzugriff auf die Datenbank wurden zu jeder Collection Service-Module unter dem Verzeichnis '/services' erstellt, die entsprechenden Zugriff gewähren. Dafür wurden innerhalb der Service-Module die benötigten Zugriffsfunktionen implementiert (siehe Abbildung \ref{fig:node_service_structure}).
 
 \begin{figure}[tbt]
 \centering
@@ -14,14 +14,13 @@ Für den Datenzugriff auf die Datenbank wurden zu jeder Collection Service-Modul
 %
 
 \paragraph{Movie Service}
-Die Funktionen des Moduls movieService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die  auf die Collection movies angewandt werden. Der Funktionsspektrum begrenzt sich für diesen Service auf die Funktion 'FindMovieExcept'.
+Die Funktionen des Moduls movieService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection movies angewandt werden. Das Funktionsspektrum begrenzt sich für diesen Service auf die Funktion 'FindMovieExcept', die in Listing \ref{lst:findmoviesexcept} zu sehen ist.\\
 
 \noindent
 \textbf{FindMoviesExcept:}
 Diese Funktion erhält als Parameter 'excludedMovies' eine Liste von MovieID's und als Parameter 'amount' einen Integerwert.
-Über die Find-Funktion des importierten Movie-Models wird eine über den Wert von 'amount' begrenzte Anzahl an Movie-Dokumenten ausgelesen, deren ID nicht in der übergebenen 'excludedMovies'-Liste vorhanden sind. Für das Filtern wird die 'nin'-Operation verwendet.\footnote{Siehe Dokumentation: \url{https://docs.mongodb.com/manual/reference/operator/query/nin/}, letzter Zugriff: 26. April 2021}
-
-Sollte die Datenbank bei der Datenauslese ein Fehler zurückgeben, wird dieser über den try-catch-Block gefangen und an im Aufrufstack überliegende Funktion über das Schlüsselwort throw weitergeleitet.\\
+Über die Find-Funktion des importierten Movie-Models wird eine über den Wert von 'amount' begrenzte Anzahl an Movie-Dokumenten ausgelesen, deren IDs nicht in der übergebenen 'excludedMovies'-Liste vorhanden sind. Für das Filtern wird die 'nin'-Operation verwendet\footnote{Siehe Dokumentation: \url{https://docs.mongodb.com/manual/reference/operator/query/nin/}, letzter Zugriff: 26. April 2021}.\\
+Sollte die Datenbank bei der Datenauslese einen Fehler zurückgeben, wird dieser über den try-catch-Block gefangen und an im Aufrufstack liegende Funktion über das Schlüsselwort throw weitergeleitet.\\
 
 \begin{lstlisting}[caption=movieService.js - FindMoviesExcept, label=lst:findmoviesexcept]
 const Movie = require('../database/models/movie')
@@ -51,7 +50,7 @@ Die Funktionen des Moduls userService.js bieten innerhalb der Projektumgebung de
 
 \noindent
 \textbf{CreateUser:}
-Die Funktion erhält sämtliche Eigenschaften, die im User-Schema beschrieben sind, als Parameter. Diese Funktion wird in der Projektumgebung in Zusammenhang mit mindestens einer weiteren datenbankzugreifenden Funktion aufgerufen. Im Sinne einer Transaktion müssen sie als atomare Operation ausgeführt werden, um den Datenbestand konsistent zu halten. Daher wird ein Session-Objekt als Parameter mitgeliefert. Innerhalb der Funktion wird über die Create-Funktion des importierten User-Models ein neuer Eintrag in der User-Collection der Datenbank erstellt.
+Die in Listing \ref{lst:userservicecreateuser} dargestellte Funktion erhält sämtliche Eigenschaften, die im User-Schema beschrieben sind, als Parameter. Diese Funktion wird in der Projektumgebung in Zusammenhang mit mindestens einer weiteren datenbankzugreifenden Funktion aufgerufen. Im Sinne einer Transaktion müssen sie als atomare Operationen ausgeführt werden, um den Datenbestand konsistent zu halten. Daher wird ein Session-Objekt als Parameter mitgeliefert. Innerhalb der Funktion wird über die Create-Funktion des importierten User-Models ein neuer Eintrag in der User-Collection der Datenbank erstellt.\\
 
 \begin{lstlisting}[caption=User Service - CreateUser, label=lst:userservicecreateuser]
 async function CreateUser(uid, swipeid, matchid, city, malewanted, femalewanted, diversewanted, mygender, session) {
@@ -78,7 +77,7 @@ async function CreateUser(uid, swipeid, matchid, city, malewanted, femalewanted,
 
 \noindent
 \textbf{CheckExistence:}
-Die Funktion prüft darauf, ob innerhalb der User-Collection ein User mit entsprechendem Wert für die Eigenschaft 'uid', die als Parameter übergeben wird und gibt entsprechend den boolschen Wert 'true' bei Vorhandensein beziehungsweise 'false' bei Nicht-Vorhandensein zurück.\\
+Wie in Listing \ref{lst:userservicecheckexistence} zu sehen prüft diese Funktion, ob innerhalb der User-Collection ein User mit entsprechendem Wert für die Eigenschaft 'uid', die als Parameter übergeben wird, existiert und gibt entsprechend den boolschen Wert 'true' bei Vorhandensein beziehungsweise 'false' bei Nicht-Vorhandensein zurück.\\
 
 \begin{lstlisting}[caption=User Service - CheckExistence, label=lst:userservicecheckexistence]
 async function CheckExistence(uid) {
@@ -88,7 +87,7 @@ async function CheckExistence(uid) {
 
 \noindent
 \textbf{GetCityFromUser:}
-Die Funktion gibt den Eintrag der Eigenschaft 'city' eines Dokuments zurück, dessen 'uid'-Attribut mit dem übergebenen 'uid'-Parameter übereinstimmt.\\
+Diese Funktion gibt den Eintrag der Eigenschaft 'city' eines Dokuments zurück, dessen 'uid'-Attribut mit dem übergebenen 'uid'-Parameter übereinstimmt, wie in Listing \ref{lst:userservicecheckexistence} zu sehen ist.\\
 
 \begin{lstlisting}[caption=User Service - CheckExistence, label=lst:userservicecheckexistence]
 async function GetCityFromUser(uid) {
@@ -104,7 +103,7 @@ async function GetCityFromUser(uid) {
 
 \noindent
 \textbf{ChangeCityFromUser:}
-Die Funktion führt ein Update auf einem User-Dokument aus, dessen 'uid'-Eigenschaft mit dem gleichnamigen übergebenemen Parameter übereinstimmt. Dabei wird die 'city'-Eigenschaft innerhalb des User-Dokuments auf den Wert des gleichnamigen Parameters aktualisiert.\\
+Die in Listing \ref{lst:userservicechangecityfromuser} dargestellte Funktion führt ein Update auf einem User-Dokument aus, dessen 'uid'-Eigenschaft mit dem gleichnamigen übergebenem Parameter übereinstimmt. Dabei wird die 'city'-Eigenschaft innerhalb des User-Dokuments auf den Wert des gleichnamigen Parameters aktualisiert.\\
 
 \begin{lstlisting}[caption=User Service - ChangeCityFromUser, label=lst:userservicechangecityfromuser]
 async function ChangeCityFromUser(uid, city, session) {  
@@ -122,11 +121,11 @@ async function ChangeCityFromUser(uid, city, session) {
 
 \noindent
 \textbf{ChangeGenderWantedFromUser:}
-Die Funktion erfüllt die gleiche Funktionalität wie die ChangeCityFromUser-Funktionalität mit dem Unterschied, dass statt der 'city'-Eigenschaft die Eigenschaft 'malewanted','femalewanted' und 'diverswanted' aktualisiert werden.\\
+Diese Funktion erfüllt die gleiche Funktionalität wie die ChangeCityFromUser-Funktion  mit dem Unterschied, dass statt der 'city'-Eigenschaft die Eigenschaften 'malewanted','femalewanted' und 'diverswanted' aktualisiert werden.\\
 
 \noindent
 \textbf{ChangeGenderFromUser:}
-Die Funktion erfüllt die gleiche Funktionalität wie die ChangeCityFromUser-Funktionalität mit dem Unterschied, dass statt der 'city'-Eigenschaft die 'mygender'-Eigenschaft aktualisiert wird.\\
+Die Funktion ChangeGenderFromUser erfüllt die gleiche Funktionalität wie die ChangeCityFromUser-Funktionalität mit dem Unterschied, dass statt der 'city'-Eigenschaft die 'mygender'-Eigenschaft aktualisiert wird.\\
 
 
 %
@@ -140,7 +139,7 @@ Die Funktionen des Moduls matchService.js bieten innerhalb der Projektumgebung d
 
 \noindent
 \textbf{CreateUserMatchDocument:}
-Die Funktion überprüft zunächst, ob ein Match-Dokument mit übergebener 'uid'-Eigenschaft bereits existiert. Ist dies nicht der Fall, wird ein neues Match-Dokument in der matches-Collection erzeugt.\\
+Die in Listing \ref{lst:matchserviceCreateUserMatchDocument} dargestellte Funktion überprüft zunächst, ob ein Match-Dokument mit übergebener 'uid'-Eigenschaft bereits existiert. Ist dies nicht der Fall, wird ein neues Match-Dokument in der matches-Collection erzeugt.\\
 
 \begin{lstlisting}[caption=Match Service - CreateUserMatchDocument, label=lst:matchserviceCreateUserMatchDocument]
 async function CreateUserMatchDocument(uid, session) {
@@ -164,7 +163,7 @@ async function CreateUserMatchDocument(uid, session) {
 
 \noindent
 \textbf{CheckMatchExists:}
-Die Funktion überprüft, ob ein Match-Dokument existiert, welches den übergebenen 'uid'-Eigenschaftswert hat sowie innerhalb seiner 'supermatches'- oder 'normalmatches'-Liste die übergebene 'matchedUid' enthält. Zurück wird ein entsprechender boolescher Wert geschickt. 
+Wie in Listing \ref{lst:matchserviceCreateUserMatchDocument} zu sehen, überprüft diese  Funktion ob ein Match-Dokument existiert, welches den übergebenen 'uid'-Eigenschaftswert hat sowie innerhalb seiner 'supermatches'- oder 'normalmatches'-Liste die übergebene 'matchedUid' enthält. Zurück wird ein entsprechender boolescher Wert geschickt. \\
 
 \begin{lstlisting}[caption=Match Service - CreateUserMatchDocument, label=lst:matchserviceCreateUserMatchDocument]
 async function CheckMatchExists(uid, matchedUid, session) {
@@ -185,7 +184,7 @@ async function CheckMatchExists(uid, matchedUid, session) {
 
 \noindent
 \textbf{AddNormalMatchToUser:}
-Die Funktion fügt der 'normalmatches'-Liste eines Match-Dokuments ein neues Objekt mit den Eigenschaften 'uid','matchUid' und 'movieid', die ihren Wert über die übergebenen Funktionsparameter erhalten. Des Weiteren wird das Attribut 'startedChat' und 'removed' jeweils mit dem booleschen Standardwert 'false' hinzugefügt. Außerdem wird die Eigenschaft 'newChanges' des Match-Dokuments auf true gesetzt.
+Die Funktion AddNormalMatchToUser, welche in Listing \ref{lst:matchserviceAddNormalMatchToUser} zu sehen ist,  fügt der 'normalmatches'-Liste eines Match-Dokuments ein neues Objekt mit den Eigenschaften 'uid','matchUid' und 'movieid', die ihren Wert über die übergebenen Funktionsparameter erhalten. Des Weiteren wird das Attribut 'startedChat' und 'removed' jeweils mit dem booleschen Standardwert 'false' hinzugefügt. Außerdem wird die Eigenschaft 'newChanges' des Match-Dokuments auf true gesetzt.\\
 
 \begin{lstlisting}[caption=Match Service - AddNormalMatchToUser, label=lst:matchserviceAddNormalMatchToUser]
 async function AddNormalMatchToUser(uid, matchedUid, movieid, session) {
@@ -214,7 +213,7 @@ Die Funktion empfängt eine 'uid' als Parameter und gibt ein entsprechendes Matc
 
 \noindent
 \textbf{SuperMatchMarkAsRemoved:}
-Innerhalb der Funktion wird anhand des übergebenen 'uid' und 'matchesUid' der Eintrag in der 'supermatches'-Liste angepasst. Dabei wird der Wert für 'removed' auf true gesetzt. Ausserdem wird 'newChanges' des betroffenen Match-Dokuments auf true gesetzt.
+Innerhalb der Funktion wird, wie in Listing \ref{lst:matchserviceSuperMatchMarkAsRemoved} dargestellt, anhand des übergebenen 'uid' und 'matchesUid' der Eintrag in der 'supermatches'-Liste angepasst. Dabei wird der Wert für 'removed' auf true gesetzt. Ausserdem wird 'newChanges' des betroffenen Match-Dokuments auf true gesetzt.\\
 
 \begin{lstlisting}[caption=Match Service - SuperMatchMarkAsRemoved, label=lst:matchserviceSuperMatchMarkAsRemoved]
 async function SuperMatchMarkAsRemoved(uid, matchUid, session) {
@@ -236,7 +235,7 @@ Die Funktion unterscheidet sich von 'SuperMatchMarkAsRemoved' nur in dem Aspekt,
 
 \noindent
 \textbf{MatchesReceived:}
-Anhand einer übergebenen 'uid' und 'matchUid' wird die Eigenschaft 'newChanges' eines entsprechenden Match-Dokuments in der Match-Collection auf den booleschen Wert false gesetzt. 
+Anhand einer übergebenen 'uid' und 'matchUid' wird die Eigenschaft 'new"-Changes' eines entsprechenden Match-Dokuments in der Match-Collection auf den booleschen Wert false gesetzt. 
 
 
 
@@ -246,7 +245,7 @@ Anhand einer übergebenen 'uid' und 'matchUid' wird die Eigenschaft 'newChanges'
 %
 
 \paragraph{Swipe Service}
-Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection swipes angewandt werden. Dieser Service import das Swipe-Model.\\
+Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection swipes angewandt werden. Dieser Service importiert das Swipe-Model.\\
 
 \noindent
 \textbf{CreateUserSwipeDocument:}
@@ -254,8 +253,8 @@ Die Funktion erfüllt die gleiche Funktionalität wie die 'Create\-UserMatchDocu
 
 \noindent
 \textbf{AddSwipe:}
-Die Funktion erstellt zunächst ein swipe-Objekt mit den Eigenschaften 'movieid' und 'swipeaction' und entnimmt die Werte dafür aus den gleichnamigen übergebenen Parametern. 
-Wenn ein Swipe-Dokument mit übergebener 'uid' existiert, wird überprüft, ob das Dokument in der 'swipes'-Liste bereits ein Eintrag mit entsprechender movieid enthält. Ist dies der Fall, wird die 'swipeaction'-Eigenschaft auf den Wert des übergebenene gleichnamigen Parameters aktualisiert. Ansonsten wird der Liste das zu Beginn erstellte 'swipe'-Objekt hinzugefügt. Letzlich wird das Swipe-Dokument über die Save-Funktion des Save-Models gespeichert.
+Die in Listing \ref{lst:swipeserviceaddswipe} dargestellte Funktion erstellt zunächst ein 'swipe'-Objekt mit den Eigenschaften 'movieid' und 'swipeaction' und entnimmt die Werte dafür aus den gleichnamigen übergebenen Parametern. 
+Wenn ein Swipe-Dokument mit übergebener 'uid' existiert, wird überprüft ob das Dokument in der 'swipes'-Liste bereits ein Eintrag mit entsprechender movieid enthält. Ist dies der Fall, wird die 'swipeaction'-Eigenschaft auf den Wert des übergebenen gleichnamigen Parameters aktualisiert. Ansonsten wird der Liste das zu Beginn erstellte 'swipe'-Objekt hinzugefügt. Letzlich wird das Swipe-Dokument über die Save-Funktion des Save-Models gespeichert.\\
 
 \begin{lstlisting}[caption=Swipe Service - AddSwipe, label=lst:swipeserviceaddswipe]
 async function AddSwipe(uid, movieid, swipeaction) {
@@ -286,10 +285,10 @@ Die Funktion empfängt eine 'uid' als Parameter und gibt ein entsprechendes Matc
 
 \noindent
 \textbf{RequestSuperlikeSwipes:}
-Innerhalb dieser Funktion kommt es zum Einsatz einer Aggregation. 
-Dabei kommt es zum Einsatz mehrerer Pipeline-Operatoren. []
+Innerhalb dieser in Listing \ref{lst:swipeserviceRequestSuperlikeSwipes} dargestellten Funktion kommt es zum Einsatz einer Aggregation. 
+Dabei kommt es zum Einsatz mehrerer Pipeline-Operatoren.
 % %TODO Link auf Tabelle 5 Aggregation Framework
-Über den 'unwind'-Operator wird gesetzt, dass für jeden Listeneintrag innerhalb der 'swipes'-Liste neue Dokumente erzeugt werden, die in die nachfolgende Pipeline-Stufen weitergeleitet werden. Anhand des 'match'-Operators werden dann die neuen Dokumente gefiltert. Letzlich wird eine Liste von Swipes zurückgeschicht, die eine 'swipeaction' von 2 (entsprechend Superlike) aufweisen.
+Über den 'unwind'-Operator wird gesetzt, dass für jeden Listeneintrag innerhalb der 'swipes'-Liste neue Dokumente erzeugt werden, die in die nachfolgende Pipeline-Stufen weitergeleitet werden. Anhand des 'match'-Operators werden dann die neuen Dokumente gefiltert. Letztlich wird eine Liste von Swipes zurückgeschickt, die eine 'swipeaction' von 2 (repräsentativ für Superlike) aufweisen.\\
 
 \begin{lstlisting}[caption=Swipe Service - RequestSuperlikeSwipes, label=lst:swipeserviceRequestSuperlikeSwipes]
 async function RequestSuperlikeSwipes(uid) {
@@ -313,7 +312,7 @@ async function RequestSuperlikeSwipes(uid) {
 
 \noindent
 \textbf{FindAllSwipedMoviesByUserID:}
-Innerhalb dieser Funktion werden für eine übergebene 'uid' sämtlich movieid's zurückgeben, die in der 'swipes'-Liste des entsprechenden Swipe-Dokuments vorhanden sind.
+Innerhalb dieser in Listing \ref{lst:swipeserviceFindAllSwipedMoviesByUserID} dargestellten Funktion werden für eine übergebene 'uid' sämtlich 'movieid's zurückgeben, die in der 'swipes'-Liste des entsprechenden Swipe-Dokuments vorhanden sind.\\
 
 \begin{lstlisting}[caption=Swipe Service - FindAllSwipedMoviesByUserID, label=lst:swipeserviceFindAllSwipedMoviesByUserID]
 var swipedMovieIDs = [];
@@ -335,7 +334,7 @@ Die Funktionen des Moduls cityService.js bieten innerhalb der Projektumgebung de
 
 \noindent
 \textbf{GetAllInhabitedCities:}
-Diese Funktion wird im Matching-Algorithmus aufgerufen. Er liefert sämtliche Städte, die mindestens zwei Nutzer aufzuweisen haben. 
+Diese Funktion wird im Matching-Algorithmus aufgerufen. Wie in Listing \ref{lst:cityServiceGetAllInhabitedCities} zu sehen liefert er sämtliche Städte, mit mindestens zwei Nutzern. \\
 
 \begin{lstlisting}[caption=City Service - GetAllInhabitedCities, label=lst:cityServiceGetAllInhabitedCities]
 async function GetAllInhabitedCities() {

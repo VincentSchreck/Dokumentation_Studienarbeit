@@ -5,7 +5,7 @@ Um das Jahr 1980 wurden daraufhin von verschiedenen Computerherstellern modulari
 Es musste eine Vielzahl von Aufgaben bewältigt und Anforderung bezüglich Zuverlässigkeit, Sicherheit, Effizienz etc. erfüllt werden. Die Aufgaben reichten dabei von der elektronischen Übertragung der Signale bis zur geregelten Reihenfolge der in der Kommunikation abstrakteren Aufgaben \cite{wikiOsiModell}.
 Aus den zu lösenden Problemen und Anforderung kristallisierten sich sieben Schichten bzw. Ebenen heraus. 
 Jede einzelne Schicht setzt dabei separat eine Anforderung um und kann dabei durch verschiedene Protokolle realisiert werden. In dem sich etablierten OSI-Schichtenmodell bauen die einzelnen Schichten aufeinander auf, wobei die unterste Schicht das Fundament ist. 
-Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. Sie wird in Abbildung \ref{fig:OSISchichten} dargestellt. Die einzelnen Aufgaben werden in der Tabelle \ref{tab:OSISchichtenbeschreibung} beschrieben.
+Die Open Systems Interconnection (OSI) wurde von der International Organization for Standardization (ISO), der Internationalen Organisation für Normung, als Grundlage für die Bildung von offenen Kommunikationsstandards entworfen. Das Modell wird in Abbildung \ref{fig:OSISchichten} dargestellt. Die einzelnen Aufgaben werden in der Tabelle \ref{tab:OSISchichtenbeschreibung} beschrieben.\\
 \newline
 \noindent
 Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP-Referenz\-modell. Entwickler dieses Schichtmodells war das Verteidigungsministerium der Vereinigten Staaten, auch bekannt als das Department of Defense (DoD). Dementsprechend trägt das TCP/IP-Referenzmodell auch den Namen DoD-Schichtenmodell \cite{wikiDodModell}.
@@ -16,7 +16,7 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
 \caption[Netzwerkprotokolle: OSI-Schichten]{Netzwerkprotokolle: OSI-Schichten \protect \footnotemark}
 \label{fig:OSISchichten}
 \end{figure}
-\footnotetext{\url{Wikipedia. Internetprotokollfamilie, https://de.wikipedia.org/wiki/Internetprotokollfamilie}, letzter Zugriff: 06. April 2021}
+\footnotetext{Quelle: \url{https://de.wikipedia.org/wiki/Internetprotokollfamilie}, letzter Zugriff: 06. April 2021}
 
 \newpage
 
@@ -29,19 +29,19 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
      OSI-Schicht & Aufgabe \\ 
      \midrule
         
-    Anwendungen & Funktionen für Anwendungen, sowie die Dateneingabe und -ausgabe. \\
+    Anwendungen & Funktionen für Anwendungen, sowie die Dateneingabe und -ausgabe \\
 
-    Darstellung & Umwandlung der systemabhängigen Daten in ein unabhängiges Format.  \\
+    Darstellung & Umwandlung der systemabhängigen Daten in ein unabhängiges Format  \\
 
-    Sitzung & Steuerung der Verbindungen und des Datenaustauschs.  \\
+    Sitzung & Steuerung der Verbindungen und des Datenaustauschs  \\
 
-    Transport & Zuordnung der Datenpakete zu einer Anwendung. \\
+    Transport & Zuordnung der Datenpakete zu einer Anwendung \\
     
-	Vermittlung & Routing der Datenpakete zum nächsten Knoten. \\
+	Vermittlung & Routing der Datenpakete zum nächsten Knoten \\
 	
-	Sicherung & Fehlererkennungsmechanismen / Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen.  \\
+	Sicherung & Fehlererkennungsmechanismen / Segmentierung der Pakete in Frames und Hinzufügen von Prüfsummen  \\
     
-    Bitübertragung & Umwandlung der Bits in ein zum Medium passendes Signal und physikalische Übertragung.\\ 
+    Bitübertragung & Umwandlung der Bits in ein zum Medium passendes Signal und physikalische Übertragung\\ 
     \bottomrule
     \end{tabular}
 \end{center}
@@ -50,12 +50,17 @@ Zusätzlich zum OSI-Modell existiert das in den 1960er-Jahren entwickelte TCP/IP
 \noindent
 \hangindent1cm
 \textbf{IP:}
-In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Über\-tra\-gungs\-mediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32 Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128 Bit.\\
+In der Vermittlungsschicht des OSI-Schichtenmodells findet, unabhängig des Über\-tra\-gungs\-mediums und der genutzten Topologie, die logische Adressierung der Endgeräte statt. Das geläufigste Protokoll dafür ist das Internet Procotol (IP). Jedem am Netz verbundenen Teilnehmer wird eine IP-Adresse zugewiesen. Die bekannteste Notation ist die 32\,Bit lange IPv4-Adressen und die IPv6-Adressen mit einer Größe von 128\,Bit.\\
 
 \noindent
 \hangindent1cm
 \textbf{TCP/UDP:}
-In der Transportschicht wird eine Ende-zu-Ende-Kommunikation ermöglicht. Sie ist das Bindeglied zwischen den anwendungsorientierten und den transportorientierten Schichten. Die geläufigsten Protokolle sind das verbindungslose, unzuverlässige, aber weniger Overhead belastete User Datagram Protocol (UDP) und das verbindungsorientierte und datentransferzuverlässige Transmission Control Protocol (TCP). Jedes netzwerkfähige Gerät enthält eine Vielzahl von Ports, die primär zur
+In der Transportschicht wird eine Ende-zu-Ende-Kommunikation ermöglicht. 
+Sie ist das Bindeglied zwischen den anwendungsorientierten und den transportorientierten Schichten. 
+Die geläufigsten Protokolle sind das User Datagram Protocol (UDP) und das Transmission Control Protocol (TCP).
+UDP ist verbindungslos und daher unzuverlässiger, ist aber durch weniger Overhead belastet.
+TCP hingegen ist verbindungsorientiert und dadurch zuverlässiger beim Datentransfer.
+Jedes netzwerkfähige Gerät enthält eine Vielzahl von Ports, die primär zur
 Unterscheidung zwischen Datenströmen aus Anwendungen bei Netzwerkverbindungen
 genutzt werden. Anhand des genutzten Ports bei Netzwerkanfragen
 wissen Webserver, welches Protokollverfahren genutzt werden soll.
@@ -67,12 +72,12 @@ Das Hypertext Transfer Protocol, kurz HTTP, ist ein zustandloses Protokoll zur �
 \noindent
 \hangindent1cm
 \textbf{Kommunikation:}
-Unter einer Nachricht versteht man in HTTP die Kommunikationseinheiten zwischen dem Zentralrechner (Server) und dem, der einen Dienst vom Server abruft (Client). 
+Unter einer Nachricht versteht man im HTTP Kontext die Kommunikationseinheiten zwischen dem Zentralrechner (Server) und dem, der einen Dienst vom Server abruft (Client). 
 Man unterscheidet dabei zwischen der Anfrage (Request) vom Client an den Server und der Antwort (Response) als Reaktion vom Server zum Client. 
 \newline
 \noindent
 Eine Nachricht besteht aus dem Nachrichtenkopf (Message Header, kurz Header) und dem Nachrichtenrumpf (Message Body, kurz Body). 
-Der Header enthält generelle Informationen über die Nachricht wie zum Beispiel den Methodentyp, das Datenformat, den genutzten Kompressionsalgorithmus, die Länge der Nachricht oder die verwendete Kodierung im Body. 
+Der Header enthält generelle Informationen über die Nachricht wie zum Beispiel den Methodentyp, das Datenformat, den genutzten Kompressionsalgorithmus, die Länge der Nachricht oder die verwendete Codierung im Body. 
 \newline
 \noindent
 In Abbildung \ref{fig:HTTPNachricht} ist der Aufbau der HTTP-Nachrichten dargestellt.
@@ -92,8 +97,8 @@ Der Nachrichtenrumpf, der mit den Nachrichtenkopf über einen Zeilenumbruch synt
 \hangindent1cm
 \textbf{Methoden:}
 HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiedene Aufgaben gedacht sind. Im Folgenden werden die wichtigsten Methoden beschrieben:
-\begin{enumerate}
-		\item \textit{GET} ist die gebräuchlichste Methode. Sie fordert vom Server eine Ressource, die bei Erfolg in der Antwort im Body zurückgegeben wird. 
+\begin{itemize}
+{\setlength\itemindent{1cm}\item\textit{GET} ist die gebräuchlichste Methode. Sie fordert vom Server eine Ressource, die bei Erfolg in der Antwort im Body zurückgegeben wird.}
 		
 		\item \textit{POST} ist für die Änderung oder Erzeugung einer Ressource vorgesehen. Dafür werden bei der Anfrage zus"atzlich Daten im Body der Nachricht übertragen.
 		
@@ -105,12 +110,12 @@ HTTP bietet fest definierte Standard-Methoden für Anfragen, die für verschiede
 		
 		\item \textit{OPTIONS} liefert eine Liste von Methoden und Merkmale, die vom Server unterstützt werden.
 		
-\end{enumerate}
+\end{itemize}
 \newpage
 \noindent
 \hangindent1cm
-\textbf{Statuscodes:}
-HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Statuscodes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben. Tabelle \ref{tab:HTTPStatuscode} stellt die Statuscodes und ihre Beschreiben anhand von Beispielen dar. \newline
+\textbf{Status-Codes:}
+HTTP-Antworten senden in der Anfangszeile ihrer Nachricht Status-Codes. Die Angabe ist zweiteilig und besteht aus einer standardisierten Statuskennzahl sowie einer kurzen textuellen Beschreibung, die zusammen Auskunft über den Bearbeitungszustand der zugehörigen Anfrage geben. Tabelle \ref{tab:HTTPStatuscode} stellt die Status-Codes und ihre Beschreibungen anhand von Beispielen dar. \newline
 
 \begin{table}[tbt]
 \caption{HTTP Statuscodebeschreibungen}
@@ -143,8 +148,8 @@ Dafür dienen zwei Konzepte:
 
 \noindent
 \noindent
-Ersteres ist das Verschlüsseln der Kommunikation von Sender und Empfänger. Die zugrundeliegende Technik nennt sich Transport Layer Security (TLS), ist aber auch als Secure Sockets Layer (SSL) bekannt. Die Idee dahinter ist, dass jeder Teilnehmer der Kommunikation einen öffentlich bekannten Schlüssel (Public Key) und einen geheimen, nicht-öffentlichen Schlüssel (Private Key) besitzen. Über den Public-Key des Empfängers verschlüsselt der Sender seine Nachricht. Diese kann nur über den Private-Key des Empfängers entschlüsselt werden, der vom Empfänger nicht weitergegeben werden sollte.
+Ersteres ist das Verschlüsseln der Kommunikation von Sender und Empfänger. Die zugrundeliegende Technik nennt sich Transport Layer Security (TLS), ist aber auch als Secure Sockets Layer (SSL) bekannt. Die Idee dahinter ist, dass jeder Teilnehmer der Kommunikation einen öffentlich bekannten Schlüssel (Public Key) und einen geheimen, nicht-öffentlichen Schlüssel (Private Key) besitzt. Über den Public-Key des Empfängers verschlüsselt der Sender seine Nachricht. Diese kann nur über den Private-Key des Empfängers entschlüsselt werden, der vom Empfänger nicht weitergegeben werden sollte.
 \newline
 
 \noindent
-Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, dass zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauens"-würdig"-keit des Senders. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.
+Das zweite Konzept von HTTPS ist die Webserver-Authentifizierung. Ein Zertifikat, das zu Beginn der Kommunikation an den Webclient gesendet wird, bescheinigt die Vertrauens"-würdig"-keit des Servers. Dafür vertrauen Browser- und Betriebssystemhersteller bestimmten Zertifizierungsstellen, deren Zertifikate sie in ihrem Browser bzw. Betriebssystem hinterlegen. Die Kommunikation zwischen Webserver und Webclient findet folglich erst nach vollständiger Authentifizierung statt.

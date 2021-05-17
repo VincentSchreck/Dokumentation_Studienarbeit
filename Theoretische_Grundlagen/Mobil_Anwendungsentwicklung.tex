@@ -1,6 +1,6 @@
 \label{sec:mobile_development}
-Mobile Geräte sind heutzutage ein sehr großer Teil unseres Tagesablaufs. Durchschnittlich verbringen wir 3:54 Stunden pro Tag an mobilen Geräten (hier bezogen aus Bürger der USA). Die meiste Zeit hiervon wird in Apps (ca. 90\%). \footnote{\url{https://www.emarketer.com/content/us-time-spent-with-mobile-2019}, letzter Zugriff: 26. Februar 2021}
-Laut Cisco wird dieser Markt sich jedoch nicht nur auf Industrieländer beruhen, sondern bis 2023 sollen weltweit 71\% der Bevölkerung mobile Konnektivität haben \cite{cisco2020}.
+Mobile Geräte sind heutzutage ein sehr großer Teil unseres Tagesablaufs. Durchschnittlich verbringen wir 3:54 Stunden pro Tag an mobilen Geräten (hier bezogen aus Bürger der USA). Die meiste Zeit hiervon wird in Apps verbracht (ca. 90\%) \footnote{\url{https://www.emarketer.com/content/us-time-spent-with-mobile-2019}, letzter Zugriff: 26. Februar 2021}.
+Laut Cisco wird sich dieser Markt jedoch nicht nur auf Industrieländer beruhen, stattdessen sollen bis 2023 weltweit 71\% der Bevölkerung mobile Konnektivität haben \cite{cisco2020}.
 Diese Entwicklung forcierte viele Firmen immer mehr ihre Anwendungen auch \textit{mobile ready} zu gestalten. Dies kann man bspw. deutlich bei der Anpassung vieler Webseiten an Mobile Seiten- und Größenverhältnisse oder auch dem Anbieten von \textit{Apps}, welche bereits für Desktop o.ä. verfügbar waren, erkennen. \\
 
 \noindent
@@ -15,7 +15,7 @@ Zusammen bietet eine Plattform die Grundlage um Software für sie zu entwickeln.
 \noindent
 \hangindent1cm
 \textbf{Ein Framework:} definiert eine Architektur für Anwendungen und stellt Komponenten bereit, mit welchen das Entwickeln einer Anwendung erleichtert sein soll \cite{johnson1988}.
-Ein platt"-form"-über"-grei"-fendes Framework muss somit Anwendungscode für mehrere Plattformen wiederverwenden, jedoch müssen auch plattformspezifische Funktionen, wie Architektur oder Benutzeroberflächen API, bereitgestellt werden. Mehr dazu in Kapitel \ref{plattformuebergreifende_anwendungen}.
+Ein platt"-form"-über"-grei"-fendes Framework muss somit Anwendungscode für mehrere Plattformen wiederverwenden, jedoch müssen auch plattformspezifische Funktionen, wie Architektur oder Benutzeroberflächen API (Application Programming Interface), bereitgestellt werden. Mehr dazu in Kapitel \ref{plattformuebergreifende_anwendungen}.
 
 \noindent
 \hangindent1cm
@@ -34,7 +34,7 @@ Gleichzeitig beschränkt man sich aber logischerweise auf eine Plattform und dec
 Zwei der am weitesten verbreiteten Plattformen sind Android von Google und iOS von Apple. Anwendungen für Android können in Kotlin oder Java als Programmiersprache beispielsweise in dem \textit{integrated development environment (IDE)} von Google Android Studio entwickelt werden. Für iOS wird hingegen mit Objective-C und Swift als Programmiersprache primär in der IDE XCode entwickelt.
 
 \noindent
-Beide bieten jeweils Plattform eigene Services an, beispielsweise das direkte Veröffentlichen in den jeweiligen Appstore \cite{fentaw2020}.
+Beide bieten jeweils Plattform-eigene Services an, beispielsweise das direkte Veröffentlichen in den jeweiligen Appstore \cite{fentaw2020}.
 
 \subsubsection{Plattformübergreifende Anwendungen}
 \label{plattformuebergreifende_anwendungen}
@@ -45,7 +45,7 @@ Verschiedene Ansätze einer solchen Anwendung sind in Abbildung \ref{fig:crosspl
 	\begin{center}
 		\includegraphics[scale=0.47]{Theoretische_Grundlagen/images/crossplattform_unterteilung.png}
 	\end{center}
-	\caption[Kategorisierung verschiedener plattformübergreifender Ansätze]{Kategorisierung verschiedener plattformübergreifender Ansätze. Erstellt nach \cite{majchrzak2015} \protect}
+	\caption[Kategorisierung verschiedener plattformübergreifender Ansätze]{Kategorisierung verschiedener plattformübergreifender Ansätze. Auf Basis von \cite{majchrzak2015} \protect}
 	\label{fig:crossplattform_architecture}
 \end{figure}
 
@@ -56,11 +56,11 @@ Jedoch kann diese App logischerweise nicht im jeweiligen \textit{Appstore} herun
 Aus gleichem Grund kann hiermit auch kein \glqq natives Design und Leistung\grqq erzeugt werden.\\
 
 \noindent
-Abhilfe hierfür sorgt jedoch die von Google vorgestellte Design Idee \textit{Progressive Web Apps} (PWA). Sie bietet die Möglichkeit Code in sogenannte \textit{service worker} als Hintergrundthread ausführen zu lassen, ein Webseiten Manifest anzugeben, die App offline bedienen zu können und bieten die Möglichkeit die PWA zu installieren. Gleichzeitig kann mit diesem Design eine zu nativen Apps vergleichbare Leistung erreicht werden \cite{bjorn-hansen2020}. \\
+Abhilfe hierfür sorgt jedoch die von Google vorgestellte Design Idee \textit{Progressive Web Apps} (PWA). Sie bietet die Möglichkeit Code in sogenannte \textit{service worker} als Hintergrundthread ausführen zu lassen, ein Webseiten Manifest anzugeben, die App offline bedienen zu können und die Möglichkeit die PWA zu installieren. Gleichzeitig kann mit diesem Design eine zu nativen Apps vergleichbare Leistung erreicht werden \cite{bjorn-hansen2020}. \\
 
 \noindent
 Generell ist der Ansatz sehr simpel, da hiermit plattformübergreifende Anwendungen geschrieben werden können, welche sich auf allen Geräten mit Browser bedienen lassen.
-Hierfür wird zudem keine zusätzliche Programmiersprache oder wissen über die jeweilige Plattform benötigt.\\
+Hierfür wird zudem keine zusätzliche Programmiersprache oder Wissen über die jeweilige Plattform benötigt.\\
 Eine große Schwierigkeit hieran ist weiterhin der Zugriff auf Gerätefeatures, da nicht alle über den Browser verfügbar sind.
 
 \paragraph{Hybride Anwendungen}
@@ -72,8 +72,8 @@ Diese WebView funktioniert ähnlich wie ein normaler Browser, jedoch werden Kont
 Ein sehr frühes Framework für diese Art von Anwendung war \href{https://cordova.apache.org/}{Adobe Cordova}, eher bekannt als das ursprüngliche PhoneGap von Nitobi. Viele weitere Frameworks basieren auf ihren Anfängen.\\
 
 \noindent
-Eine hybride Anwendung kann also normal als App im \textit{Appstore} heruntergeladen auf dem Gerät installiert und offline genutzt werden - also sehr ähnlich zu nativen Lösungen. Daher ist dieser Ansatz auch sehr beliebt
-Daher liegt auch hier die Leitung der Applikation deutlich hinter der der Nativen \cite{lachgar2017} \cite{bjorn-hansen2020}.
+Eine hybride Anwendung kann also normal als App im \textit{Appstore} heruntergeladen, auf dem Gerät installiert und offline genutzt werden - also sehr ähnlich zu nativen Lösungen. Daher ist dieser Ansatz auch sehr beliebt.
+Die Leistung der Applikation liegt auch hier deutlich hinter der der Nativen \cite{lachgar2017} \cite{bjorn-hansen2020}.
 
 \begin{figure}[tbt]
 	\begin{center}
@@ -87,7 +87,7 @@ Daher liegt auch hier die Leitung der Applikation deutlich hinter der der Native
 \paragraph{Runtime basierte Anwendungen}
 \label{runtime_based_apps}
 Im Gegensatz zur in Kapitel \ref{hybride_anwendung} beschriebenen hybriden Anwendung, nutzen Runtime basierte Anwendungen keinen Browser des Gerätes mit einer WebView, sondern jede App besitzt eine eigene Runtime Ebene. 
-Jedes Framework muss also eine solche Ebene für alle Plattformen in jeweiliger Programmiersprache mitliefern, damit seine Anwendung hierauf laufen können.
+Jedes Framework muss also eine solche Ebene für alle Plattformen in jeweiliger Programmiersprache mitliefern, damit seine Anwendung hierauf laufen kann.
 Die Anwendungen hingegen sind dann beispielsweise in JavaScript (bspw. \href{https://reactnative.dev/}{React Native} oder \href{https://nativescript.org/}{NativeScript}), C\# (\href{https://dotnet.microsoft.com/apps/xamarin}{Xamarin}) oder sonstigen Programmiersprachen (bspw. \href{https://www.qt.io/}{Qt}) geschrieben.\\
 \\
 Jedem Framework-Entwickler ist die Freiheit gegeben, wie man die Anbindung an native Funktionen regelt. Bei hybriden Anwendungen ist dies durch die WebView Cordova festgelegt.
@@ -99,7 +99,7 @@ Bei projektspezifischen Plug-ins macht es einen späteren Systemwechsel daher be
 
 \paragraph{Model-driven Software Entwicklung}
 Die Grundsätze der modellgetriebenen Softwareentwicklung beschäftigen sich mit der Abstraktion des Modells als (Teil eines) System, von welchem die eigentliche Software abgeleitet wird \cite{stahl2006}.\\
-Das bedeutet in der Realität, dass eine höhere Abstraktion als Quellcode in Form von textuellen oder grafischen domänenspezifischen Sprachen oder universell einsetzbaren Modellierungssprachen (Unified Modeling Language(UML)) zum beschreiben der Software verwendet wird. 
+Das bedeutet in der Realität, dass eine höhere Abstraktion als Quellcode in Form von textuellen oder grafischen domänenspezifischen Sprachen oder universell einsetzbaren Modellierungssprachen (Unified Modeling Language(UML)) zum Beschreiben der Software verwendet wird. 
 Codegeneratoren übersetzen diese Modelle nun jeweils in Programmiersprachen der gewählten Zielplattform, auf welcher sie kompiliert werden.\\
 \\
 Theoretisch kann hierdurch der komplette Funktionsumfang wie bei einer nativen Anwendung erreicht werden.
@@ -117,7 +117,7 @@ Ein Hindernis dieser Art ist die erhöhte Komplexität der einzelnen Frameworks.
 \label{sec:framework}
 In den folgenden Kapiteln werden einzelne Frameworks zur mobilen, plattformübergreifenden Entwicklung vorgestellt.\\
 In der Statistik \ref{fig:crossplattform_popularity} aus dem Jahr 2020 ist React-Native das beliebteste Framework, dicht gefolgt von Flutter. 
-Wie man deutlich hier auch sehen kann, haben andere, bisher auch sehr erfolgreiche Frameworks einen enormen Rückgang von teilweise über einem Drittel ihrer Nutzer erleben müssen. \\
+Wie hier man deutlich sehen kann, haben andere, bisher auch sehr erfolgreiche Frameworks einen enormen Rückgang von teilweise über einem Drittel ihrer Nutzer erleben müssen. \\
 \\
 Aus diesen Gründen werden im weiteren Verlauf nur die Frameworks React-Native und Flutter weiter besprochen.
 
@@ -137,9 +137,10 @@ Es basiert auf dem bekannten Web-Framework \href{https://reactjs.org/}{\textit{R
 Die Programmiersprache ist aus diesem Hintergrund auch logischerweise JavaScript.
 Das Framework an sich ist in verschiedenen Sprachen implementiert: JavaScript, Swift, Objective-C, C++ und Python.\\
 \\
-Allgemein bietet das Framework die Möglichkeit plattformübergreifende Apps für iOS, Android und für Windows zu schreiben. Hierbei wird der geschriebene Code in einer JavaScript Laufzeitumgebung ausgeführt (React Native selbst verwendet generell \href{https://trac.webkit.org/wiki/JavaScriptCore}{JSC (JavaScriptCore)}, seit neuestem kommt auch \href{https://hermesengine.dev/}{Hermes} zum Einsatz, jedoch sind auch andere bekannte Umgebungen denkbar - bspw. \href{https://v8.dev/}{V8} in Chrome) es lässt sich zu den Runtime-basierten Anwendungen in Kapitel \ref{runtime_based_apps} zuordnen \cite{reactnative2021}.\\
+Allgemein bietet das Framework die Möglichkeit plattformübergreifende Apps für iOS, Android und für Windows zu schreiben. Hierbei wird der geschriebene Code in einer JavaScript Laufzeitumgebung ausgeführt (React Native selbst verwendet generell \href{https://trac.webkit.org/wiki/JavaScriptCore}{JSC (JavaScriptCore)}, seit neuestem kommt auch \href{https://hermesengine.dev/}{Hermes} zum Einsatz, jedoch sind auch andere bekannte Umgebungen denkbar - bspw. \href{https://v8.dev/}{V8} in Chrome). 
+Es lässt sich zu den Runtime-basierten Anwendungen in Kapitel \ref{runtime_based_apps} zuordnen \cite{reactnative2021}.\\
 \paragraph{Architektur}
-Grundlegend wurde React Native als Plattform-agnostisch designt. Entwickler schreiben also plattformunabhängigen JavaScript React Code, während das Framework den erstellten React Baum in Plattform-spezifischen Code umschreibt. Hierbei wurde 2013 (noch intern) die Web-Technologie React mit nativen Plattformen (nur interne) vereint, jedoch war dieses Design aufgrund eines einzigen Threads sehr langsam. Um dies zu verbessern basierte das Framework lange Zeit auf drei unterschiedlichen Threads, welche über eine Brücke verbunden sind.
+Grundlegend wurde React Native als Plattform-agnostisch designt. Entwickler schreiben also plattformunabhängigen JavaScript React Code, während das Framework den erstellten React Baum in Plattform-spezifischen Code umschreibt. Hierbei wurde 2013 (noch intern) die Web-Technologie React mit nativen Plattformen (nur interne) vereint, jedoch war dieses Design aufgrund eines einzigen Threads sehr langsam. Um dies zu verbessern, basierte das Framework lange Zeit auf drei unterschiedlichen Threads, welche über eine Brücke verbunden sind.
 
 \begin{figure}[tbt]
 	\begin{subfigure}{\textwidth}
@@ -160,7 +161,7 @@ Grundlegend wurde React Native als Plattform-agnostisch designt. Entwickler schr
 
 \begin{itemize}
 	\item \textit{JavaScript Thread}. Hier wird der gesamte JavaScript Code abgelegt und interpretiert. Alles wird über die JSC Engine ausgeführt.
-	\item \textit{Native Thread}. Die Benutzeroberfläche und Kommunikation mit dem JavaScript Thread steht hier im Mittelpunkt. Der gesamte native Code wird hier ausgeführt. Die Benutzeroberfläche wird dann aktualisiert, sobald die eben ein Änderung vom JS Thread vermittelt wird.
+	\item \textit{Native Thread}. Die Benutzeroberfläche und Kommunikation mit dem JavaScript Thread steht hier im Mittelpunkt. Der gesamte native Code wird hier ausgeführt. Die Benutzeroberfläche wird dann aktualisiert, sobald sie eine Änderung vom JS Thread vermittelt bekommt.
 	\item \textit{Shadow Thread}. Hier wird das gesamte Layout der Anwendung berechnet. Zugrunde liegt die Facebook-eigene layout engine \glqq Yoga\grqq .
 \end{itemize}
 
@@ -170,9 +171,9 @@ Daher kann es zu Performance-Einbrüchen und somit zu schlechter Nutzererfahrung
 
 \noindent
 Nach der Ankündigung 2018 veröffentlichte Facebook im Juli 2020 die neue Architektur. Mit ihr wurde der Bottleneck (die Brücke) ersetzt durch das JavaScript Interface.
-Es ermöglicht nicht nur die komplette Synchronisierung der beiden Threads, sondern auch die direkte Kommunikation untereinander - vor allem das Konzept von \glqq shared ownership\grqq ist hier tragend, weshalb auch keine Serialisierung mehr nötig ist.
+Es ermöglicht nicht nur die komplette Synchronisierung der beiden Threads, sondern auch die direkte Kommunikation untereinander - vor allem das Konzept von \enquote{shared ownership} ist hier tragend, weshalb auch keine Serialisierung mehr nötig ist.
 Zudem  ist man nun nicht mehr an JSC gebunden, sondern kann auch jegliche hoch-performante JavaScript Engines als Laufzeitumgebung verwenden.
-Native Module werden nun nur noch bei Bedarf geladen anstatt alle beim Start der App.\\
+Native Module werden nun nur noch bei Bedarf geladen, anstatt alle beim Start der App.\\
 Weiter wurde veralteter Legacy-Code aus dem Kern von React Native entfernt und nicht-essenzielle Teile aus dem Kern ausgelagert. Die aktuelle Architektur von React Native ist  in Abbildung \ref{fig:reactnative_architecture} zu sehen.\footnote{Quelle: React Native's re-architecture (2020): \url{https://medium.com/swlh/react-natives-re-architecture-in-2020-9bb82659792c}, letzter Zugriff: 17. April 2021}
 
 \paragraph{JSX mit nativen Komponenten}
@@ -180,8 +181,8 @@ React (Native) verwendet als Programmiersprache JSX. Diese ist eine syntaktische
 \begin{lstlisting}[caption=JSX Hello World Element]
 	const element = <h1>Hello, world!</h1>;
 \end{lstlisting}
-Mithilfe dieser losen Kopplung von UI-Code und dazugehöriger Logik schlägt React eine optionale Lösung zur \textit{Separation of Concerns} vor. Anstelle dessen ist es auch möglich die Technologien in Markup- und Logik-Dateien aufzuteilen. \\
-Außerdem kann argumentiert werden, dass JSX nur eine weitere Template-Sprache sei, ähnlich HTML oder XAML. DIes ist nicht korrekt, da wie oben bereits erwähnt JSX lediglich eine syntaktische Erweiterung von Java"-Script ist, also inmitten von JSX Objekten JavaScript geschrieben werden kann.\\
+Mithilfe dieser losen Kopplung von UI-Code und dazugehöriger Logik schlägt React eine optionale Lösung zur \textit{Separation of Concerns} vor. Anstelle dessen ist es auch möglich, die Technologien in Markup- und Logik-Dateien aufzuteilen. \\
+Außerdem kann argumentiert werden, dass JSX nur eine weitere Template-Sprache sei, ähnlich HTML oder XAML. Dies ist nicht korrekt, da wie oben bereits erwähnt JSX lediglich eine syntaktische Erweiterung von Java"-Script ist, also inmitten von JSX Objekten JavaScript geschrieben werden kann.\\
 Weiterhin ist interessant, dass JSX \href{https://owasp.org/www-community/attacks/xss/}{Cross Site Scripting} vorbeugt, indem der React DOM alle eingesetzten Werte zunächst in einen einfachen String konvertiert \cite{react2021}.
 \begin{lstlisting}[caption=Native Komponenten, label=lst:jsx_native_component]
 	import React from 'react';
@@ -238,9 +239,9 @@ export default Cafe;
 
 
 \paragraph{State}
-Für eine interaktive Benutzeroberfläche fehlt jedoch noch das Kernprinzip eines deklarativen UI. Ein sogenannter \textit{State} wird verwendet um die Daten, welche sich mit der Zeit oder über Nutzerinteraktion ändern, auf der Oberfläche anzuzeigen. Dieses Konzept wird ebenfalls von dem zweiten Framework verwendet und ist in Abbildung \ref{fig:flutter_state} visualisiert.\\
+Für eine interaktive Benutzeroberfläche fehlt jedoch noch das Kernprinzip eines deklarativen UI. Ein sogenannter \textit{State} wird verwendet, um die Daten, welche sich mit der Zeit oder über Nutzerinteraktion ändern, auf der Oberfläche anzuzeigen. Dieses Konzept wird ebenfalls von dem zweiten Framework verwendet und ist in Abbildung \ref{fig:flutter_state} visualisiert.\\
 \\
-Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion einen \textit{State} hinzuzufügen. Hooks sind Funktionen, welche es Entwicklern ermöglichen sich in React Features einzuhaken. Bisher wurde dies über Klassenkomponenten ermöglicht, wodurch es jedoch komplizierter ist \textit{stateful logic} zwischen Komponenten wiederzuverwenden. Daher entkoppelt man diese Logik von den Komponenten und erlaubt unter anderem das separate Testen.\\
+Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion einen \textit{State} hinzuzufügen. Hooks sind Funktionen, welche es Entwicklern ermöglichen, sich in React Features einzuhaken. Bisher wurde dies über Klassenkomponenten ermöglicht, wodurch es jedoch komplizierter ist \textit{stateful logic} zwischen Komponenten wiederzuverwenden. Daher entkoppelt man diese Logik von den Komponenten und erlaubt unter anderem das separate Testen.\\
 
 \begin{lstlisting}[caption=State mit \texttt{useState} Hook, label=lst:reactnative_state]
 	import React, { useState } from "react";
@@ -280,16 +281,16 @@ Seit v14.8 ermöglicht React (und auch React Native)  durch Hooks einer Funktion
 \end{lstlisting}
 
 \noindent
-Im Beispiel \ref{lst:reactnative_state} wird in Zeile 6 der \texttt{useState}-Hook verwendet. Diese Funktion erzeugt eine State-Variable mit dem Initialwert \texttt{true} und erstellt gleichzeitig eine Funktion zur Änderung des States (\texttt{setIsHungry}). Daraufhin wird, abhängig ob die Katze hungrig ist, dies im Text angezeigt, der Knopf zum füttern (de-)aktiviert bzw. auch hier den Text verändert \cite{reactnative2021}.\\
+Im Beispiel \ref{lst:reactnative_state} wird in Zeile 6 der \texttt{useState}-Hook verwendet. Diese Funktion erzeugt eine State-Variable mit dem Initialwert \texttt{true} und erstellt gleichzeitig eine Funktion zur Änderung des States (\texttt{setIsHungry}). Daraufhin wird, abhängig ob die Katze hungrig ist, dies im Text angezeigt, der Knopf zum Füttern (de-)aktiviert bzw. auch hier den Text verändert \cite{reactnative2021}.\\
 
 \subsubsection{Flutter}
-\label{flutter}
+\label{sec:flutter}
 Flutter ist eine open-source SDK entwickelt von Google und ist geschrieben in C, C++ und Dart.
 Auf Basis eines Codes erlaubt Flutter es gleichzeitig Anwendungen für Android, iOS, Web und Desktop zu erstellen und ist zudem die primäre Methode für Google Fuchsia, Googles Betriebssystem\footnote{Quelle: \url{https://fuchsia.dev/}}.
-Als 2D Grafikbibliothek verwendet Flutter  \href{https://skia.org/}{Skia}, welche auch von Chrome, Firefox und Android verwendet wird. Zudem basiert Flutter auf der Dart-Plattform welche das Kompilieren auf 32-bit und 64-bit ARM Prozessoren, auf Intel x64 Prozessoren und in JavaScript ermöglicht (siehe Abbildung \ref{fig:dart_plattform}). Daher ist Flutter eine wie in Kap. \ref{compilierte_anwendungen} beschriebene kompilierte, plattformübergreifende Anwendung
+Als 2D Grafikbibliothek verwendet Flutter  \href{https://skia.org/}{Skia}, welche auch von Chrome, Firefox und Android verwendet wird. Zudem basiert Flutter auf der Dart-Plattform, welche das Kompilieren auf 32-bit und 64-bit ARM Prozessoren, auf Intel x64 Prozessoren und in JavaScript ermöglicht (siehe Abbildung \ref{fig:dart_plattform}). Daher ist Flutter eine wie in Kap. \ref{compilierte_anwendungen} beschriebene kompilierte, plattformübergreifende Anwendung
 
 \noindent
-Während der Entwicklung werden Flutter-Apps in einer virtuellen Maschine (VM) gestartet, welche \textit{stateful hot reload} ermöglicht. Bei Änderungen muss die App so nicht komplett neu kompiliert werden, sondern sie erneuert sich während der Laufzeit. Bei der Veröffentlichung der App, wird sie in den Maschinencode der beschriebenen Plattformen übersetzt.\\
+Während der Entwicklung werden Flutter-Apps in einer virtuellen Maschine (VM) gestartet, welche \textit{stateful hot reload} ermöglicht. Bei Änderungen muss die App so nicht komplett neu kompiliert werden, sondern sie erneuert sich während der Laufzeit. Bei der Veröffentlichung der App wird sie in den Maschinencode der beschriebenen Plattformen übersetzt.\\
 
 \begin{figure}[tbt]
 	\begin{center}
@@ -306,7 +307,7 @@ Während der Entwicklung werden Flutter-Apps in einer virtuellen Maschine (VM) g
 \end{displayquote}
 
 \noindent
-Grundlegend ist das Framework in drei Prozesseinheiten gegliedert. Diese bestehen wiederum jeweils aus, für sie charakteristischen APIs und Bibliotheken:\\
+Grundlegend ist das Framework in drei Prozesseinheiten gegliedert. Dies ist in der Abbildung \ref{fig:flutter_plattform} illustriert. Diese bestehen wiederum jeweils aus für sie charakteristischen APIs und Bibliotheken:\\
 
 \noindent
 \hangindent1cm
@@ -314,11 +315,11 @@ Grundlegend ist das Framework in drei Prozesseinheiten gegliedert. Diese bestehe
 
 \noindent
 \hangindent1cm
-\textbf{Flutter Engine}: Der Kern von Flutter, geschrieben hauptsächlich in C und C++, ist die \textit{low-level} Implementierung der Flutter Kern Programmierschnittstelle (API). Daher ist sie zuständig für das graphische Darstellen (Rasterisierung) des Codes sobald ein neuer \textit{Frame} angezeigt werden muss. Im Flutter Framework wird die \textit{Engine} als dart:ui Bibliothek offengelegt - der zugrundeliegende C++ Code wird in Dart Klassen eingefügt.\\
+\textbf{Flutter Engine}: Der Kern von Flutter, geschrieben hauptsächlich in C und C++, ist die \textit{low-level} Implementierung der Flutter Kern Programmierschnittstelle (API). Daher ist sie zuständig für das graphische Darstellen (Rasterisierung) des Codes, sobald ein neuer \textit{Frame} angezeigt werden muss. Im Flutter Framework wird die \textit{Engine} als dart:ui Bibliothek offengelegt - der zugrundeliegende C++ Code wird in Dart Klassen eingefügt.\\
 
 \noindent
 \hangindent1cm
-\textbf{Flutter Framework}: Das Framework, mit welchem der Entwickler schlussendlich meistens arbeiten wird. Es ist in Dart geschrieben und bietet sogenannte \textit{Layer} für Animationen, Layout und Widgets. Widgets werden von Flutter als Einheit der Komposition von Benutzeroberflächen verwendet und sind als einzelne Bausteine zu verstehen, welche zusammengefügt ein Objekt oder sogar einen kompletten Bildschirm ergeben.\\
+\textbf{Flutter Framework}: Das Framework, mit welchem der Entwickler schlussendlich meistens arbeiten wird. Es ist in Dart geschrieben und bietet sogenannte \textit{Layer} für Animationen, Layout und Widgets. Widgets werden von Flutter als Einheit der Komposition von Benutzeroberflächen verwendet und sind als einzelne Bausteine zu verstehen, welche zusammengefügt ein Objekt oder sogar eine komplette Benutzeroberfläche ergeben.\\
 
 \noindent
 Bei der Entwicklung mit Flutter wird ein Baum von Widgets erzeugt, welcher als Bauplan der Applikation angesehen werden kann. Nach diesem Plan wird mithilfe von States der einzelnen Widgets schlussendlich das User Interface (UI) gerendert \cite{flutter2021}.
@@ -348,7 +349,8 @@ Flutter arbeitet mit der Devise:
 \end{displayquote}
 Auf diesem Satz baut die Einfachheit von Flutter auf. Jedes Objekt, jede Animation, jede Reihe, einfach alles ist ein Widget. Somit baut man eine App von der Wurzel aus auf und beschreibt die einzelnen Abzweigungen exakt.
 Die Anordnung von Widgets ist daher hierarchisch aufgebaut. 
-Ein Widget wir also immer in einem Elternteil verschachtelt sein und erhält bei seiner Erstellung den \textit{build context} übergeben. Das \glqq äußerste\grqq \space Widget, also die Wurzel, enthält somit die gesamte App. Typischerweise ist das ein \textit{MaterialApp} oder \textit{CupertinoApp} Widget.\\
+Die Abbildung \ref{fig:flutter_widget_tree} zeigt dies beispielhaft.
+Ein Widget wird also immer in einem Elternteil verschachtelt sein und erhält bei seiner Erstellung den \textit{build context} übergeben. Das \glqq äußerste\grqq \space Widget, also die Wurzel, enthält somit die gesamte App. Typischerweise ist das ein \textit{MaterialApp} oder \textit{CupertinoApp} Widget.\\
 \\ 
 OEM Widgets, also Widgets von und für eine spezifische Plattform werden von Flutter gemieden. Hierfür erzeugt Flutter eigene Widgets mithilfe der oben genannten, eigener Rendering Plattform. Da diese Widgets jedoch komplett individualisierbar sind, bietet man somit native Möglichkeiten für jegliche Stile. Es gibt auch Pakete, welche Plattform-ähnliche Widgets zur Verfügung stellen.
 
@@ -364,9 +366,8 @@ OEM Widgets, also Widgets von und für eine spezifische Plattform werden von Flu
 
 \paragraph{States}
 Flutter ist deklarativ - das bedeutet, die Benutzeroberfläche wird anhand von dem aktuellen \textit{State} der App erzeugt. 
-Im Gegensatz dazu muss der Entwickler beim imperativen Stil die Übergänge der einzelnen \textit{States}. 
+Im Gegensatz dazu muss der Entwickler beim imperativen Stil die Übergänge der einzelnen \textit{States} behandeln. 
 Die Abbildung \ref{fig:flutter_state} stellt eine deklarative Benutzeroberfläche dar. 
-Hier wird dies durch das Framework gelöst. 
 	
 \begin{figure}[tbt]
 	\begin{center}

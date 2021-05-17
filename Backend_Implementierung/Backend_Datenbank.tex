@@ -1,8 +1,7 @@
 \subsubsection{Bereitstellung der Datenbank}
-Über die offizielle Seite der MongoDB-Hersteller wird das Community-Installationspaket heruntergeladen und ausgeführt. \footnote{MongoDB Download: \url{ https://www.mongodb.com/try/download/community}}
-Ausserdem wird die Kommandozeilenanwendung MongDBShell\footnote{MongDBShell Download: \url{ https://www.mongodb.com/try/download/shell}} und die
-graphische Benutzeroberfläche MongoDBCompass installiert\footnote{MongDBCompass  Download: \url{https://www.mongodb.com/try/download/compass}}. 
-
+Über die offizielle Seite der MongoDB-Hersteller wird das Community-Installationspaket heruntergeladen und ausgeführt\footnote{MongoDB Download: \url{ https://www.mongodb.com/try/download/community}}.
+Außerdem wird die Kommandozeilenanwendung MongDBShell\footnote{MongDBShell Download: \url{ https://www.mongodb.com/try/download/shell}} und die
+graphische Benutzeroberfläche MongoDBCompass installiert\footnote{MongDBCompass  Download: \url{https://www.mongodb.com/try/download/compass}}.\\
 Nach erfolgreichem Initiieren eines Replica-Sets\footnote{Vergleiche Replica Set: \url{https://docs.mongodb.com/manual/tutorial/deploy-replica-set/}}
 kann der mongod-Prozess unter Angabe des zu verwendenden Replica-Sets, des Ports und des Datenspeicherpfads gestartet werden. \newline
 
@@ -11,20 +10,20 @@ kann der mongod-Prozess unter Angabe des zu verwendenden Replica-Sets, des Ports
 %\end{lstlisting} %TODO
 
 \noindent
-Standardmäßig wird bei Installation von MongoDB eine Konfigurationsdatei erstellt, dessen Name und Verzeichnis anhängig vom benutzten Betriebssystem sind. Auf diese Datei wird bei fehlender Angabe im mongod-ausführendem Kommando zugegriffen\footnote{MongDB Konfiguration: \url{https://docs.mongodb.com/manual/reference/configuration-options/}}.
-
-Sie ermöglicht das Konfigurieren der zu nutzen Storage-Engine. Dementsprechend wird als Storage Engine die WiredTiger-Engine eingestellt. 
-Über die graphische Benutzeroberfläche MongoDBCompass wird nach erfolgreicher Verbindung mit der MongoDB-Datenbanksystem eine neue Datenbank hinzugefügt namens 'StreamSwipeDatabase'. Ihr werden die benötigten Collections hinzugefügt:
+Standardmäßig wird bei Installation von MongoDB eine Konfigurationsdatei erstellt, dessen Name und Verzeichnis abhängig vom benutzten Betriebssystem sind. Auf diese Datei wird bei fehlender Angabe im mongod-ausführendem Kommando zugegriffen\footnote{MongDB Konfiguration: \url{https://docs.mongodb.com/manual/reference/configuration-options/}}.\\
+Sie ermöglicht das Konfigurieren der zu nutzenden Storage-Engine. Dementsprechend wird als Storage Engine die WiredTiger-Engine eingestellt. 
+Über die graphische Benutzeroberfläche MongoDBCompass wird nach erfolgreicher Verbindung mit dem MongoDB-Datenbanksystem eine neue Datenbank hinzugefügt namens 'StreamSwipeDatabase'. Ihr werden die benötigten Collections hinzugefügt:
 
 \begin{itemize}
 \item movies
 \item users
 \item matches
 \item swipes
+\item cities
 \end{itemize}
 
 \subsubsection{Importieren der Film- und Städtedaten}
-Um Nutzer innerhalb einer Stadt miteinander matchen zu können, werden Städtenamendaten auf der Datenbank benötigt. Auf der Webseite "datenb"orse.net" wird eine Liste deutscher Städtenamen zur Verfügung gestellt\footnote{Städteverzeichnis: \url{https://www.datenborse.net/item/Liste\_von\_deutschen\_Staedtenamen\_.csv}}.
-Die von uns genutzte Filmdatenbank TMDB bietet eine Liste der datenbankseitig vorhandenen Filme. Sie kann über die Filmdatenbankanbieter-API heruntergeladen werden\footnote{TMDB-API Daily File Exports: \url{https://developers.themoviedb.org/3/getting-started/daily-file-exports}}. 
+Um Nutzer innerhalb einer Stadt miteinander matchen zu können, werden Daten der realen Städtenamen auf der Datenbank benötigt. Auf der Webseite \glqq datenbörse.net\grqq \, wird eine Liste deutscher Städtenamen zur Verfügung gestellt\footnote{Städteverzeichnis: \url{https://www.datenborse.net/item/Liste\_von\_deutschen\_Staedtenamen\_.csv}}.
+Die von uns genutzte Filmdatenbank TMDb bietet eine Liste der datenbankseitig vorhandenen Filme. Sie kann über die Filmdatenbankanbieter-API heruntergeladen werden\footnote{TMDB-API Daily File Exports: \url{https://developers.themoviedb.org/3/getting-started/daily-file-exports}}. 
 Über MongoDBCompass werden die heruntergeladenen Städtenamen in die Datenbank als Collection 'cities' und die Filminformationen in die 'movies'-Collection importiert.
 

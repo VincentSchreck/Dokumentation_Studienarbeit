@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{subcaption}
+\usepackage{framed}
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{threeparttable}
@@ -96,6 +97,8 @@
 \maketitle
 \thispagestyle{empty}
 \newpage
+\input{erklaerung.tex}
+\newpage
 \pagenumbering{Roman}
 \tableofcontents
 \newpage
@@ -156,7 +159,9 @@
 % Neue Section, neue Seite
 \clearpage
 \subsection{NoSQL-Datenbank}
+\label{sec:nosql}
 \input{Theoretische_Grundlagen/Grundlagen_NoSQL_Datenbank}
+\clearpage
 \subsection{Firebase}
 \label{sec:firebase}
 \input{Theoretische_Grundlagen/Firebase}
@@ -169,6 +174,7 @@
 % Neue Section, neue Seite
 \clearpage
 \section{Planung}
+\label{sec:concept}
 \input{Konzept/Konzept.tex}
 
 
@@ -189,7 +195,7 @@ Die Software für die mobile Anwendung wird ebenfalls in Komponenten/Module aufg
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=10cm]{images/AppBackend.PNG}
-\caption{Webserver Architektur}
+\caption{Vereinfachte Architektur der mobilen Anwendung}
 \label{fig:AppArchitektur}
 \end{figure}
 
@@ -292,10 +298,79 @@ Die Software für die mobile Anwendung wird ebenfalls in Komponenten/Module aufg
 
 %TODO Abkürzungsverzeichnis
 \section*{Abkürzungsverzeichnis}
+\noindent
+\begin{center}
+\begin{table}[h]
+    \begin{tabular}{ l p{8cm} }
+    \toprule
+    \textbf{Abkürzung} & \textbf{Bedeutung} \\
+    \midrule
+2D    & Zweidimensionalität  \\
+ATL   & Android Transport Layer \\
+API   & Application Programming Interface \\
+APN   & Apple Push Notification Service\\
+App   & Applikation \\
+BaaS  & Backend-as-a-Service \\
+CAP   & Consistency, Availability, Partioning \\
+CSS   & Cascading Style Sheets \\
+CRUD  & Create, Read, Update, Delete \\
+DOD   & (United States) Department of Defense \\
+DOM   & Document Object Model \\
+ECMA  & European Computer Manufacturers Association \\
+GCP   & Google Cloud Platform \\
+GPS   & Global Positioning System \\
+FCM   & Firebase Cloud Messaging \\
+HTML  & Hypertext Markup Language \\
+HTTP  & Hypertext Transfer Protocol \\
+HTTPS & Hypertext Transfer Protocol Secure \\
+I/O   & Input / Output \\
+ID    & (eindeutiger) Identifier \\
+IDE   & Integrated Development Environment \\
+IME   & Input Method Editor \\
+IMDB  & Internet Movie Database \\
+IP    & Internet Protocol \\
+ISO   & International Organization for Standardization \\
+JS    & JavaScript \\
+JSC   & JavaScriptCore \\
+JSON  & JavaScript Object Notation \\
+JSX   & JavaScript Expression \\
+MB    & MegaBytes \\
+NoSQL & Not only SQL \\
+ODM   & Object Document Mapper \\
+OEM   & Original Equipment Manufacturer \\
+OMDB  & Open Media Databse \\
+OpLog & Operation log \\
+	\end{tabular}
+\end{table}
+\end{center}
+\clearpage
 
-- ECMA European Computer Manufacturers Association
-
-\newpage
+\noindent
+\begin{center}
+\begin{table}[tt]
+    \begin{tabular}{ l p{8cm} }
+    \toprule
+    \textbf{Abkürzung} & \textbf{Bedeutung} \\
+    \midrule
+ORM   & Object Relational Mapping \\
+OSI   & Open Systems Interconnection \\
+PWA   & Progressive Web App  \\
+SDK   & Software Development Kit \\
+SSL   & Secure Sockets Layer \\
+TCP   & Transmission Control Protocol \\
+TLS   & Transport Layer Security \\
+TMDB  & The Movie Database  \\
+UDP   & User Datagram Protocol \\
+URI   & Uniform Resource Identifier \\
+URL   & Uniform Resource Locator \\
+UI    & User Interface \\
+uid   & Userbezogene ID \\
+UML   & Unified Modeling Language \\
+VM    & Virtuelle Maschine \\
+XAML  & Extensible Application Markup Language \\
+	\end{tabular}
+\end{table}
+\end{center}
 
 
 \clearpage
@@ -413,6 +488,8 @@ Die Software für die mobile Anwendung wird ebenfalls in Komponenten/Module aufg
 
 \bibitem[DB5]{DB1.8} \url{https://www.mongodb.com/json-and-bson}, letzter Zugriff: 10. Februar 2021
 
+\bibitem[MongoDB1.9]{DB1.9} \url{https://www.informatik-aktuell.de/betrieb/datenbanken/mongodb-fuer-software-entwickler.html}, letzter Zugriff: 10. Februar 2021
+
 \bibitem[DB6]{DB1.85} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 32, ISBN 9-781-4842-0648-5
 
 \bibitem[DB7]{DB2.4} S. G. Edward und N. Sabharwal, Practical MongoDB. Berkeley, 2015, Seite 83, ISBN 9-781-4842-0648-5
@@ -495,6 +572,7 @@ Die Software für die mobile Anwendung wird ebenfalls in Komponenten/Module aufg
     \bibitem[21]{kostenPlayStoreDeveloper} Digital Guide IONOS (2020): \url{https://www.ionos.de/digitalguide/websites/web-entwicklung/die-eigene-app-entwickeln-android-app-veroeffentlichen/}, letzter Zugriff: 14. Mai 2021
 \end{itemize}
 \end{document}
+
 
 \section*{Literaturverzeichnis}
 \begin{itemize}
