@@ -1,18 +1,19 @@
-Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen (Siehe Abbildung \ref{ControllerStruktur}). Die einzelnen Funktionen empfangen jeweils das Request- und das Response-Objekt der Anfrage. Das Füllen und Zurückschicken des Response-Objekts ist ebenfalls Aufgabe der Controller. Zum Zugriff auf die Datenbank greifen sie auf die Services zu.
+Die Controller enthalten die Abhandlungsroutinen für die HTTPS-Anfragen (siehe Abbildung \ref{ControllerStruktur}). Die einzelnen Funktionen empfangen jeweils das Request- und das Response-Objekt der Anfrage. Das Füllen und Zurückschicken des Response-Objekts ist ebenfalls Aufgabe der Controller. Zum Zugriff auf die Datenbank greifen sie auf die Services zu.\\
 
 
 
-\begin{figure}[h]
+\begin{figure}[tbt]
 \centering
-\includegraphics[width=8cm]{images/controllerStruktur.PNG}
+\includegraphics[width=12cm]{images/controllerStruktur.PNG}
 \caption{Node.js Server - Controller Struktur}
 \label{ControllerStruktur}
 \end{figure}
 
 \paragraph{Movie Controller}
 
-Der Movie-Controller nutzt den Movie-Service zum Zugriff auf die Datenbank. 
-\begin{lstlisting}[caption=movieController.js Imports und Funktionen, label=lst:movieController.js]
+Der Movie-Controller  aus Listing \ref{lst:movieController_js} nutzt den Movie-Service zum Zugriff auf die Datenbank. \\
+
+\begin{lstlisting}[caption=movieController.js Imports und Funktionen, label=lst:movieController_js]
 const SwipeService = require('../services/swipeService')
 const MovieService = require('../services/movieService')
 const FirebaseService = require('../services/firebaseService')
@@ -25,7 +26,7 @@ exports.RequestMovies = async function(req, res){
 \noindent
 Er enthält die Funktion 'RequestMovies', welche in engem Kontakt zum SwipeManager des Frontends steht und es Nutzern ermöglichen sollen, neue Filminformationen, die vom Nutzer noch nicht empfangen wurden, abzufragen.
 \newline
-Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Objekts eine Eigenschaft 'uidtoken', dessen Wert eine aus Firebase generierte Token-Referenz zur eindeutigen Authentifizierung des Nutzers ist. Der Token wird an die 'GetUID'-Funktion des Firebase-Services weitergeleitet, die bei erfolgreicher Authentifizierung die entsprechende 'uid' zurückschickt. Bei einem aufgetretenen Fehler, wie beispielsweise einem ungültigem Token, wird das Response-Objekt mit dem Statuscode 401 sowie der aufgetretenen Fehlernachricht zurückgeschickt und die Funktion beendet. Der folgende Code kommt in weiteren Funktionen anderer Controller ebenfalls zum Einsatz, wenn eine Authentifizierung benötigt wurde.
+Wie in Listing \ref{lst:controllerfirebaseauth} zu erkennen ist, erwartet die Funktion im 'body'-Objekt des als Parameter übergebenen Request-Objekts eine Eigenschaft 'uidtoken', dessen Wert eine aus Firebase generierte Token-Referenz zur eindeutigen Authentifizierung des Nutzers ist. Der Token wird an die 'GetUID'-Funktion des Firebase-Services weitergeleitet, die bei erfolgreicher Authentifizierung die entsprechende 'uid' zurückschickt. Bei einem aufgetretenen Fehler, wie beispielsweise einem ungültigen Token, wird das Response-Objekt mit dem Statuscode 401 sowie der aufgetretenen Fehlernachricht zurückgeschickt und die Funktion beendet. Der folgende Code kommt in weiteren Funktionen anderer Controller ebenfalls zum Einsatz, wenn eine Authentifizierung benötigen.
 
 \begin{lstlisting}[caption=Controller Firebase-Authentifizierung, label=lst:controllerfirebaseauth]
     var uid; 
@@ -36,7 +37,7 @@ Die Funktion erwartet im 'body'-Objekt des als Parameter übergebenen Request-Ob
 \end{lstlisting}
 
 \noindent
-Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenschaftswerte aus dem Request-Body als Variabeln gespeichert. Erwartet wird ein Zahlenwert 'amount', der die Anzahl der abgefragten Filme darstellt. Über die lokale Funktion 'RestrictAmount' wird überprüft, dass die begrenzende Zahl den Wert 10 nicht übersteigt. Damit soll sichergestellt werden, dass die Datenbankabfrage mit den weit über 500.000 Filmen nicht ausgelastet wird. Des Weiteren werden in der Variable 'alreadyRequestedMovieIDs' eine Liste von   eindeutigen Identifizierern aus der Movie-Collection erwartet. Die Werte sollen jene Film-ID's wiederspiegeln, die bereits vom Nutzer abgefragt worden sind, aber noch nicht über einen Swipe-Request in der Datenbank hinterlegt wurden. Die vom Nutzer bereits getätigten Swipes werden über die 'FindAllSwipesByUserID'-Funktion des SwipeServices abgefragt. Zurück\-gegeben wird eine Liste von Film-ID's, die zusammen mit der Liste der 'alreadyRequestedMovieIDs' in die Variabel 'excludedMovieIDs' gespeichert werden.
+Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenschaftswerte aus dem Request-Body als Variabeln gespeichert. Erwartet wird ein Zahlenwert 'amount', der die Anzahl der abgefragten Filme darstellt. Über die lokale Funktion 'RestrictAmount' wird geprüft, dass die begrenzende Zahl den Wert 10 nicht übersteigt. Damit soll sichergestellt werden, dass die Datenbankabfrage mit den weit über 500.000 Filmen nicht ausgelastet wird. Des Weiteren werden in der Variable 'alreadyRequestedMovieIDs' eine Liste von   eindeutigen Identifizierern aus der Movie-Collection erwartet. Die Werte sollen jene Film-ID's wiederspiegeln, die bereits vom Nutzer abgefragt, aber noch nicht über einen Swipe-Request in der Datenbank hinterlegt wurden. Die vom Nutzer bereits getätigten Swipes werden über die 'FindAllSwipesByUserID'-Funktion des SwipeServices abgefragt. Zurück\-gegeben wird eine Liste von Film-ID's, die zusammen mit der Liste der 'alreadyRequestedMovieIDs' in die Variabel 'excludedMovieIDs' gespeichert werden.\\
 
 \begin{lstlisting}[caption=MovieController - RequestMovie - Excluded Movies, label=lst:MovieControllerExcludedMovies]
     var amount = RestrictAmount(req.body.amount);
@@ -55,7 +56,7 @@ Nach erfolgreicher Authentifizerung des Firebase-Tokens werden weitere Eigenscha
 \end{lstlisting}
 
 \noindent
-Letzlich wird bei vorhandenen zu exkludierenden Filmen die Funktion 'FindMoviesExcept' des Movie-Services aufgerufen.  Ist die Liste 'excludedMovieIDs' dagegen leer, so wird die 'Find\-ExactAmount'-Funktion aufgerufen. Bei Erfolg wird das Response-Objekt mit dem Statuscode 200 und den Movie-Dokumenten als JSON-Objekt im Body der Antwort zurückgeschickt.
+Letzlich wird bei vorhandenen zu exkludierenden Filmen die Funktion 'FindMoviesExcept' des Movie-Services aus Listing \ref{lst:MovieControllerExcludedMovies}  aufgerufen.  Ist die Liste 'excludedMovieIDs' dagegen leer, so wird die 'Find\-ExactAmount'-Funktion aufgerufen. Bei Erfolg wird das Response-Objekt mit dem Statuscode 200 und den Movie-Dokumenten als JSON-Objekt im Body der Antwort zurückgeschickt.\\
 
 \begin{lstlisting}[caption=MovieController - RequestMovie - Excluded Movies, label=lst:MovieControllerExcludedMovies]
     if(excludedMovieIDs.length > 0)
@@ -81,11 +82,11 @@ Letzlich wird bei vorhandenen zu exkludierenden Filmen die Funktion 'FindMoviesE
 
 
 \paragraph{User Controller}
-Der User-Controller bietet Funktionen, die die users-Collection der Datenbank betreffen. Sie greift dafür auf das User-Service zu. Die folgenden Funktionen greifen teils auch auf andere Collections zu. Daher werden auch die entsprechenden weiteren Services importiert.
+Der User-Controller bietet Funktionen, die die users-Collection der Datenbank betreffen. Sie greift dafür auf das User-Service zu. Die folgenden Funktionen greifen teils auch auf andere Collections zu. Daher werden auch die entsprechenden weiteren Services importiert.\\
 
 \noindent
-\subparagraph{CreateUser}
-Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür werden gleichnamige Eigenschaften des User-Models im Request-Body der eingehenden Anfrage erwartet. Nach erfolgreicher Authentifizierung des Firebase-Tokens und Überprüfung über die 'CheckExistence'-Funktion des User-Services, ob ein User-Dokument mit der gleichen 'uid' bereits existiert, wird für die weiteren Datenbankabfragen eine Transaktion gestartet.
+\textbf{CreateUser:}
+Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür werden gleichnamige Eigenschaften des User-Models im Request-Body der eingehenden Anfrage erwartet. Nach erfolgreicher Authentifizierung des Firebase-Tokens und Überprüfung über die 'CheckExistence'-Funktion des User-Services, ob ein User-Dokument mit der gleichen 'uid' bereits existiert, wird für die weiteren Datenbankabfragen eine Transaktion gestartet.\\
 
 \begin{lstlisting}[caption=UserController - Create User - Transaktionsstart, label=lst:UserControllertransaction]
     // 1. Starte Transaktion!
@@ -94,14 +95,14 @@ Die Funktion erstellt ein neues User-Dokument in der users-Collection. Dafür we
 \end{lstlisting}
 
 \noindent
-Das dafür genutzte 'session'-Objekt wird in den weiteren Service-Funktionen übergeben. Im Folgenden wird:
+Das dafür genutzte 'session'-Objekt wird in den weiteren Service-Funktionen übergeben. In Listing \ref{lst:UserControllerdocumentscreation} wird:
 \begin{itemize}
 \item ein Swipe-Dokument über die 'CreateUserSwipeDocument'-Funktion des Swipe-Services erstellt.
 \item ein Match-Dokument über die 'CreateUserMatchDocument'-Funktion des Match-Services erstellt. 
 \item ein User-Dokument über die 'CreateUser'-Funktion des User-Services mit entsprechender Parametrisierung erstellt.
 \item die 'uid' der entsprechenen Stadt über die 'AddUserToCity'-Funktion des City-Services hinzugefügt.
  \end{itemize}
-Nur wenn alle Operationen erfolgreich ausgeführt wurden, wird die Transaktion über die 'commit\-Transaction'-Methode ausgeführt. Damit soll sichergestellt sein, dass einzelne, zusammenhängende Dokumente und Informationen nur im Ganzen erstellt werden. Bei Misserfolg einer Operation wird die komplette Transaktion über die 'abortTransaction'-Methode abgebrochen.
+Nur wenn alle Operationen erfolgreich ausgeführt wurden, wird die Transaktion über die 'commit\-Transaction'-Methode ausgeführt. Damit soll sichergestellt sein, dass einzelne, zusammenhängende Dokumente und Informationen nur im Ganzen erstellt werden. Bei Misserfolg einer Operation wird die komplette Transaktion über die 'abortTransaction'-Methode abgebrochen.\\
 
 \begin{lstlisting}[caption=UserController - Create User - Dokumente erstellen, label=lst:UserControllerdocumentscreation]
 try {
@@ -132,10 +133,9 @@ session.endSession();
 \end{lstlisting}
    
 \noindent
-\subparagraph{ChangeUser}
-Diese Funktion erlaubt einem Nutzer, seine Eigenschaften innerhalb der Datenbank zu aktualisieren. Dafür wird nach erfolgreicher Authentifizierung eine Transaktion gestartet. Im folgendem Try-Block werden die einzelnen Operationen dargestellt, die für eine erfolgreiche Transaktion ausgeführt werden. Über das User-Service werden die Methoden ' ChangeGenderWantedFromUser' und 'ChangeGenderFromUser' aufgerufen. Anschließend muss der Stadteintrag angepasst werden. 
-Dieser muss an mehreren Stellen in der Datenbank geändert werden. 
-So muss zunächst die 'uid' aus dem alten 'city'-Dokument entfernt (Schritt 3 und 4) und dem  Dokument hinzugefügt werden, dass dem aktualisierten Stadtwert entspricht (Schritt 5). Letzlich wird der Wert der 'city'-Eigenschaft über die 'ChangeCityFromUser' des User-Services angepasst.
+\textbf{ChangeUser:}
+Diese Funktion erlaubt einem Nutzer, seine Eigenschaften innerhalb der Datenbank zu aktualisieren. Die Schritte sind in Listing \ref{lst:UserControlleruserchange} zu sehen. Dafür wird nach erfolgreicher Authentifizierung eine Transaktion gestartet. Im folgendem Try-Block werden die einzelnen Operationen dargestellt, die für eine erfolgreiche Transaktion ausgeführt werden. Über das User-Service werden die Methoden 'ChangeGenderWantedFromUser' und 'ChangeGenderFromUser' aufgerufen. Anschließend muss der Stadteintrag angepasst werden, welcher an  mehreren Stellen in der Datenbank geändert werden muss. 
+So muss zunächst die 'uid' aus dem alten 'city'-Dokument entfernt (Schritt 3 und 4) und dem  Dokument hinzugefügt werden, dass dem aktualisierten Stadtwert entspricht (Schritt 5). Letzlich wird der Wert der 'city'-Eigenschaft über die 'ChangeCityFromUser' des User-Services angepasst.\\
 
 \begin{lstlisting}[caption=UserController - Change User, label=lst:UserControlleruserchange]
 //1. Aenderung an GenderWanted
@@ -161,7 +161,7 @@ res.status(200).json();
 \end{lstlisting}
   
 \noindent
-\subparagraph{InfoUser}     
+\textbf{InfoUser:}     
 Diese Funktion dient dazu, nach erfolgreicher Authentifizierung die gespeicherten Eigenschaft und ihre Werte des abgefragten User-Dokuments zu erhalten. Dafür wird die 'GetInfoFromUser'-Methode des User-Services aufgerufen.
         
 
@@ -172,11 +172,11 @@ Diese Funktion dient dazu, nach erfolgreicher Authentifizierung die gespeicherte
 
 
 \paragraph{Match Controller}
-Der Match-Controller bietet Funktionen, die die matches-Collection der Datenbank betreffen. Sie greift dafür vorrangig auf das Match-Service zu.
+Der Match-Controller bietet Funktionen, die die matches-Collection der Datenbank betreffen. Sie greift dafür vorrangig auf den Match-Service zu.\\
 
 \noindent
-\subparagraph{RequestMatches} 
-Das Frontend erlaubt es, Matches anzeigen zu lassen. Dafür bietet diese Funktion Informationen über das Match-Dokument des jeweiligen Nutzers. Nach erfolgreicher Authentifizierung wird das zugehörige Match-Dokument über die 'GetMatches'-Methode abgefragt. Das Dokument enthält zwei Listen: supermatches und normalmatches. Beide enthalten jeweils eine Eigenschaft 'removed'. Ist diese auf true gesetzt, so soll impliziert werden, dass der Nutzer den Match entfernt hat. Folglich soll der gelöschte Match nicht mehr angezeigt werden. Daher werden die beiden Listen über die 'filter'-Funktion nach den nicht entfernten Matches gefiltert. Bei Erfolg wird ein JSON-Objekt mit beiden Listen und der Eigenschaft 'newChanges' aus dem Match-Dokument zurückgesendet.
+\textbf{RequestMatches:} 
+Das Frontend erlaubt es, Matches anzeigen zu lassen. Dafür bietet die in Listing \ref{lst:matchcontrollerrequestmatches} dargestellte Funktion Informationen über das Match-Dokument des jeweiligen Nutzers. Nach erfolgreicher Authentifizierung wird das zugehörige Match-Dokument über die 'GetMatches'-Methode abgefragt. Das Dokument enthält zwei Listen: supermatches und normalmatches. Beide enthalten jeweils eine Eigenschaft 'removed'. Ist diese auf true gesetzt, so soll impliziert werden, dass der Nutzer das Match entfernt hat. Folglich soll das gelöschte Match nicht mehr angezeigt werden. Daher werden die beiden Listen über die 'filter'-Funktion nach den nicht entfernten Matches gefiltert. Bei Erfolg wird ein JSON-Objekt mit beiden Listen und der Eigenschaft 'newChanges' aus dem Match-Dokument zurückgesendet.\\
  
 \begin{lstlisting}[caption=MatchController - RequestMatches, label=lst:matchcontrollerrequestmatches]
 var match = await MatchService.GetMatches(uid);
@@ -188,20 +188,20 @@ res.status(200).json({ newChanges: match.newChanges,
 \end{lstlisting}
 
 \noindent
-\subparagraph{DeleteSupermatch} 
-Hier wird die 'SuperMatchMarkAsRemoved'-Methode des Match-Services aufgerufen, um die 'removed'-Eigenschaft des entsprechenden Supermatches auf true zu setzen. Dieser Supermatch wird folglich nicht mehr über die 'RequestMatches'-Funktion zurückgegeben.
+\textbf{DeleteSupermatch:} 
+Hier wird die 'SuperMatchMarkAsRemoved'-Methode des Match-Services aufgerufen, um die 'removed'-Eigenschaft des entsprechenden Supermatches auf true zu setzen. Dieser Supermatch wird folglich nicht mehr über die 'RequestMatches'-Funktion zurückgegeben.\\
 
 \noindent
-\subparagraph{DeleteNormalmatch} 
-Gleiches Prinzip wie 'DeleteSupermatch' mit Normalmatches.
+\textbf{DeleteNormalmatch:} 
+Gleiches Prinzip wie 'DeleteSupermatch' mit Normalmatches.\\
 
 \noindent
-\subparagraph{Received} 
-Hier wird die 'newChanges'-Eigenschaft auf false gesetzt. Es wird impliziert, dass der Nutzer den aktuellsten Stand der Matches hat.
+\textbf{Received:} 
+Hier wird die 'newChanges'-Eigenschaft auf false gesetzt. Es wird impliziert, dass der Nutzer den aktuellsten Stand der Matches hat.\\
 
 \noindent
-\subparagraph{Trigger} 
-Diese Funktion ruft MatchManager.startMatching() aus. Sie ist vorerst nur für die Entwicklung gedacht, und soll es ermöglich, über das Frontend den Matching-Algorhythmus im Backend zu starten.
+\textbf{Trigger:} 
+Diese Funktion ruft MatchManager.startMatching() auf. Sie ist vorerst nur für die Entwicklung gedacht, und soll es ermöglichen, über das Frontend den Matching-Algorithmus im Backend zu starten.\\
 
 %
 %			Swipe	
@@ -210,5 +210,5 @@ Diese Funktion ruft MatchManager.startMatching() aus. Sie ist vorerst nur für d
 
 
 \paragraph{Swipe Controller}
-Der Swipe-Controller bietet Funktion, die die swipes-Collection der Datenbank betreffen. Sie greift dafür auf das Swipe-Service zu.
+Der Swipe-Controller bietet eine Funktion, die die swipes-Collection der Datenbank betrifft. Hierfür greift sie auf den Swipe-Service zu.
 Sie bietet lediglich die Funktion \textbf{CreateSwipe} an. Sie ruft die SwipeService.AddSwipeToDB-Methode auf.
