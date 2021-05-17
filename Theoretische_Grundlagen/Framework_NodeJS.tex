@@ -6,11 +6,11 @@ Eine wesentliche Eigenschaft von Node.js ist die hohe Performance. Im Folgenden 
 \newline
 
 \noindent
-Herkömmliche Webserver erstellten zunächst für jede ankommende Anfrage einen neuen Thread. Dieses Vorgehen ist eng mit steigendem Speicher- und Rechenaufwand verbunden. Um sich Rechenzeit, die durch die Erstellung und Zerstörung von Threads entstanden, zu sparen, wurden Threadpools eingerichtet. Dieser Threadpool enthält mehrere Threads, denen Aufgaben zugewiesen werden können. Nach erfolgreicher Abarbeitung einer Operation kann einem Thread eine weitere Aufgabe zugeordnet werden.
+Herkömmliche Webserver erstellten zunächst für jede ankommende Anfrage einen neuen Thread. Dieses Vorgehen ist eng mit steigendem Speicher- und Rechenaufwand verbunden. Um sich Rechenzeit zu sparen, die durch die Erstellung und Zerstörung von Threads entstand, wurden Threadpools eingerichtet. Dieser Threadpool enthält mehrere Threads, denen Aufgaben zugewiesen werden können. Nach erfolgreicher Abarbeitung einer Operation kann einem Thread eine weitere Aufgabe zugeordnet werden.
 \newline
 
 \noindent
-Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu einer Form von blockierender Ein- und Ausgabe (Blocking Input/Output kurz Blocking I/O) kommen: zum Beispiel beim Suchen in einer Datenbank oder dem Laden einer Datei im Dateisystem.
+Es bleibt aber ein weiteres Problem: Bei der Anfragenabarbeitung kann es zu einer Form von blockierender Ein- und Ausgabe (Blocking Input/Output, kurz Blocking I/O) kommen: zum Beispiel beim Suchen in einer Datenbank oder dem Laden einer Datei im Dateisystem.
  Während der Abarbeitung wartet der Thread solange, bis die Operation ein Ergebnis zurückwirft und belegt dabei weiterhin Speicherplatz. 
  Bei hohem Aufkommen von Anfragen kommt es dadurch zu einer hohen Speicherauslastung des Servers. Zudem kosten die Kontextwechsel zwischen den Threads im Betriebssystem weitere Rechenzeit \cite{Node1.05}. Man spricht bei diesem Architekturkonzept auch vom Multi-Threaded Server. Graphisch dargestellt ist das Konzept in Abbildung \ref{fig:Multithreaded}.
 \newline
@@ -54,7 +54,7 @@ Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein
 \noindent
 Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen.
 Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponenten, die den Hauptteil des Moduls repräsentiert, exportiert werden. 
-Bei der anderen Möglichkeit, des sogenannten ‚benannten Exports‘ werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist in nachfolgender Abbildung dargestellt. 
+Bei der anderen Möglichkeit, des sogenannten \enquote{benannten Exports} werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist im Codebeispiel \ref{lst:ModuleExport} dargestellt.
 \newline
   
     
@@ -70,7 +70,7 @@ module.exports.bar = bar;
 
 \noindent
 Für den Import stehen verschiedene Möglichkeiten zur Verfügung.
-Im folgenden Quellcode ist ein Import über die require()-Funktion dargestellt. 
+Im Codebeispiel \ref{lst:ModuleImport} ist ein Import über die require()-Funktion dargestellt.
 Mit mitgeliefertem Modul-Pfad als Parameter gibt diese Funktion ein Objekt des Moduls wieder, das die exportierten Objekte (und Funktionen) enthält.
 \newline
   
@@ -89,8 +89,8 @@ Das bedeutet, dass jeder require()-Aufruf innerhalb eines Programms auf ein Modu
 Ehemals als Node Package Manager bekannt, ist npm ein Paketmanager für Node.js, entwickelt 2010 von Isaac Z. Schlueter \cite{Node1.3}. Es verwaltet ein öffentliches Repository (ein digitales Software-Verzeichnis im Internet) unter dem Name npm Registry. In dem Verzeichnis werden weit über 1 Millionen Pakete (Module) angeboten \cite{Node1.4}. Der Großteil kann unter freier Lizenz verwendet werden. Mit npm können Module installiert, aktualisiert, entfernt und gesucht werden. Node.js liefert seit seiner Version 0.6.3 npm standardmäßig bei der Installation mit \cite{Node1.5}.
 
 \paragraph{Express}
-„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.  
-Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden sowie weiterer nützlicher Möglichkeiten. Im Grunde handelt es sich bei Express um ein Modul, das durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}.
+„Express ist ein einfaches und flexibles Node.js-Framework von Webanwendungen, das zahlreiche leistungsfähige Features und Funktionen für Webanwendungen und mobile Anwendungen bereitstellt“ \cite{Node1.6}.
+Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwicklern veröffentlicht und erweitert Node.js unter anderem um das Abarbeiten verschiedener HTTP-Methoden, das separate Abarbeiten von Anfragen mit verschiedenen URL-Pfaden. Im Grunde handelt es sich bei Express um ein Modul, das durch den npm Package Manager heruntergeladen werden kann. Die aktuelle Version zum Zeitpunkt der Dokumentation ist 4.17.1 \footnote{\url{https://www.npmjs.com/package/express}, letzter Zugriff: 04. April 2021}.
 \newline
 \newline
 \textbf{Beispiel}
@@ -165,7 +165,7 @@ Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express �
 \newline
 
 \noindent
-Die in Express eingebaute Middleware express.Router ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middle\-ware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der sich durch die Modularität herausziehende Vorteil ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
+Die in Express eingebaute Middleware \texttt{express.Router} ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middle"-ware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der Vorteil durch die Modularität ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
 \newline
 
 \begin{lstlisting}[caption=Routinghandler erstellen \protect \footnotemark,label=lst:RoutingHandlerCreate]
@@ -192,7 +192,7 @@ module.exports = router;
 \footnotetext{Express, API-Dokumentation Router. \url{https://expressjs.com/en/api.html\#router}, letzter Zugriff: 05. April 2021}
 
 \noindent
-In oberem Beispiel wird ein Routerhandler für das Verzeichnis ‚/birds‘ mit eigen implementierter Middleware und zwei Anwendungsendpunkte ‚/‘ (bezieht sich auf das Stammverzeichnis) und ‚/about‘ erstellt. Der Code wird unter der Datei birds.js abgespeichert. 
+In Beispiel \ref{lst:RoutingHandlerCreate} wird ein Routerhandler für das Verzeichnis \enquote{/birds} mit eigen implementierter Middleware und zwei Anwendungsendpunkte \enquote{/} (bezieht sich auf das Stammverzeichnis) und \enquote{/about} erstellt. Der Code wird unter der Datei birds.js abgespeichert.
 Abschließend kann das Routermodul in die Anwendung geladen werden: 
 \newline
 
@@ -209,7 +209,7 @@ app.use('birds', birds);
 
 \newpage
 \paragraph{Mongoose}
-Mongoose ist ein öffentliches Modul, das zum Zeitpunkt der Dokumentation im npm Package Manager in der Version 5.12.3 zur Verfügung steht \footnote{npm mongoose. \url{https://www.npmjs.com/package/mongoose}, letzter Zugriff: 05. April 2021}. Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM \cite{Node2.55}. Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objektem im Code und der Repräsentierung dieser Objekte in der Datenbank.
+Mongoose ist ein öffentliches Modul, das zum Zeitpunkt der Dokumentation im npm Package Manager in der Version 5.12.3 zur Verfügung steht \footnote{npm mongoose. \url{https://www.npmjs.com/package/mongoose}, letzter Zugriff: 05. April 2021}. Bei diesem Modul handelt es sich um ein Object-Document Mapper (ODM), der es ermöglicht, asynchron mit einer NoSql-Datenbank (siehe Kapitel \ref{sec:nosql}) zu kommunizieren. Mongoose ist der populärste und am weitest von MongoDB unterstützte ODM \cite{Node2.55}. Es unterstützt neben transparenter Persistenz auch die Datenvalidierung, das Erstellen von Abfragen (Queries), das Schreiben von logischem Business Code und die Übertragung zwischen Objekten im Code und der Repräsentation dieser Objekte in der Datenbank.
 \newline
 
 %
@@ -252,7 +252,7 @@ const schema = new Schema({
 \newpage
 \noindent
 \textbf{Model:}
-Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen werden auch ‚documents‘ genannt. Sie stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung. Beispielsweise wird beim Abspeichern einer Mongoose Instanz eines Models die entsprechende Collection in der Datenbank erzeugt, sofern sie noch nicht vorhanden ist. Eine Konvention in Mongoose sieht vor, dass der Name eines Models dem Singular eines Nomens entspricht, während die Collections nach dem Plural dieses Namens beschrieben werden \cite{Node3.2}. Im folgenden Beispiel wird ein Model über die mongoose.model()-Funktion erstellt unter Angabe des Modelnamens und dem zu verwendenden Schema. Dieses Model wird über module.exports nach außen zur Verfügung gestellt.\\
+Ein Model in Mongoose ist ein aus einer Schemadefinition erstellter Konstruktor, aus denen Objekte instanziiert werden können. Diese Instanzen werden auch \enquote{documents} genannt. Sie stehen in direkter Verbindung zu den jeweiligen Collections der verbundenen Datenbank und enthalten Methoden für die persistente Speicherung, Bearbeitung oder Löschung. Beispielsweise wird beim Abspeichern einer Mongoose Instanz eines Models die entsprechende Collection in der Datenbank erzeugt, sofern sie noch nicht vorhanden ist. Eine Konvention in Mongoose sieht vor, dass der Name eines Models dem Singular eines Nomens entspricht, während die Collections nach dem Plural dieses Namens beschrieben werden \cite{Node3.2}. Im Codebeispiel \ref{lst:MongooseObjectExport} wird ein Model über die Funktion \texttt{mongoose.model()} erstellt unter Angabe des Modelnamens und dem zu verwendenden Schema. Dieses Model wird über \texttt{module.exports} nach außen zur Verfügung gestellt.\\
 
 \begin{lstlisting}[caption=Model erstellen und exportierenn,label=lst:MongooseObjectExport]
 const mongoose = require('mongoose');
@@ -267,7 +267,7 @@ module.exports = mongoose.model('test',testSchema);
 \end{lstlisting}
 
 \noindent
-An anderer Stelle kann das Model nun importiert werden. Aus dem Model kann ein Objekt instanziiert werden, welches über die save()-Funktion in der Datenbank gespeichert werden kann.\\
+An anderer Stelle kann das Model nun importiert werden. Aus dem Model kann ein Objekt instanziiert werden, welches über die Funktion \texttt{save()} in der Datenbank gespeichert werden kann.\\
 
 \begin{lstlisting}[caption=Model importieren - Objekt instanziieren und persistent speichern,label=lst:MongooseObjectInstance]
 const testModel = require(test);
@@ -277,7 +277,7 @@ await testInstanz.save();
 \end{lstlisting}
 
 \noindent
-Mongoose Models enthalten ohne Instanziierung des Weiteren auch Schnittstellen, um Daten der zugehörigen Collection zu kreieren, abfragen, bearbeiten oder löschen. (Create, Receive, Update, Delete oder auch kurz CRUD).
+Mongoose Models enthalten ohne Instanziierung des Weiteren auch Schnittstellen, um Daten der zugehörigen Collection zu kreieren, abzufragen, zu bearbeiten oder zu löschen. (Create, Receive, Update, Delete oder auch kurz CRUD).
 \newline
 
 \begin{lstlisting}[caption=CRUD-Beispielfunktionen eines Mongoose-Models,label=lst:MongooseCrud]
@@ -298,7 +298,7 @@ await testModel.deleteMany({X:"abc"})
 \noindent
 \textbf{Verbindung:}
 Verbindung zur Datenbank kann über die connect()-Funktion mit Angabe der genutzten Datenbank und des Datenbankpfads hergestellt werden. 
-Über das mongoose.connection-Objekt können auf Verbindungsereignisse reagiert werden. 
+Über das Objekt \texttt{mongoose.connection} können auf Verbindungsereignisse reagiert werden.
 \newline
 
 \begin{lstlisting}[caption=Mongoose: Verbindung zur Datenbank aufbauen,
@@ -310,7 +310,7 @@ mongooose.connection.on('open',() => console.log('Connected'));
 \end{lstlisting}
 
 \noindent
-Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann ein Objekt wie in folgendem Beispiel erstellt werden, dass die zugehörigen Optionen als Attribute beinhaltet. 
+Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann ein Objekt wie in Beispiel \ref{lst:MongooseConnect} erstellt werden, dass die zugehörigen Optionen als Attribute beinhaltet.
 \newline
 
 \begin{lstlisting}[caption=Mongoose Verbindungsoptionen \protect \footnotemark  ,label=lst:MongooseConnect]

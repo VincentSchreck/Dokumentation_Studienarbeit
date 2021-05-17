@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{subcaption}
+\usepackage{framed}
 \usepackage{booktabs}
 \usepackage{setspace}
 \usepackage{threeparttable}
@@ -96,6 +97,8 @@
 \maketitle
 \thispagestyle{empty}
 \newpage
+\input{erklaerung.tex}
+\newpage
 \pagenumbering{Roman}
 \tableofcontents
 \newpage
@@ -155,6 +158,7 @@
 % Neue Section, neue Seite
 \clearpage
 \subsection{NoSQL-Datenbank}
+\label{sec:nosql}
 \input{Theoretische_Grundlagen/Grundlagen_NoSQL_Datenbank}
 \clearpage
 \subsection{Firebase}
