@@ -1,5 +1,5 @@
 Die Kommunikationsanfragen an den Webserver und den Filmdatenbankserver TMDB werden auf einzelne Service-Komponenten aufgeteilt, die jeweils das von Dart zur Verfügung gestellte HTTP-Package \footnote{Offizielle Homepage : \url{https://pub.dev/packages/http}} implementieren.\\
-Da der Webserver in der Entwicklungsphase einen selbstsigniertes Sicherheitszertifikat hat, wird für die HTTPS-Kommunikation die 'badCertificateCallback'-Funktion des 'HttpClient'-Objekts im HTTP-Package umgeschrieben. Es sei zu erwähnen, dass dieser Workaround nur in der Entwicklung genutzt werden soll. 
+Da der Webserver in der Entwicklungsphase ein selbstsigniertes Sicherheitszertifikat hat, wird für die HTTPS-Kommunikation die 'badCertificateCallback'-Funktion des 'HttpClient'-Objekts im HTTP-Package umgeschrieben. Es sei zu erwähnen, dass dieser Workaround nur in der Entwicklung genutzt werden soll. 
 
 \begin{lstlisting}[caption=Bad Certificate - Workaround, label=lst:badcertificateworkaround]
 class DevHttpOverrides extends HttpOverrides {
