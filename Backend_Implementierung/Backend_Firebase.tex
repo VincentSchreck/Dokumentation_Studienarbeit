@@ -1,5 +1,5 @@
 Firebase bietet viele verschiedene Werkzeuge zur Entwicklung und Überwachung von Mobil- und Webanwendungen.
-Nach dem Konzept nach Kapitel \ref{sec:} beschränkt sich der Aufgabenbereich des Firebase Backends auf Nutzerauthentifizierung, Verwaltung der Nutzerdaten und der Chatfunktion.
+Nach dem Konzept nach Kapitel \ref{sec:concept} beschränkt sich der Aufgabenbereich des Firebase Backends auf Nutzerauthentifizierung, Verwaltung der Nutzerdaten und der Chatfunktion.
 Die hierfür genutzten Werkzeuge werden im Folgenden besprochen.\\
 Grundlegend muss zunächst eine Anwendung erstellt, ein Firebase Projekt aufgesetzt und diese zusammen verknüpft werden.
 Sobald dieser Prozess abgeschlossen ist, muss sichergestellt sein, dass Firebase in der Anwendung initialisiert wird.
@@ -15,7 +15,7 @@ Nun muss das SDK \texttt{firebase\_auth} integriert werden und mithilfe der Funk
 Hierbei können mithilfe von Fehlercodes geeignete Fehlermeldungen erstellt werden. 
 Zusätzlich besitzt die Klasse \texttt{User} das Feld \texttt{emailVerified} (Boolean) und die Methode \texttt{sendEmailVerification()}, wodurch eine Verifizierung der E-Mail über Nachrichtenvorlage durchgeführt wird.
 Ist ein Nutzer einmal authentifiziert, muss unterschieden werden, welchen Bildschirm er sehen darf.
-Hierzu wird darauf geachtet ob ein aktueller Nutzerobjekt existiert.
+Hierzu wird darauf geachtet, ob ein aktueller Nutzerobjekt existiert.
 Ist dies nicht der Fall, wird der Anmeldebildschirm angezeigt; ansonsten der Hauptbildschirm.
 \medspace
 \begin{lstlisting}[caption= Anzeige abhängig ob ein aktueller Nutzer existiert]
@@ -102,7 +102,7 @@ Bei einem separaten Server ist dies zwar ebenfalls nicht gegeben, aber kann übe
 \\
 \noindent
 Grundsätzlich benötigt man für die Chaträume eine Sammlung in Firebase, welche die beteiligten Nutzer beinhaltet. 
-Ein Dokument dieser Sammlung bekommt eine einzigartige ID bestehend aus den jeweiligen UIDs der Nutzer und zusammengefügt durch eine Unterstrich.
+Ein Dokument dieser Sammlung bekommt eine einzigartige ID bestehend aus den jeweiligen UIDs der Nutzer, die durch  einen Unterstrich zusammengefügt sind.
 Damit diese ID wirklich einzigartig ist und nicht zwei Chaträume mit den IDs \enquote{Nutzer1\_Nutzer2} und \enquote{Nutzer2\_Nutzer1} entstehen können, werden bei der Erstellung beide UIDs alphabetisch verglichen und entsprechend angeordnet (siehe Code \ref{lst:chat_uid_sorting}).\\
 
 \begin{lstlisting}[caption=Sortierung der UIDs, label=lst:chat_uid_sorting]
@@ -125,7 +125,7 @@ Es bietet die Aus"-füh"-rung von serverseitigem Code unter bestimmten Bedingung
 Um eine solche Funktion nun ausführen zu können, muss eine weitere Sammlung \texttt{unreadMessages} existieren.
 In diese wird beim Versenden einer Nachricht das selbe Nachrichtendokument wie in der Untersammlung \texttt{messages} gespeichert.
 Dieser Schreibvorgang löst nun die Funktion von Cloud Functions aus, welche eine Benachrichtigung zusammenbaut (siehe Code \ref{lst:chat_functions}).
-Diese Funktion muss jedoch wissen an welches Gerät die Benachrichtigung versendet werden muss.
+Diese Funktion muss jedoch wissen, an welches Gerät die Benachrichtigung versendet werden muss.
 Hierzu wird in dem Dokument des Nutzers (in der \texttt{users} Sammlung) eine Untersammlung \texttt{tokens} abgespeichert.
 Dessen Dokumente beinhalten die jeweilige Plattform, das zum Gerät des Nutzers passende Token und ein Erstellungsdatum.
 Pro Gerät, auf dem der Nutzer sich mindestens einmal angemeldet hat, wird also ein Token abgespeichert.\\
@@ -164,17 +164,17 @@ Pro Gerät, auf dem der Nutzer sich mindestens einmal angemeldet hat, wird also 
 \end{lstlisting}
 
 \noindent
-Das Doppelte Abspeichern der Nachrichten ist zwingend notwendig, da die Erstellung einer Nachricht nicht für jeden Chatraum anders überprüft werden kann.
+Das doppelte Abspeichern der Nachrichten ist zwingend notwendig, da die Erstellung einer Nachricht nicht für jeden Chatraum anders überprüft werden kann.
 Gleichzeitig wird aber auch die Sammlung \texttt{chatroom} benötigt, da diese zur Anzeige aller Räume eines Nutzers und aller Nachrichten eines Raumes benötigt werden.
 Für das Anzeigen wird in das Nutzerdokument eine Untersammlung mit Chaträumen abgespeichert.
-Dies muss aus Anzeigegründen eine Sammlung und kann kein einfaches Array oder Liste sein - pro Dokument werden Nutzernamen, NutzerIDs und Raum ID gespeichert.\\
+Dies muss aus Anzeigegründen eine Sammlung und kein einfaches Array oder Liste sein - pro Dokument werden Nutzernamen, NutzerIDs und Raum ID gespeichert.\\
 \\
 Falls nun ein Nutzer mit einem anderen Nutzer gematched wird (siehe Abbildung \ref{fig:homescreen_b}), kann dieser einen Chatraum erstellen.
 Dabei wird der Chatraum in die Untersammlung \texttt{chatRooms} wie beschrieben eingefügt.
 Dadurch erscheint er in der Liste seiner Chaträume.
 Gleichzeitig wird dieser Raum auch in die Untersammlung \texttt{pendingChatRooms} des Kommunikationspartners eingetragen.
 Nun erscheint die Chatanfrage beim Kommunikationspartner auf dem Hauptbildschirm (siehe Abbildung \ref{fig:homescreen_a} oben).
-Er kann jetzt bereits mit ihm eine Konversation führen, jedoch ist es beiden nicht erlaubt die Profile des jeweils anderen zu sehen.
+Er kann jetzt bereits mit ihm eine Konversation führen, jedoch ist es beiden nicht erlaubt, die Profile des jeweils anderen zu sehen.
 Dies dient als Schutzmechanismus gegenüber oberflächlicher Betrachtung des Partners.
 Es steht dem angefragten Nutzer nun die Wahl ob er den Gesprächspartner annehmen (Abbildung \ref{fig:chat_c}) oder ablehnen (Abbildung \ref{fig:chat_d}) will.
 Beim Annehmen wird der Chat in die Untersammlung \texttt{chatRooms} verschoben und beide können die Profile einander sehen,
