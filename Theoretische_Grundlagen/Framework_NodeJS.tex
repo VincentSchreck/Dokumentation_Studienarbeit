@@ -52,9 +52,9 @@ Der große Vorteil hierbei ist, dass der Hauptthread trotz der blockierenden Ein
 \subsubsection{Module}
 
 \noindent
-Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen sollen.
+Module stellen in Node.js Software-Komponenten dar, die Objekte und Funktionen nach außen hin bereitstellen.
 Sie können aus einer Skriptdatei oder einem Verzeichnis von Dateien bestehen. Module können als einzelne Default-Komponenten, die den Hauptteil des Moduls repräsentiert, exportiert werden. 
-Bei der anderen Möglichkeit, des sogenannten \enquote{benannten Exports} werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist im Codebeispiel \ref{lst:ModuleExport} dargestellt.
+Bei den \enquote{benannten Exports} werden die zu exportierenden Komponenten dagegen explizit angegeben. Letzteres ist im Codebeispiel \ref{lst:ModuleExport} dargestellt.
 \newline
   
     
@@ -81,7 +81,7 @@ const bar = require('./module/path');
 \end{lstlisting}
 
 \noindent
-Eine wichtige Besonderheit ist, dass importierte Module  beim ersten Aufruf gecached werden. 
+Eine wichtige Besonderheit ist, dass importierte Module beim ersten Aufruf im Cache gespeichert werden. 
 Das bedeutet, dass jeder require()-Aufruf innerhalb eines Programms auf ein Modul dasselbe Objekt zurückliefert \cite{Node1.21}.
 
 
@@ -161,7 +161,7 @@ app.use(express.json());
 
 \noindent
 \textbf{Router:}
-Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ [nodejs 2.15]
+Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express „[...] die Definition von Anwendungsendpunkten (URIs) und deren Antworten auf Clientanforderungen.“ \cite{Node2.15}
 \newline
 
 \noindent

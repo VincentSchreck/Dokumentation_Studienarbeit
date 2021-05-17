@@ -9,10 +9,10 @@ Gleichzeitig ist bei der Entwicklung auf die verwendete Programmiersprache, die 
 Wie bereits in Abbildung \ref{fig:crossplattform_popularity} gezeigt, können sich Marktanteile verschiedener Frameworks sehr schnell ändern. 
 Dies hängt auch deutlich mit den unterliegenden Plattformen und deren Update-Zyklen zusammen.
 Google beispielsweise veröffentlicht beinahe jährlich eine neue Version von Android\footnote{\url{https://engineerbabu.com/blog/evolution-of-android-versions/}, letzter Zugriff: 20. April 2021}, weshalb sich eben Programmierumgebungen immer mitentwickeln.
-Die Popularität eines Frameworks spiegelt somit unter anderem wieder, wie gut es mit den neuesten Features und Programmierkonzepten umgeht. 
+Die Popularität eines Frameworks spiegelt somit unter anderem wider, wie gut es mit den neuesten Features und Programmierkonzepten umgeht. 
 Daher wurde sich bei den plattformübergreifenden Frameworks \ref{sec:framework} auf React Native und Flutter beschränkt. 
 Beide bieten vordefinierte, nativ implementierte Benutzeroberflächenkomponenten - welche im Falle von Flutter sogar auf dem Design System \href{https://material.io/}{\textit{Material Design}} beruht.\\
-Das Konzept aus Kapitel \ref{sec:app_concept} schlägt vor, dem Nutzer die Bewertung einzelner Filme über eine Wisch-Funktion bereitzustellen.
+Das Konzept aus Kapitel \ref{sec:concept} schlägt vor, dem Nutzer die Bewertung einzelner Filme über eine Wisch-Funktion bereitzustellen.
 Allein dieser Bildschirm muss zunächst einmal eine Reihe von Filmen inklusive Titelbild und Informationen über HTTP Anfragen von unserer Datenbank laden, die Animationen und Logik hinter dem Bewertungssystem abarbeiten und zusätzlich die Bewertung wieder zurück an unseren Server senden.
 Aufgrund dieses enorm hohen Performance-Anspruchs sind nativ implementierte Komponente unabdingbar.
 Da sowohl Flutter als auch React Native es ermöglichen, die UI Komponenten in der plattformspezifischen Sprache zu implementieren, erweist sich der Leistungsvergleich beider Frameworks als schwierig.
@@ -28,7 +28,7 @@ Somit kristallisierten sich drei Entwicklungsmöglichkeiten per Ausschlussverfah
 Mit einer nativen Anwendung für jede Plattform erhält man nicht nur doppelten Entwicklungsaufwand, sondern gleichzeitig auch doppelten Wartungsaufwand. 
 Zusätzlich gegen die native Möglichkeit spricht, dass für die Entwicklung einer iOS Anwendung die Entwicklungsumgebung XCode benötigt wird, welche eine Desktopanwendung ausschließlich für das Betriebssystem macOS ist.
 Daher ist die Entwicklung nicht nur in Sachen Codezeilen ein deutlicher Mehraufwand, welcher sich aber bei der Größe des Projektes nicht bezahlt macht.
-Bei den plattformübergreifenden Lösungen entfällt dieser Aspekt, jedoch ist das veröffentlichen einer iOS Anwendung im Vergleich zu Android weiterhin deutlich komplizierter - hierauf wird im weiteren Verlauf der Arbeit noch eingegangen.\\
+Bei den plattformübergreifenden Lösungen entfällt dieser Aspekt, jedoch ist das Veröffentlichen einer iOS Anwendung im Vergleich zu Android weiterhin deutlich komplizierter - hierauf wird im weiteren Verlauf der Arbeit noch eingegangen.\\
 \\
 Beim direkten Vergleich zwischen React Native und Flutter ist der deutlichste Unterschied, dass React Native die Entwicklung einer Laufzeit-basierten Anwendung bietet und Flutter die einer kompilierten Anwendung.
 Hierbei werden unterschiedliche Programmiersprachen verwendet: Flutter beruht auf der Google eigenen Sprache Dart. 
@@ -43,15 +43,15 @@ Es existiert zwar ein großer Konkurrent zu Firebase, nämlich \href{https://doc
 Hierbei handelt es sich ebenfalls um ein Backend-Service für Mobil- und Webanwendungen. 
 Aufgrund der auf Skalierung ausgesetzten Tools mit besseren Echtzeit-Features ist Firebase jedoch speziell für Nachrichtenaustausch besser geeignet.
 Gleichzeitig spielt die Vertrautheit mit dieser BaaS Plattform und die breit gefächerten Tools eine große Rolle bei der Auswahl des Services.
-Letztendlich wurde die Entscheidung getroffen, das allgemeines Nutzermanagement und Chat-Funktion der Anwendung mit Firebase zu realisieren.\\
-Da AWS Amplify erst seit Beginn 2021 eine offizielle Unterstützung für Flutter anbieten\footnote{\url{https://aws.amazon.com/de/about-aws/whats-new/2021/02/announcing-general-availability-amplify-flutter-data-authentication-support/}}, wurde Flutter als Frontend-Framework und Firebase als BaaS-Plattform ausgewählt.
+Letztendlich wurde die Entscheidung getroffen, dass das allgemeine Nutzermanagement und die Chat-Funktion der Anwendung mit Firebase realisiert werden.\\
+Da AWS Amplify erst seit Beginn 2021 eine offizielle Unterstützung für Flutter anbietet\footnote{\url{https://aws.amazon.com/de/about-aws/whats-new/2021/02/announcing-general-availability-amplify-flutter-data-authentication-support/}}, wurde Flutter als Frontend-Framework und Firebase als BaaS-Plattform ausgewählt.
 
 \subsection{Server}
 \label{sec:server}
 Der Webserver ist jener Dienst,  der die zugrundeliegenden Funktionalitäten bezüglich der Filmabfragen, der Matching-Logik und der Filmempfehlung bietet. 
 Anforderungen an die genutzte Webservertechnologie sind zum einen eine grundlegend hohe Performance, um mit einer hohen Anzahl an Serveranfragen umzugehen. Des Weiteren sollte die Technologie Skalierbarkeit in Bezug auf die Performance und wachsenden Ressourcen wie Hardware aufweisen und eine Unterstützung, Dokumentation und umfassende Funktionalitäten des Frameworks bieten. 
 Ein Paketmanager, der umfassende Kern-Funktionalitäten zur Verfügung stellt, sollte vorhanden sein, damit diese nicht neu implementiert werden müssen. Um offen für das genutzte Zielbetriebssystem zu bleiben, sollten mehrere Betriebssysteme unterstützt werden. 
-Im folgenden werden keine proprietären Webserver-technologien betrachtet.
+Im Folgenden werden keine proprietären Webserver-technologien betrachtet.
 \newline
 Nach genauerer Recherche kamen drei Webservertechnologien in die engere Betrachtung:
 
@@ -70,13 +70,13 @@ Große Firmen wie Uber \footnote{siehe \url{https://eng.uber.com/uber-tech-stack
 \subsection{Datenbank}
 Im Hinblick auf die Speicherung der potenziell hohen Anzahl an Nutzern, deren Swipe-Ent\-schei\-dungen und deren Matches untereinander sowie der Anzahl von über 500.000 Filmen\footnote{siehe \url{https://www.themoviedb.org/faq/general}, letzter Zugriff: 18. März 2021} wird ein performanter Umgang der Datenbank mit vielen Datensätzen notwendig sein.  
 Um massive Daten speichern zu können sind relationale Datenbanken nicht die passende Wahl. 
-Es hat sich gezeigt, dass je größer die Menge an Daten ist und je mehr Tabellen in einer Anfrage enthalten sind, desto größer ist der Performanceverlust durch SQL. \cite{4.5}
+Es hat sich gezeigt, dass je größer die Menge an Daten ist und je mehr Tabellen in einer Anfrage enthalten sind, desto größer ist der Performanceverlust durch SQL. \cite{Tech4.5}
 \newline
 Die Verwendung von dokumentenbasierten Datenbanken führt dagegen zu einer strukturlosen Zusammensetzung an Daten, bei denen ein Dokument ein einzelnes Objekt repräsentieren kann. 
 Somit muss für die Wiedergabe eines Objekts nur ein Dokument angefragt werden. Die fehlenden Möglichkeiten zur Normalisierung können jedoch zu Redundanzen in den Daten führen, wodurch die Entwicklung der aufrufenden Anwendung komplexer werden kann. 
 Die Redundanz wird jedoch in Kauf genommen, um schnelle Abfragen zu ermöglichen und eine hohe Performance zu erhalten. Da Datensätze in dokumentenbasierten NoSQL-Datenbanken schemalos als JSON-Objekte abgelegt werden, begünstigt dies den generischen Dokumentenaufbau in der Entwicklung.
 \newline
-Einige NoSQL-Datenbanken wie MongoDB verfolgen einen nicht-relationalen Ansatz und werden mit JavaScript-fähigen Schnittstellen bereitgestellt. Durch die Kommunikation im JSON-Format eignen ist ein optimaler Einsatz mit Node.js gegeben. MongoDB ist über seine horizontale Skalierbarkeit darauf ausgelegt, in einem kurzen Zeitraum sehr viele Daten zu verarbeiten \cite{Tech6}. Während relationale Systeme vertikal im Sinne von neuen Tabelleneinträgen skalieren, werden Dokumente hingegen werden in einer Kollektion, die horizontal erweitert werden können, indem Datenmengen im Sinne des Shardings auf mehreren Systemen verteilt werden, anstatt ein einzelnes System zu verwenden.
+Einige NoSQL-Datenbanken wie MongoDB verfolgen einen nicht-relationalen Ansatz und werden mit JavaScript-fähigen Schnittstellen bereitgestellt. Durch die Kommunikation im JSON-Format ist ein optimaler Einsatz mit Node.js gegeben. MongoDB ist über seine horizontale Skalierbarkeit darauf ausgelegt, in einem kurzen Zeitraum sehr viele Daten zu verarbeiten \cite{Tech5}. Während relationale Systeme vertikal im Sinne von neuen Tabelleneinträgen skalieren, werden Dokumente hingegen werden in einer Kollektion, die horizontal erweitert werden können, indem Datenmengen im Sinne des Shardings auf mehreren Systemen verteilt werden, anstatt ein einzelnes System zu verwenden.
 \newline
 Als Datenbank für die Backend-Implementierung wurde aufgrund von Performance, der guten Einbindung an Node.js und der Skalierbarkeit MongoDB ausgewählt. Um die Vorteile der Da\-ten\-kompression sowie der Transaktionen über mehrere Dokumente hinweg zu nutzen, ist die WiredTiger-Engine die Wahl für das genutzte Storage-Engine.  
 
@@ -94,7 +94,7 @@ Gleichzeitig ist der Zugriff über 1000 Anfragen pro Tag und eine Poster API zur
 \\
 Die API von IMDb (Internet Movie Database) ist hingegen sehr gut dokumentiert und bietet auch die wichtigsten Daten (Titel, Beschreibung und Bild) an.
 Problem hieran ist jedoch, dass es zwar einen kostenlosen Zugang gibt, dieser jedoch auf 100 Anfragen täglich beschränkt ist\footnote{Quelle: \url{https://imdb-api.com/}, letzter Zugriff: 20. März 2021}. 
-Gleichzeitig hat diese API eine Verzögerung von knapp 1\,s, was zu schlechter Benutzererfahrung führen kann\footnote{Quelle: \url{https://rapidapi.com/amrelrafie/api/movies-tvshows-data-imdb}, letzter Zugriff: 20. März 2021}.\\
+Gleichzeitig hat diese API eine Verzögerung von knapp einer Sekunde, was zu schlechter Benutzererfahrung führen kann\footnote{Quelle: \url{https://rapidapi.com/amrelrafie/api/movies-tvshows-data-imdb}, letzter Zugriff: 20. März 2021}.\\
 \\
 Letztendlich wurde die Version 3 der API von TMDb (The Movie Database) gewählt.
 Sie ist außerordentlich gut dokumentiert und bietet mehr Möglichkeiten als für diese Anwendung überhaupt notwendig.
