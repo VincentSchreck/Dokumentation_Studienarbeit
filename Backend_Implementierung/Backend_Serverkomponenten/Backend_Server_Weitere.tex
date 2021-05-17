@@ -1,7 +1,7 @@
 Nachfolgend werden weitere Systemfunktionalitäten des Backends dargestellt.
 
 \paragraph{Firebase-Service}
-Um unberechtigte Zugriffe zu vermeiden, findet für die nutzerbezogenenen Anfragen eine Authentifizierung statt. Die erste Authentifizierung des Nutzers findet über den Login des Frontends in Firebase statt. Nachträglich muss bei Anfragen an den Webserver sichergestellt werden, dass der Nutzer weiterhin authentifiziert ist. Ohne diesen Vorgang könnte man sich über das Schicken einer willkürlich übermittelten Nutzer-Uid fälschlicherweise als anderer Nutzer ausgeben. Für den Zugriff auf die Firebase-Authentifizierungsfunktionen wird in die firebaseService.js-Datei das Modul 'firebase-Admin' importiert \footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup}, letzter Zugriff: 3. April 2021}.\\
+Um unberechtigte Zugriffe zu vermeiden, findet für die nutzerbezogenenen Anfragen eine Authentifizierung statt. Die erste Authentifizierung des Nutzers findet über den Login der mobilen Anwendung in Firebase statt. Nachträglich muss bei Anfragen an den Webserver sichergestellt werden, dass der Nutzer weiterhin authentifiziert ist. Ohne diesen Vorgang könnte man sich über das Schicken einer willkürlich übermittelten Nutzer-Uid fälschlicherweise als anderer Nutzer ausgeben. Für den Zugriff auf die Firebase-Authentifizierungsfunktionen wird in die firebaseService.js-Datei das Modul 'firebase-Admin' importiert \footnote{Siehe Dokumentation: \url{https://firebase.google.com/docs/admin/setup}, letzter Zugriff: 3. April 2021}.\\
 
 \noindent
 %\hangindent1cm
@@ -27,7 +27,7 @@ Um Zugriffszeiten auf die Firebase-Schnittstelle, werden in einem lokalen Dictio
 \noindent
 %\hangindent1cm
 \textbf{GetUID:}
-Die Funktion erwartet einen Firebase Token als Parameter 'uidtoken', welcher an die Funktion 'verifyIdToken' des FirebaseAdmin-Objeekts weitergeleitet wird. Zurück wird ein Objekt gegeben, dass unter anderem die 'uid' des zum Token zugehörigen Nutzers und die Ablaufzeit schickt. Nach erfolgreichem Überprüfen, ob die 'uid' tatsächlich ein Wert übermittelt bekommen hat, wird das Paar aus UidToken und Uid samt Ablaufzeit in der UID/TokenID-Dictionary gespeichert.\\
+Die Funktion erwartet einen Firebase Token als Parameter 'uidtoken', welcher an die Funktion 'verifyIdToken' des FirebaseAdmin-Objekts weitergeleitet wird. Zurück wird ein Objekt gegeben, dass unter anderem die 'uid' des zum Token zugehörigen Nutzers und die Ablaufzeit schickt. Nach erfolgreichem Überprüfen, ob die 'uid' tatsächlich ein Wert übermittelt bekommen hat, wird das Paar aus UidToken und Uid samt Ablaufzeit in der UID/TokenID-Dictionary gespeichert.\\
 
 \begin{lstlisting}[caption=Firebase-Service Register, label=lst:firebaseServiceRegister]
 verifiedUid = await firebaseAdmin.auth().verifyIdToken(uidToken);
@@ -42,7 +42,7 @@ return uid;
 \noindent
 %\hangindent1cm
 \textbf{RefreshList:}
-Diese Funktion wird aufgerufen, um abgelaufene Token in der UID/TokenID-Dictionary zu löschen. Sie wird über das Modul TimedEvents periodisch aufgerufen. Dabei wird zu jedem Paar die aktuelle Uhrzeit und die Ablaufszeit verglichen. Stellt die Ablaufszeit ein größeren Wert dar, wird das Schlüsselwertpaar aus der Dictionary entfernt.\\
+Diese Funktion wird aufgerufen, um abgelaufene Token in der UID/TokenID-Dictionary zu löschen. Sie wird über das Modul TimedEvents periodisch aufgerufen. Dabei wird zu jedem Paar die aktuelle Uhrzeit und die Ablaufszeit verglichen. Stellt die Ablaufszeit ein geringeren Wert dar, wird das Schlüsselwertpaar aus der Dictionary entfernt.\\
 
 \paragraph{Timed Events}
 Über das 'node-cron'-Modul \footnote{Siehe Dokumentation: \url{//https://www.npmjs.com/package/node-cron}, letzter Zugriff: 26. April 2021}
@@ -54,7 +54,7 @@ können zeitlich definierte und periodische Funktionen ausgeführt werden. Dafü
 \textbf{StartMatching - Teil 1:}
 Die aktuelle Implementierung des Matching-Algorithmus sucht für jede Stadt Nutzerpaare, die einen gleichen Film mit einem Superlike versehen haben. Dafür werden zunächst über die 'GetAllInhabitedCities'-Funktion des City-Services die Städte in einer Liste gespeichert, die mindestens zwei Nutzer aufweisen. Folglich finden eine Verschachtelung von Iterationsabläufen zum Ausführen von Programmcode auf jedem Element einer Liste statt.
 In der ersten Iterationsstufe wird durch die Städte iteriert.
-Die zweite Iterationsstufe iteriert vom ersten bis zum vorletzten Nutzereintrag ('uid') innerhalb der aktuell iterierten Stadt. Innerhalb des zugehörigen Codeblocks wird die 'RequestSuperlikeSwipes'-Funktion des SwipeServices aufgerufen mit der 'uid' des aktuell iterierten Nutzers als Parameterübergabe. Die zurückerhaltene Liste enthält sämtliche Film-ID's, die vom Nutzer mit einem Superlike versehen wurden. Die Liste wird samt dem Index des nächsten Users in der Liste, der aktuell iterierten Stadt und dem aktuell iterierten User an die Funktion \texttt{getSupermatches()} weitergeleitet. Außerdem wird eine Referenz auf das 'foundSupermatches'-Objekt, dass später mit Informationen zu den errechneten Supermatches gefüllt wird, mitgegeben.\\
+Die zweite Iterationsstufe iteriert vom ersten bis zum vorletzten Nutzereintrag ('uid') innerhalb der aktuell iterierten Stadt. Innerhalb des zugehörigen Codeblocks wird die 'RequestSuperlikeSwipes'-Funktion des SwipeServices aufgerufen mit der 'uid' des aktuell iterierten Nutzers als Parameterübergabe. Die zurückerhaltene Liste enthält sämtliche Film-ID's, die vom Nutzer mit einem Superlike versehen wurden. Die Liste wird samt dem Index des nächsten Users in der Liste, der aktuell iterierten Stadt und dem aktuell iterierten User an die Funktion \texttt{getSupermatches()} weitergeleitet. Außerdem wird eine Referenz auf das 'foundSupermatches'-Objekt, das später mit Informationen zu den errechneten Supermatches gefüllt wird, mitgegeben.\\
 
 \begin{lstlisting}[caption=Match Manager - startMatching - Teil 1: Finde Matches, label=lst:findMatches]
 var cities = await CityService.GetAllInhabitedCities();
@@ -123,7 +123,7 @@ Diese Funktion ist zum Zeitpunkt der Dokumentation nicht implementiert \\
 \noindent
 %\hangindent1cm
 \textbf{StartMatching - Teil 2:}
-Die 'startMatching'-Funktion wird beendet, nachdem die gefundenen Matchinformationen in den entsprechenden Match-Dokumenten gespeichert werden. Es wird durch die Liste 'foundSupermatches' durchiteriert. Dafür wird zunächst geprüft, dass ein Match der zwei Nutzer noch nicht in der Datenbank hinterlegt ist. Anschließend werden beiden zugehörigen Match-Dokumenten die gegenseitigen 'uid' in die 'supermatches'-Liste hinzugefügt.
+Die 'startMatching'-Funktion wird beendet, nachdem die gefundenen Matchinformationen in den entsprechenden Match-Dokumenten gespeichert werden. Es wird durch die Liste 'foundSupermatches' durchiteriert. Dafür wird zunächst geprüft, dass ein Match der zwei Nutzer noch nicht in der Datenbank hinterlegt ist. Anschließend werden beiden zugehörigen Match-Dokumenten die gegenseitigen 'uid' der Nutzer in die 'supermatches'-Liste hinzugefügt.
 Der Vorgang wird für die 'normalmatches'-Liste wiederholt mit entsprechender Speicherung in die 'normalmatches'-Listen.
 
 \begin{lstlisting}[caption=Match Manager - startMatching - Teil 2: Speichere Matches, label=lst:startMatchingteil2]
