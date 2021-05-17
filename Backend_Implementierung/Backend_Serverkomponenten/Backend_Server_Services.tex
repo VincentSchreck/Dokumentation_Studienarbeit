@@ -245,7 +245,7 @@ Anhand einer übergebenen 'uid' und 'matchUid' wird die Eigenschaft 'new"-Change
 %
 
 \paragraph{Swipe Service}
-Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection swipes angewandt werden. Dieser Service import das Swipe-Model.\\
+Die Funktionen des Moduls swipeService.js bieten innerhalb der Projektumgebung den Zugriff auf bestimmte Operationen, die auf die Collection swipes angewandt werden. Dieser Service importiert das Swipe-Model.\\
 
 \noindent
 \textbf{CreateUserSwipeDocument:}
@@ -286,9 +286,9 @@ Die Funktion empfängt eine 'uid' als Parameter und gibt ein entsprechendes Matc
 \noindent
 \textbf{RequestSuperlikeSwipes:}
 Innerhalb dieser in Listing \ref{lst:swipeserviceRequestSuperlikeSwipes} dargestellten Funktion kommt es zum Einsatz einer Aggregation. 
-Dabei kommt es zum Einsatz mehrerer Pipeline-Operatoren. []
+Dabei kommt es zum Einsatz mehrerer Pipeline-Operatoren.
 % %TODO Link auf Tabelle 5 Aggregation Framework
-Über den 'unwind'-Operator wird gesetzt, dass für jeden Listeneintrag innerhalb der 'swipes'-Liste neue Dokumente erzeugt werden, die in die nachfolgende Pipeline-Stufen weitergeleitet werden. Anhand des 'match'-Operators werden dann die neuen Dokumente gefiltert. Letzlich wird eine Liste von Swipes zurückgeschicht, die eine 'swipeaction' von 2 (entsprechend Superlike) aufweisen.\\
+Über den 'unwind'-Operator wird gesetzt, dass für jeden Listeneintrag innerhalb der 'swipes'-Liste neue Dokumente erzeugt werden, die in die nachfolgende Pipeline-Stufen weitergeleitet werden. Anhand des 'match'-Operators werden dann die neuen Dokumente gefiltert. Letztlich wird eine Liste von Swipes zurückgeschickt, die eine 'swipeaction' von 2 (repräsentativ für Superlike) aufweisen.\\
 
 \begin{lstlisting}[caption=Swipe Service - RequestSuperlikeSwipes, label=lst:swipeserviceRequestSuperlikeSwipes]
 async function RequestSuperlikeSwipes(uid) {
