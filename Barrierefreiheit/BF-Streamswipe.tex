@@ -30,7 +30,7 @@ Bei Flutter ist das Hinzufügen von Semantiken bereits eingebaut. Hierfür kann 
 Die Funktion \texttt{GestureDetector()} erkennt Interaktionen mit dem Touchscreen, wobei hier nur auf Antippen reagieren soll, deshalb die Funktion \texttt{onTap:()$\{\}$}, die auf den Einstellungsbildschirm leitet. Diese Implementierung ist hier aber nicht von Relevanz und wird übersprungen. In dem \texttt{GestureDetector()} ist ein Icon eingebettet, von der Form \textit{Settings}, was einem Zahnrad entspricht. Dieses Icon erhält eine Farbe und anschließend eine Semantik aus allem was in den Anführungszeichen steht. Ein Screenreader kann AE erkennen und ihn als den Umlaut Ä aussprechen. \\
 So wird im kompletten Programm für jedes relevante Element vorgegangen. Teilweise  müssen den Semantiken Variablen übergeben werden, da sich die vorzulesende Information ändert wie beispielsweise bei den Filmtiteln.
     
-\begin{lstlisting}[caption=Codeausschnitt in Dart von einem Button mit Semantiken.,label=lst:semantics]
+\begin{lstlisting}[caption=Codeausschnitt in Dart von einem Button mit Semantiken,label=lst:semantics]
 GestureDetector(
   onTap: () {
      ...

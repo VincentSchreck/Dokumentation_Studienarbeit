@@ -211,7 +211,7 @@ Da auf Nutzerdaten, welche im Auth-Service abgespeichert werden sowieso nur der 
 \paragraph{Ende-zu-Ende Verschlüsselung}
 Ende-zu-Ende Verschlüsselung bedeutet die Verschlüsselung von Daten, die bei einer Kommunikation nur von den Teilnehmern als Klartext gelesen werden kann.
 In Firebase sieht die Struktur des implementierten Chats wie in Abbildung \ref{fig:firebase_without_encryption} aus.
-Die Nachricht ist zwar bei der Verbindung von den Geräten zum Server über das Protokoll HTTPS und über eine lokale Verschlüsselung zum Abspeichern auf dem Server gesichert, jedoch sind diese Daten als Klartext sichtbar, während sie in die Frontend und Backend Server verarbeitet werden.
+Die Nachricht ist zwar bei der Verbindung von den Geräten zum Server über das Protokoll HTTPS und über eine lokale Verschlüsselung zum Abspeichern auf dem Server gesichert, jedoch sind diese Daten als Klartext sichtbar, während sie in der mobilen Anwendung und dem Backend-Server verarbeitet werden.
 Zudem haben Firebase Administratoren und Entwickler ebenfalls vollen Zugriff auf unverschlüsselte Nachrichten und könnten alles mitlesen.
 Daher wäre Ende-zu-Ende Verschlüsselung eine zusätzliche Schutzschicht, sowohl für Text, als auch Dateien.
 Die Struktur hierzu ist in Abbildung \ref{fig:firebase_with_encryption} beschrieben.\\

@@ -99,7 +99,7 @@ Es wurde im November 2010 von Douglas Christopher Wilson und weiteren Entwickler
 \noindent
 Das Erstellen einer einfachen Express-Applikation wird im folgenden Beispiel dargestellt:\newline
 
-\begin{lstlisting}[caption=Einfacher Webserver \protect \footnotemark,label=lst:Middleware]
+\begin{lstlisting}[caption={[Einfacher Webserver] Einfacher Webserver \protect \footnotemark},label=lst:Middleware]
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -127,14 +127,14 @@ Der unterste Block startet den Webserver auf dem mitgegebenen Port über die Fun
 
 \noindent
 \textbf{Middleware:}
-Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion \cite{Node1.9}.
+Express arbeitet nach dem Middleware-Konzept. Darunter versteht man Funktionen, die für die Verarbeitung von Anfragen hintereinandergeschaltet werden können. Jede Middleware hat Zugriff auf das Anfrageobjekt, das Antwortobjekt und die jeweils nächste Middleware-Funktion (\cite{Node1.9}, S. 895ff).
 Dabei kann die HTTP-Request direkt terminiert oder an die nächste Middleware gesendet werden. Die Verkettung der Middleware-Funktionen wird in Abbildung \ref{fig:middleware} illustriert.
 \newline
 
 \begin{figure}[tbt]
 \centering
 \includegraphics[width=12cm]{images/nodejs_middleware.png}
-\caption[Middleware]{Middleware \cite{Node1.2}}
+\caption[Middleware]{Middleware (\cite{Node1.2}, S. 868ff)}
 \label{fig:middleware}
 \end{figure}
 
@@ -168,7 +168,7 @@ Unter dem Begriff Routing (Weiterleitung) versteht man im Kontext von Express �
 Die in Express eingebaute Middleware \texttt{express.Router} ermöglicht es, modular einbindbare Routenhandler (Weiterleitungsroutinen) zu erstellen. Eine Router-Instanz ist als vollständiges Middle"-ware- und Routingsystem zu sehen und wird deshalb auch als „Mini-App“ angesehen. Der Vorteil durch die Modularität ist, dass folglich unterschiedliche Anwendungsendpunkte auf entsprechende Dateien ausgelagert werden können.
 \newline
 
-\begin{lstlisting}[caption=Routinghandler erstellen \protect \footnotemark,label=lst:RoutingHandlerCreate]
+\begin{lstlisting}[caption={[Routinghandler erstellen] Routinghandler erstellen \protect \footnotemark},label=lst:RoutingHandlerCreate]
 var express = require('express');
 var router = express.router();
 
@@ -313,7 +313,7 @@ mongooose.connection.on('open',() => console.log('Connected'));
 Für den Verbindungsaufbau können weitere Option übergeben werden. Dafür kann ein Objekt wie in Beispiel \ref{lst:MongooseConnect} erstellt werden, dass die zugehörigen Optionen als Attribute beinhaltet.
 \newline
 
-\begin{lstlisting}[caption=Mongoose Verbindungsoptionen \protect \footnotemark  ,label=lst:MongooseConnect]
+\begin{lstlisting}[caption={[Mongoose Verbindungsoptionen] Mongoose Verbindungsoptionen \protect \footnotemark},label=lst:MongooseConnect]
 const options = {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
